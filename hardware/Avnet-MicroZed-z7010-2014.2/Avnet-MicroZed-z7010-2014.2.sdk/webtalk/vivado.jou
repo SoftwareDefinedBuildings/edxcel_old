@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.2_EA911930 (64-bit)
+# SW Build 911930 on Mon May 12 18:29:50 MDT 2014
+# IP Build 912031 on Mon May 12 17:24:26 MDT 2014
+# Start of session at: Thu Jun 12 14:50:18 2014
+# Process ID: 15552
+# Log file: /home/training/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.sdk/webtalk/vivado.log
+# Journal file: /home/training/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.sdk/webtalk/vivado.jou
+#-----------------------------------------------------------
+source sdk.tcl

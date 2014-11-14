@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Thu Nov 13 18:18:38 2014
+# Process ID: 14356
+# Log file: /home/immesys/w/FPGA/project/Avnet-MicroZed-z7010-v2014.2/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/synth_1/zed_wrapper.vds
+# Journal file: /home/immesys/w/FPGA/project/Avnet-MicroZed-z7010-v2014.2/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source zed_wrapper.tcl

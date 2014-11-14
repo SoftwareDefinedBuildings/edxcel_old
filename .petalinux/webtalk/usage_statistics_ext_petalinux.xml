@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<webTalkData  fileName='/home/immesys/w/FPGA/project/Avnet-MicroZed-z7010-v2014.2/.petalinux/webtalk/usage_statistics_ext_petalinux.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Nov 13 18:26:02 2014'>
+<section name="__ROOT__" level="0" order="1" description="">
+ <section name="software_version_and_target_device" level="1" order="1" description="">
+  <keyValuePair key="beta" value="FALSE" description="" />
+  <keyValuePair key="build_version" value="2014.2" description="" />
+  <keyValuePair key="date_generated" value="Thu Nov 13 18:25:57 2014" description="" />
+  <keyValuePair key="os_platform" value="LIN64" description="" />
+  <keyValuePair key="product_version" value="PetaLinux v2014.2" description="" />
+  <keyValuePair key="project_id" value="88109b1dc2116df2b308382340eb2bda" description="" />
+  <keyValuePair key="project_iteration" value="0" description="" />
+  <keyValuePair key="random_id" value="88109b1dc2116df2b308382340eb2bda" description="" />
+  <keyValuePair key="registration_id" value="210971219_1777504235_0_041" description="" />
+  <keyValuePair key="route_design" value="FALSE" description="" />
+  <keyValuePair key="target_device" value="not_applicable" description="" />
+  <keyValuePair key="target_family" value="not_applicable" description="" />
+  <keyValuePair key="target_package" value="not_applicable" description="" />
+  <keyValuePair key="target_speed" value="not_applicable" description="" />
+  <keyValuePair key="tool_flow" value="PetaLinux" description="" />
+ </section>
+ <section name="user_environment" level="1" order="2" description="">
+  <keyValuePair key="cpu_name" value="Intel(R) Xeon(R) CPU E5-2690 0 @ 2.90GHz" description="" />
+  <keyValuePair key="cpu_speed" value="1200.000 MHz" description="" />
+  <keyValuePair key="os_name" value="Ubuntu" description="" />
+  <keyValuePair key="os_release" value="Ubuntu 14.04.1 LTS" description="" />
+  <keyValuePair key="system_ram" value="125.911 GB" description="" />
+  <keyValuePair key="total_processors" value="16" description="" />
+ </section>
+ <section name="petalinux_build" level="1" order="3" description="">
+  <section name="usage" level="2" order="1" description="">
+   <keyValuePair key="failure" value="1" description="" />
+   <keyValuePair key="tool_name" value="petalinux-build" description="" />
+   <keyValuePair key="total_run" value="2" description="" />
+  </section>
+ </section>
+ <section name="petalinux_config" level="1" order="4" description="">
+  <section name="command_line_options" level="2" order="1" description="">
+   <keyValuePair key="c" value="&lt;USER_DEFINED&gt;" description="" />
+  </section>
+  <section name="usage" level="2" order="2" description="">
+   <keyValuePair key="failure" value="4" description="" />
+   <keyValuePair key="tool_name" value="petalinux-config" description="" />
+   <keyValuePair key="total_run" value="14" description="" />
+  </section>
+ </section>
+ <section name="petalinux_create" level="1" order="5" description="">
+  <section name="command_line_options" level="2" order="1" description="">
+   <keyValuePair key="name" value="&lt;USER_DEFINED&gt;" description="" />
+   <keyValuePair key="template" value="&lt;USER_DEFINED&gt;" description="" />
+   <keyValuePair key="type" value="&lt;USER_DEFINED&gt;" description="" />
+  </section>
+  <section name="usage" level="2" order="2" description="">
+   <keyValuePair key="failure" value="0" description="" />
+   <keyValuePair key="tool_name" value="petalinux-create" description="" />
+   <keyValuePair key="total_run" value="1" description="" />
+  </section>
+ </section>
+ <section name="petalinux_package" level="1" order="6" description="">
+  <section name="command_line_options" level="2" order="1" description="">
+   <keyValuePair key="boot" value="" description="" />
+   <keyValuePair key="fpga" value="&lt;USER_DEFINED&gt;" description="" />
+   <keyValuePair key="fsbl" value="&lt;USER_DEFINED&gt;" description="" />
+   <keyValuePair key="uboot" value="" description="" />
+  </section>
+  <section name="usage" level="2" order="2" description="">
+   <keyValuePair key="failure" value="0" description="" />
+   <keyValuePair key="tool_name" value="petalinux-package" description="" />
+   <keyValuePair key="total_run" value="1" description="" />
+  </section>
+ </section>
+ <section name="vivado_usage" level="1" order="7" description="">
+ </section>
+</section>
+</webTalkData>

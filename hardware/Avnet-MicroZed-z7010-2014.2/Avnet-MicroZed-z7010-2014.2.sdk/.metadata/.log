@@ -1,0 +1,12 @@
+!SESSION 2014-06-12 14:40:33.305 -----------------------------------------------
+eclipse.buildId=2014.2
+java.version=1.7.0_40
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/training/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.sdk
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-06-12 14:43:05.868
+!MESSAGE Indexed 'zynq_fsbl' (12 sources, 57 headers) in 4.05 sec: 1,594 declarations; 7,141 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2014-06-12 14:43:09.033
+!MESSAGE Indexed 'zynq_fsbl_bsp' (117 sources, 144 headers) in 3.05 sec: 6,112 declarations; 28,712 references; 65 unresolved inclusions; 9 syntax errors; 38 unresolved names (0.11%)
