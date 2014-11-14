@@ -1,6 +1,7 @@
 import sys
 import binascii
 import ed25519
+import ed25519_checkvalid
 
 # examples of inputs: see sign.input
 # should produce no output: python sign.py < sign.input
@@ -21,7 +22,7 @@ while 1:
   pk = ed25519.publickey(sk)
   m = binascii.unhexlify(x[2])
   s = ed25519.signature(m,sk,pk)
-  ed25519.checkvalid(s,m,pk)
+  ed25519_checkvalid.checkvalid(s,m,pk)
   forgedsuccess = 0
   try:
     if len(m) == 0:
@@ -29,7 +30,7 @@ while 1:
     else:
       forgedmlen = len(m)
       forgedm = ''.join([chr(ord(m[i])+(i==forgedmlen-1)) for i in range(forgedmlen)])
-    ed25519.checkvalid(s,forgedm,pk)
+    ed25519_checkvalid.checkvalid(s,forgedm,pk)
     forgedsuccess = 1
   except:
     pass
@@ -37,3 +38,4 @@ while 1:
   assert x[0] == binascii.hexlify(sk + pk)
   assert x[1] == binascii.hexlify(pk)
   assert x[3] == binascii.hexlify(s + m)
+  print "pass"
