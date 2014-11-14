@@ -1,7 +1,7 @@
-2753323250
+3775686450
 
-command_total_run_petalinux-package=4
-command_failures_petalinux-package=2
+command_total_run_petalinux-package=6
+command_failures_petalinux-package=3
 command_option_petalinux-package=--force
 command_option_petalinux-package=--boot
 command_option_petalinux-package=--fsbl
@@ -9,8 +9,8 @@ command_option_value_petalinux-package=<USER_DEFINED>
 command_option_petalinux-package=--fpga
 command_option_value_petalinux-package=<USER_DEFINED>
 command_option_petalinux-package=--uboot
-command_total_run_petalinux-package=4
-command_failures_petalinux-package=2
+command_total_run_petalinux-package=6
+command_failures_petalinux-package=3
 command_option_petalinux-package=--force
 command_option_petalinux-package=--boot
 command_option_petalinux-package=--fsbl

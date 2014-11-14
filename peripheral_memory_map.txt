@@ -1,0 +1,10 @@
+The peripheral starts at 0x4C00000 and has a 64K memory address range.
+These are the mappings expressed as an offset:
+
+
+0x0000 : Version of the PL
+0x0010 : Processing unit ready states. 0 for ready, 1 for busy
+0x0014 : Index of the first available processing unit
+0x0020 : Signature result, when ready is 0 this is 0 for OK, 1 for invalid. If 
+         there has been no previous signature, it will be 1
+0x

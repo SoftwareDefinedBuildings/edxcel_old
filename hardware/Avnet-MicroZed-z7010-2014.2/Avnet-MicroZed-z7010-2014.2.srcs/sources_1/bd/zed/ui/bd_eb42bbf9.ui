@@ -1,23 +1,26 @@
 {
    guistr: "# # String gsaved with Nlview 6.4.7  2014-07-30 bk=1.3165 VDI=35 GEI=35 GUI=JA:1.8
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -y 260 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 280 -defaultsOSRD
-preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 110 -defaultsOSRD
-preplace inst EdXel_0 -pg 1 -lvl 3 -y 140 -defaultsOSRD
-preplace inst processing_system7_0_axi_periph -pg 1 -lvl 2 -y 120 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 330 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 1 3 NJ 260 NJ 260 NJ
-preplace netloc processing_system7_0_axi_periph_M00_AXI 1 2 1 N
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 450
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 20 430
-preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 2 460 250 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 280 NJ 280 NJ
-preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 1 460
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 10 440 240 NJ
-levelinfo -pg 1 0 230 600 840 960
+preplace port DDR -pg 1 -y 370 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 390 -defaultsOSRD
+preplace inst rst_processing_system7_0_100M -pg 1 -lvl 1 -y 100 -defaultsOSRD
+preplace inst jtag_axi_0 -pg 1 -lvl 2 -y 130 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 4 -y 180 -defaultsOSRD
+preplace inst EdXel_0 -pg 1 -lvl 4 -y 300 -defaultsOSRD
+preplace inst processing_system7_0_axi_periph -pg 1 -lvl 3 -y 200 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -y 440 -defaultsOSRD
+preplace netloc processing_system7_0_DDR 1 2 3 NJ 370 NJ 370 NJ
+preplace netloc processing_system7_0_axi_periph_M00_AXI 1 3 1 1120
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 800
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 3 20 580 NJ 580 790
+preplace netloc jtag_axi_0_M_AXI 1 2 1 N
+preplace netloc rst_processing_system7_0_100M_peripheral_aresetn 1 1 3 380 210 810 360 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 390 NJ 390 NJ
+preplace netloc rst_processing_system7_0_100M_interconnect_aresetn 1 1 2 NJ 70 790
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 10 370 60 780 350 1110
+levelinfo -pg 1 0 190 580 960 1210 1330
 ",
 }
 {
-   da_axi4_cnt: "1",
+   da_axi4_cnt: "2",
 }

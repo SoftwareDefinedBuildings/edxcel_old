@@ -71,6 +71,45 @@ module zed_processing_system7_0_0 (
   USB0_PORT_INDCTL,
   USB0_VBUS_PWRSELECT,
   USB0_VBUS_PWRFAULT,
+  M_AXI_GP0_ARVALID,
+  M_AXI_GP0_AWVALID,
+  M_AXI_GP0_BREADY,
+  M_AXI_GP0_RREADY,
+  M_AXI_GP0_WLAST,
+  M_AXI_GP0_WVALID,
+  M_AXI_GP0_ARID,
+  M_AXI_GP0_AWID,
+  M_AXI_GP0_WID,
+  M_AXI_GP0_ARBURST,
+  M_AXI_GP0_ARLOCK,
+  M_AXI_GP0_ARSIZE,
+  M_AXI_GP0_AWBURST,
+  M_AXI_GP0_AWLOCK,
+  M_AXI_GP0_AWSIZE,
+  M_AXI_GP0_ARPROT,
+  M_AXI_GP0_AWPROT,
+  M_AXI_GP0_ARADDR,
+  M_AXI_GP0_AWADDR,
+  M_AXI_GP0_WDATA,
+  M_AXI_GP0_ARCACHE,
+  M_AXI_GP0_ARLEN,
+  M_AXI_GP0_ARQOS,
+  M_AXI_GP0_AWCACHE,
+  M_AXI_GP0_AWLEN,
+  M_AXI_GP0_AWQOS,
+  M_AXI_GP0_WSTRB,
+  M_AXI_GP0_ACLK,
+  M_AXI_GP0_ARREADY,
+  M_AXI_GP0_AWREADY,
+  M_AXI_GP0_BVALID,
+  M_AXI_GP0_RLAST,
+  M_AXI_GP0_RVALID,
+  M_AXI_GP0_WREADY,
+  M_AXI_GP0_BID,
+  M_AXI_GP0_RID,
+  M_AXI_GP0_BRESP,
+  M_AXI_GP0_RRESP,
+  M_AXI_GP0_RDATA,
   FCLK_CLK0,
   FCLK_RESET0_N,
   MIO,
@@ -125,6 +164,84 @@ output wire [1 : 0] USB0_PORT_INDCTL;
 output wire USB0_VBUS_PWRSELECT;
 (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:usbctrl:1.0 USBIND_0 VBUS_PWRFAULT" *)
 input wire USB0_VBUS_PWRFAULT;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARVALID" *)
+output wire M_AXI_GP0_ARVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWVALID" *)
+output wire M_AXI_GP0_AWVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BREADY" *)
+output wire M_AXI_GP0_BREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RREADY" *)
+output wire M_AXI_GP0_RREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WLAST" *)
+output wire M_AXI_GP0_WLAST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WVALID" *)
+output wire M_AXI_GP0_WVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARID" *)
+output wire [11 : 0] M_AXI_GP0_ARID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWID" *)
+output wire [11 : 0] M_AXI_GP0_AWID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WID" *)
+output wire [11 : 0] M_AXI_GP0_WID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARBURST" *)
+output wire [1 : 0] M_AXI_GP0_ARBURST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARLOCK" *)
+output wire [1 : 0] M_AXI_GP0_ARLOCK;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARSIZE" *)
+output wire [2 : 0] M_AXI_GP0_ARSIZE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWBURST" *)
+output wire [1 : 0] M_AXI_GP0_AWBURST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWLOCK" *)
+output wire [1 : 0] M_AXI_GP0_AWLOCK;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWSIZE" *)
+output wire [2 : 0] M_AXI_GP0_AWSIZE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARPROT" *)
+output wire [2 : 0] M_AXI_GP0_ARPROT;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWPROT" *)
+output wire [2 : 0] M_AXI_GP0_AWPROT;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARADDR" *)
+output wire [31 : 0] M_AXI_GP0_ARADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWADDR" *)
+output wire [31 : 0] M_AXI_GP0_AWADDR;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WDATA" *)
+output wire [31 : 0] M_AXI_GP0_WDATA;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARCACHE" *)
+output wire [3 : 0] M_AXI_GP0_ARCACHE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARLEN" *)
+output wire [3 : 0] M_AXI_GP0_ARLEN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARQOS" *)
+output wire [3 : 0] M_AXI_GP0_ARQOS;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWCACHE" *)
+output wire [3 : 0] M_AXI_GP0_AWCACHE;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWLEN" *)
+output wire [3 : 0] M_AXI_GP0_AWLEN;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWQOS" *)
+output wire [3 : 0] M_AXI_GP0_AWQOS;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WSTRB" *)
+output wire [3 : 0] M_AXI_GP0_WSTRB;
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 M_AXI_GP0_ACLK CLK" *)
+input wire M_AXI_GP0_ACLK;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 ARREADY" *)
+input wire M_AXI_GP0_ARREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 AWREADY" *)
+input wire M_AXI_GP0_AWREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BVALID" *)
+input wire M_AXI_GP0_BVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RLAST" *)
+input wire M_AXI_GP0_RLAST;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RVALID" *)
+input wire M_AXI_GP0_RVALID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 WREADY" *)
+input wire M_AXI_GP0_WREADY;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BID" *)
+input wire [11 : 0] M_AXI_GP0_BID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RID" *)
+input wire [11 : 0] M_AXI_GP0_RID;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 BRESP" *)
+input wire [1 : 0] M_AXI_GP0_BRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RRESP" *)
+input wire [1 : 0] M_AXI_GP0_RRESP;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI_GP0 RDATA" *)
+input wire [31 : 0] M_AXI_GP0_RDATA;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 FCLK_CLK0 CLK" *)
 output wire FCLK_CLK0;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 FCLK_RESET0_N RST" *)
@@ -386,45 +503,45 @@ inout wire PS_PORB;
     .USB1_VBUS_PWRSELECT(),
     .USB1_VBUS_PWRFAULT(1'B0),
     .SRAM_INTIN(1'B0),
-    .M_AXI_GP0_ARVALID(),
-    .M_AXI_GP0_AWVALID(),
-    .M_AXI_GP0_BREADY(),
-    .M_AXI_GP0_RREADY(),
-    .M_AXI_GP0_WLAST(),
-    .M_AXI_GP0_WVALID(),
-    .M_AXI_GP0_ARID(),
-    .M_AXI_GP0_AWID(),
-    .M_AXI_GP0_WID(),
-    .M_AXI_GP0_ARBURST(),
-    .M_AXI_GP0_ARLOCK(),
-    .M_AXI_GP0_ARSIZE(),
-    .M_AXI_GP0_AWBURST(),
-    .M_AXI_GP0_AWLOCK(),
-    .M_AXI_GP0_AWSIZE(),
-    .M_AXI_GP0_ARPROT(),
-    .M_AXI_GP0_AWPROT(),
-    .M_AXI_GP0_ARADDR(),
-    .M_AXI_GP0_AWADDR(),
-    .M_AXI_GP0_WDATA(),
-    .M_AXI_GP0_ARCACHE(),
-    .M_AXI_GP0_ARLEN(),
-    .M_AXI_GP0_ARQOS(),
-    .M_AXI_GP0_AWCACHE(),
-    .M_AXI_GP0_AWLEN(),
-    .M_AXI_GP0_AWQOS(),
-    .M_AXI_GP0_WSTRB(),
-    .M_AXI_GP0_ACLK(1'B0),
-    .M_AXI_GP0_ARREADY(1'B0),
-    .M_AXI_GP0_AWREADY(1'B0),
-    .M_AXI_GP0_BVALID(1'B0),
-    .M_AXI_GP0_RLAST(1'B0),
-    .M_AXI_GP0_RVALID(1'B0),
-    .M_AXI_GP0_WREADY(1'B0),
-    .M_AXI_GP0_BID(12'B0),
-    .M_AXI_GP0_RID(12'B0),
-    .M_AXI_GP0_BRESP(2'B0),
-    .M_AXI_GP0_RRESP(2'B0),
-    .M_AXI_GP0_RDATA(32'B0),
+    .M_AXI_GP0_ARVALID(M_AXI_GP0_ARVALID),
+    .M_AXI_GP0_AWVALID(M_AXI_GP0_AWVALID),
+    .M_AXI_GP0_BREADY(M_AXI_GP0_BREADY),
+    .M_AXI_GP0_RREADY(M_AXI_GP0_RREADY),
+    .M_AXI_GP0_WLAST(M_AXI_GP0_WLAST),
+    .M_AXI_GP0_WVALID(M_AXI_GP0_WVALID),
+    .M_AXI_GP0_ARID(M_AXI_GP0_ARID),
+    .M_AXI_GP0_AWID(M_AXI_GP0_AWID),
+    .M_AXI_GP0_WID(M_AXI_GP0_WID),
+    .M_AXI_GP0_ARBURST(M_AXI_GP0_ARBURST),
+    .M_AXI_GP0_ARLOCK(M_AXI_GP0_ARLOCK),
+    .M_AXI_GP0_ARSIZE(M_AXI_GP0_ARSIZE),
+    .M_AXI_GP0_AWBURST(M_AXI_GP0_AWBURST),
+    .M_AXI_GP0_AWLOCK(M_AXI_GP0_AWLOCK),
+    .M_AXI_GP0_AWSIZE(M_AXI_GP0_AWSIZE),
+    .M_AXI_GP0_ARPROT(M_AXI_GP0_ARPROT),
+    .M_AXI_GP0_AWPROT(M_AXI_GP0_AWPROT),
+    .M_AXI_GP0_ARADDR(M_AXI_GP0_ARADDR),
+    .M_AXI_GP0_AWADDR(M_AXI_GP0_AWADDR),
+    .M_AXI_GP0_WDATA(M_AXI_GP0_WDATA),
+    .M_AXI_GP0_ARCACHE(M_AXI_GP0_ARCACHE),
+    .M_AXI_GP0_ARLEN(M_AXI_GP0_ARLEN),
+    .M_AXI_GP0_ARQOS(M_AXI_GP0_ARQOS),
+    .M_AXI_GP0_AWCACHE(M_AXI_GP0_AWCACHE),
+    .M_AXI_GP0_AWLEN(M_AXI_GP0_AWLEN),
+    .M_AXI_GP0_AWQOS(M_AXI_GP0_AWQOS),
+    .M_AXI_GP0_WSTRB(M_AXI_GP0_WSTRB),
+    .M_AXI_GP0_ACLK(M_AXI_GP0_ACLK),
+    .M_AXI_GP0_ARREADY(M_AXI_GP0_ARREADY),
+    .M_AXI_GP0_AWREADY(M_AXI_GP0_AWREADY),
+    .M_AXI_GP0_BVALID(M_AXI_GP0_BVALID),
+    .M_AXI_GP0_RLAST(M_AXI_GP0_RLAST),
+    .M_AXI_GP0_RVALID(M_AXI_GP0_RVALID),
+    .M_AXI_GP0_WREADY(M_AXI_GP0_WREADY),
+    .M_AXI_GP0_BID(M_AXI_GP0_BID),
+    .M_AXI_GP0_RID(M_AXI_GP0_RID),
+    .M_AXI_GP0_BRESP(M_AXI_GP0_BRESP),
+    .M_AXI_GP0_RRESP(M_AXI_GP0_RRESP),
+    .M_AXI_GP0_RDATA(M_AXI_GP0_RDATA),
     .M_AXI_GP1_ARVALID(),
     .M_AXI_GP1_AWVALID(),
     .M_AXI_GP1_BREADY(),

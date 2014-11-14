@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.3.1 (lin64) Build 1056140 Thu Oct 30 16:30:39 MDT 2014
-| Date         : Thu Nov 13 18:19:46 2014
+| Date         : Thu Nov 13 20:20:47 2014
 | Host         : bunker running 64-bit Ubuntu 14.04.1 LTS
 | Command      : report_drc
 --------------------------------------------------------------------------------------
@@ -20,7 +20,7 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
            Max violations: <unlimited>
-         Violations found: 2
+         Violations found: 3
 
 2. REPORT DETAILS
 -----------------
@@ -40,6 +40,11 @@ Related violations: <none>
 PLIO-7#1 Warning
 Placement Constraints Check for IO constraints  
 An IO Bus FIXED_IO_mio[53:0] with more than one IO standard is found. Components associated with this bus are:  FIXED_IO_mio[53] of IOStandard LVCMOS18; FIXED_IO_mio[52] of IOStandard LVCMOS18; FIXED_IO_mio[51] of IOStandard LVCMOS18; FIXED_IO_mio[50] of IOStandard LVCMOS18; FIXED_IO_mio[49] of IOStandard LVCMOS18; FIXED_IO_mio[48] of IOStandard LVCMOS18; FIXED_IO_mio[47] of IOStandard LVCMOS18; FIXED_IO_mio[46] of IOStandard LVCMOS18; FIXED_IO_mio[45] of IOStandard LVCMOS18; FIXED_IO_mio[44] of IOStandard LVCMOS18; FIXED_IO_mio[43] of IOStandard LVCMOS18; FIXED_IO_mio[42] of IOStandard LVCMOS18; FIXED_IO_mio[41] of IOStandard LVCMOS18; FIXED_IO_mio[40] of IOStandard LVCMOS18; FIXED_IO_mio[39] of IOStandard LVCMOS18; FIXED_IO_mio[38] of IOStandard LVCMOS18; FIXED_IO_mio[37] of IOStandard LVCMOS18; FIXED_IO_mio[36] of IOStandard LVCMOS18; FIXED_IO_mio[35] of IOStandard LVCMOS18; FIXED_IO_mio[34] of IOStandard LVCMOS18; FIXED_IO_mio[33] of IOStandard LVCMOS18; FIXED_IO_mio[32] of IOStandard LVCMOS18; FIXED_IO_mio[31] of IOStandard LVCMOS18; FIXED_IO_mio[30] of IOStandard LVCMOS18; FIXED_IO_mio[29] of IOStandard LVCMOS18; FIXED_IO_mio[28] of IOStandard LVCMOS18; FIXED_IO_mio[27] of IOStandard LVCMOS18; FIXED_IO_mio[26] of IOStandard LVCMOS18; FIXED_IO_mio[25] of IOStandard LVCMOS18; FIXED_IO_mio[24] of IOStandard LVCMOS18; FIXED_IO_mio[23] of IOStandard LVCMOS18; FIXED_IO_mio[22] of IOStandard LVCMOS18; FIXED_IO_mio[21] of IOStandard LVCMOS18; FIXED_IO_mio[20] of IOStandard LVCMOS18; FIXED_IO_mio[19] of IOStandard LVCMOS18; FIXED_IO_mio[18] of IOStandard LVCMOS18; FIXED_IO_mio[17] of IOStandard LVCMOS18; FIXED_IO_mio[16] of IOStandard LVCMOS18; FIXED_IO_mio[15] of IOStandard LVCMOS33; FIXED_IO_mio[14] of IOStandard LVCMOS33; FIXED_IO_mio[13] of IOStandard LVCMOS33; FIXED_IO_mio[12] of IOStandard LVCMOS33; FIXED_IO_mio[11] of IOStandard LVCMOS33; FIXED_IO_mio[10] of IOStandard LVCMOS33; FIXED_IO_mio[9] of IOStandard LVCMOS33; FIXED_IO_mio[8] of IOStandard LVCMOS33; FIXED_IO_mio[7] of IOStandard LVCMOS33; FIXED_IO_mio[6] of IOStandard LVCMOS33; FIXED_IO_mio[5] of IOStandard LVCMOS33; FIXED_IO_mio[4] of IOStandard LVCMOS33; FIXED_IO_mio[3] of IOStandard LVCMOS33; FIXED_IO_mio[2] of IOStandard LVCMOS33; FIXED_IO_mio[1] of IOStandard LVCMOS33; FIXED_IO_mio[0] of IOStandard LVCMOS33;
+Related violations: <none>
+
+REQP-165#1 Advisory
+writefirst  
+Synchronous clocking for BRAM (zed_i/jtag_axi_0/inst/jtag_axi_engine_u/tx_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SDP.WIDE_PRIM18.ram) in SDP mode with Write First mode may have address collisions if the same address appears on both read and write ports. It is suggested to simulate the design to determine if any possible address collisions could exist in the design.  If so it is suggested to evaluate ways to eliminate the collisions or you may change the write mode to Read First which may reduce some performance and consume more power however will delay the writing thus resolving any potential collisions.  See the FPGA Memory Resources User Guide for additional information.
 Related violations: <none>
 
 
