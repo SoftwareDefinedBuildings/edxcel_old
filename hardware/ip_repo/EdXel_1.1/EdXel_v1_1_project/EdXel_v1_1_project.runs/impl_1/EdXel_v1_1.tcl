@@ -44,11 +44,13 @@ proc step_failed { step } {
 
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
+set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param gui.test TreeTableDev
+  set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   set_property design_mode GateLvl [current_fileset]
   set_property webtalk.parent_dir /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.cache/wt [current_project]

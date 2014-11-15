@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.hw/hw_1/wave/hw_ila_data_2/hw_ila_data_2.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="6" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/EdXel_0_epu0_keyl">
+      <obj_property name="ElementShortName">zed_i/EdXel_0_epu0_keyl[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/EdXel_0_epu0_keyl[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/EdXel_0_epu0_msgl">
+      <obj_property name="ElementShortName">zed_i/EdXel_0_epu0_msgl[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/EdXel_0_epu0_msgl[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/EdXel_0_epu0_rdy">
+      <obj_property name="ElementShortName">zed_i/EdXel_0_epu0_rdy</obj_property>
+      <obj_property name="ObjectShortName">zed_i/EdXel_0_epu0_rdy</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/EdXel_0_epu0_sigl">
+      <obj_property name="ElementShortName">zed_i/EdXel_0_epu0_sigl[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/EdXel_0_epu0_sigl[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/EdXel_0_epu0_sok">
+      <obj_property name="ElementShortName">zed_i/EdXel_0_epu0_sok</obj_property>
+      <obj_property name="ObjectShortName">zed_i/EdXel_0_epu0_sok</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/EdXel_0_epu0_valid">
+      <obj_property name="ElementShortName">zed_i/EdXel_0_epu0_valid</obj_property>
+      <obj_property name="ObjectShortName">zed_i/EdXel_0_epu0_valid</obj_property>
+   </wvobject>
+</wave_config>

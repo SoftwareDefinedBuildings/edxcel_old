@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<Checkpoint Version="4" Minor="0">
+	<BUILD_NUMBER Name="1056140"/>
+	<FULL_BUILD Name="SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014"/>
+	<Part Name="xc7z010clg400-1"/>
+	<Top Name="EdXel_v1_1"/>
+	<DisableAutoIOBuffers Name="0"/>
+	<OutOfContext Name="0"/>
+	<File Type="EDIF" Name="EdXel_v1_1.edf" ModTime="1416031299"/>
+	<File Type="VERILOG_STUB" Name="EdXel_v1_1_stub.v" ModTime="1416031299"/>
+	<File Type="VHDL_STUB" Name="EdXel_v1_1_stub.vhdl" ModTime="1416031299"/>
+	<File Type="INCR" Name="EdXel_v1_1.incr" ModTime="1416031299"/>
+	<File Type="PSR" Name="EdXel_v1_1.psr" ModTime="1416031299"/>
+	<File Type="WDF" Name="EdXel_v1_1.wdf" ModTime="1416031299"/>
+</Checkpoint>
+

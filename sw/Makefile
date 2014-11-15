@@ -1,7 +1,7 @@
 LIBS  = 
-CFLAGS = -Wall
+CFLAGS = -Wall -I./ed25519/src/ -I.
 GCC = arm-xilinx-linux-gnueabi-gcc
-SRC=$(wildcard *.c)
+SRC=$(wildcard *.c ed25519/src/*.c)
 
 upload: bins
 	cp edxcel /tftpboot

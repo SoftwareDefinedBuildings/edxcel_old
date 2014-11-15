@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.3.1 (lin64) Build 1056140 Thu Oct 30 16:30:39 MDT 2014
-//Date        : Fri Nov 14 14:34:26 2014
+//Date        : Sat Nov 15 12:36:55 2014
 //Host        : bunker running 64-bit Ubuntu 14.04.1 LTS
 //Command     : generate_target zed.bd
 //Design      : zed
@@ -765,7 +765,7 @@ zed_auto_pc_1 auto_pc
         .s_axi_wvalid(s01_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "zed,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=8,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,da_axi4_cnt=2}" *) 
+(* CORE_GENERATION_INFO = "zed,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLanguage=VERILOG,numBlks=13,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=4,maxHierDepth=0,da_axi4_cnt=2}" *) 
 module zed
    (DDR_addr,
     DDR_ba,
@@ -810,6 +810,12 @@ module zed
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
 
+  wire [31:0]EdXel_0_epu0_keyl;
+  wire [31:0]EdXel_0_epu0_msgl;
+  wire EdXel_0_epu0_rdy;
+  wire [31:0]EdXel_0_epu0_sigl;
+  wire EdXel_0_epu0_sok;
+  wire EdXel_0_epu0_valid;
   wire GND_1;
   wire VCC_1;
   wire [31:0]jtag_axi_0_M_AXI_ARADDR;
@@ -933,7 +939,13 @@ module zed
   wire [0:0]rst_processing_system7_0_100M_peripheral_aresetn;
 
 zed_EdXel_0_1 EdXel_0
-       (.s00_axi_aclk(processing_system7_0_FCLK_CLK0),
+       (.epu0_keyl(EdXel_0_epu0_keyl),
+        .epu0_msgl(EdXel_0_epu0_msgl),
+        .epu0_rdy(EdXel_0_epu0_rdy),
+        .epu0_sigl(EdXel_0_epu0_sigl),
+        .epu0_sok(EdXel_0_epu0_sok),
+        .epu0_valid(EdXel_0_epu0_valid),
+        .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(processing_system7_0_axi_periph_M00_AXI_ARADDR),
         .s00_axi_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),
         .s00_axi_arprot(processing_system7_0_axi_periph_M00_AXI_ARPROT),
@@ -979,6 +991,14 @@ zed_ila_0_0 ila_0
         .probe7(processing_system7_0_axi_periph_M00_AXI_WVALID),
         .probe8(processing_system7_0_axi_periph_M00_AXI_ARVALID),
         .probe9(processing_system7_0_axi_periph_M00_AXI_ARREADY));
+zed_ila_1_0 ila_1
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(EdXel_0_epu0_valid),
+        .probe1(EdXel_0_epu0_sok),
+        .probe2(EdXel_0_epu0_rdy),
+        .probe3(EdXel_0_epu0_sigl),
+        .probe4(EdXel_0_epu0_keyl),
+        .probe5(EdXel_0_epu0_msgl));
 zed_jtag_axi_0_0 jtag_axi_0
        (.aclk(processing_system7_0_FCLK_CLK0),
         .aresetn(rst_processing_system7_0_100M_peripheral_aresetn),

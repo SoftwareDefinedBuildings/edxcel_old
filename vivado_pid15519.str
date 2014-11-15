@@ -1,0 +1,1339 @@
+/*
+
+Vivado v2014.3.1 (64-bit)
+SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+Process ID: 15519
+
+Current time: 	11/15/14 12:23:47 PM
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: DISTRIB_ID=Ubuntu
+Version: 3.13.0-35-generic
+Architecture: amd64
+Available processors (cores): 16
+
+DISPLAY: :0
+Screen size: 4000x2560
+Screen resolution (DPI): 96
+Available screens: 2
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	/opt/Xilinx/Vivado/2014.3.1/tps/lnx64/jre
+
+User name: 	immesys
+User directory: /home/immesys/w/FPGA/project
+User country: 	US
+User language: 	en
+User locale: 	en_US
+Vivado preferences path: /home/immesys/.Xilinx/Vivado/2014.3/vivado.ini
+Vivado layouts directory: /home/immesys/.Xilinx/Vivado/2014.3/layouts/application
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,878 MB
+
+*/
+
+// TclEventType: START_GUI
+// HColorUtils.generateUniqueColorPalette (num colors: 55) elapsed time: 0.7s
+// Tcl Message: start_gui 
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // k:JideButton (JPanel:JComponent, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// [GUI Memory]: 23 MB (+22107kb) [00:00:05]
+// [Engine Memory]: 4,878 MB (+4963826kb) [00:00:05]
+setFileChooser("/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.xpr");
+// cn:P (ch:JFrame):  Open Project : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 4,889 MB. GUI used memory: 22 MB. Current time: 11/15/14 12:23:49 PM
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// [GUI Memory]: 24 MB (+691kb) [00:00:10]
+// [Engine Memory]: 4,947 MB (+72208kb) [00:00:10]
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 40 MB (+17094kb) [00:00:11]
+// [Engine Memory]: 4,983 MB (+37330kb) [00:00:11]
+// [GUI Memory]: 75 MB (+36284kb) [00:00:13]
+// [Engine Memory]: 5,128 MB (+152563kb) [00:00:13]
+// [Engine Memory]: 5,152 MB (+25272kb) [00:00:14]
+// [GUI Memory]: 81 MB (+5929kb) [00:00:16]
+// [Engine Memory]: 5,154 MB (+2097kb) [00:00:16]
+// Tcl Message: open_project /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.3.1/data/ip'. 
+// [GUI Memory]: 81 MB (+322kb) [00:00:18]
+// [Engine Memory]: 5,156 MB (+2097kb) [00:00:18]
+// [GUI Memory]: 82 MB (+931kb) [00:00:18]
+// [GUI Memory]: 83 MB (+935kb) [00:00:18]
+// [GUI Memory]: 84 MB (+981kb) [00:00:18]
+// [GUI Memory]: 84 MB (+6kb) [00:00:18]
+// [GUI Memory]: 85 MB (+931kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 85 MB (+940kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 86 MB (+981kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 87 MB (+931kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 88 MB (+932kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 89 MB (+981kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 90 MB (+931kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 91 MB (+981kb) [00:00:18]
+// [GUI Memory]: 92 MB (+931kb) [00:00:18]
+// [GUI Memory]: 93 MB (+933kb) [00:00:18]
+// [GUI Memory]: 94 MB (+931kb) [00:00:18]
+// [GUI Memory]: 95 MB (+931kb) [00:00:18]
+// [GUI Memory]: 95 MB (+49kb) [00:00:18]
+// [GUI Memory]: 95 MB (+931kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 96 MB (+931kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 97 MB (+981kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 98 MB (+931kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 99 MB (+931kb) [00:00:18]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 100 MB (+981kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 101 MB (+931kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 102 MB (+931kb) [00:00:19]
+// [GUI Memory]: 103 MB (+983kb) [00:00:19]
+// [GUI Memory]: 104 MB (+931kb) [00:00:19]
+// [GUI Memory]: 104 MB (+931kb) [00:00:19]
+// [GUI Memory]: 105 MB (+981kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 106 MB (+931kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 107 MB (+931kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 108 MB (+981kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 109 MB (+931kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 110 MB (+931kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 111 MB (+981kb) [00:00:19]
+// [GUI Memory]: 112 MB (+934kb) [00:00:19]
+// [GUI Memory]: 113 MB (+948kb) [00:00:19]
+// [GUI Memory]: 114 MB (+981kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Avnet-MicroZed-z7010-2014.2; location: /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2; part: xc7z010clg400-1
+// 'g' command handler elapsed time: 15 seconds
+// Tcl Message: open_project: Time (s): cpu = 00:00:40 ; elapsed = 00:00:11 . Memory (MB): peak = 5949.191 ; gain = 256.832 ; free physical = 118228 ; free virtual = 184029 
+// Elapsed time: 11 seconds
+dismissDialog("Open Project"); // cn:P (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // w:Y (v:H, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// cn:P (ch:JFrame):  Open Block Design : addNotify
+// TclEventType: LOAD_FEATURE
+// Tcl Message: open_bd_design {/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd} 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M Adding component instance block -- xilinx.com:ip:jtag_axi:1.0 - jtag_axi_0 Adding component instance block -- xilinx.com:ip:ila:5.0 - ila_0 Adding component instance block -- xilinx.com:ip:ila:5.0 - ila_1 Adding component instance block -- SDB:user:EdXel:1.2 - EdXel_0 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 5,161 MB (+5251kb) [00:00:24]
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Successfully read diagram <zed> from BD file </home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd> 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 5,163 MB (+2101kb) [00:00:25]
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: open_bd_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 5978.250 ; gain = 29.059 ; free physical = 118209 ; free virtual = 184009 
+// 'aX' command handler elapsed time: 7 seconds
+// [Engine Memory]: 5,165 MB (+2097kb) [00:00:28]
+dismissDialog("Open Block Design"); // cn:P (ch:JFrame)
+// [GUI Memory]: 116 MB (+2605kb) [00:00:29]
+selectButton(PAResourceQtoS.SystemTab_REPORT_IP_STATUS, "Report IP Status"); // h:k (JPanel:JComponent, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// TclEventType: IP_SUMMARY_RESULTS
+// [GUI Memory]: 118 MB (+1717kb) [00:00:30]
+// [Engine Memory]: 5,166 MB (+1048kb) [00:00:30]
+// Tcl Message: report_ip_status -name ip_status  
+// [Engine Memory]: 5,171 MB (+5111kb) [00:00:30]
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a:JButton (JPanel:JComponent, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: upgrade_ip -vlnv SDB:user:EdXel:1.3 [get_ips  zed_EdXel_0_1] 
+// Tcl Message: Upgrading '/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd' 
+// TclEventType: DG_GRAPH_STALE
+// cn:P (ch:JFrame):  Upgrade IP : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: INFO: [IP_Flow 19-1972] Upgraded zed_EdXel_0_1 from EdXel_v1.3.0 1.2 to EdXel_v1.3.0 1.3 INFO: [IP_Flow 19-3471] Wrote upgrade log to '/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/ip/zed_EdXel_0_1/zed_EdXel_0_1.upgrade_log'. 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 122 MB (+4071kb) [00:00:36]
+// [Engine Memory]: 5,179 MB (+8388kb) [00:00:36]
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: Wrote  : </home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd>  
+// [GUI Memory]: 127 MB (+5935kb) [00:00:36]
+dismissDialog("Upgrade IP"); // cn:P (ch:JFrame)
+// HMemoryUtils.trashcanNow. Engine heap size: 5,179 MB. GUI used memory: 47 MB. Current time: 11/15/14 12:24:19 PM
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 24, false); // w:Y (v:H, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// cn:P (ch:JFrame):  Generate Bitstream : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 
+// Tcl Message: INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 
+// Tcl Message: Generated Block Design Tcl file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hw_handoff/zed_bd.tcl Exporting to file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hw_handoff/zed.hwh 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Verilog Output written to : zed.v Verilog Output written to : zed_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd>  
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_0 . INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_EdXel_0_1'... INFO: [BD 41-1029] Generation completed for the IP Integrator block EdXel_0 . INFO: [IP_Flow 19-1706] Not generating 'Synthesis' target for IP 'zed_ila_1_0'. Target already exists and is up to date. INFO: [BD 41-1029] Generation completed for the IP Integrator block ila_1 . INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_auto_pc_0'... 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc . INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_auto_pc_1'... INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s01_couplers/auto_pc . 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 5,189 MB (+10485kb) [00:00:57]
+// Tcl Message: INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 
+// Tcl Message: Generated Block Design Tcl file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hw_handoff/zed_bd.tcl Exporting to file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hw_handoff/zed.hwh Verilog Output written to : zed.v Verilog Output written to : zed_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 5,203 MB (+14540kb) [00:00:58]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd>  
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s01_couplers/auto_pc . 
+// Tcl Message: [Sat Nov 15 12:24:42 2014] Launched synth_1... Run output will be captured here: /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/synth_1/runme.log [Sat Nov 15 12:24:42 2014] Launched impl_1... Run output will be captured here: /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 6010.469 ; gain = 30.445 ; free physical = 118149 ; free virtual = 183949 
+// Elapsed time: 22 seconds
+dismissDialog("Generate Bitstream"); // cn:P (ch:JFrame)
+// [Engine Memory]: 5,205 MB (+2097kb) [00:01:02]
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 5,205 MB. GUI used memory: 32 MB. Current time: 11/15/14 12:24:44 PM
+// TclEventType: RUN_FAILED
+// Q:ao (ch:JFrame): Synthesis Failed: addNotify
+// Elapsed time: 196 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ao)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // Q:ao (ch:JFrame)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-524] part-select [256:263] out of range of prefix 'epu_key' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/19aa5784/hdl/EdXel_v1_1_S00_AXI.v:317]. ]", 1, false); // ae:k (JViewport:JComponent, ch:JFrame)
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/19aa5784/hdl/EdXel_v1_1_S00_AXI.v;-;;-;15;-;line;-;317;-;;-;15;-;"); // ae:k (JViewport:JComponent, ch:JFrame)
+// Elapsed time: 77 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_EXAMPLE_PROJECT, "Open Example Project"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_7_SERIES_WEBPACK, "7 Series Webpack"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenuItem(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.xpr"); // Z:JMenuItem (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,204 MB. GUI used memory: 29 MB. Current time: 11/15/14 12:29:27 PM
+// cn:P (ch:JFrame):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 5,209 MB (+4190kb) [00:05:47]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.3.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: EdXel_v1_1_project; location: /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project; part: xc7z010clg400-1
+dismissDialog("Open Project"); // cn:P (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 21 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 1); // u:k (H:JPanel, ch:JFrame)
+// [Engine Memory]: 5,211 MB (+2097kb) [00:06:11]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v), EdXel_v1_1_S00_AXI_inst - EdXel_v1_1_S00_AXI (EdXel_v1_1_S00_AXI.v)]", 2, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v), EdXel_v1_1_S00_AXI_inst - EdXel_v1_1_S00_AXI (EdXel_v1_1_S00_AXI.v)]", 2, true, false, false, false, false, true); // u:k (H:JPanel, ch:JFrame) - Double Click - Node
+// Elapsed time: 55 seconds
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 425, 580); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 429, 790); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 532, 742); // aY:J (JPanel:JComponent, ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 137, 802); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 140, 812); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 138, 808); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 114, 753, false, false, false, true, false); // aY:J (JPanel:JComponent, ch:JFrame) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_COPY, "Copy"); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 150, 808); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 105, 818, false, false, false, true, false); // aY:J (JPanel:JComponent, ch:JFrame) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 240, 883); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 134, 819); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 291, 832); // aY:J (JPanel:JComponent, ch:JFrame)
+// [Engine Memory]: 5,216 MB (+5246kb) [00:07:36]
+// Elapsed time: 40 seconds
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 137, 905); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 296, 855); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 251, 878); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 239, 893); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1_S00_AXI.v", 239, 879); // aY:J (JPanel:JComponent, ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 17, false); // w:Y (v:H, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// cn:P (ch:JFrame):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// cn:P (ch:JFrame):  Starting Design Runs : addNotify
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 
+// Tcl Message: [Sat Nov 15 12:32:24 2014] Launched synth_1... Run output will be captured here: /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // cn:P (ch:JFrame)
+// TclEventType: RUN_COMPLETED
+// Q:ao (ch:JFrame): Synthesis Completed: addNotify
+// Elapsed time: 192 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a:JButton (JPanel:JComponent, Q:ao)
+dismissDialog("Synthesis Completed"); // Q:ao (ch:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Package IP]", 5, false); // w:Y (v:H, ch:JFrame)
+// cn:P (ch:JFrame):  Open Project Manager : addNotify
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+dismissDialog("Open Project Manager"); // cn:P (ch:JFrame)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [Engine Memory]: 5,218 MB (+2097kb) [00:11:59]
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/component.xml 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// cn:P (ch:JFrame):  IP Packager : addNotify
+dismissDialog("IP Packager"); // cn:P (ch:JFrame)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+setText(PAResourceItoN.IdentificationContentPanel_DISPLAY_NAME, "EdXel_v1.3.1"); // N:an (aF:M, ch:JFrame)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // P:v (JViewport:JComponent, ch:JFrame)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property display_name EdXel_v1.3.1 [ipx::current_core] 
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a:JButton (JPanel:JComponent, ch:JFrame)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 20 [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// TclEventType: PACKAGER_OBJECT_DELETE
+// TclEventType: PACKAGER_OBJECT_ADD
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// cn:P (ch:JFrame):  Package IP : addNotify
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -repo_path /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1' 
+selectButton("PAResourceQtoS.ReviewContentPanel_FINISHED_PACKAGING_SUCCESSFULLY_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent Project"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenuItem(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.xpr"); // Z:JMenuItem (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,213 MB. GUI used memory: 33 MB. Current time: 11/15/14 12:35:54 PM
+// cn:P (ch:JFrame):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_Yes", "Yes"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+// Tcl Message: close_project 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_CURRENT
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.3.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,220 MB (+1859kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,222 MB (+2097kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,223 MB (+1409kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,225 MB (+1499kb) [00:12:16]
+// [Engine Memory]: 5,226 MB (+1613kb) [00:12:16]
+// [Engine Memory]: 5,227 MB (+1048kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,228 MB (+1048kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,229 MB (+1048kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,230 MB (+1048kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,231 MB (+1048kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [Engine Memory]: 5,232 MB (+1048kb) [00:12:16]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Project name: Avnet-MicroZed-z7010-2014.2; location: /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2; part: xc7z010clg400-1
+dismissDialog("Open Project"); // cn:P (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // w:Y (v:H, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// cn:P (ch:JFrame):  Open Block Design : addNotify
+// Tcl Message: open_bd_design {/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd} 
+// Tcl Message: Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_processing_system7_0_100M Adding component instance block -- xilinx.com:ip:jtag_axi:1.0 - jtag_axi_0 Adding component instance block -- xilinx.com:ip:ila:5.0 - ila_0 Adding component instance block -- xilinx.com:ip:ila:5.0 - ila_1 
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- SDB:user:EdXel:1.3 - EdXel_0 Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc 
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc Successfully read diagram <zed> from BD file </home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd> 
+// 'aX' command handler elapsed time: 4 seconds
+dismissDialog("Open Block Design"); // cn:P (ch:JFrame)
+selectButton(PAResourceQtoS.SystemTab_REPORT_IP_STATUS, "Report IP Status"); // h:k (JPanel:JComponent, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// TclEventType: IP_SUMMARY_RESULTS
+// cn:P (ch:JFrame):  Report IP Status : addNotify
+// Tcl Message: report_ip_status -name ip_status  
+dismissDialog("Report IP Status"); // cn:P (ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORT, "Report"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORT, "Report"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a:JButton (JPanel:JComponent, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// [Engine Memory]: 5,237 MB (+5054kb) [00:12:50]
+// [Engine Memory]: 5,240 MB (+2990kb) [00:12:50]
+// TclEventType: DG_GRAPH_STALE
+// [Engine Memory]: 5,246 MB (+6291kb) [00:12:50]
+// TclEventType: DG_GRAPH_STALE
+// cn:P (ch:JFrame):  Upgrade IP : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: upgrade_ip -vlnv SDB:user:EdXel:1.3 [get_ips  zed_EdXel_0_1] 
+// Tcl Message: Upgrading '/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded zed_EdXel_0_1 (EdXel_v1.3.1 1.3) from revision 19 to revision 20 INFO: [IP_Flow 19-3471] Wrote upgrade log to '/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/ip/zed_EdXel_0_1/zed_EdXel_0_1.upgrade_log'. 
+// [Engine Memory]: 5,260 MB (+15245kb) [00:12:51]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// Tcl Message: Wrote  : </home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd>  
+dismissDialog("Upgrade IP"); // cn:P (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// HMemoryUtils.trashcanNow. Engine heap size: 5,260 MB. GUI used memory: 36 MB. Current time: 11/15/14 12:36:34 PM
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 24, false); // w:Y (v:H, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream 
+// cn:P (ch:JFrame):  Generate Bitstream : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 
+// Tcl Message: Generated Block Design Tcl file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hw_handoff/zed_bd.tcl Exporting to file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hw_handoff/zed.hwh Verilog Output written to : zed.v Verilog Output written to : zed_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd>  
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 5,262 MB (+1368kb) [00:13:09]
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc . INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'zed_auto_pc_1'... INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s01_couplers/auto_pc . 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 5,264 MB (+2121kb) [00:13:11]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 5,279 MB (+15482kb) [00:13:11]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 INFO: [BD 41-1378] This design does not contain any "MEMORY" mapped segment for processor processing_system7_0 
+// Tcl Message: Generated Block Design Tcl file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hw_handoff/zed_bd.tcl Exporting to file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hw_handoff/zed.hwh Verilog Output written to : zed.v Verilog Output written to : zed_wrapper.v 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: Wrote  : </home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/zed.bd>  
+// Tcl Message: [Sat Nov 15 12:36:58 2014] Launched synth_1... Run output will be captured here: /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/synth_1/runme.log [Sat Nov 15 12:36:58 2014] Launched impl_1... Run output will be captured here: /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:24 ; elapsed = 00:00:22 . Memory (MB): peak = 6085.855 ; gain = 18.094 ; free physical = 117854 ; free virtual = 183690 
+// Elapsed time: 22 seconds
+dismissDialog("Generate Bitstream"); // cn:P (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: RUN_COMPLETED
+// [Engine Memory]: 5,314 MB (+36896kb) [00:18:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,314 MB. GUI used memory: 51 MB. Current time: 11/15/14 12:42:44 PM
+// [Engine Memory]: 5,318 MB (+4194kb) [00:19:07]
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// Q:ao (ch:JFrame): Bitstream Generation Completed: addNotify
+// Elapsed time: 495 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER, "Open Hardware Manager"); // a:JRadioButton (JPanel:JComponent, Q:ao)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, Q:ao)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// TclEventType: LOAD_FEATURE
+// TclEventType: HW_SESSION_OPEN
+// [Engine Memory]: 5,318 MB (+20kb) [00:21:34]
+// [Engine Memory]: 5,320 MB (+2097kb) [00:21:34]
+// Tcl Message: open_hw 
+dismissDialog("Bitstream Generation Completed"); // Q:ao (ch:JFrame)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h:k (JPanel:JComponent, ch:JFrame)
+// [Engine Memory]: 5,321 MB (+1310kb) [00:21:37]
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_AXI_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// Run Command: PAResourceCommand.PACommandNames_ILA_WINDOW
+// [Engine Memory]: 5,353 MB (+33669kb) [00:21:38]
+// TclEventType: HW_DEVICE_CHANGE
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+# Current time: 11/15/14 12:45:19 PM
+# Process ID: 15519
+# Platform: Unix
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+ui.frmwork.CommandFailedException: ERROR: [Labtools 27-1975] The device xc7z010 (JTAG device index = 1) has an ILA core referenced in the associated probes file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/impl_1/debug_nets.ltx,
+which is not detectable in the design at the specified location user chain=1 index=1.
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file OR
+2. Goto device properties and associate the correct probes file with the programming file already programmed in the device.
+ (See /home/immesys/w/FPGA/project/vivado_pid15519.debug)
+*/
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2014.3   **** Build date : Oct 30 2014-16:29:41     ** Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.  INFO: hw_server application started INFO: Use Ctrl-C to exit hw_server application   
+// Tcl Message: open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0] 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost/xilinx_tcf/Digilent/210249896001 
+// TclEventType: HW_ILA_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 5,363 MB. GUI used memory: 53 MB. Current time: 11/15/14 12:45:20 PM
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: refresh_hw_device 
+// Tcl Message: INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 2 ILA core(s). INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 JTAG AXI core(s). 
+// Tcl Message: ERROR: [Labtools 27-1975] The device xc7z010 (JTAG device index = 1) has an ILA core referenced in the associated probes file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/impl_1/debug_nets.ltx, which is not detectable in the design at the specified location user chain=1 index=1. Resolution:  1. Reprogram device with the correct programming file and associated probes file OR 2. Goto device properties and associate the correct probes file with the programming file already programmed in the device. 
+// HOptionPane Error: "ERROR: [Labtools 27-1975] The device xc7z010 (JTAG device index = 1) has an ILA corereferenced in the associated probes file /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/impl_1/debug_nets.ltx, whichis not detectable in the design at the specified location user chain=1 index=1. Resolution:  1. Reprogram device with the correct programming file and associated probes fileOR 2. Goto device properties and associate the correct probes file with the programmingfile already programmed in the device.  (Vivado v2014.3.1 (64-bit))"
+// TclEventType: HW_ILA_CHANGE
+selectButton("RDIResource.HOptionPane_APPLICATION_EXCEPTION_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+// [Engine Memory]: 5,363 MB (+10493kb) [00:21:40]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Hardware Manager, Program Device]", 27, false); // w:Y (v:H, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7z010_1"); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// [Engine Memory]: 5,365 MB (+2097kb) [00:21:42]
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// aE:a (ch:JFrame): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a:JButton (JPanel:JComponent, aE:a)
+// cn:P (ch:JFrame):  Program Device : addNotify
+dismissDialog("Program Device"); // aE:a (ch:JFrame)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/impl_1/zed_wrapper.bit} [lindex [get_hw_devices] 1] 
+// Tcl Message: program_hw_devices [lindex [get_hw_devices] 1] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-32] Done pin status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+closeView(PAResourceOtoP.PAViews_ILA, "ILA - hw_ila_1"); // h:aG
+// TclEventType: HW_ILA_CHANGE
+closeView(PAResourceOtoP.PAViews_ILA, "ILA - hw_ila_2"); // h:aG
+// TclEventType: HW_AXI_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// Run Command: PAResourceCommand.PACommandNames_ILA_WINDOW
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices] 1] 
+// Tcl Message: INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 2 ILA core(s). INFO: [Labtools 27-2302] Device xc7z010 (JTAG device index = 1) is programmed with a design that has 1 JTAG AXI core(s). 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: DEBUG_PROBE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: HW_ILA_CHANGE
+// 'q' command handler elapsed time: 7 seconds
+dismissDialog("Program Device"); // cn:P (ch:JFrame)
+// Elapsed time: 16 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ILA - hw_ila_1", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, ch:JFrame)
+selectButton(PAResourceItoN.IlaDashboardView_RUN_TRIGGER_FOR_THIS_ILA_CORE, "Debug_run_trigger"); // v:JideButton (CommandBar:DockableBar, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_RUN_TRIGGER
+// Tcl Message: run_hw_ila hw_ila_1 
+// Tcl Message: INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2014-Nov-15 12:45:49 
+// TclEventType: HW_ILA_CHANGE
+setText(PAResourceTtoZ.TriggerCaptureControlPanel_NUMBER_OF_WINDOWS, "1"); // I:F (JPanel:JComponent, ch:JFrame)
+// Elapsed time: 37 seconds
+setText(PAResourceTtoZ.TriggerCaptureControlPanel_NUMBER_OF_WINDOWS, "1"); // I:F (JPanel:JComponent, ch:JFrame)
+selectButton(PAResourceItoN.IlaDashboardView_STOP_TRIGGER_FOR_THIS_ILA_CORE, "Debug_stop_trigger"); // v:JideButton (CommandBar:DockableBar, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_STOP_TRIGGER
+// cn:P (ch:JFrame):  StopTrigger : addNotify
+// Tcl Message: wait_on_hw_ila -timeout 0 hw_ila_1 
+// Tcl Message: upload_hw_ila_data hw_ila_1 
+// Tcl Message: INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2014-Nov-15 12:46:33 
+dismissDialog("StopTrigger"); // cn:P (ch:JFrame)
+// TclEventType: HW_ILA_CHANGE
+selectButton(PAResourceItoN.IlaDashboardView_RUN_TRIGGER_IMMEDIATE_FOR_THIS_ILA_CORE, "Debug_trigger_immediate"); // v:JideButton (CommandBar:DockableBar, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_TRIGGER_IMMEDIATE
+// Tcl Message: run_hw_ila hw_ila_1 -trigger_now 
+// Tcl Message: INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2014-Nov-15 12:46:37 
+// TclEventType: HW_ILA_CHANGE
+// cn:P (ch:JFrame):  Upload Waveform : addNotify
+// Tcl Message: wait_on_hw_ila hw_ila_1 
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_OPEN_WCFG
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Waveform: addNotify
+// Waveform: addNotify
+// Waveform: addNotify
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: HW_ILA_CHANGE
+// Tcl Message: display_hw_ila_data [upload_hw_ila_data hw_ila_1] 
+// Tcl Message: INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2014-Nov-15 12:46:37 
+dismissDialog("Upload Waveform"); // cn:P (ch:JFrame)
+unMinimizeFrame(PAResourceOtoP.PAViews_DEBUG_PROBES, "Debug Probes"); // al:DockableFrame
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,365 MB. GUI used memory: 93 MB. Current time: 11/15/14 12:46:40 PM
+selectTree(PAResourceOtoP.ProbesView_PROBES_TREE, "[root, hw_ila_1, zed_i/EdXel_0_epu0_keyl[31:0]]", 1, false); // t:k (JViewport:JComponent, ch:JFrame)
+selectTree(PAResourceOtoP.ProbesView_PROBES_TREE, "[root, hw_ila_1, zed_i/EdXel_0_epu0_valid]", 6, false, true, false, false, false, false); // t:k (JViewport:JComponent, ch:JFrame) - Shift Key
+selectTree(PAResourceOtoP.ProbesView_PROBES_TREE, "[root, hw_ila_1, zed_i/EdXel_0_epu0_valid]", 6, false, false, false, false, true, false); // t:k (JViewport:JComponent, ch:JFrame) - Popup Trigger
+selectMenu(PAResourceItoN.LabtoolsMenu_NAME, "Name"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_PROBES_TO_WAVEFORM, "Add Probes to Waveform"); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_ADD_PROBES_TO_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [Engine Memory]: 5,367 MB (+2097kb) [00:23:01]
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_TITLE
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: add_wave -into {hw_ila_data_1.wcfg} -radix hex [get_hw_probes {zed_i/EdXel_0_epu0_keyl}] 
+// Tcl Message: add_wave -into {hw_ila_data_1.wcfg} -radix hex [get_hw_probes {zed_i/EdXel_0_epu0_msgl}] 
+// Tcl Message: add_wave -into {hw_ila_data_1.wcfg} -radix bin [get_hw_probes {zed_i/EdXel_0_epu0_rdy}] 
+// Tcl Message: add_wave -into {hw_ila_data_1.wcfg} -radix hex [get_hw_probes {zed_i/EdXel_0_epu0_sigl}] 
+// Tcl Message: add_wave -into {hw_ila_data_1.wcfg} -radix bin [get_hw_probes {zed_i/EdXel_0_epu0_sok}] 
+// Tcl Message: add_wave -into {hw_ila_data_1.wcfg} -radix bin [get_hw_probes {zed_i/EdXel_0_epu0_valid}] 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_data_1.wcfg*", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, ch:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 119 MB. Current time: 11/15/14 12:46:47 PM
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "ILA - hw_ila_1", 0); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, ch:JFrame)
+// Elapsed time: 12 seconds
+setText(PAResourceTtoZ.TriggerCaptureControlPanel_POSITION_OF_TRIGGER_MARKER_WITHIN, "500"); // I:F (JPanel:JComponent, ch:JFrame)
+selectButton(PAResourceItoN.IlaDashboardView_RUN_TRIGGER_FOR_THIS_ILA_CORE, "Debug_run_trigger"); // v:JideButton (CommandBar:DockableBar, ch:JFrame)
+// TclEventType: HW_ILA_CHANGE
+// Run Command: PAResourceCommand.PACommandNames_RUN_TRIGGER
+// Tcl Message: set_property CONTROL.TRIGGER_POSITION 500 [get_hw_ilas hw_ila_1] 
+// Tcl Message: run_hw_ila hw_ila_1 
+// Tcl Message: INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2014-Nov-15 12:47:12 
+// [GUI Memory]: 130 MB (+2963kb) [00:23:30]
+// TclEventType: HW_ILA_CHANGE
+setText(PAResourceTtoZ.TriggerCaptureControlPanel_POSITION_OF_TRIGGER_MARKER_WITHIN, "500"); // I:F (JPanel:JComponent, ch:JFrame)
+// [GUI Memory]: 139 MB (+9799kb) [00:23:34]
+// TclEventType: HW_ILA_CHANGE
+// cn:P (ch:JFrame):  Upload Waveform : addNotify
+// Tcl Message: wait_on_hw_ila hw_ila_1 
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// [GUI Memory]: 143 MB (+3830kb) [00:23:41]
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// Tcl Message: display_hw_ila_data [upload_hw_ila_data hw_ila_1] 
+// Tcl Message: INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2014-Nov-15 12:47:22 
+// [GUI Memory]: 144 MB (+790kb) [00:23:41]
+// cn:P (ch:JFrame):  Upload Waveform : addNotify
+// TclEventType: HW_ILA_CHANGE
+dismissDialog("Upload Waveform"); // cn:P (ch:JFrame)
+// Tcl Message: wait_on_hw_ila hw_ila_1 
+// Tcl Message: upload_hw_ila_data hw_ila_1 
+// Tcl Message: INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2014-Nov-15 12:47:22 
+dismissDialog("Upload Waveform"); // cn:P (ch:JFrame)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "hw_ila_data_1.wcfg*", 2); // TdiGroup:JideTabbedPane (CodeEditorDocumentPane:DocumentPane, ch:JFrame)
+selectGraphicalView(RDIResource.RDIViews_WAVEFORM_VIEWER, 1495, -30); // n:a (JViewport:JComponent, ch:JFrame)
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 64 MB. Current time: 11/15/14 12:47:28 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 65 MB. Current time: 11/15/14 12:47:28 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 65 MB. Current time: 11/15/14 12:47:28 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 64 MB. Current time: 11/15/14 12:47:28 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 64 MB. Current time: 11/15/14 12:47:28 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+selectButton(RDIResource.GraphicalView_ZOOM_OUT, "Waveform Viewer_zoom_out"); // v:JideButton (CommandBar:DockableBar, ch:JFrame)
+// TclEventType: WAVEFORM_UPDATE_COMMANDS
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 73 MB. Current time: 11/15/14 12:47:31 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 86 MB. Current time: 11/15/14 12:47:34 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 71 MB. Current time: 11/15/14 12:47:34 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 71 MB. Current time: 11/15/14 12:47:34 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 71 MB. Current time: 11/15/14 12:47:34 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 71 MB. Current time: 11/15/14 12:47:35 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 71 MB. Current time: 11/15/14 12:47:35 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 71 MB. Current time: 11/15/14 12:47:35 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 71 MB. Current time: 11/15/14 12:47:35 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM
+// HMemoryUtils.trashcanNow. Engine heap size: 5,367 MB. GUI used memory: 71 MB. Current time: 11/15/14 12:47:35 PM
+// TclEventType: WAVEFORM_UPDATE_WAVEFORM

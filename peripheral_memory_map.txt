@@ -14,8 +14,8 @@ For each EPU:
 0x0000 - 0x0040 : Signature
 0x0080 - 0x00A0 : Public key
 0x00A0 - 0x00C0 : Message
-0x0080 : A write of 0x410 will start processing. This register will read 0
-         while processing, and read 1 for signature pass and -1 for signature
+0x00C0 : A write of 0x410 will start processing. This register will read 0
+         while processing, and read 1 for signature pass and 2 for signature
          failure
 
 EPU's are mapped as

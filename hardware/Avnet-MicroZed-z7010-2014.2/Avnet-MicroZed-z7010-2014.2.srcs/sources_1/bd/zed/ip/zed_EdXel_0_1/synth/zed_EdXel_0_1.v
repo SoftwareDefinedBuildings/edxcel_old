@@ -47,8 +47,8 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: SDB:user:EdXel:1.2
-// IP Revision: 10
+// IP VLNV: SDB:user:EdXel:1.3
+// IP Revision: 20
 
 (* X_CORE_INFO = "EdXel_v1_1,Vivado 2014.3.1" *)
 (* CHECK_LICENSE_TYPE = "zed_EdXel_0_1,EdXel_v1_1,{}" *)
@@ -73,6 +73,12 @@ module zed_EdXel_0_1 (
   s00_axi_rresp,
   s00_axi_rvalid,
   s00_axi_rready,
+  epu0_valid,
+  epu0_sok,
+  epu0_rdy,
+  epu0_sigl,
+  epu0_keyl,
+  epu0_msgl,
   s00_axi_aclk,
   s00_axi_aresetn
 );
@@ -115,6 +121,12 @@ output wire [1 : 0] s00_axi_rresp;
 output wire s00_axi_rvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI RREADY" *)
 input wire s00_axi_rready;
+output wire epu0_valid;
+output wire epu0_sok;
+output wire epu0_rdy;
+output wire [31 : 0] epu0_sigl;
+output wire [31 : 0] epu0_keyl;
+output wire [31 : 0] epu0_msgl;
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 S00_AXI_CLK CLK" *)
 input wire s00_axi_aclk;
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 S00_AXI_RST RST" *)
@@ -122,7 +134,8 @@ input wire s00_axi_aresetn;
 
   EdXel_v1_1 #(
     .C_S00_AXI_DATA_WIDTH(32),  // Width of S_AXI data bus
-    .C_S00_AXI_ADDR_WIDTH(16)  // Width of S_AXI address bus
+    .C_S00_AXI_ADDR_WIDTH(16),  // Width of S_AXI address bus
+    .NUM_EPU(2)
   ) inst (
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
@@ -143,6 +156,12 @@ input wire s00_axi_aresetn;
     .s00_axi_rresp(s00_axi_rresp),
     .s00_axi_rvalid(s00_axi_rvalid),
     .s00_axi_rready(s00_axi_rready),
+    .epu0_valid(epu0_valid),
+    .epu0_sok(epu0_sok),
+    .epu0_rdy(epu0_rdy),
+    .epu0_sigl(epu0_sigl),
+    .epu0_keyl(epu0_keyl),
+    .epu0_msgl(epu0_msgl),
     .s00_axi_aclk(s00_axi_aclk),
     .s00_axi_aresetn(s00_axi_aresetn)
   );

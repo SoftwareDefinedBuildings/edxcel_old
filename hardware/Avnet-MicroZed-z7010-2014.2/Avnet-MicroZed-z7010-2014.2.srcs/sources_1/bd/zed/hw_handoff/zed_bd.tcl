@@ -149,11 +149,15 @@ proc create_root_design { parentCell } {
   # Create ports
 
   # Create instance: EdXel_0, and set properties
-  set EdXel_0 [ create_bd_cell -type ip -vlnv SDB:user:EdXel:1.2 EdXel_0 ]
+  set EdXel_0 [ create_bd_cell -type ip -vlnv SDB:user:EdXel:1.3 EdXel_0 ]
 
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:5.0 ila_0 ]
   set_property -dict [ list CONFIG.ALL_PROBE_SAME_MU_CNT {1} CONFIG.C_ENABLE_ILA_AXI_MON {true} CONFIG.C_EN_STRG_QUAL {0} CONFIG.C_MONITOR_TYPE {AXI} CONFIG.C_NUM_OF_PROBES {19} CONFIG.C_PROBE0_MU_CNT {1} CONFIG.C_PROBE10_MU_CNT {1} CONFIG.C_PROBE11_MU_CNT {1} CONFIG.C_PROBE12_MU_CNT {1} CONFIG.C_PROBE13_MU_CNT {1} CONFIG.C_PROBE14_MU_CNT {1} CONFIG.C_PROBE15_MU_CNT {1} CONFIG.C_PROBE16_MU_CNT {1} CONFIG.C_PROBE17_MU_CNT {1} CONFIG.C_PROBE18_MU_CNT {1} CONFIG.C_PROBE19_MU_CNT {1} CONFIG.C_PROBE1_MU_CNT {1} CONFIG.C_PROBE20_MU_CNT {1} CONFIG.C_PROBE21_MU_CNT {1} CONFIG.C_PROBE22_MU_CNT {1} CONFIG.C_PROBE23_MU_CNT {1} CONFIG.C_PROBE24_MU_CNT {1} CONFIG.C_PROBE25_MU_CNT {1} CONFIG.C_PROBE26_MU_CNT {1} CONFIG.C_PROBE27_MU_CNT {1} CONFIG.C_PROBE28_MU_CNT {1} CONFIG.C_PROBE29_MU_CNT {1} CONFIG.C_PROBE2_MU_CNT {1} CONFIG.C_PROBE30_MU_CNT {1} CONFIG.C_PROBE31_MU_CNT {1} CONFIG.C_PROBE32_MU_CNT {1} CONFIG.C_PROBE33_MU_CNT {1} CONFIG.C_PROBE34_MU_CNT {1} CONFIG.C_PROBE35_MU_CNT {1} CONFIG.C_PROBE36_MU_CNT {1} CONFIG.C_PROBE37_MU_CNT {1} CONFIG.C_PROBE38_MU_CNT {1} CONFIG.C_PROBE39_MU_CNT {1} CONFIG.C_PROBE3_MU_CNT {1} CONFIG.C_PROBE40_MU_CNT {1} CONFIG.C_PROBE41_MU_CNT {1} CONFIG.C_PROBE42_MU_CNT {1} CONFIG.C_PROBE43_MU_CNT {1} CONFIG.C_PROBE44_MU_CNT {1} CONFIG.C_PROBE4_MU_CNT {1} CONFIG.C_PROBE5_MU_CNT {1} CONFIG.C_PROBE6_MU_CNT {1} CONFIG.C_PROBE7_MU_CNT {1} CONFIG.C_PROBE8_MU_CNT {1} CONFIG.C_PROBE9_MU_CNT {1} CONFIG.C_TRIGIN_EN {false}  ] $ila_0
+
+  # Create instance: ila_1, and set properties
+  set ila_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:5.0 ila_1 ]
+  set_property -dict [ list CONFIG.C_ENABLE_ILA_AXI_MON {false} CONFIG.C_MONITOR_TYPE {Native} CONFIG.C_NUM_OF_PROBES {6} CONFIG.C_PROBE3_WIDTH {32} CONFIG.C_PROBE4_WIDTH {32} CONFIG.C_PROBE5_WIDTH {32}  ] $ila_1
 
   # Create instance: jtag_axi_0, and set properties
   set jtag_axi_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:jtag_axi:1.0 jtag_axi_0 ]
@@ -178,7 +182,13 @@ proc create_root_design { parentCell } {
 connect_bd_intf_net -intf_net processing_system7_0_axi_periph_M00_AXI [get_bd_intf_pins ila_0/SLOT_0_AXI] [get_bd_intf_pins processing_system7_0_axi_periph/M00_AXI]
 
   # Create port connections
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins EdXel_0/s00_axi_aclk] [get_bd_pins ila_0/clk] [get_bd_pins jtag_axi_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S01_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
+  connect_bd_net -net EdXel_0_epu0_keyl [get_bd_pins EdXel_0/epu0_keyl] [get_bd_pins ila_1/probe4]
+  connect_bd_net -net EdXel_0_epu0_msgl [get_bd_pins EdXel_0/epu0_msgl] [get_bd_pins ila_1/probe5]
+  connect_bd_net -net EdXel_0_epu0_rdy [get_bd_pins EdXel_0/epu0_rdy] [get_bd_pins ila_1/probe2]
+  connect_bd_net -net EdXel_0_epu0_sigl [get_bd_pins EdXel_0/epu0_sigl] [get_bd_pins ila_1/probe3]
+  connect_bd_net -net EdXel_0_epu0_sok [get_bd_pins EdXel_0/epu0_sok] [get_bd_pins ila_1/probe1]
+  connect_bd_net -net EdXel_0_epu0_valid [get_bd_pins EdXel_0/epu0_valid] [get_bd_pins ila_1/probe0]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins EdXel_0/s00_axi_aclk] [get_bd_pins ila_0/clk] [get_bd_pins ila_1/clk] [get_bd_pins jtag_axi_0/aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins processing_system7_0_axi_periph/S01_ACLK] [get_bd_pins rst_processing_system7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_100M/ext_reset_in]
   connect_bd_net -net rst_processing_system7_0_100M_interconnect_aresetn [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_100M/interconnect_aresetn]
   connect_bd_net -net rst_processing_system7_0_100M_peripheral_aresetn [get_bd_pins EdXel_0/s00_axi_aresetn] [get_bd_pins jtag_axi_0/aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S01_ARESETN] [get_bd_pins rst_processing_system7_0_100M/peripheral_aresetn]

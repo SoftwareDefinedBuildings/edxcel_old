@@ -25,6 +25,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_ila_0_0 || 
 # IP: bd/zed/ip/zed_EdXel_0_1/zed_EdXel_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_EdXel_0_1 || ORIG_REF_NAME==zed_EdXel_0_1}]
 
+# IP: bd/zed/ip/zed_ila_1_0/zed_ila_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_ila_1_0 || ORIG_REF_NAME==zed_ila_1_0}]
+
 # IP: bd/zed/ip/zed_auto_pc_0/zed_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_auto_pc_0 || ORIG_REF_NAME==zed_auto_pc_0}]
 
@@ -53,6 +56,11 @@ set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {R
 #dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_ila_0_0 || ORIG_REF_NAME==zed_ila_0_0}]
 
 # XDC: bd/zed/ip/zed_ila_0_0/zed_ila_0_0_ooc.xdc
+
+# XDC: ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc
+#dup# set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_ila_1_0 || ORIG_REF_NAME==zed_ila_1_0}]
+
+# XDC: bd/zed/ip/zed_ila_1_0/zed_ila_1_0_ooc.xdc
 
 # XDC: bd/zed/ip/zed_auto_pc_0/zed_auto_pc_0_ooc.xdc
 

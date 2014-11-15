@@ -326,8 +326,21 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
+        <spirit:instanceName>ila_1</spirit:instanceName>
+        <spirit:componentRef spirit:library="ip" spirit:name="ila" spirit:vendor="xilinx.com" spirit:version="5.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">zed_ila_1_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE5_WIDTH">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE4_WIDTH">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_PROBE3_WIDTH">32</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_NUM_OF_PROBES">6</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_ENABLE_ILA_AXI_MON">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_MONITOR_TYPE">Native</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
         <spirit:instanceName>EdXel_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="user" spirit:name="EdXel" spirit:vendor="SDB" spirit:version="1.2"/>
+        <spirit:componentRef spirit:library="user" spirit:name="EdXel" spirit:vendor="SDB" spirit:version="1.3"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">zed_EdXel_0_1</spirit:configurableElementValue>
         </spirit:configurableElementValues>
@@ -367,6 +380,7 @@
         <spirit:internalPortReference spirit:componentRef="jtag_axi_0" spirit:portRef="aclk"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="S01_ACLK"/>
         <spirit:internalPortReference spirit:componentRef="ila_0" spirit:portRef="clk"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="EdXel_0" spirit:portRef="s00_axi_aclk"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
@@ -387,6 +401,36 @@
         <spirit:name>rst_processing_system7_0_100M_interconnect_aresetn</spirit:name>
         <spirit:internalPortReference spirit:componentRef="rst_processing_system7_0_100M" spirit:portRef="interconnect_aresetn"/>
         <spirit:internalPortReference spirit:componentRef="processing_system7_0_axi_periph" spirit:portRef="ARESETN"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>EdXel_0_epu0_valid</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="EdXel_0" spirit:portRef="epu0_valid"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>EdXel_0_epu0_sok</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="EdXel_0" spirit:portRef="epu0_sok"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe1"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>EdXel_0_epu0_rdy</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="EdXel_0" spirit:portRef="epu0_rdy"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe2"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>EdXel_0_epu0_sigl</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="EdXel_0" spirit:portRef="epu0_sigl"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe3"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>EdXel_0_epu0_keyl</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="EdXel_0" spirit:portRef="epu0_keyl"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>EdXel_0_epu0_msgl</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="EdXel_0" spirit:portRef="epu0_msgl"/>
+        <spirit:internalPortReference spirit:componentRef="ila_1" spirit:portRef="probe5"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>

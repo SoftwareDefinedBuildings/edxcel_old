@@ -1,111 +1,99 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <wave_config>
-	<wave_state>
-	</wave_state>
-	<db_ref_list>
-		<db_ref path="/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1" type="auto">
-			<top_modules>
-				<top_module name="top">
-				</top_module>
-			</top_modules>
-		</db_ref>
-	</db_ref_list>
-	<WVObjectSize size="19">
-	</WVObjectSize>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_WREADY" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WREADY</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WREADY</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[3:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[3:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_BRESP" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BRESP[1:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BRESP[1:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_BVALID" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BVALID</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BVALID</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_BREADY" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BREADY</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BREADY</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[3:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[3:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_RREADY" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RREADY</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RREADY</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_WVALID" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WVALID</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WVALID</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARVALID" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARVALID</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARVALID</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARREADY" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARREADY</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARREADY</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_RDATA" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RDATA[31:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RDATA[31:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWVALID" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWVALID</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWVALID</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWREADY" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWREADY</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWREADY</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_RRESP" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RRESP[1:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RRESP[1:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_WDATA" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WDATA[31:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WDATA[31:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_WSTRB" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WSTRB[3:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WSTRB[3:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_RVALID" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RVALID</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RVALID</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARPROT" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARPROT[2:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARPROT[2:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWPROT" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWPROT[2:0]</obj_property>
-		<obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWPROT[2:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="19" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARPROT">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARPROT[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARREADY">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARREADY</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARVALID">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARVALID</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_ARVALID</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWPROT">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWPROT[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWREADY">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWREADY</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWVALID">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWVALID</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_AWVALID</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_BREADY">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BREADY</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_BRESP">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BRESP[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_BVALID">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BVALID</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_BVALID</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_RDATA">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_RREADY">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RREADY</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_RRESP">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RRESP[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_RVALID">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RVALID</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_RVALID</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_WDATA">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WDATA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_WREADY">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WREADY</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WREADY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_WSTRB">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WSTRB[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="zed_i/processing_system7_0_axi_periph_M00_AXI_WVALID">
+      <obj_property name="ElementShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WVALID</obj_property>
+      <obj_property name="ObjectShortName">zed_i/processing_system7_0_axi_periph_M00_AXI_WVALID</obj_property>
+   </wvobject>
 </wave_config>
-

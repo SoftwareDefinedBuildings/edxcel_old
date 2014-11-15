@@ -69,6 +69,8 @@ set rc [catch {
   set_property processing_order EARLY [get_files /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/jtag_axi_v1_0/b7a1cace/constraints/jtag_axi.xdc]
   read_xdc -ref zed_ila_0_0 /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc
   set_property processing_order EARLY [get_files /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc]
+  read_xdc -ref zed_ila_1_0 /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc
+  set_property processing_order EARLY [get_files /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc]
   link_design -top zed_wrapper -part xc7z010clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
