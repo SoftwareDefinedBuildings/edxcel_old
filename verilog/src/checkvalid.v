@@ -1,8 +1,8 @@
-module decodepoint (
+module verify (
     input clk, 
     input rst,
     input valid,
-    input [512:0] sk,
+    input [512:0] sig,
     input [256:0] msg,
     input [256:0] pk,
     output ready,
@@ -12,7 +12,7 @@ module decodepoint (
 wire clk;
 wire rst;
 wire valid;
-wire [512:0] sk;
+wire [512:0] sig;
 wire [256:0] msg;
 wire [256:0] pk;
 reg ready;

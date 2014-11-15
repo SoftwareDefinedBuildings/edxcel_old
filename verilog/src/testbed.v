@@ -4,7 +4,7 @@ module testbed();
 reg clk;
 reg rst;
 reg valid;
-reg [512:0] sk;
+reg [512:0] sig;
 reg [256:0] msg;
 reg [256:0] pk;
 wire ready;
@@ -25,11 +25,11 @@ always begin
 end
 
 // Connect DUT to test bench
-checkvalid checkvalid (
+checkvalid verify (
 .clk(clk), 
 .rst(rst),
 .valid(valid),
-.sk(sk),
+.sig(sig),
 .msg(msg),
 .pk(pk),
 .ready(ready),
