@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Fri Nov 14 14:30:50 2014
+# Process ID: 21258
+# Log file: /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.runs/synth_1/EdXel_v1_1.vds
+# Journal file: /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source EdXel_v1_1.tcl

@@ -1,0 +1,8 @@
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.srcs/sources_1/new/DummyEPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DummyEPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.srcs/sim_1/new/DummyEPU_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DummyEPU_tb
+WARNING: [VRFC 10-994] loop statement with empty body is not permitted in this mode of verilog [/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.srcs/sim_1/new/DummyEPU_tb.v:54]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

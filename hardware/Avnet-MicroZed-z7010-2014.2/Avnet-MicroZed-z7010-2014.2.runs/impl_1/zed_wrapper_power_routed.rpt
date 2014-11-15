@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.3.1 (lin64) Build 1056140 Thu Oct 30 16:30:39 MDT 2014
-| Date             : Thu Nov 13 20:21:28 2014
+| Date             : Fri Nov 14 14:40:34 2014
 | Host             : bunker running 64-bit Ubuntu 14.04.1 LTS
 | Command          : report_power -file zed_wrapper_power_routed.rpt -pb zed_wrapper_power_summary_routed.pb
 | Design           : zed_wrapper
@@ -51,16 +51,16 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.019 |        5 |       --- |             --- |
-| Slice Logic              |     0.008 |    10727 |       --- |             --- |
-|   LUT as Logic           |     0.007 |     3060 |     17600 |           17.38 |
-|   Register               |    <0.001 |     5259 |     35200 |           14.94 |
-|   LUT as Shift Register  |    <0.001 |      340 |      6000 |            5.66 |
-|   CARRY4                 |    <0.001 |       79 |      4400 |            1.79 |
-|   F7/F8 Muxes            |    <0.001 |      140 |     17600 |            0.79 |
-|   LUT as Distributed RAM |    <0.001 |      256 |      6000 |            4.26 |
-|   Others                 |     0.000 |      719 |       --- |             --- |
-| Signals                  |     0.010 |     7352 |       --- |             --- |
-| Block RAM                |    <0.001 |      3.5 |        60 |            5.83 |
+| Slice Logic              |     0.008 |    11079 |       --- |             --- |
+|   LUT as Logic           |     0.007 |     3052 |     17600 |           17.34 |
+|   Register               |    <0.001 |     5483 |     35200 |           15.57 |
+|   LUT as Shift Register  |    <0.001 |      360 |      6000 |            6.00 |
+|   CARRY4                 |    <0.001 |      105 |      4400 |            2.38 |
+|   F7/F8 Muxes            |    <0.001 |      172 |     17600 |            0.97 |
+|   LUT as Distributed RAM |    <0.001 |      264 |      6000 |            4.40 |
+|   Others                 |     0.000 |      734 |       --- |             --- |
+| Signals                  |     0.010 |     7722 |       --- |             --- |
+| Block RAM                |    <0.001 |        4 |        60 |            6.66 |
 | PS7                      |     1.310 |        1 |       --- |             --- |
 | Static Power             |     0.130 |          |           |                 |
 | Total                    |     1.478 |          |           |                 |
@@ -137,8 +137,8 @@ Table of Contents
 | Clock                                                   | Domain                                                 | Constraint (ns) |
 +---------------------------------------------------------+--------------------------------------------------------+-----------------+
 | clk_fpga_0                                              | zed_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
-| dbg_hub/inst/bscan_inst/SERIES7_BSCAN.bscan_inst/DRCK   | dbg_hub/inst/bscan_inst/DRCK                           |            30.0 |
 | dbg_hub/inst/bscan_inst/SERIES7_BSCAN.bscan_inst/UPDATE | dbg_hub/inst/bscan_inst/UPDATE_temp                    |            60.0 |
+| dbg_hub/inst/bscan_inst/SERIES7_BSCAN.bscan_inst/DRCK   | dbg_hub/inst/bscan_inst/DRCK                           |            30.0 |
 +---------------------------------------------------------+--------------------------------------------------------+-----------------+
 
 
@@ -225,9 +225,9 @@ Table of Contents
 |         U_SYNC                                                          |    <0.001 |
 |       bscan_inst                                                        |    <0.001 |
 |   zed_i                                                                 |     1.345 |
-|     EdXel_0                                                             |     0.001 |
-|       inst                                                              |     0.001 |
-|         EdXel_v1_1_S00_AXI_inst                                         |     0.001 |
+|     EdXel_0                                                             |    <0.001 |
+|       inst                                                              |    <0.001 |
+|         EdXel_v1_1_S00_AXI_inst                                         |    <0.001 |
 |     ila_0                                                               |     0.015 |
 |       inst                                                              |     0.015 |
 |         ila_core_inst                                                   |     0.015 |
@@ -241,6 +241,8 @@ Table of Contents
 |                     ramloop[1].ram.r                                    |    <0.001 |
 |                       prim_noinit.ram                                   |    <0.001 |
 |                     ramloop[2].ram.r                                    |    <0.001 |
+|                       prim_noinit.ram                                   |    <0.001 |
+|                     ramloop[3].ram.r                                    |    <0.001 |
 |                       prim_noinit.ram                                   |    <0.001 |
 |           u_ila_cap_ctrl                                                |    <0.001 |
 |             U_CDONE                                                     |    <0.001 |
@@ -295,7 +297,7 @@ Table of Contents
 |                         u_srlB                                          |    <0.001 |
 |                         u_srlC                                          |    <0.001 |
 |                         u_srlD                                          |    <0.001 |
-|           u_ila_regs                                                    |     0.011 |
+|           u_ila_regs                                                    |     0.010 |
 |             MU_SRL[0].mu_srl_reg                                        |    <0.001 |
 |             MU_SRL[10].mu_srl_reg                                       |    <0.001 |
 |             MU_SRL[11].mu_srl_reg                                       |    <0.001 |
@@ -329,8 +331,6 @@ Table of Contents
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             MU_STATUS[15].mu_tpid_reg                                   |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
-|             MU_STATUS[16].mu_tpid_reg                                   |    <0.001 |
-|               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             MU_STATUS[17].mu_tpid_reg                                   |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             MU_STATUS[18].mu_tpid_reg                                   |    <0.001 |
@@ -340,6 +340,8 @@ Table of Contents
 |             MU_STATUS[2].mu_width_reg                                   |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             MU_STATUS[3].mu_tpid_reg                                    |    <0.001 |
+|               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
+|             MU_STATUS[4].mu_tpid_reg                                    |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             MU_STATUS[5].mu_tpid_reg                                    |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
@@ -352,7 +354,7 @@ Table of Contents
 |             MU_STATUS[9].mu_tpid_reg                                    |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             TC_SRL[0].tc_srl_reg                                        |    <0.001 |
-|             U_XSDB_SLAVE                                                |     0.003 |
+|             U_XSDB_SLAVE                                                |     0.002 |
 |             reg_0                                                       |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             reg_1                                                       |    <0.001 |
@@ -407,8 +409,8 @@ Table of Contents
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             reg_a                                                       |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
-|             reg_c                                                       |    <0.001 |
-|               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
+|             reg_c                                                       |     0.000 |
+|               I_EN_STAT_EQ1.U_STAT                                      |     0.000 |
 |             reg_e                                                       |    <0.001 |
 |               I_EN_STAT_EQ1.U_STAT                                      |    <0.001 |
 |             reg_srl_fff                                                 |    <0.001 |
@@ -543,6 +545,11 @@ Table of Contents
 |                       u_srlB                                            |    <0.001 |
 |                       u_srlC                                            |    <0.001 |
 |                       u_srlD                                            |    <0.001 |
+|                     I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE        |    <0.001 |
+|                       u_srlA                                            |    <0.001 |
+|                       u_srlB                                            |    <0.001 |
+|                       u_srlC                                            |    <0.001 |
+|                       u_srlD                                            |    <0.001 |
 |               G_NMU[2].U_M                                              |    <0.001 |
 |                 allx_typeA_match_detection.ltlib_v1_0_allx_typeA_inst   |    <0.001 |
 |                   DUT                                                   |    <0.001 |
@@ -571,6 +578,11 @@ Table of Contents
 |                 allx_typeA_match_detection.ltlib_v1_0_allx_typeA_inst   |    <0.001 |
 |                   DUT                                                   |    <0.001 |
 |                     I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE        |    <0.001 |
+|                       u_srlA                                            |    <0.001 |
+|                       u_srlB                                            |    <0.001 |
+|                       u_srlC                                            |    <0.001 |
+|                       u_srlD                                            |    <0.001 |
+|                     I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE        |    <0.001 |
 |                       u_srlA                                            |    <0.001 |
 |                       u_srlB                                            |    <0.001 |
 |                       u_srlC                                            |    <0.001 |
@@ -626,19 +638,19 @@ Table of Contents
 |                     u_srlC                                              |    <0.001 |
 |                     u_srlD                                              |    <0.001 |
 |           xsdb_memory_read_inst                                         |    <0.001 |
-|     jtag_axi_0                                                          |     0.008 |
-|       inst                                                              |     0.008 |
+|     jtag_axi_0                                                          |     0.009 |
+|       inst                                                              |     0.009 |
 |         axi_bridge_u                                                    |    <0.001 |
 |           read_axi_full_u                                               |    <0.001 |
 |           write_axi_full_u                                              |    <0.001 |
-|         jtag_axi_engine_u                                               |     0.007 |
+|         jtag_axi_engine_u                                               |     0.008 |
 |           U_XSDB_SLAVE                                                  |    <0.001 |
 |           cmd_decode_rd_channel                                         |    <0.001 |
 |           cmd_decode_wr_channel                                         |    <0.001 |
-|           rd_cmd_fifo_i                                                 |    <0.001 |
-|             inst_fifo_gen                                               |    <0.001 |
-|               gconvfifo.rf                                              |    <0.001 |
-|                 grf.rf                                                  |    <0.001 |
+|           rd_cmd_fifo_i                                                 |     0.001 |
+|             inst_fifo_gen                                               |     0.001 |
+|               gconvfifo.rf                                              |     0.001 |
+|                 grf.rf                                                  |     0.001 |
 |                   gntv_or_sync_fifo.gcx.clkx                            |    <0.001 |
 |                     gsync_stage[1].rd_stg_inst                          |    <0.001 |
 |                     gsync_stage[1].wr_stg_inst                          |    <0.001 |
@@ -657,6 +669,7 @@ Table of Contents
 |                       RAM_reg_0_15_24_29                                |    <0.001 |
 |                       RAM_reg_0_15_30_35                                |    <0.001 |
 |                       RAM_reg_0_15_36_41                                |    <0.001 |
+|                       RAM_reg_0_15_42_47                                |    <0.001 |
 |                       RAM_reg_0_15_48_53                                |    <0.001 |
 |                       RAM_reg_0_15_54_59                                |    <0.001 |
 |                       RAM_reg_0_15_60_63                                |    <0.001 |
@@ -779,6 +792,7 @@ Table of Contents
 |                       RAM_reg_0_15_24_29                                |    <0.001 |
 |                       RAM_reg_0_15_30_35                                |    <0.001 |
 |                       RAM_reg_0_15_36_41                                |    <0.001 |
+|                       RAM_reg_0_15_42_47                                |    <0.001 |
 |                       RAM_reg_0_15_48_53                                |    <0.001 |
 |                       RAM_reg_0_15_54_59                                |    <0.001 |
 |                       RAM_reg_0_15_60_63                                |    <0.001 |
@@ -786,10 +800,10 @@ Table of Contents
 |     processing_system7_0                                                |     1.311 |
 |       inst                                                              |     1.311 |
 |     processing_system7_0_axi_periph                                     |     0.010 |
-|       s00_couplers                                                      |     0.004 |
-|         auto_pc                                                         |     0.004 |
-|           inst                                                          |     0.004 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s                        |     0.004 |
+|       s00_couplers                                                      |     0.005 |
+|         auto_pc                                                         |     0.005 |
+|           inst                                                          |     0.005 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s                        |     0.005 |
 |               RD.ar_channel_0                                           |    <0.001 |
 |                 ar_cmd_fsm_0                                            |    <0.001 |
 |                 cmd_translator_0                                        |    <0.001 |
@@ -811,10 +825,10 @@ Table of Contents
 |               WR.b_channel_0                                            |    <0.001 |
 |                 bid_fifo_0                                              |    <0.001 |
 |                 bresp_fifo_0                                            |    <0.001 |
-|       s01_couplers                                                      |     0.003 |
-|         auto_pc                                                         |     0.003 |
-|           inst                                                          |     0.003 |
-|             gen_axilite.gen_b2s_conv.axilite_b2s                        |     0.003 |
+|       s01_couplers                                                      |     0.004 |
+|         auto_pc                                                         |     0.004 |
+|           inst                                                          |     0.004 |
+|             gen_axilite.gen_b2s_conv.axilite_b2s                        |     0.004 |
 |               RD.ar_channel_0                                           |    <0.001 |
 |                 ar_cmd_fsm_0                                            |    <0.001 |
 |                 cmd_translator_0                                        |    <0.001 |
@@ -839,7 +853,7 @@ Table of Contents
 |       xbar                                                              |     0.002 |
 |         inst                                                            |     0.002 |
 |           gen_sasd.crossbar_sasd_0                                      |     0.002 |
-|             addr_arbiter_inst                                           |     0.001 |
+|             addr_arbiter_inst                                           |     0.002 |
 |             gen_decerr.decerr_slave_inst                                |    <0.001 |
 |             reg_slice_r                                                 |    <0.001 |
 |             splitter_ar                                                 |    <0.001 |

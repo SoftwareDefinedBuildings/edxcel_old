@@ -18,6 +18,36 @@
   <probeset name="hw project" active="false">
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[15]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[14]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[13]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[12]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[11]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[10]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[9]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[8]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[7]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[6]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[5]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[4]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[3]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[2]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[1]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
         <Option Id="DISPLAY_HINT" value=""/>
@@ -82,6 +112,36 @@
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+      </probeOptions>
+      <nets>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[15]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[14]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[13]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[12]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[11]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[10]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[9]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[8]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[7]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[6]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[5]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[4]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[3]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[2]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[1]"/>
+        <net name="zed_i/processing_system7_0_axi_periph_M00_AXI_AWADDR[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
         <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>

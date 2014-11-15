@@ -3,10 +3,10 @@
     <DashboardHolder activeDashboard="ILA">
         <Dashboard columnResizable="1" key="ILA" rowResizable="0" title="ILA">
             <Settings/>
-            <GadgetContainer boxAxis="1" count="2" height="1051"
-                layout="JideBoxLayout" vgap="6" width="927">
-                <Gadget height="108" key="Trigger Capture Status" width="927"/>
-                <Gadget height="446" key="Basic Trigger Setup" width="927">
+            <GadgetContainer boxAxis="1" count="2" height="798"
+                layout="JideBoxLayout" vgap="6" width="1247">
+                <Gadget height="108" key="Trigger Capture Status" width="1247"/>
+                <Gadget height="446" key="Basic Trigger Setup" width="1247">
                     <Probe name="zed_i/processing_system7_0_axi_periph_M00_AXI_ARVALID"/>
                 </Gadget>
                 <Settings/>

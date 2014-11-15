@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Thu Nov 13 22:11:12 2014
+# Process ID: 19998
+# Log file: /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.sim/sim_1/behav/webtalk.log
+# Journal file: /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.sim/sim_1/behav/webtalk.jou
+#-----------------------------------------------------------
+source /home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.sim/sim_1/behav/xsim.dir/DummyEPU_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/immesys/w/FPGA/project/hardware/ip_repo/EdXel_1.1/EdXel_v1_1_project/EdXel_v1_1_project.sim/sim_1/behav/xsim.dir/DummyEPU_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Thu Nov 13 22:11:13 2014. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2014.3.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Thu Nov 13 22:11:13 2014...

@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.3.1 (lin64) Build 1056140 Thu Oct 30 16:30:39 MDT 2014
-//Date        : Thu Nov 13 20:15:06 2014
+//Date        : Fri Nov 14 14:34:26 2014
 //Host        : bunker running 64-bit Ubuntu 14.04.1 LTS
 //Command     : generate_target zed.bd
 //Design      : zed
@@ -54,11 +54,11 @@ module m00_couplers_imp_1LM7CTR
     S_AXI_wvalid);
   input M_ACLK;
   input [0:0]M_ARESETN;
-  output [3:0]M_AXI_araddr;
+  output [15:0]M_AXI_araddr;
   output [2:0]M_AXI_arprot;
   input M_AXI_arready;
   output M_AXI_arvalid;
-  output [3:0]M_AXI_awaddr;
+  output [15:0]M_AXI_awaddr;
   output [2:0]M_AXI_awprot;
   input M_AXI_awready;
   output M_AXI_awvalid;
@@ -75,11 +75,11 @@ module m00_couplers_imp_1LM7CTR
   output M_AXI_wvalid;
   input S_ACLK;
   input [0:0]S_ARESETN;
-  input [3:0]S_AXI_araddr;
+  input [15:0]S_AXI_araddr;
   input [2:0]S_AXI_arprot;
   output S_AXI_arready;
   input S_AXI_arvalid;
-  input [3:0]S_AXI_awaddr;
+  input [15:0]S_AXI_awaddr;
   input [2:0]S_AXI_awprot;
   output S_AXI_awready;
   input S_AXI_awvalid;
@@ -95,11 +95,11 @@ module m00_couplers_imp_1LM7CTR
   input [3:0]S_AXI_wstrb;
   input S_AXI_wvalid;
 
-  wire [3:0]m00_couplers_to_m00_couplers_ARADDR;
+  wire [15:0]m00_couplers_to_m00_couplers_ARADDR;
   wire [2:0]m00_couplers_to_m00_couplers_ARPROT;
   wire m00_couplers_to_m00_couplers_ARREADY;
   wire m00_couplers_to_m00_couplers_ARVALID;
-  wire [3:0]m00_couplers_to_m00_couplers_AWADDR;
+  wire [15:0]m00_couplers_to_m00_couplers_AWADDR;
   wire [2:0]m00_couplers_to_m00_couplers_AWPROT;
   wire m00_couplers_to_m00_couplers_AWREADY;
   wire m00_couplers_to_m00_couplers_AWVALID;
@@ -115,10 +115,10 @@ module m00_couplers_imp_1LM7CTR
   wire [3:0]m00_couplers_to_m00_couplers_WSTRB;
   wire m00_couplers_to_m00_couplers_WVALID;
 
-  assign M_AXI_araddr[3:0] = m00_couplers_to_m00_couplers_ARADDR;
+  assign M_AXI_araddr[15:0] = m00_couplers_to_m00_couplers_ARADDR;
   assign M_AXI_arprot[2:0] = m00_couplers_to_m00_couplers_ARPROT;
   assign M_AXI_arvalid = m00_couplers_to_m00_couplers_ARVALID;
-  assign M_AXI_awaddr[3:0] = m00_couplers_to_m00_couplers_AWADDR;
+  assign M_AXI_awaddr[15:0] = m00_couplers_to_m00_couplers_AWADDR;
   assign M_AXI_awprot[2:0] = m00_couplers_to_m00_couplers_AWPROT;
   assign M_AXI_awvalid = m00_couplers_to_m00_couplers_AWVALID;
   assign M_AXI_bready = m00_couplers_to_m00_couplers_BREADY;
@@ -134,11 +134,11 @@ module m00_couplers_imp_1LM7CTR
   assign S_AXI_rresp[1:0] = m00_couplers_to_m00_couplers_RRESP;
   assign S_AXI_rvalid = m00_couplers_to_m00_couplers_RVALID;
   assign S_AXI_wready = m00_couplers_to_m00_couplers_WREADY;
-  assign m00_couplers_to_m00_couplers_ARADDR = S_AXI_araddr[3:0];
+  assign m00_couplers_to_m00_couplers_ARADDR = S_AXI_araddr[15:0];
   assign m00_couplers_to_m00_couplers_ARPROT = S_AXI_arprot[2:0];
   assign m00_couplers_to_m00_couplers_ARREADY = M_AXI_arready;
   assign m00_couplers_to_m00_couplers_ARVALID = S_AXI_arvalid;
-  assign m00_couplers_to_m00_couplers_AWADDR = S_AXI_awaddr[3:0];
+  assign m00_couplers_to_m00_couplers_AWADDR = S_AXI_awaddr[15:0];
   assign m00_couplers_to_m00_couplers_AWPROT = S_AXI_awprot[2:0];
   assign m00_couplers_to_m00_couplers_AWREADY = M_AXI_awready;
   assign m00_couplers_to_m00_couplers_AWVALID = S_AXI_awvalid;
@@ -910,11 +910,11 @@ module zed
   wire processing_system7_0_M_AXI_GP0_WREADY;
   wire [3:0]processing_system7_0_M_AXI_GP0_WSTRB;
   wire processing_system7_0_M_AXI_GP0_WVALID;
-  wire [3:0]processing_system7_0_axi_periph_M00_AXI_ARADDR;
+  wire [15:0]processing_system7_0_axi_periph_M00_AXI_ARADDR;
   wire [2:0]processing_system7_0_axi_periph_M00_AXI_ARPROT;
   wire processing_system7_0_axi_periph_M00_AXI_ARREADY;
   wire processing_system7_0_axi_periph_M00_AXI_ARVALID;
-  wire [3:0]processing_system7_0_axi_periph_M00_AXI_AWADDR;
+  wire [15:0]processing_system7_0_axi_periph_M00_AXI_AWADDR;
   wire [2:0]processing_system7_0_axi_periph_M00_AXI_AWPROT;
   wire processing_system7_0_axi_periph_M00_AXI_AWREADY;
   wire processing_system7_0_axi_periph_M00_AXI_AWVALID;
@@ -932,7 +932,7 @@ module zed
   wire [0:0]rst_processing_system7_0_100M_interconnect_aresetn;
   wire [0:0]rst_processing_system7_0_100M_peripheral_aresetn;
 
-zed_EdXel_0_0 EdXel_0
+zed_EdXel_0_1 EdXel_0
        (.s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(processing_system7_0_axi_periph_M00_AXI_ARADDR),
         .s00_axi_aresetn(rst_processing_system7_0_100M_peripheral_aresetn),
@@ -1303,11 +1303,11 @@ module zed_processing_system7_0_axi_periph_0
   input [0:0]ARESETN;
   input M00_ACLK;
   input [0:0]M00_ARESETN;
-  output [3:0]M00_AXI_araddr;
+  output [15:0]M00_AXI_araddr;
   output [2:0]M00_AXI_arprot;
   input M00_AXI_arready;
   output M00_AXI_arvalid;
-  output [3:0]M00_AXI_awaddr;
+  output [15:0]M00_AXI_awaddr;
   output [2:0]M00_AXI_awprot;
   input M00_AXI_awready;
   output M00_AXI_awvalid;
@@ -1408,11 +1408,11 @@ module zed_processing_system7_0_axi_periph_0
   wire [0:0]S00_ARESETN_1;
   wire S01_ACLK_1;
   wire [0:0]S01_ARESETN_1;
-  wire [3:0]m00_couplers_to_processing_system7_0_axi_periph_ARADDR;
+  wire [15:0]m00_couplers_to_processing_system7_0_axi_periph_ARADDR;
   wire [2:0]m00_couplers_to_processing_system7_0_axi_periph_ARPROT;
   wire m00_couplers_to_processing_system7_0_axi_periph_ARREADY;
   wire m00_couplers_to_processing_system7_0_axi_periph_ARVALID;
-  wire [3:0]m00_couplers_to_processing_system7_0_axi_periph_AWADDR;
+  wire [15:0]m00_couplers_to_processing_system7_0_axi_periph_AWADDR;
   wire [2:0]m00_couplers_to_processing_system7_0_axi_periph_AWPROT;
   wire m00_couplers_to_processing_system7_0_axi_periph_AWREADY;
   wire m00_couplers_to_processing_system7_0_axi_periph_AWVALID;
@@ -1564,10 +1564,10 @@ module zed_processing_system7_0_axi_periph_0
 
   assign M00_ACLK_1 = M00_ACLK;
   assign M00_ARESETN_1 = M00_ARESETN[0];
-  assign M00_AXI_araddr[3:0] = m00_couplers_to_processing_system7_0_axi_periph_ARADDR;
+  assign M00_AXI_araddr[15:0] = m00_couplers_to_processing_system7_0_axi_periph_ARADDR;
   assign M00_AXI_arprot[2:0] = m00_couplers_to_processing_system7_0_axi_periph_ARPROT;
   assign M00_AXI_arvalid = m00_couplers_to_processing_system7_0_axi_periph_ARVALID;
-  assign M00_AXI_awaddr[3:0] = m00_couplers_to_processing_system7_0_axi_periph_AWADDR;
+  assign M00_AXI_awaddr[15:0] = m00_couplers_to_processing_system7_0_axi_periph_AWADDR;
   assign M00_AXI_awprot[2:0] = m00_couplers_to_processing_system7_0_axi_periph_AWPROT;
   assign M00_AXI_awvalid = m00_couplers_to_processing_system7_0_axi_periph_AWVALID;
   assign M00_AXI_bready = m00_couplers_to_processing_system7_0_axi_periph_BREADY;
@@ -1688,11 +1688,11 @@ m00_couplers_imp_1LM7CTR m00_couplers
         .M_AXI_wvalid(m00_couplers_to_processing_system7_0_axi_periph_WVALID),
         .S_ACLK(processing_system7_0_axi_periph_ACLK_net),
         .S_ARESETN(processing_system7_0_axi_periph_ARESETN_net),
-        .S_AXI_araddr(xbar_to_m00_couplers_ARADDR[3:0]),
+        .S_AXI_araddr(xbar_to_m00_couplers_ARADDR[15:0]),
         .S_AXI_arprot(xbar_to_m00_couplers_ARPROT),
         .S_AXI_arready(xbar_to_m00_couplers_ARREADY),
         .S_AXI_arvalid(xbar_to_m00_couplers_ARVALID),
-        .S_AXI_awaddr(xbar_to_m00_couplers_AWADDR[3:0]),
+        .S_AXI_awaddr(xbar_to_m00_couplers_AWADDR[15:0]),
         .S_AXI_awprot(xbar_to_m00_couplers_AWPROT),
         .S_AXI_awready(xbar_to_m00_couplers_AWREADY),
         .S_AXI_awvalid(xbar_to_m00_couplers_AWVALID),

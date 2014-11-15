@@ -149,7 +149,7 @@ proc create_root_design { parentCell } {
   # Create ports
 
   # Create instance: EdXel_0, and set properties
-  set EdXel_0 [ create_bd_cell -type ip -vlnv SDB:user:EdXel:1.1 EdXel_0 ]
+  set EdXel_0 [ create_bd_cell -type ip -vlnv SDB:user:EdXel:1.2 EdXel_0 ]
 
   # Create instance: ila_0, and set properties
   set ila_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:ila:5.0 ila_0 ]

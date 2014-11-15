@@ -1,0 +1,7 @@
+LIBS  = 
+CFLAGS = -Wall
+GCC = arm-xilinx-linux-gnueabi-gcc
+SRC=$(wildcard *.c)
+
+test: $(SRC)
+	$(GCC) -o edxcel $^ $(CFLAGS) $(LIBS)

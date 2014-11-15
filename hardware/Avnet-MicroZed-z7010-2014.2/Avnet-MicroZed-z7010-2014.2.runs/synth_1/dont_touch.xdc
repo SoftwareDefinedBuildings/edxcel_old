@@ -7,9 +7,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed || ORIG_REF
 # IP: bd/zed/ip/zed_processing_system7_0_0/zed_processing_system7_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_processing_system7_0_0 || ORIG_REF_NAME==zed_processing_system7_0_0}]
 
-# IP: bd/zed/ip/zed_EdXel_0_0/zed_EdXel_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_EdXel_0_0 || ORIG_REF_NAME==zed_EdXel_0_0}]
-
 # IP: bd/zed/ip/zed_processing_system7_0_axi_periph_0/zed_processing_system7_0_axi_periph_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_processing_system7_0_axi_periph_0 || ORIG_REF_NAME==zed_processing_system7_0_axi_periph_0}]
 
@@ -24,6 +21,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_xbar_0 || O
 
 # IP: bd/zed/ip/zed_ila_0_0/zed_ila_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_ila_0_0 || ORIG_REF_NAME==zed_ila_0_0}]
+
+# IP: bd/zed/ip/zed_EdXel_0_1/zed_EdXel_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_EdXel_0_1 || ORIG_REF_NAME==zed_EdXel_0_1}]
 
 # IP: bd/zed/ip/zed_auto_pc_0/zed_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==zed_auto_pc_0 || ORIG_REF_NAME==zed_auto_pc_0}]

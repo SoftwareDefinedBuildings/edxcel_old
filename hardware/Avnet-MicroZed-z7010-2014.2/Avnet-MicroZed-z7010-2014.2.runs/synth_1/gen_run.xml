@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1415938509">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1416004469">
   <File Type="VDS-TIMING-PB" Name="zed_wrapper_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="zed_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="zed_wrapper.dcp"/>
@@ -29,7 +29,7 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/bd/zed/ip/zed_processing_system7_0_0/zed_processing_system7_0_0.upgrade_log"/>
-    <File Path="$PSRCDIR/sources_1/bd/zed/ip/zed_EdXel_0_0/zed_EdXel_0_0.upgrade_log"/>
+    <File Path="$PSRCDIR/sources_1/bd/zed/ip/zed_EdXel_0_1/zed_EdXel_0_1.upgrade_log"/>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="zed_wrapper"/>
