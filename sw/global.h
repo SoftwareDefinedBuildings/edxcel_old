@@ -14,5 +14,6 @@ extern uint32_t *PL;
 #define XL_EPU_SIG(x)		(PL[2048 + 64*(x))
 #define XL_EPU_KEY(x)		(PL[2048 + 64*(x)+32)
 #define XL_EPU_KEY(x)		(PL[2048 + 64*(x)+40)
-#define XL_EPU_GO(x)		(PL[2048 + 64*(x)+
+#define XL_EPU_GO(x)		(PL[2048 + 64*(x)+48)
+
 #endif
