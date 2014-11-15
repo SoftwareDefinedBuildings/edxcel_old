@@ -1,7 +1,8 @@
 `include "checkvalid.v"
 module testbed();
 // Declare inputs as regs and outputs as wires
-reg clk, rst;
+reg clk;
+reg rst;
 reg valid;
 reg [512:0] sk;
 reg [256:0] msg;

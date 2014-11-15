@@ -1,5 +1,6 @@
-module checkvalid (
-    input clk, rst,
+module decodepoint (
+    input clk, 
+    input rst,
     input valid,
     input [512:0] sk,
     input [256:0] msg,
@@ -8,7 +9,8 @@ module checkvalid (
     output result
     );
 
-wire clk, rst;
+wire clk;
+wire rst;
 wire valid;
 wire [512:0] sk;
 wire [256:0] msg;
