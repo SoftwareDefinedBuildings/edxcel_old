@@ -26,7 +26,7 @@ reg [63:0] result;
 
 always @ (posedge clk)
 begin
-    result = s0 | (s1 << 8) | (s2 << 16) | (s3 << 24);
+    result <= s0 | (s1 << 8) | (s2 << 16) | (s3 << 24);
 end
 
 endmodule
