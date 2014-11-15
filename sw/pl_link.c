@@ -38,23 +38,11 @@ void initialize_pl()
 	//Get PL version
 	uint32_t version = PL[0];
 	uint32_t num_epu = PL[1];
-	XL_EPU_MSG(0)[0] = 0x11111111;
-	XL_EPU_KEY(0)[0] = 0x22222222;
-	XL_EPU_SIG(0)[0] = 0x33333333;
-	XL_EPU_GO(0) = 0x00000410;
-	//(PL[2048 + 49]) = 0x410; //set vlaid
-	/*(PL[2048 + 50]) = 0x410; //Nvalid
-	(PL[2048 + 49]) = 0x410; //set vlaid
-	(PL[2048 + 50]) = 0x410; //Nvalid
-	(PL[2048 + 49]) = 0x410; //set vlaid
-	(PL[2048 + 50]) = 0x410; //Nvalid
-	//*((uint32_t*)(PL_ADDR + 0x20C8) = 0x410;*/
-	//PL test
+
 	if (version >> 16 == 0x0410)
 	{
 	    printf("%sPL linked (%d EPU's), version 0x%08x\n\033[0m",banner, num_epu, version);
 	}
-	exit(1);
 	
 }
 

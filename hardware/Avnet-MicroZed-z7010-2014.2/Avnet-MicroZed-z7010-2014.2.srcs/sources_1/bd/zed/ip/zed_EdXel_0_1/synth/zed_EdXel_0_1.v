@@ -48,7 +48,7 @@
 
 
 // IP VLNV: SDB:user:EdXel:1.3
-// IP Revision: 20
+// IP Revision: 23
 
 (* X_CORE_INFO = "EdXel_v1_1,Vivado 2014.3.1" *)
 (* CHECK_LICENSE_TYPE = "zed_EdXel_0_1,EdXel_v1_1,{}" *)

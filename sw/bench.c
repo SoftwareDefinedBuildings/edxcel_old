@@ -45,14 +45,10 @@ uint8_t hw_verify_sync(uint8_t *sig, uint8_t *msg, uint8_t *key)
 		
 	//Wait until calculation is done
 	while(!XL_EPU_DONE(epu_idx));
-	result = XL_SIGNOK_FLAGS;
-	//result = XL_EPU_DONE(epu_idx);
 
+	result = XL_EPU_DONE(epu_idx);
 	printf("result was: %d\n", result);
-	result = XL_SIGNOK_FLAGS;
-	//result = XL_EPU_DONE(epu_idx);
-
-	printf("result was: %d\n", result);
+	
 	//Codes are 0 for busy, 1 for sig pass and 2 for sig fail
 	return result == 1;
 }
@@ -68,9 +64,10 @@ void enumerate_API()
 }
 int check_ok_sig()
 {
-	uint8_t sig [] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,2,3,4};
-	uint8_t key [] = {																  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,4};
-	uint8_t msg [] = {																  0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0};
+	uint8_t sig [64] = {0x55,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   , 		
+						0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   };
+	uint8_t key [32] = {0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   };
+	uint8_t msg [32] = {0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   };
 	int result = hw_verify_sync(sig, msg, key);
 	return result;
 }
@@ -86,7 +83,7 @@ int check_bad_sig()
 
 void go()
 {
-	//printf("ok sig result: %d\n", check_ok_sig());
+	printf("ok sig result: %d\n", check_ok_sig());
 	printf("bad sig result: %d\n", check_bad_sig());
 }
 

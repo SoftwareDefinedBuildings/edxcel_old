@@ -93,7 +93,7 @@
 	);
 
     
-    localparam integer PL_VERSION = 32'h0410_0130;
+    localparam integer PL_VERSION = 32'h0410_0132;
     
 	// AXI4LITE signals
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;

@@ -10,6 +10,7 @@
 
 source zed_wrapper.tcl
 # set_param gui.test TreeTableDev
+# set_param xicom.use_bs_reader 1
 # debug::add_scope template.lib 1
 # set_msg_config -id {HDL 9-1061} -limit 100000
 # set_msg_config -id {HDL 9-1654} -limit 100000
@@ -51,27 +52,27 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 973.934 ; gain = 224.891 ; free physical = 117597 ; free virtual = 183418
+Starting RTL Elaboration : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 973.922 ; gain = 224.887 ; free physical = 117026 ; free virtual = 182958
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'zed_wrapper' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hdl/zed_wrapper.v:12]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hdl/zed_wrapper.v:78]
 INFO: [Synth 8-638] synthesizing module 'zed' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hdl/zed.v:769]
 INFO: [Synth 8-638] synthesizing module 'zed_EdXel_0_1' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/ip/zed_EdXel_0_1/synth/zed_EdXel_0_1.v:56]
-INFO: [Synth 8-638] synthesizing module 'EdXel_v1_1' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/f9bece7f/hdl/EdXel_v1_1.v:4]
+INFO: [Synth 8-638] synthesizing module 'EdXel_v1_1' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/9a4249be/hdl/EdXel_v1_1.v:4]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 16 - type: integer 
 	Parameter NUM_EPU bound to: 2 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'EdXel_v1_1_S00_AXI' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/f9bece7f/hdl/EdXel_v1_1_S00_AXI.v:5]
+INFO: [Synth 8-638] synthesizing module 'EdXel_v1_1_S00_AXI' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/9a4249be/hdl/EdXel_v1_1_S00_AXI.v:5]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 16 - type: integer 
 	Parameter NUM_EPU bound to: 2 - type: integer 
-	Parameter PL_VERSION bound to: 68157744 - type: integer 
+	Parameter PL_VERSION bound to: 68157746 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 15 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'DummyEPU' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/f9bece7f/EdXel_v1_1_project/EdXel_v1_1_project.srcs/sources_1/new/DummyEPU.v:24]
-INFO: [Synth 8-256] done synthesizing module 'DummyEPU' (1#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/f9bece7f/EdXel_v1_1_project/EdXel_v1_1_project.srcs/sources_1/new/DummyEPU.v:24]
-INFO: [Synth 8-256] done synthesizing module 'EdXel_v1_1_S00_AXI' (2#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/f9bece7f/hdl/EdXel_v1_1_S00_AXI.v:5]
-INFO: [Synth 8-256] done synthesizing module 'EdXel_v1_1' (3#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/f9bece7f/hdl/EdXel_v1_1.v:4]
+INFO: [Synth 8-638] synthesizing module 'DummyEPU' [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/9a4249be/EdXel_v1_1_project/EdXel_v1_1_project.srcs/sources_1/new/DummyEPU.v:24]
+INFO: [Synth 8-256] done synthesizing module 'DummyEPU' (1#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/9a4249be/EdXel_v1_1_project/EdXel_v1_1_project.srcs/sources_1/new/DummyEPU.v:24]
+INFO: [Synth 8-256] done synthesizing module 'EdXel_v1_1_S00_AXI' (2#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/9a4249be/hdl/EdXel_v1_1_S00_AXI.v:5]
+INFO: [Synth 8-256] done synthesizing module 'EdXel_v1_1' (3#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/SDB/EdXel_v1_3/9a4249be/hdl/EdXel_v1_1.v:4]
 INFO: [Synth 8-256] done synthesizing module 'zed_EdXel_0_1' (4#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/ip/zed_EdXel_0_1/synth/zed_EdXel_0_1.v:56]
 INFO: [Synth 8-638] synthesizing module 'GND' [/opt/Xilinx/Vivado/2014.3.1/scripts/rt/data/unisim_comp.v:3852]
 INFO: [Synth 8-256] done synthesizing module 'GND' (5#1) [/opt/Xilinx/Vivado/2014.3.1/scripts/rt/data/unisim_comp.v:3852]
@@ -14762,7 +14763,7 @@ WARNING: [Synth 8-350] instance 'rst_processing_system7_0_100M' of module 'zed_r
 INFO: [Synth 8-256] done synthesizing module 'zed' (128#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hdl/zed.v:769]
 INFO: [Synth 8-256] done synthesizing module 'zed_wrapper' (129#1) [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/hdl/zed_wrapper.v:12]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:03:27 ; elapsed = 00:03:28 . Memory (MB): peak = 1283.656 ; gain = 534.613 ; free physical = 117158 ; free virtual = 183060
+Finished RTL Elaboration : Time (s): cpu = 00:03:39 ; elapsed = 00:03:40 . Memory (MB): peak = 1283.648 ; gain = 534.613 ; free physical = 116696 ; free virtual = 182627
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -14873,7 +14874,7 @@ INFO: [Synth 8-3295] tying undriven pin u_ila_regs:CAPTURE_CNT_SL_I[28] to const
 INFO: [Synth 8-3295] tying undriven pin u_ila_regs:CAPTURE_CNT_SL_I[27] to constant 0 [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/hdl/verilog/ila_v5_0_ila_core.v:254]
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:28 ; elapsed = 00:03:29 . Memory (MB): peak = 1283.656 ; gain = 534.613 ; free physical = 117142 ; free virtual = 183044
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:40 ; elapsed = 00:03:42 . Memory (MB): peak = 1283.648 ; gain = 534.613 ; free physical = 116679 ; free virtual = 182611
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 377 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -14914,16 +14915,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 1566.438 ; gain = 0.875 ; free physical = 117053 ; free virtual = 182955
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1565.430 ; gain = 0.875 ; free physical = 116547 ; free virtual = 182479
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:03:49 ; elapsed = 00:03:50 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 117051 ; free virtual = 182953
+Finished Constraint Validation : Time (s): cpu = 00:04:04 ; elapsed = 00:04:05 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116546 ; free virtual = 182478
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:03:49 ; elapsed = 00:03:50 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 117051 ; free virtual = 182953
+Finished Loading Part and Timing Information : Time (s): cpu = 00:04:04 ; elapsed = 00:04:05 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116546 ; free virtual = 182478
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -14941,7 +14942,7 @@ Applied set_property DONT_TOUCH = true for zed_i/processing_system7_0_axi_periph
 Applied set_property DONT_TOUCH = true for zed_i/processing_system7_0_axi_periph/s01_couplers/auto_pc. (constraint file  /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/synth_1/dont_touch.xdc, line 35).
 Applied set_property DONT_TOUCH = true for zed_i/processing_system7_0/inst. (constraint file  /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.runs/synth_1/dont_touch.xdc, line 38).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:03:55 ; elapsed = 00:03:55 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 117042 ; free virtual = 182944
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:04:10 ; elapsed = 00:04:11 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116545 ; free virtual = 182477
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_reg_p2s'
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_reg_p2s__parameterized0'
@@ -14995,16 +14996,16 @@ WARNING: [Synth 8-3848] Net FTMD_TRACEIN_ATID_i in module/entity processing_syst
 WARNING: [Synth 8-3848] Net FTMD_TRACEIN_DATA_i in module/entity processing_system7_v5_5_processing_system7 does not have driver. [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/ip/zed_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1070]
 WARNING: [Synth 8-3848] Net FTMD_TRACEIN_VALID_i in module/entity processing_system7_v5_5_processing_system7 does not have driver. [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/bd/zed/ip/zed_processing_system7_0_0/hdl/verilog/processing_system7_v5_5_processing_system7.v:1071]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:00 ; elapsed = 00:04:01 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 117019 ; free virtual = 182931
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:04:15 ; elapsed = 00:04:16 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116534 ; free virtual = 182466
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+------------------------+------------+----------+
 |      |RTL Partition           |Replication |Instances |
 +------+------------------------+------------+----------+
-|1     |EdXel_v1_1_S00_AXI__GB0 |           1|     44716|
+|1     |EdXel_v1_1_S00_AXI__GB0 |           1|     42170|
 |2     |muxpart__9              |           1|      8704|
-|3     |EdXel_v1_1_S00_AXI__GB2 |           1|       578|
+|3     |EdXel_v1_1_S00_AXI__GB2 |           1|       579|
 |4     |zed__GC0                |           1|     28515|
 +------+------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -15033,7 +15034,7 @@ Detailed RTL Component Info :
 	                3 Bit    Wide XORs := 8     
 	                2 Bit    Wide XORs := 8     
 +---Registers : 
-	              512 Bit    Registers := 4     
+	              512 Bit    Registers := 2     
 	              256 Bit    Registers := 4     
 	              128 Bit    Registers := 1     
 	              120 Bit    Registers := 9     
@@ -15112,12 +15113,10 @@ Detailed RTL Component Info :
 Module DummyEPU__1 
 Detailed RTL Component Info : 
 +---Registers : 
-	              512 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 Module DummyEPU 
 Detailed RTL Component Info : 
 +---Registers : 
-	              512 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 Module EdXel_v1_1_S00_AXI 
 Detailed RTL Component Info : 
@@ -18544,7 +18543,7 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:04:01 ; elapsed = 00:04:02 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 117012 ; free virtual = 182924
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:04:17 ; elapsed = 00:04:18 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116531 ; free virtual = 182463
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -18599,17 +18598,17 @@ INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_axilite.gen_b2s_conv.axilite_b2s/SI_REG/ar_pipe/m_payload_i_reg' and it is trimmed from '62' to '54' bits. [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/d7ee63c6/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/axi_register_slice_v2_1/d7ee63c6/hdl/verilog/axi_register_slice_v2_1_axic_register_slice.v:121]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:04:16 ; elapsed = 00:04:17 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 117013 ; free virtual = 182925
+Finished Cross Boundary Optimization : Time (s): cpu = 00:04:31 ; elapsed = 00:04:32 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116533 ; free virtual = 182465
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:04:16 ; elapsed = 00:04:17 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 117013 ; free virtual = 182925
+Finished Parallel Reinference  : Time (s): cpu = 00:04:31 ; elapsed = 00:04:32 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116533 ; free virtual = 182465
 
 Report RTL Partitions: 
 +------+------------------------+------------+----------+
 |      |RTL Partition           |Replication |Instances |
 +------+------------------------+------------+----------+
-|1     |EdXel_v1_1_S00_AXI__GB0 |           1|     99920|
+|1     |EdXel_v1_1_S00_AXI__GB0 |           1|     77895|
 |2     |muxpart__9              |           1|      8704|
-|3     |EdXel_v1_1_S00_AXI__GB2 |           1|       592|
+|3     |EdXel_v1_1_S00_AXI__GB2 |           1|       593|
 |4     |zed__GC0                |           1|     28165|
 +------+------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -18661,101 +18660,24 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (zed_i/EdX
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (zed_i/EdXel_0/EdXel_v1_1_S00_AXI_insti_2/\axi_rdata_reg[31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (zed_i/EdXel_0/EdXel_v1_1_S00_AXI_insti_2/\axi_rresp_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (zed_i/EdXel_0/EdXel_v1_1_S00_AXI_insti_2/\axi_rresp_reg[1] )
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[511] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[510] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[509] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[508] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[507] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[506] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[505] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[504] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[503] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[502] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[501] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[500] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[499] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[498] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[497] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[496] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[495] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[494] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[493] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[492] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[491] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[490] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[489] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[488] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[487] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[486] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[485] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[484] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[483] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[482] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[481] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[480] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[479] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[478] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[477] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[476] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[475] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[474] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[473] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[472] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[471] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[470] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[469] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[468] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[467] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[466] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[465] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[464] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[463] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[462] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[461] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[460] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[459] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[458] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[457] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[456] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[455] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[454] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[453] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[452] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[451] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[450] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[449] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[448] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[447] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[446] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[445] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[444] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[443] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[442] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[441] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[440] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[439] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[438] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[437] ) is unused and will be removed from module DummyEPU__1.
-WARNING: [Synth 8-3332] Sequential element (\iresult_reg[436] ) is unused and will be removed from module DummyEPU__1.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:04:40 ; elapsed = 00:04:41 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 116937 ; free virtual = 182830
+Finished Area Optimization : Time (s): cpu = 00:04:45 ; elapsed = 00:04:46 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116499 ; free virtual = 182431
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:04:40 ; elapsed = 00:04:41 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 116937 ; free virtual = 182830
+Finished Area Optimization : Time (s): cpu = 00:04:45 ; elapsed = 00:04:46 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116499 ; free virtual = 182431
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:04:40 ; elapsed = 00:04:41 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 116937 ; free virtual = 182830
+Finished Parallel Area Optimization  : Time (s): cpu = 00:04:45 ; elapsed = 00:04:46 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116499 ; free virtual = 182431
 
 Report RTL Partitions: 
 +------+------------------------+------------+----------+
 |      |RTL Partition           |Replication |Instances |
 +------+------------------------+------------+----------+
-|1     |EdXel_v1_1_S00_AXI__GB0 |           1|     27835|
-|2     |muxpart__9              |           1|        63|
-|3     |EdXel_v1_1_S00_AXI__GB2 |           1|       167|
+|1     |EdXel_v1_1_S00_AXI__GB0 |           1|       339|
+|2     |muxpart__9              |           1|         9|
+|3     |EdXel_v1_1_S00_AXI__GB2 |           1|       168|
 |4     |zed__GC0                |           1|     23600|
 +------+------------------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:40 ; elapsed = 00:04:41 . Memory (MB): peak = 1566.438 ; gain = 817.395 ; free physical = 116937 ; free virtual = 182830
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:04:45 ; elapsed = 00:04:46 . Memory (MB): peak = 1565.430 ; gain = 816.395 ; free physical = 116499 ; free virtual = 182431
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -18771,25 +18693,102 @@ WARNING: [Synth 8-3321] Empty from list for constraint at line 78 of /home/immes
 WARNING: [Synth 8-3321] Empty from list for constraint at line 79 of /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc. [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc:79]
 WARNING: [Synth 8-3321] Empty from list for constraint at line 100 of /home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc. [/home/immesys/w/FPGA/project/hardware/Avnet-MicroZed-z7010-2014.2/Avnet-MicroZed-z7010-2014.2.srcs/sources_1/ipshared/xilinx.com/ila_v5_0/ce9baedf/constraints/ila.xdc:100]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:56 ; elapsed = 00:04:57 . Memory (MB): peak = 1732.422 ; gain = 983.379 ; free physical = 116779 ; free virtual = 182672
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:05:05 ; elapsed = 00:05:06 . Memory (MB): peak = 1646.414 ; gain = 897.379 ; free physical = 116345 ; free virtual = 182277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:04 ; elapsed = 00:05:06 . Memory (MB): peak = 1769.555 ; gain = 1020.512 ; free physical = 116747 ; free virtual = 182639
+Finished Timing Optimization : Time (s): cpu = 00:05:07 ; elapsed = 00:05:08 . Memory (MB): peak = 1666.547 ; gain = 917.512 ; free physical = 116325 ; free virtual = 182257
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
 +------+------------------+------------+----------+
 |      |RTL Partition     |Replication |Instances |
 +------+------------------+------------+----------+
-|1     |muxpart__9        |           1|        63|
+|1     |muxpart__9        |           1|         9|
 |2     |zed__GC0          |           1|     23600|
-|3     |zed_EdXel_0_1_GT0 |           1|     28002|
+|3     |zed_EdXel_0_1_GT0 |           1|       507|
 +------+------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[23] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[22] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[21] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[14] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[13] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[12] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[10] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[9] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[8] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[7] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[6] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[5] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[4] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[3] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[2] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[1] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[0] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[23] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[22] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[21] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[14] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[13] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[12] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[10] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[9] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[8] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[7] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[6] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[5] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[4] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[3] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[2] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[1] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/rd_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/gpr1.dout_i_reg[0] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/u_xsdb_fifo_interface/xsdb2read_cmdfifo/shift_reg_reg[5] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/u_xsdb_fifo_interface/xsdb2read_cmdfifo/shift_reg_reg[4] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/u_xsdb_fifo_interface/xsdb2read_cmdfifo/tx_fifo_dataout_reg[5] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/u_xsdb_fifo_interface/xsdb2read_cmdfifo/tx_fifo_dataout_reg[4] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/u_xsdb_fifo_interface/xsdb2write_cmdfifo/shift_reg_reg[5] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/u_xsdb_fifo_interface/xsdb2write_cmdfifo/shift_reg_reg[4] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/u_xsdb_fifo_interface/xsdb2write_cmdfifo/tx_fifo_dataout_reg[5] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/u_xsdb_fifo_interface/xsdb2write_cmdfifo/tx_fifo_dataout_reg[4] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[23] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[22] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[21] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[14] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[13] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[12] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[10] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[9] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[8] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[7] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[6] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[5] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[4] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[3] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[2] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[1] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_i/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/goreg_dm.dout_i_reg[0] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[23] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[22] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[21] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[14] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[13] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[12] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[10] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[9] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[8] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[7] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[6] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[5] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[4] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[3] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[2] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[1] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Synth 8-3332] Sequential element (\jtag_axi_engine_u/wr_cmd_fifo_data_out_reg[0] ) is unused and will be removed from module jtag_axi_v1_0_jtag_axi.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:16 ; elapsed = 00:05:18 . Memory (MB): peak = 1777.562 ; gain = 1028.520 ; free physical = 116739 ; free virtual = 182632
+Finished Technology Mapping : Time (s): cpu = 00:05:15 ; elapsed = 00:05:16 . Memory (MB): peak = 1688.242 ; gain = 939.207 ; free physical = 116310 ; free virtual = 182242
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -18842,8 +18841,8 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \inst/gen_axili
 INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/cnt_read [4]. Fanout reduced from 39 to 8 by creating 5 replicas.
 INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/ar_cmd_fsm_0/state [1]. Fanout reduced from 31 to 16 by creating 1 replicas.
 INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.ar_channel_0/ar_cmd_fsm_0/state [0]. Fanout reduced from 32 to 17 by creating 1 replicas.
-INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/state [1]. Fanout reduced from 26 to 14 by creating 1 replicas.
-INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/state [0]. Fanout reduced from 27 to 14 by creating 1 replicas.
+INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/state [1]. Fanout reduced from 29 to 15 by creating 1 replicas.
+INFO: [Synth 8-4618] Found max_fanout attribute set to 20 on net \inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.aw_channel_0/aw_cmd_fsm_0/state [0]. Fanout reduced from 30 to 16 by creating 1 replicas.
 INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \n_0_inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/cnt_read_reg[1]_rep__4 . Fanout reduced from 12 to 7 by creating 1 replicas.
 INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \n_0_inst/gen_axilite.gen_b2s_conv.axilite_b2s/WR.b_channel_0/bid_fifo_0/cnt_read_reg[0]_rep . Fanout reduced from 12 to 7 by creating 1 replicas.
 INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \n_0_inst/gen_axilite.gen_b2s_conv.axilite_b2s/RD.r_channel_0/rd_data_fifo_0/cnt_read_reg[0]_rep__2 . Fanout reduced from 27 to 10 by creating 2 replicas.
@@ -18855,7 +18854,7 @@ INFO: [Synth 8-4618] Found max_fanout attribute set to 10 on net \n_0_inst/gen_a
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:18 ; elapsed = 00:05:20 . Memory (MB): peak = 1777.562 ; gain = 1028.520 ; free physical = 116739 ; free virtual = 182632
+Finished IO Insertion : Time (s): cpu = 00:05:17 ; elapsed = 00:05:18 . Memory (MB): peak = 1688.242 ; gain = 939.207 ; free physical = 116303 ; free virtual = 182234
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -18868,7 +18867,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:18 ; elapsed = 00:05:20 . Memory (MB): peak = 1777.562 ; gain = 1028.520 ; free physical = 116739 ; free virtual = 182632
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:17 ; elapsed = 00:05:18 . Memory (MB): peak = 1688.242 ; gain = 939.207 ; free physical = 116303 ; free virtual = 182234
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -18880,7 +18879,7 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:20 ; elapsed = 00:05:22 . Memory (MB): peak = 1777.562 ; gain = 1028.520 ; free physical = 116737 ; free virtual = 182630
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:18 ; elapsed = 00:05:20 . Memory (MB): peak = 1688.242 ; gain = 939.207 ; free physical = 116303 ; free virtual = 182234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RAM, DSP and Shift Register Reporting
@@ -18929,15 +18928,15 @@ Report Cell Usage:
 +------+-----------+------+
 |1     |BIBUF      |   130|
 |2     |BUFG       |     1|
-|3     |CARRY4     |   159|
+|3     |CARRY4     |   115|
 |4     |CFGLUT5    |   265|
 |5     |GND        |     1|
 |6     |LUT1       |   210|
-|7     |LUT2       |   355|
-|8     |LUT3       |   990|
-|9     |LUT4       |  1377|
-|10    |LUT5       |  1126|
-|11    |LUT6       |  2209|
+|7     |LUT2       |   340|
+|8     |LUT3       |   864|
+|9     |LUT4       |  1196|
+|10    |LUT5       |   752|
+|11    |LUT6       |  1423|
 |12    |MUXCY_L    |    44|
 |13    |MUXF7      |   132|
 |14    |MUXF8      |    34|
@@ -18956,7 +18955,7 @@ Report Cell Usage:
 |27    |FDCE       |   502|
 |28    |FDPE       |    48|
 |29    |FDR        |     8|
-|30    |FDRE       |  8188|
+|30    |FDRE       |  6695|
 |31    |FDSE       |   154|
 +------+-----------+------+
 
@@ -18964,16 +18963,16 @@ Report Instance Areas:
 +------+--------------------------------------------------------------------------+-------------------------------------------------------------------+------+
 |      |Instance                                                                  |Module                                                             |Cells |
 +------+--------------------------------------------------------------------------+-------------------------------------------------------------------+------+
-|1     |top                                                                       |                                                                   | 16442|
-|2     |  zed_i                                                                   |zed                                                                | 16442|
-|3     |    EdXel_0                                                               |zed_EdXel_0_1                                                      |  3263|
-|4     |      inst                                                                |EdXel_v1_1                                                         |  3263|
-|5     |        EdXel_v1_1_S00_AXI_inst                                           |EdXel_v1_1_S00_AXI                                                 |  3263|
-|6     |          \genblk1[0].U                                                   |DummyEPU                                                           |   371|
-|7     |          \genblk1[1].U                                                   |DummyEPU_356                                                       |   375|
-|8     |    ila_0                                                                 |zed_ila_0_0                                                        |  4864|
-|9     |      inst                                                                |ila_v5_0_ila                                                       |  4864|
-|10    |        ila_core_inst                                                     |ila_v5_0_ila_core                                                  |  4864|
+|1     |top                                                                       |                                                                   | 13423|
+|2     |  zed_i                                                                   |zed                                                                | 13423|
+|3     |    EdXel_0                                                               |zed_EdXel_0_1                                                      |   236|
+|4     |      inst                                                                |EdXel_v1_1                                                         |   236|
+|5     |        EdXel_v1_1_S00_AXI_inst                                           |EdXel_v1_1_S00_AXI                                                 |   236|
+|6     |          \genblk1[0].U                                                   |DummyEPU                                                           |     9|
+|7     |          \genblk1[1].U                                                   |DummyEPU_356                                                       |    14|
+|8     |    ila_0                                                                 |zed_ila_0_0                                                        |  4865|
+|9     |      inst                                                                |ila_v5_0_ila                                                       |  4865|
+|10    |        ila_core_inst                                                     |ila_v5_0_ila_core                                                  |  4865|
 |11    |          ila_trace_memory_inst                                           |ila_v5_0_ila_trace_memory                                          |     4|
 |12    |            \SUBCORE_RAM_BLK_MEM_1.trace_block_memory                     |blk_mem_gen_v8_2                                                   |     4|
 |13    |              inst_blk_mem_gen                                            |blk_mem_gen_v8_2_synth                                             |     4|
@@ -19016,8 +19015,8 @@ Report Instance Areas:
 |50    |                    DUT                                                   |ltlib_v1_0_all_typeA__parameterized3_341                           |    12|
 |51    |                      \I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE       |ltlib_v1_0_all_typeA_slice__parameterized1_342                     |     5|
 |52    |                      \I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE       |ltlib_v1_0_all_typeA_slice__parameterized2_343                     |     5|
-|53    |          u_ila_regs                                                      |ila_v5_0_ila_register                                              |  3623|
-|54    |            U_XSDB_SLAVE                                                  |xsdbs_v1_0_xsdbs                                                   |   127|
+|53    |          u_ila_regs                                                      |ila_v5_0_ila_register                                              |  3637|
+|54    |            U_XSDB_SLAVE                                                  |xsdbs_v1_0_xsdbs                                                   |   128|
 |55    |            \MU_SRL[0].mu_srl_reg                                         |xsdbs_v1_0_reg_p2s__parameterized0_225                             |    74|
 |56    |            \MU_SRL[10].mu_srl_reg                                        |xsdbs_v1_0_reg_p2s__parameterized10                                |    74|
 |57    |            \MU_SRL[11].mu_srl_reg                                        |xsdbs_v1_0_reg_p2s__parameterized11                                |   105|
@@ -19090,8 +19089,8 @@ Report Instance Areas:
 |124   |              \I_EN_STAT_EQ1.U_STAT                                       |xsdbs_v1_0_reg_stat_303                                            |    48|
 |125   |            reg_15                                                        |xsdbs_v1_0_reg__parameterized20_242                                |    50|
 |126   |              \I_EN_CTL_EQ1.U_CTL                                         |xsdbs_v1_0_reg_ctl_302                                             |    50|
-|127   |            reg_16                                                        |xsdbs_v1_0_reg__parameterized21_243                                |    37|
-|128   |              \I_EN_CTL_EQ1.U_CTL                                         |xsdbs_v1_0_reg_ctl_301                                             |    37|
+|127   |            reg_16                                                        |xsdbs_v1_0_reg__parameterized21_243                                |    47|
+|128   |              \I_EN_CTL_EQ1.U_CTL                                         |xsdbs_v1_0_reg_ctl_301                                             |    47|
 |129   |            reg_17                                                        |xsdbs_v1_0_reg__parameterized22_244                                |    17|
 |130   |              \I_EN_CTL_EQ1.U_CTL                                         |xsdbs_v1_0_reg_ctl_300                                             |    17|
 |131   |            reg_18                                                        |xsdbs_v1_0_reg__parameterized23_245                                |    29|
@@ -19248,10 +19247,10 @@ Report Instance Areas:
 |282   |                  \I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE           |ltlib_v1_0_all_typeA_slice__parameterized0_141                     |     5|
 |283   |                  \I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE           |ltlib_v1_0_all_typeA_slice__parameterized0_142                     |     5|
 |284   |                  \I_WHOLE_SLICE.G_SLICE_IDX[2].U_ALL_SRL_SLICE           |ltlib_v1_0_all_typeA_slice_143                                     |     8|
-|285   |          xsdb_memory_read_inst                                           |ltlib_v1_0_generic_memrd                                           |   235|
-|286   |    ila_1                                                                 |zed_ila_1_0                                                        |  3050|
-|287   |      inst                                                                |ila_v5_0_ila__parameterized0                                       |  3050|
-|288   |        ila_core_inst                                                     |ila_v5_0_ila_core__parameterized0                                  |  3050|
+|285   |          xsdb_memory_read_inst                                           |ltlib_v1_0_generic_memrd                                           |   222|
+|286   |    ila_1                                                                 |zed_ila_1_0                                                        |  3051|
+|287   |      inst                                                                |ila_v5_0_ila__parameterized0                                       |  3051|
+|288   |        ila_core_inst                                                     |ila_v5_0_ila_core__parameterized0                                  |  3051|
 |289   |          ila_trace_memory_inst                                           |ila_v5_0_ila_trace_memory__parameterized0                          |     3|
 |290   |            \SUBCORE_RAM_BLK_MEM_1.trace_block_memory                     |blk_mem_gen_v8_2__parameterized0                                   |     3|
 |291   |              inst_blk_mem_gen                                            |blk_mem_gen_v8_2_synth__parameterized0                             |     3|
@@ -19292,8 +19291,8 @@ Report Instance Areas:
 |326   |                    DUT                                                   |ltlib_v1_0_all_typeA__parameterized3                               |    12|
 |327   |                      \I_WHOLE_SLICE.G_SLICE_IDX[0].U_ALL_SRL_SLICE       |ltlib_v1_0_all_typeA_slice__parameterized1                         |     5|
 |328   |                      \I_WHOLE_SLICE.G_SLICE_IDX[1].U_ALL_SRL_SLICE       |ltlib_v1_0_all_typeA_slice__parameterized2                         |     5|
-|329   |          u_ila_regs                                                      |ila_v5_0_ila_register__parameterized0                              |  2101|
-|330   |            U_XSDB_SLAVE                                                  |xsdbs_v1_0_xsdbs__1                                                |   127|
+|329   |          u_ila_regs                                                      |ila_v5_0_ila_register__parameterized0                              |  2102|
+|330   |            U_XSDB_SLAVE                                                  |xsdbs_v1_0_xsdbs__1                                                |   128|
 |331   |            \MU_SRL[0].mu_srl_reg                                         |xsdbs_v1_0_reg_p2s__parameterized0                                 |    75|
 |332   |            \MU_SRL[1].mu_srl_reg                                         |xsdbs_v1_0_reg_p2s__parameterized1                                 |    74|
 |333   |            \MU_SRL[2].mu_srl_reg                                         |xsdbs_v1_0_reg_p2s__parameterized2                                 |    74|
@@ -19530,36 +19529,36 @@ Report Instance Areas:
 |564   |                  rstblk                                                  |reset_blk_ramfifo__parameterized0                                  |    13|
 |565   |    processing_system7_0                                                  |zed_processing_system7_0_0                                         |   220|
 |566   |      inst                                                                |processing_system7_v5_5_processing_system7                         |   220|
-|567   |    processing_system7_0_axi_periph                                       |zed_processing_system7_0_axi_periph_0                              |  2842|
-|568   |      xbar                                                                |zed_xbar_0                                                         |   384|
-|569   |        inst                                                              |axi_crossbar_v2_1_axi_crossbar                                     |   384|
-|570   |          \gen_sasd.crossbar_sasd_0                                       |axi_crossbar_v2_1_crossbar_sasd                                    |   384|
-|571   |            addr_arbiter_inst                                             |axi_crossbar_v2_1_addr_arbiter_sasd                                |   213|
-|572   |            \gen_decerr.decerr_slave_inst                                 |axi_crossbar_v2_1_decerr_slave                                     |     8|
-|573   |            reg_slice_r                                                   |axi_register_slice_v2_1_axic_register_slice__parameterized11       |   146|
+|567   |    processing_system7_0_axi_periph                                       |zed_processing_system7_0_axi_periph_0                              |  2848|
+|568   |      xbar                                                                |zed_xbar_0                                                         |   390|
+|569   |        inst                                                              |axi_crossbar_v2_1_axi_crossbar                                     |   390|
+|570   |          \gen_sasd.crossbar_sasd_0                                       |axi_crossbar_v2_1_crossbar_sasd                                    |   390|
+|571   |            addr_arbiter_inst                                             |axi_crossbar_v2_1_addr_arbiter_sasd                                |   221|
+|572   |            \gen_decerr.decerr_slave_inst                                 |axi_crossbar_v2_1_decerr_slave                                     |     6|
+|573   |            reg_slice_r                                                   |axi_register_slice_v2_1_axic_register_slice__parameterized11       |   147|
 |574   |            splitter_ar                                                   |axi_crossbar_v2_1_splitter__parameterized0                         |     4|
-|575   |            splitter_aw                                                   |axi_crossbar_v2_1_splitter                                         |     7|
+|575   |            splitter_aw                                                   |axi_crossbar_v2_1_splitter                                         |     6|
 |576   |      s00_couplers                                                        |s00_couplers_imp_SHYBV9                                            |  1320|
 |577   |        auto_pc                                                           |zed_auto_pc_0                                                      |  1320|
 |578   |          inst                                                            |axi_protocol_converter_v2_1_axi_protocol_converter                 |  1320|
 |579   |            \gen_axilite.gen_b2s_conv.axilite_b2s                         |axi_protocol_converter_v2_1_b2s                                    |  1320|
-|580   |              \RD.ar_channel_0                                            |axi_protocol_converter_v2_1_b2s_ar_channel                         |   210|
+|580   |              \RD.ar_channel_0                                            |axi_protocol_converter_v2_1_b2s_ar_channel                         |   209|
 |581   |                ar_cmd_fsm_0                                              |axi_protocol_converter_v2_1_b2s_rd_cmd_fsm_12                      |    29|
-|582   |                cmd_translator_0                                          |axi_protocol_converter_v2_1_b2s_cmd_translator_13                  |   169|
-|583   |                  incr_cmd_0                                              |axi_protocol_converter_v2_1_b2s_incr_cmd_14                        |    75|
+|582   |                cmd_translator_0                                          |axi_protocol_converter_v2_1_b2s_cmd_translator_13                  |   168|
+|583   |                  incr_cmd_0                                              |axi_protocol_converter_v2_1_b2s_incr_cmd_14                        |    74|
 |584   |                  wrap_cmd_0                                              |axi_protocol_converter_v2_1_b2s_wrap_cmd_15                        |    89|
 |585   |              \RD.r_channel_0                                             |axi_protocol_converter_v2_1_b2s_r_channel                          |   180|
 |586   |                rd_data_fifo_0                                            |axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized1_11     |   115|
 |587   |                transaction_fifo_0                                        |axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized2        |    51|
-|588   |              SI_REG                                                      |axi_register_slice_v2_1_axi_register_slice                         |   637|
-|589   |                ar_pipe                                                   |axi_register_slice_v2_1_axic_register_slice                        |   220|
+|588   |              SI_REG                                                      |axi_register_slice_v2_1_axi_register_slice                         |   638|
+|589   |                ar_pipe                                                   |axi_register_slice_v2_1_axic_register_slice                        |   221|
 |590   |                aw_pipe                                                   |axi_register_slice_v2_1_axic_register_slice_10                     |   219|
 |591   |                b_pipe                                                    |axi_register_slice_v2_1_axic_register_slice__parameterized1        |    50|
 |592   |                r_pipe                                                    |axi_register_slice_v2_1_axic_register_slice__parameterized2        |   148|
 |593   |              \WR.aw_channel_0                                            |axi_protocol_converter_v2_1_b2s_aw_channel                         |   214|
-|594   |                aw_cmd_fsm_0                                              |axi_protocol_converter_v2_1_b2s_wr_cmd_fsm_6                       |    32|
-|595   |                cmd_translator_0                                          |axi_protocol_converter_v2_1_b2s_cmd_translator_7                   |   166|
-|596   |                  incr_cmd_0                                              |axi_protocol_converter_v2_1_b2s_incr_cmd_8                         |    73|
+|594   |                aw_cmd_fsm_0                                              |axi_protocol_converter_v2_1_b2s_wr_cmd_fsm_6                       |    35|
+|595   |                cmd_translator_0                                          |axi_protocol_converter_v2_1_b2s_cmd_translator_7                   |   163|
+|596   |                  incr_cmd_0                                              |axi_protocol_converter_v2_1_b2s_incr_cmd_8                         |    70|
 |597   |                  wrap_cmd_0                                              |axi_protocol_converter_v2_1_b2s_wrap_cmd_9                         |    89|
 |598   |              \WR.b_channel_0                                             |axi_protocol_converter_v2_1_b2s_b_channel                          |    78|
 |599   |                bid_fifo_0                                                |axi_protocol_converter_v2_1_b2s_simple_fifo                        |    44|
@@ -19568,23 +19567,23 @@ Report Instance Areas:
 |602   |        auto_pc                                                           |zed_auto_pc_1                                                      |  1137|
 |603   |          inst                                                            |axi_protocol_converter_v2_1_axi_protocol_converter__parameterized0 |  1137|
 |604   |            \gen_axilite.gen_b2s_conv.axilite_b2s                         |axi_protocol_converter_v2_1_b2s__parameterized0                    |  1137|
-|605   |              \RD.ar_channel_0                                            |axi_protocol_converter_v2_1_b2s_ar_channel__parameterized0         |   199|
+|605   |              \RD.ar_channel_0                                            |axi_protocol_converter_v2_1_b2s_ar_channel__parameterized0         |   198|
 |606   |                ar_cmd_fsm_0                                              |axi_protocol_converter_v2_1_b2s_rd_cmd_fsm                         |    30|
-|607   |                cmd_translator_0                                          |axi_protocol_converter_v2_1_b2s_cmd_translator_2                   |   168|
-|608   |                  incr_cmd_0                                              |axi_protocol_converter_v2_1_b2s_incr_cmd_3                         |    73|
+|607   |                cmd_translator_0                                          |axi_protocol_converter_v2_1_b2s_cmd_translator_2                   |   167|
+|608   |                  incr_cmd_0                                              |axi_protocol_converter_v2_1_b2s_incr_cmd_3                         |    72|
 |609   |                  wrap_cmd_0                                              |axi_protocol_converter_v2_1_b2s_wrap_cmd_4                         |    90|
 |610   |              \RD.r_channel_0                                             |axi_protocol_converter_v2_1_b2s_r_channel__parameterized0          |   134|
 |611   |                rd_data_fifo_0                                            |axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized1        |   115|
 |612   |                transaction_fifo_0                                        |axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized4        |    16|
-|613   |              SI_REG                                                      |axi_register_slice_v2_1_axi_register_slice__parameterized1         |   533|
-|614   |                ar_pipe                                                   |axi_register_slice_v2_1_axic_register_slice__parameterized7        |   200|
+|613   |              SI_REG                                                      |axi_register_slice_v2_1_axi_register_slice__parameterized1         |   534|
+|614   |                ar_pipe                                                   |axi_register_slice_v2_1_axic_register_slice__parameterized7        |   201|
 |615   |                aw_pipe                                                   |axi_register_slice_v2_1_axic_register_slice__parameterized7_1      |   199|
 |616   |                b_pipe                                                    |axi_register_slice_v2_1_axic_register_slice__parameterized9        |    19|
 |617   |                r_pipe                                                    |axi_register_slice_v2_1_axic_register_slice__parameterized10       |   115|
 |618   |              \WR.aw_channel_0                                            |axi_protocol_converter_v2_1_b2s_aw_channel__parameterized0         |   207|
-|619   |                aw_cmd_fsm_0                                              |axi_protocol_converter_v2_1_b2s_wr_cmd_fsm                         |    33|
-|620   |                cmd_translator_0                                          |axi_protocol_converter_v2_1_b2s_cmd_translator                     |   165|
-|621   |                  incr_cmd_0                                              |axi_protocol_converter_v2_1_b2s_incr_cmd                           |    72|
+|619   |                aw_cmd_fsm_0                                              |axi_protocol_converter_v2_1_b2s_wr_cmd_fsm                         |    36|
+|620   |                cmd_translator_0                                          |axi_protocol_converter_v2_1_b2s_cmd_translator                     |   162|
+|621   |                  incr_cmd_0                                              |axi_protocol_converter_v2_1_b2s_incr_cmd                           |    69|
 |622   |                  wrap_cmd_0                                              |axi_protocol_converter_v2_1_b2s_wrap_cmd                           |    89|
 |623   |              \WR.b_channel_0                                             |axi_protocol_converter_v2_1_b2s_b_channel__parameterized0          |    63|
 |624   |                bid_fifo_0                                                |axi_protocol_converter_v2_1_b2s_simple_fifo__parameterized3        |    29|
@@ -19598,13 +19597,13 @@ Report Instance Areas:
 |632   |          SEQ_COUNTER                                                     |upcnt_n                                                            |    14|
 +------+--------------------------------------------------------------------------+-------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:21 ; elapsed = 00:05:23 . Memory (MB): peak = 1777.562 ; gain = 1028.520 ; free physical = 116735 ; free virtual = 182628
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:19 ; elapsed = 00:05:20 . Memory (MB): peak = 1688.242 ; gain = 939.207 ; free physical = 116303 ; free virtual = 182234
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 662 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:04:57 ; elapsed = 00:05:00 . Memory (MB): peak = 1777.562 ; gain = 569.727 ; free physical = 116735 ; free virtual = 182628
-Synthesis Optimization Complete : Time (s): cpu = 00:05:21 ; elapsed = 00:05:23 . Memory (MB): peak = 1777.562 ; gain = 1028.520 ; free physical = 116735 ; free virtual = 182628
+Synthesis finished with 0 errors, 0 critical warnings and 150 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:04:53 ; elapsed = 00:04:55 . Memory (MB): peak = 1688.242 ; gain = 481.414 ; free physical = 116303 ; free virtual = 182234
+Synthesis Optimization Complete : Time (s): cpu = 00:05:19 ; elapsed = 00:05:20 . Memory (MB): peak = 1688.242 ; gain = 939.207 ; free physical = 116303 ; free virtual = 182234
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 601 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 557 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
@@ -19646,10 +19645,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-1039 Infos, 282 Warnings, 0 Critical Warnings and 0 Errors encountered.
+1115 Infos, 206 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:05:25 ; elapsed = 00:05:27 . Memory (MB): peak = 1777.562 ; gain = 852.508 ; free physical = 116678 ; free virtual = 182575
+synth_design: Time (s): cpu = 00:05:22 ; elapsed = 00:05:23 . Memory (MB): peak = 1688.367 ; gain = 763.320 ; free physical = 116302 ; free virtual = 182234
 # write_checkpoint zed_wrapper.dcp
 # catch { report_utilization -file zed_wrapper_utilization_synth.rpt -pb zed_wrapper_utilization_synth.pb }
-report_utilization: Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.40 . Memory (MB): peak = 1777.562 ; gain = 0.000 ; free physical = 116675 ; free virtual = 182572
-INFO: [Common 17-206] Exiting Vivado at Sat Nov 15 12:42:37 2014...
+report_utilization: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.34 . Memory (MB): peak = 1688.367 ; gain = 0.000 ; free physical = 116294 ; free virtual = 182226
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 15 13:07:32 2014...
