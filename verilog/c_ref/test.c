@@ -6,22 +6,49 @@
 #include "src/ed25519.h"
 
 int main() {
-    unsigned char public_key[32] = {0x82, 0x66, 0xed, 0x57, 0x26, 0x0c, 0x99, 
-        0xfb, 0xb3, 0x91, 0x73, 0x79, 0xbc, 0xe1, 0x53, 0xb2, 0xab, 0x65, 0xfa, 
-        0x5b, 0xe2, 0x7f, 0x41, 0xf4, 0x3d, 0x65, 0xe1, 0xa1, 0x1e, 0xaf, 0x04, 
-        0x29};
-    unsigned char signature[64] = {0xcd, 0xd9, 0x0b, 0x65, 0xc7, 0x96, 0x6f, 
-        0x1c, 0xdb, 0x98, 0x6a, 0x3b, 0xd9, 0x12, 0xe4, 0xab, 0xff, 0xda, 0xcb, 
-        0xaa, 0x20, 0x2c, 0x4e, 0x3a, 0x3e, 0xd0, 0x1a, 0xb4, 0x7c, 0x99, 0xd3, 
-        0xc2, 0xae, 0xc0, 0x91, 0x7d, 0xe3, 0xfe, 0x3b, 0x54, 0xf5, 0x8c, 0x95, 
-        0x57, 0x7b, 0xaa, 0xf7, 0x4d, 0x40, 0xa2, 0x34, 0x84, 0xf9, 0x95, 0xfa, 
-        0xae, 0xdc, 0xd1, 0xf4, 0x0f, 0xbc, 0x82, 0xf3, 0x0d};
-    const unsigned char message[] = "Hello, world!";
-    const int message_len = strlen((char*) message);
+    unsigned char public_key[32];
+    unsigned char signature[64];
+    unsigned char message[64];
+    const int message_len = 64; // use private key as message
+    unsigned char str[256];
 
-    int success = ed25519_verify(signature, message, message_len, public_key);
+    int i, j;
 
-    printf("success = %d\n", success);
+    int count_total = 0;
+    int count_success = 0;
+    while (1) {
+        char *pos;
+
+        if (scanf("%s", str) == EOF)
+            break;
+
+        pos = str + 3; // get rid of heading of each line
+        for (j = 0; j < 32; j++) {
+            sscanf(pos, "%2hhx", &public_key[j]);
+            pos += 2 * sizeof(char);
+        }
+    
+        scanf("%s", str);
+        pos = str + 3;
+        for (j = 0; j < 64; j++) {
+            sscanf(pos, "%2hhx", &message[j]);
+            pos += 2 * sizeof(char);
+        }
+        
+        scanf("%s", str);
+        pos = str + 4;
+        for (j = 0; j < 64; j++) {
+            sscanf(pos, "%2hhx", &signature[j]);
+            pos += 2 * sizeof(char);
+        }
+        
+        int success = ed25519_verify(signature, message, message_len, public_key);
+        
+        count_total++;
+        if (success) count_success++;
+        printf("success = %d (%d/%d)\n", success, count_success, count_total);
+    }
 
     return 0;
+
 }
