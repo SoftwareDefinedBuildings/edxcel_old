@@ -51,7 +51,6 @@ typedef struct {
   fe T2d;
 } ge_cached;
 
-void ge_p3_tobytes(unsigned char *s, const ge_p3 *h);
 void ge_tobytes(unsigned char *s, const ge_p2 *h);
 int ge_frombytes_negate_vartime(ge_p3 *h, const unsigned char *s);
 

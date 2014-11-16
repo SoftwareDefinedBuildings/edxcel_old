@@ -26,13 +26,11 @@ void fe_copy(fe h, const fe f);
 int fe_isnegative(const fe f);
 int fe_isnonzero(const fe f);
 void fe_cmov(fe f, const fe g, unsigned int b);
-void fe_cswap(fe f, fe g, unsigned int b);
 
 void fe_neg(fe h, const fe f);
 void fe_add(fe h, const fe f, const fe g);
 void fe_invert(fe out, const fe z);
 void fe_mul(fe h, const fe f, const fe g);
-void fe_mul121666(fe h, fe f);
 void fe_pow22523(fe out, const fe z);
 void fe_sub(fe h, const fe f, const fe g);
 
