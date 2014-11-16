@@ -9,4 +9,4 @@ then
 exit $RETVAL
 fi
 }
-ExecStep $xv_path/bin/xsim fe_tobytes_tb_behav -key {Behavioral:fe_tobytes_tbset:Functional:fe_tobytes_tb} -tclbatch fe_tobytes_tb.tcl -log simulate.log
+ExecStep $xv_path/bin/xsim femulx_tb_behav -key {Behavioral:fe_tobytes_tbset:Functional:femulx_tb} -tclbatch femulx_tb.tcl -log simulate.log

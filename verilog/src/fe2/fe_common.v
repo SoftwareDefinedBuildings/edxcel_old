@@ -227,6 +227,7 @@ begin : fe_tobytes_blk
 end
 endfunction
 
+
 //Returns f if b = 0 else g
 /*
 function automatic [319:0] fe_cmov

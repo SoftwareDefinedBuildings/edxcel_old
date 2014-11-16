@@ -2,11 +2,11 @@
 # Webtalk v2014.3.1 (64-bit)
 # SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
 # IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
-# Start of session at: Sat Nov 15 17:56:13 2014
-# Process ID: 11480
+# Start of session at: Sun Nov 16 14:59:49 2014
+# Process ID: 2058
 # Log file: /home/immesys/w/FPGA/edxcel/partproject/partproject.sim/fe_tobytes_tbset/behav/webtalk.log
 # Journal file: /home/immesys/w/FPGA/edxcel/partproject/partproject.sim/fe_tobytes_tbset/behav/webtalk.jou
 #-----------------------------------------------------------
-source /home/immesys/w/FPGA/edxcel/partproject/partproject.sim/fe_tobytes_tbset/behav/xsim.dir/fe_tobytes_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] '/home/immesys/w/FPGA/edxcel/partproject/partproject.sim/fe_tobytes_tbset/behav/xsim.dir/fe_tobytes_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sat Nov 15 17:56:15 2014. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2014.3.1/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Sat Nov 15 17:56:15 2014...
+source /home/immesys/w/FPGA/edxcel/partproject/partproject.sim/fe_tobytes_tbset/behav/xsim.dir/femulx_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] '/home/immesys/w/FPGA/edxcel/partproject/partproject.sim/fe_tobytes_tbset/behav/xsim.dir/femulx_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Sun Nov 16 14:59:51 2014. For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/Vivado/2014.3.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Sun Nov 16 14:59:51 2014...

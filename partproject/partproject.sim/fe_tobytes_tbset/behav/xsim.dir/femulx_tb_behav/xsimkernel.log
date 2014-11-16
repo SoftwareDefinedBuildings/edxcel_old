@@ -1,0 +1,4 @@
+Running: xsim.dir/femulx_tb_behav/xsimk -simmode gui -wdb femulx_tb_behav.wdb -simrunnum 0 -socket 47296
+Design successfully loaded
+Design Loading Memory Usage: 110132 KB (Peak: 111476 KB)
+Design Loading CPU Usage: 50 ms
