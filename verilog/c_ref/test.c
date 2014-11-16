@@ -27,12 +27,12 @@ int main() {
         /* create signature on the message with the keypair */
         ed25519_sign(signature, message, message_len, public_key, private_key);
    
-        printf("pk :"); 
+        printf("pk:"); 
         for (j = 0; j < 32; j++)
             printf("%02x", public_key[j]);
         printf("\n");
     
-        printf("sk :"); 
+        printf("sk:"); 
         for (j = 0; j < 64; j++)
             printf("%02x", private_key[j]);
         printf("\n");
