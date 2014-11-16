@@ -313,13 +313,6 @@ void ge_p3_to_p2(ge_p2 *r, const ge_p3 *p) {
 }
 
 
-static void cmov(ge_precomp *t, ge_precomp *u, unsigned char b) {
-    fe_cmov(t->yplusx, u->yplusx, b);
-    fe_cmov(t->yminusx, u->yminusx, b);
-    fe_cmov(t->xy2d, u->xy2d, b);
-}
-
-
 /*
 r = p - q
 */
