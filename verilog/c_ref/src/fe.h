@@ -31,8 +31,6 @@ void fe_cswap(fe f, fe g, unsigned int b);
 void fe_neg(fe h, const fe f);
 void fe_add(fe h, const fe f, const fe g);
 void fe_invert(fe out, const fe z);
-void fe_sq(fe h, const fe f);
-void fe_sq2(fe h, const fe f);
 void fe_mul(fe h, const fe f, const fe g);
 void fe_mul121666(fe h, fe f);
 void fe_pow22523(fe out, const fe z);

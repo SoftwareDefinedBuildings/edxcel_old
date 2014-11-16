@@ -146,19 +146,19 @@ int ge_frombytes_negate_vartime(ge_p3 *h, const unsigned char *s) {
     fe check;
     fe_frombytes(h->Y, s);
     fe_1(h->Z);
-    fe_sq(u, h->Y);
+    fe_mul(u, h->Y, h->Y);
     fe_mul(v, u, d);
     fe_sub(u, u, h->Z);     /* u = y^2-1 */
     fe_add(v, v, h->Z);     /* v = dy^2+1 */
-    fe_sq(v3, v);
+    fe_mul(v3, v, v);
     fe_mul(v3, v3, v);      /* v3 = v^3 */
-    fe_sq(h->X, v3);
+    fe_mul(h->X, v3, v3);
     fe_mul(h->X, h->X, v);
     fe_mul(h->X, h->X, u);  /* x = uv^7 */
     fe_pow22523(h->X, h->X); /* x = (uv^7)^((q-5)/8) */
     fe_mul(h->X, h->X, v3);
     fe_mul(h->X, h->X, u);  /* x = uv^3(uv^7)^((q-5)/8) */
-    fe_sq(vxx, h->X);
+    fe_mul(vxx, h->X, h->X);
     fe_mul(vxx, vxx, v);
     fe_sub(check, vxx, u);  /* vx^2-u */
 
@@ -258,12 +258,15 @@ r = 2 * p
 
 void ge_p2_dbl(ge_p1p1 *r, const ge_p2 *p) {
     fe t0;
+    fe n2 = {0x00000002}; // init first int32_t of n2 as 2
+    fe tmp;
 
-    fe_sq(r->X, p->X);
-    fe_sq(r->Z, p->Y);
-    fe_sq2(r->T, p->Z);
+    fe_mul(r->X, p->X, p->X);
+    fe_mul(r->Z, p->Y, p->Y);
+    fe_mul(tmp, n2, p->Z);
+    fe_mul(r->T, p->Z, tmp);
     fe_add(r->Y, p->X, p->Y);
-    fe_sq(t0, r->Y);
+    fe_mul(t0, r->Y, r->Y);
     fe_add(r->Y, r->Z, r->X);
     fe_sub(r->Z, r->Z, r->X);
     fe_sub(r->X, t0, r->Y);
