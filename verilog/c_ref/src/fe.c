@@ -1,6 +1,6 @@
 #include "fixedint.h"
 #include "fe.h"
-
+#include <stdio.h>
 
 /*
     helper functions
@@ -772,6 +772,16 @@ Postconditions:
 */
 
 void fe_sub(fe h, const fe f, const fe g) {
+    int i;
+    printf("f:");
+    for (i = 9; i >= 0; i--)
+        printf("%08x", f[i]);
+    printf("\n");
+    printf("g:");
+    for (i = 9; i >= 0; i--)
+        printf("%08x", g[i]);
+    printf("\n");
+
     int32_t f0 = f[0];
     int32_t f1 = f[1];
     int32_t f2 = f[2];
@@ -813,6 +823,11 @@ void fe_sub(fe h, const fe f, const fe g) {
     h[7] = h7;
     h[8] = h8;
     h[9] = h9;
+    
+    printf("h:");
+    for (i = 9; i >= 0; i--)
+        printf("%08x", h[i]);
+    printf("\n");
 }
 
 
