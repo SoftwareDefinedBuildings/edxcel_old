@@ -48,7 +48,8 @@ uint8_t hw_verify_sync(uint8_t *sig, uint8_t *msg, uint8_t *key)
 
 	result = XL_EPU_DONE(epu_idx);
 	printf("result was: %d\n", result);
-	
+	result = XL_EPU_DONE(epu_idx);
+	printf("result was: %d\n", result);
 	//Codes are 0 for busy, 1 for sig pass and 2 for sig fail
 	return result == 1;
 }
@@ -66,7 +67,7 @@ int check_ok_sig()
 {
 	uint8_t sig [64] = {0x55,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   , 		
 						0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   };
-	uint8_t key [32] = {0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   };
+	uint8_t key [32] = {0x5a,0x5a,0x5a,0x5a,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0x5a,0x5a,0x5a,0x5a,0x5a};
 	uint8_t msg [32] = {0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   ,0   };
 	int result = hw_verify_sync(sig, msg, key);
 	return result;
@@ -75,7 +76,7 @@ int check_ok_sig()
 int check_bad_sig()
 {
 	uint8_t sig [64] = {8,8,7,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0,37,0,0,0,0,0,50};
-	uint8_t key [32] = {															85,85,85,85,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0, 0,0,0,85,85,85,85};
+	uint8_t key [32] = {															80,80,80,80,0,0,0,0,0,0,0,0,0,0,0,50,0,0,0,0,0,0,0,0,0, 0,0,0,80,80,80,80};
 	uint8_t msg [32] = {														3,4,5,6,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,38,0,0,4,3,2,1};
 	int result = hw_verify_sync(sig, msg, key);
 	return result;
@@ -83,6 +84,8 @@ int check_bad_sig()
 
 void go()
 {
+	printf("ok sig result: %d\n", check_ok_sig());
+	printf("bad sig result: %d\n", check_bad_sig());
 	printf("ok sig result: %d\n", check_ok_sig());
 	printf("bad sig result: %d\n", check_bad_sig());
 }
