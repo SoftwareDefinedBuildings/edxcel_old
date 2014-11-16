@@ -7,12 +7,13 @@ reg [319:0] h;
 
 // Initialize all variables
 initial begin        
-  f = 320'heddf27ff7e2105ff7c4ce4ff210354fffbe52401f0dc9dffd84c5701ad1e0100f6545c00cfa66aff;
-  g = 320'h61c7d9ffa909f6ff44be2e004d0375ff735be700e35e4f005340b700a11abcffff6790fff4a87c00;
+  f = 320'hff5e9ea4ffd2d0b7ff7f99e901aac0ee00106891fe73a68800f77b4affd2714effbcbe34fe38b5ce;
+  g = 320'hff18c31700e3efe000b264fbff1171c7ffcc7a920100b51c009fd3000137a8e7000ec6fe016b0a14;
   #10 h = fe_add(f, g);
   
-  //4ea701ff272bfbfec00a13006e06c9fe6e410c02d33bedff2b8d0e024e39bdfff5bcecffc34fe7ff
+  //fe7761bb00b6c0970031fee400bc32b5ffdce323ff745ba401974e4a010a1a35ffcb8532ffa3bfe2
   #10 $display("H is %h", h);
+  $display("Orig fe7761bb00b6c0970031fee400bc32b5ffdce323ff745ba401974e4a010a1a35ffcb8532ffa3bfe2");
   #20 $finish;      // Terminate simulation
 end
 
