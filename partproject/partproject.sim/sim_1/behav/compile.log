@@ -1,5 +1,0 @@
-Determining compilation order of HDL files.
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/immesys/w/FPGA/edxcel/verilog/src/testbed/fe_add_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fe_add_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/immesys/w/FPGA/edxcel/partproject/partproject.sim/sim_1/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

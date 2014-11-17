@@ -1,7 +1,0 @@
-Determining compilation order of HDL files.
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/new/fe_mulx.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module fe_mulx
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/fe_tobytes_tbset/new/femulx_tb.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module femulx_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/immesys/w/FPGA/edxcel/partproject/partproject.sim/fe_tobytes_tbset/behav/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

@@ -1,6 +1,0 @@
-# compile verilog/system verilog design source files
-verilog xil_defaultlib  "../../../partproject.srcs/sources_1/new/fe_mulx.v" --include "../../../../verilog/src/fe2"
-verilog xil_defaultlib  "../../../partproject.srcs/fe_tobytes_tbset/new/femulx_tb.v" --include "../../../../verilog/src/fe2"
-
-# compile glbl module
-verilog xil_defaultlib "glbl.v"
