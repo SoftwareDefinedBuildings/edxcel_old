@@ -1,0 +1,425 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sun Nov 16 14:07:47 2014
+# Process ID: 28843
+# Log file: /home/immesys/w/FPGA/edxcel/partproject/partproject.runs/add64_synth_1/add64.vds
+# Journal file: /home/immesys/w/FPGA/edxcel/partproject/partproject.runs/add64_synth_1/vivado.jou
+#-----------------------------------------------------------
+source add64.tcl
+# set_param gui.test TreeTableDev
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# create_project -in_memory -part xc7z010clg400-1
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property webtalk.parent_dir /home/immesys/w/FPGA/edxcel/partproject/partproject.cache/wt [current_project]
+# set_property parent.project_path /home/immesys/w/FPGA/edxcel/partproject/partproject.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language Verilog [current_project]
+# set_property board_part em.avnet.com:microzed_7010:part0:1.0 [current_project]
+# read_ip /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64.xci
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.3.1/data/ip'.
+WARNING: [IP_Flow 19-3664] IP 'add64' generated file not found '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64.dcp'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'add64' generated file not found '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_stub.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'add64' generated file not found '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_stub.vhdl'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'add64' generated file not found '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_funcsim.v'. Please regenerate to continue.
+WARNING: [IP_Flow 19-3664] IP 'add64' generated file not found '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_funcsim.vhdl'. Please regenerate to continue.
+# set_property used_in_implementation false [get_files /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64.dcp]
+# set_property used_in_implementation false [get_files -all /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64.dcp]
+# set_property is_locked true [get_files /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64.xci]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# catch { write_hwdef -file add64.hwdef }
+INFO: [Vivado_Tcl 4-279] hardware handoff file cannot be generated as there is no block diagram instance in the design
+# synth_design -top add64 -part xc7z010clg400-1 -mode out_of_context
+Command: synth_design -top add64 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 897.332 ; gain = 148.297 ; free physical = 111486 ; free virtual = 177962
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'add64' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/synth/add64.vhd:68]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0' declared at '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0.vhd:106' bound to instance 'U0' of component 'c_addsub_v12_0' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/synth/add64.vhd:128]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0__parameterized0' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0.vhd:153]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_viv' declared at '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_viv.vhd:129' bound to instance 'xst_addsub' of component 'c_addsub_v12_0_viv' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_viv__parameterized0' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_viv.vhd:187]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_legacy' declared at '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_legacy.vhd:140' bound to instance 'i_baseblox_addsub' of component 'c_addsub_v12_0_legacy' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_viv.vhd:308]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_legacy__parameterized0' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_legacy.vhd:216]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_fabric_legacy' declared at '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_fabric_legacy.vhd:151' bound to instance 'the_addsub' of component 'c_addsub_v12_0_fabric_legacy' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_legacy.vhd:507]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_fabric_legacy__parameterized0' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_fabric_legacy.vhd:203]
+INFO: [Synth 8-3491] module 'c_addsub_v12_0_lut6_legacy' declared at '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:142' bound to instance 'i_lut6_addsub' of component 'c_addsub_v12_0_lut6_legacy' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_fabric_legacy.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'c_addsub_v12_0_lut6_legacy__parameterized0' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:194]
+INFO: [Synth 8-3491] module 'c_reg_fd_v12_0_viv' declared at '/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_reg_fd_v12_0/hdl/c_reg_fd_v12_0_viv.vhd:134' bound to instance 'qreg' of component 'c_reg_fd_v12_0_viv' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:791]
+INFO: [Synth 8-638] synthesizing module 'c_reg_fd_v12_0_viv__parameterized0' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_reg_fd_v12_0/hdl/c_reg_fd_v12_0_viv.vhd:164]
+INFO: [Synth 8-256] done synthesizing module 'c_reg_fd_v12_0_viv__parameterized0' (1#1) [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_reg_fd_v12_0/hdl/c_reg_fd_v12_0_viv.vhd:164]
+INFO: [Synth 8-113] binding component instance 'carrymux0' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1115]
+INFO: [Synth 8-113] binding component instance 'carryxor0' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1123]
+INFO: [Synth 8-113] binding component instance 'carryxortop' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1135]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Synth 8-113] binding component instance 'carryxor' to cell 'XORCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1165]
+INFO: [Synth 8-113] binding component instance 'carrymux' to cell 'MUXCY' [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:1157]
+INFO: [Common 17-14] Message 'Synth 8-113' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_lut6_legacy__parameterized0' (2#1) [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd:194]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_fabric_legacy__parameterized0' (3#1) [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_fabric_legacy.vhd:203]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_legacy__parameterized0' (4#1) [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_legacy.vhd:216]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0_viv__parameterized0' (5#1) [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0_viv.vhd:187]
+INFO: [Synth 8-256] done synthesizing module 'c_addsub_v12_0__parameterized0' (6#1) [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/c_addsub_v12_0/hdl/c_addsub_v12_0.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'add64' (7#1) [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/synth/add64.vhd:68]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 937.812 ; gain = 188.777 ; free physical = 111445 ; free virtual = 177922
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 937.812 ; gain = 188.777 ; free physical = 111445 ; free virtual = 177922
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/Vivado/2014.3.1/data/parts/xilinx/zynq/zynq/xc7z010/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/Vivado/2014.3.1/data/parts/xilinx/zynq/zynq/xc7z010/ClockBuffers.xml
+Loading clock placement rules from /opt/Xilinx/Vivado/2014.3.1/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from /opt/Xilinx/Vivado/2014.3.1/data/parts/xilinx/zynq/PinFunctions.xml...
+Loading package from /opt/Xilinx/Vivado/2014.3.1/data/parts/xilinx/zynq/zynq/xc7z010/clg400/Package.xml
+Loading io standards from /opt/Xilinx/Vivado/2014.3.1/data/./parts/xilinx/zynq/IOStandards.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/immesys/w/FPGA/edxcel/partproject/partproject.runs/add64_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/immesys/w/FPGA/edxcel/partproject/partproject.runs/add64_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1268.039 ; gain = 0.000 ; free physical = 111196 ; free virtual = 177665
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111188 ; free virtual = 177656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111188 ; free virtual = 177656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/immesys/w/FPGA/edxcel/partproject/partproject.runs/add64_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111188 ; free virtual = 177656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111187 ; free virtual = 177656
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111187 ; free virtual = 177656
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111187 ; free virtual = 177656
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111187 ; free virtual = 177656
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111187 ; free virtual = 177656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111187 ; free virtual = 177656
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111187 ; free virtual = 177656
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111187 ; free virtual = 177656
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111099 ; free virtual = 177568
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111099 ; free virtual = 177567
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111099 ; free virtual = 177567
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111097 ; free virtual = 177566
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111097 ; free virtual = 177566
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111097 ; free virtual = 177566
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT2  |    64|
+|2     |MUXCY |    63|
+|3     |XORCY |    64|
+|4     |FDRE  |    64|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111097 ; free virtual = 177566
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1268.039 ; gain = 85.359 ; free physical = 111097 ; free virtual = 177566
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1268.039 ; gain = 519.004 ; free physical = 111097 ; free virtual = 177566
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 64 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_ooc.xdc] for cell 'U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+133 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1268.039 ; gain = 415.629 ; free physical = 111088 ; free virtual = 177557
+# rename_ref -prefix_all add64_
+INFO: [Coretcl 2-1174] Renamed 6 cell refs.
+# write_checkpoint -noxdef add64.dcp
+# catch { report_utilization -file add64_utilization_synth.rpt -pb add64_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.13 . Memory (MB): peak = 1268.039 ; gain = 0.000 ; free physical = 111078 ; free virtual = 177547
+# if { [catch {
+#   file copy -force /home/immesys/w/FPGA/edxcel/partproject/partproject.runs/add64_synth_1/add64.dcp /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64.dcp
+# } _RESULT ] } { 
+#   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
+# }
+# if { [catch {
+#   write_verilog -force -mode synth_stub /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_stub.v
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_vhdl -force -mode synth_stub /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_stub.vhdl
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_verilog -force -mode funcsim /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_funcsim.v
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
+# }
+# if { [catch {
+#   write_vhdl -force -mode funcsim /home/immesys/w/FPGA/edxcel/partproject/partproject.srcs/sources_1/ip/add64/add64_funcsim.vhdl
+# } _RESULT ] } { 
+#   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
+# }
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 16 14:08:18 2014...
