@@ -2,6 +2,8 @@
 #include "sha512.h"
 #include "ge.h"
 #include "sc.h"
+#include <stdio.h>
+
 
 static int consttime_equal(const unsigned char *x, const unsigned char *y) {
     unsigned char r = 0;
@@ -66,7 +68,46 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
     }
     
     sc_reduce(h);
+    int i;
+    printf("h:            ");
+    for(i = 0; i < 64; i++)
+        printf("%02x", h[i]);
+    printf("\n");
+    printf("A.X:          ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", A.X[i]);
+    printf("\n");
+    printf("A.Y:          ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", A.Y[i]);
+    printf("\n");
+    printf("A.Z:          ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", A.Z[i]);
+    printf("\n");
+    printf("A.T:          ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", A.T[i]);
+    printf("\n");
+    printf("signature+32: ");
+    for(i = 0; i < 32; i++)
+        printf("%02x", signature[i+32]);
+    printf("\n");
+    printf("Calling ge_double_scalarmult_vartime...\n");
     ge_double_scalarmult_vartime(&R, h, &A, signature + 32);
+    printf("R.X:          ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", R.X[i]);
+    printf("\n");
+    printf("R.Y:          ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", R.Y[i]);
+    printf("\n");
+    printf("R.Z:          ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", R.Z[i]);
+    printf("\n");
+    printf("\n");
     ge_tobytes(checker, &R);
 
     if (!consttime_equal(checker, signature)) {
