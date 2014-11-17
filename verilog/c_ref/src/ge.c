@@ -9,68 +9,68 @@ r = p + q
 void ge_add(ge_p1p1 *r, const ge_p3 *p, const ge_cached *q) {
     int i;
     printf("pX:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", p->X[i]);
     printf("\n");
     printf("pY:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", p->Y[i]);
     printf("\n");
     printf("pZ:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", p->Z[i]);
     printf("\n");
     printf("pT:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", p->T[i]);
     printf("\n");
 
     printf("qYplusX:  ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", q->YplusX[i]);
     printf("\n");
     printf("qYminusX: ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", q->YminusX[i]);
     printf("\n");
     printf("qZ:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", q->Z[i]);
     printf("\n");
     printf("qT2d:     ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", q->T2d[i]);
     printf("\n");
 
     fe t0;
     fe_add(r->X, p->Y, p->X);
     printf("add1:     ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->X[i]);
     printf("\n");
     fe_sub(r->Y, p->Y, p->X);
     printf("sub1:     ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->Y[i]);
     printf("\n");
     fe_mul(r->Z, r->X, q->YplusX);
     printf("mul1:     ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->Z[i]);
     printf("\n");
     fe_mul(r->Y, r->Y, q->YminusX);
     printf("mul2:     ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->Y[i]);
     printf("\n");
     fe_mul(r->T, q->T2d, p->T);
     printf("mul3:     ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->T[i]);
     printf("\n");
     fe_mul(r->X, p->Z, q->Z);
     printf("mul4:     ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->X[i]);
     printf("\n");
     fe_add(t0, r->X, r->X);
@@ -80,19 +80,19 @@ void ge_add(ge_p1p1 *r, const ge_p3 *p, const ge_cached *q) {
     fe_sub(r->T, t0, r->T);
     
     printf("rX:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->X[i]);
     printf("\n");
     printf("rY:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->Y[i]);
     printf("\n");
     printf("rZ:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->Z[i]);
     printf("\n");
     printf("rT:       ");
-    for (i = 0; i < 10; i++)
+    for (i = 9; i >= 0; i--)
         printf("%08x", r->T[i]);
     printf("\n\n");
 
