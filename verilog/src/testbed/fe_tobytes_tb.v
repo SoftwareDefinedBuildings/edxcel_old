@@ -1,7 +1,7 @@
 
 module fe_tobytes_tb();
 
-`include "../fe2/fe_common.v"
+`include "../fe/fe_common.v"
 
 reg [319:0] h;
 reg [255:0] res;

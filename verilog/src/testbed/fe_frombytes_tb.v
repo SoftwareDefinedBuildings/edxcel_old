@@ -1,7 +1,7 @@
 
 module fe_frombytes_tb();
 
-`include "../fe/fe_frombytes.v"
+`include "../fe/fe_common.v"
 
 reg [255:0] s;
 reg [319:0] h;
