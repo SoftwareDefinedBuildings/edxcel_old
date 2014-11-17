@@ -63,7 +63,7 @@ static void slide(signed char *r, const unsigned char *a) {
     
     printf("r:");
     for (i = 0; i < 256; i++)
-        printf("%02x", r[i]);
+        printf("%02x", r[i]&0xFF);
     printf("\n");
 }
 
