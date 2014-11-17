@@ -70,7 +70,7 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
     sc_reduce(h);
     int i;
     printf("h:            ");
-    for(i = 0; i < 64; i++)
+    for(i = 0; i < 32; i++)
         printf("%02x", h[i]);
     printf("\n");
     printf("A.X:          ");
