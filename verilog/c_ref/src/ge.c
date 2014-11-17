@@ -1,6 +1,6 @@
 #include "ge.h"
 #include "precomp_data.h"
-
+#include <stdio.h>
 
 /*
 r = p + q
@@ -26,6 +26,11 @@ static void slide(signed char *r, const unsigned char *a) {
     int i;
     int b;
     int k;
+
+    printf("a:");
+    for (i = 0; i < 32; i++)
+        printf("%02x", a[i]);
+    printf("\n");
 
     for (i = 0; i < 256; ++i) {
         r[i] = 1 & (a[i >> 3] >> (i & 7));
@@ -55,6 +60,11 @@ static void slide(signed char *r, const unsigned char *a) {
                 }
             }
         }
+    
+    printf("r:");
+    for (i = 0; i < 256; i++)
+        printf("%02x", r[i]);
+    printf("\n");
 }
 
 /*
