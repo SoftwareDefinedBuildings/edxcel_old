@@ -1,7 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="add64_synth_1" LaunchDir="/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.runs/add64_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="mult19_synth_1" LaunchDir="/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.runs/mult19_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="mult32x64_synth_1" LaunchDir="/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.runs/mult32x64_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-</Runs>
-
