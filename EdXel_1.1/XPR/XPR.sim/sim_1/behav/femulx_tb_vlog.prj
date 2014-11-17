@@ -1,0 +1,14 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "../../../../../verilog/src/fe/fe_mulx.v"
+verilog xil_defaultlib  "../../../../src/DummyEPU.v"
+verilog xil_defaultlib  "../../../../hdl/EdXel_v1_1_S00_AXI.v"
+verilog xil_defaultlib  "../../../../hdl/EdXel_v1_1.v"
+verilog xil_defaultlib  "../../../../../verilog/src/EPU.v"
+verilog xil_defaultlib  "../../../../../verilog/src/ge/ge_double_scalarmult_vartime.v"
+verilog xil_defaultlib  "../../../../../verilog/src/testbed/femulx_tb.v"
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

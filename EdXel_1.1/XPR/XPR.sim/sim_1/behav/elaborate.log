@@ -1,0 +1,81 @@
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2014.3.1/bin/unwrapped/lnx64.o/xelab -wto f9f6c934b3da4d508d23282669f4c193 --debug typical --relax -L xbip_utils_v3_0 -L xbip_pipe_v3_0 -L xbip_bram18k_v3_0 -L mult_gen_v12_0 -L xil_defaultlib -L c_reg_fd_v12_0 -L xbip_dsp48_wrapper_v3_0 -L xbip_dsp48_addsub_v3_0 -L xbip_addsub_v3_0 -L c_addsub_v12_0 -L unisims_ver -L unimacro_ver -L secureip --snapshot femulx_tb_behav xil_defaultlib.femulx_tb xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 14 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package mult_gen_v12_0.mult_gen_v12_0_viv_comp
+Compiling package std.textio
+Compiling package xbip_utils_v3_0.xbip_utils_v3_0_pkg
+Compiling package mult_gen_v12_0.mult_gen_v12_0_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling package mult_gen_v12_0.dsp_pkg
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package c_addsub_v12_0.c_addsub_v12_0_viv_comp
+Compiling package xbip_pipe_v3_0.xbip_pipe_v3_0_viv_comp
+Compiling package xbip_addsub_v3_0.xbip_addsub_v3_0_viv_comp
+Compiling package c_addsub_v12_0.c_addsub_v12_0_pkg
+Compiling package c_addsub_v12_0.c_addsub_v12_0_pkg_legacy
+Compiling package c_reg_fd_v12_0.c_reg_fd_v12_0_viv_comp
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_dist_mem [\ccm_dist_mem(6,64,0,0,0,"100101...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_syncmem [\ccm_syncmem("zynq",11,64,0,"100...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_scaled_adder [\ccm_scaled_adder(11,11,18,0,1,1...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_scaled_adder [\ccm_scaled_adder(18,18,31,0,1,1...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_dist_mem [\ccm_dist_mem(6,64,0,0,0,"100101...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_syncmem [\ccm_syncmem("zynq",7,64,0,"1001...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_scaled_adder [\ccm_scaled_adder(11,7,14,0,1,0,...]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,14,0...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_scaled_adder [\ccm_scaled_adder(31,14,39,0,1,0...]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,37,0...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm_operation [\ccm_operation("zynq",32,5,37,0,...]
+Compiling architecture xilinx of entity mult_gen_v12_0.ccm [\ccm("zynq",32,0,5,1,0,0,2,1,"10...]
+Compiling architecture xilinx of entity mult_gen_v12_0.mult_gen_v12_0_viv [\mult_gen_v12_0_viv(0,0,1,"zynq"...]
+Compiling architecture xilinx of entity mult_gen_v12_0.mult_gen_v12_0 [\mult_gen_v12_0(0,0,1,"zynq",0,0...]
+Compiling architecture mult19_arch of entity xil_defaultlib.mult19 [mult19_default]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,18,0...]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,15,0...]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,18,0...]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,1,0,...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(1,0,0,1,"NO_RESET","DIR...]
+Compiling architecture srl16e_v of entity unisim.SRL16E [\SRL16E("0000000000000000",'0')(...]
+Compiling architecture fdre_v of entity unisim.FDRE [\FDRE('0','0','0','0')\]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,17,0...]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,1,0,...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(0,0,1,0,"NO_RESET","CAS...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(1,1,0,1,"NO_RESET","DIR...]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,17,0...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(2,1,0,2,"NO_RESET","DIR...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(2,0,0,2,"NO_RESET","DIR...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(0,0,0,0,"NO_RESET","CAS...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(1,1,1,1,"NO_RESET","DIR...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(2,1,0,2,"NO_RESET","DIR...]
+Compiling architecture xilinx of entity mult_gen_v12_0.delay_line [\delay_line("zynq",true,0,0,43,0...]
+Compiling architecture xilinx of entity mult_gen_v12_0.op_resize [\op_resize(32,64,0,0,0,32,64)\]
+Compiling architecture xilinx of entity mult_gen_v12_0.dsp [\dsp("zynq",32,0,64,0,0,0,4,0,0,...]
+Compiling architecture xilinx of entity mult_gen_v12_0.mult_gen_v12_0_viv [\mult_gen_v12_0_viv(0,0,1,"zynq"...]
+Compiling architecture xilinx of entity mult_gen_v12_0.mult_gen_v12_0 [\mult_gen_v12_0(0,0,1,"zynq",0,0...]
+Compiling architecture mult32x64_arch of entity xil_defaultlib.mult32x64 [mult32x64_default]
+Compiling architecture structural of entity c_reg_fd_v12_0.c_reg_fd_v12_0_viv [\c_reg_fd_v12_0_viv(64,"0","0",1...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0.c_addsub_v12_0_lut6_legacy [\c_addsub_v12_0_lut6_legacy(64,0...]
+Compiling architecture synth of entity c_addsub_v12_0.c_addsub_v12_0_fabric_legacy [\c_addsub_v12_0_fabric_legacy("z...]
+Compiling architecture synth of entity c_addsub_v12_0.c_addsub_v12_0_legacy [\c_addsub_v12_0_legacy("zynq",64...]
+Compiling architecture synth of entity c_addsub_v12_0.c_addsub_v12_0_viv [\c_addsub_v12_0_viv(0,"zynq",0,6...]
+Compiling architecture xilinx of entity c_addsub_v12_0.c_addsub_v12_0 [\c_addsub_v12_0(0,"zynq",0,64,64...]
+Compiling architecture add64_arch of entity xil_defaultlib.add64 [add64_default]
+Compiling module xil_defaultlib.fe_mulx
+Compiling module xil_defaultlib.femulx_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot femulx_tb_behav

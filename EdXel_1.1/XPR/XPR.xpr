@@ -10,6 +10,7 @@
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="BoardPart" Val=""/>
+    <Option Name="SourceMgmtMode" Val="DisplayOnly"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../EdXel_1.1"/>
@@ -17,7 +18,7 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../src/fe_mulx.v">
+      <File Path="$PPRDIR/../../verilog/src/fe/fe_mulx.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -48,12 +49,20 @@
       </File>
       <File Path="$PPRDIR/../../verilog/src/fe/fe_common.v">
         <FileInfo>
+          <Attr Name="UserDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../verilog/src/fe/fe_mulx.v">
+      <File Path="$PPRDIR/../../verilog/src/EPU.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../../verilog/src/ge/ge_double_scalarmult_vartime.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -73,11 +82,18 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PPRDIR/../../verilog/src/testbed/femulx_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="EdXel_v1_1"/>
+        <Option Name="TopModule" Val="femulx_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
@@ -88,49 +104,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult19_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult19_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult19_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult19_stub.v"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult19.dcp"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_dist_mem.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_sp_block_mem.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_dp_block_mem.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_syncmem.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_scaled_adder.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_operation.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/three_input_adder.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/multMxN_lut6.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="synth/mult19.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult19.xml"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult19_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/mult18.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/dsp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/hybrid.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/dsp_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/luts.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/cc_compare.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/delay_line.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/op_resize.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_rtl.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_synth.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_hdl_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_utils_v3_0/hdl/xbip_utils_v3_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_utils_v3_0/hdl/xcc_utils_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult19.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0.vhd"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="mult19"/>
@@ -144,52 +117,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_addsub_v3_0/hdl/xbip_dsp48_addsub_v3_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_addsub_v3_0/hdl/xbip_dsp48_addsub_synth.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="add64_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="add64_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="add64_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="add64_stub.v"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="add64.dcp"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_utils_v3_0/hdl/xcc_utils_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_utils_v3_0/hdl/xbip_utils_v3_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="add64.xml"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_addsub_v3_0/hdl/xbip_dsp48_addsub_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_base_legacy.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_lut6_legacy.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_fabric_legacy.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_legacy.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="synth/add64.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_addsub_v3_0/hdl/xbip_addsub_v3_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_addsub_v3_0/hdl/xbip_addsub_v3_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="add64_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_addsub_v3_0/hdl/xbip_addsub_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_addsub_v3_0/hdl/xbip_addsub_v3_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_pkg_legacy.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_addsub_v12_0/hdl/c_addsub_v12_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_reg_fd_v12_0/hdl/c_reg_fd_v12_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48e_wrapper_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48e1_wrapper_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_addsub_v3_0/hdl/xbip_dsp48_addsub_v3_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_addsub_v3_0/hdl/xbip_dsp48_addsub_v3_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_addsub_v3_0/hdl/xbip_dsp48_addsub_v3_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_addsub_v3_0/hdl/xbip_dsp48_addsub_rtl.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48e2_wrapper_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_reg_fd_v12_0/hdl/c_reg_fd_v12_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_reg_fd_v12_0/hdl/c_reg_fd_v12_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48a1_wrapper_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48a_wrapper_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="xbip_dsp48_wrapper_v3_0/hdl/xbip_dsp48_wrapper_v3_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="add64.xci" FileRelPathName="c_reg_fd_v12_0/hdl/c_reg_fd_v12_0_viv_comp.vhd"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="add64"/>
@@ -203,49 +130,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_utils_v3_0/hdl/xcc_utils_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_utils_v3_0/hdl/xbip_utils_v3_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult32x64.dcp"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult32x64_funcsim.v"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult32x64_funcsim.vhdl"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult32x64_stub.v"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult32x64_stub.vhdl"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="synth/mult32x64.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult32x64.xml"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/multMxN_lut6.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_rtl.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_synth.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/delay_line.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/op_resize.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/cc_compare.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_hdl_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_bram18k_v3_0/hdl/xbip_bram18k_v3_0_pkg.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_viv.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="xbip_pipe_v3_0/hdl/xbip_pipe_v3_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/hybrid.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_dist_mem.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/dsp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/mult18.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/luts.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/three_input_adder.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_operation.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_scaled_adder.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_syncmem.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_dp_block_mem.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/ccm_sp_block_mem.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_viv_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult32x64_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/mult_gen_v12_0_comp.vhd"/>
-        <CompFileExtendedInfo CompFileName="mult32x64.xci" FileRelPathName="mult_gen_v12_0/hdl/dsp_pkg.vhd"/>
       </File>
       <Config>
         <Option Name="TopModule" Val="mult32x64"/>
@@ -268,47 +152,47 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="9">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
+        <Step Id="synth_design">
+          <Option Id="Directive">2</Option>
+        </Step>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="mult19_synth_1" Type="Ft3:Synth" SrcSet="mult19" Part="xc7z020clg484-1" ConstrsSet="mult19" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mult19_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="add64_synth_1" Type="Ft3:Synth" SrcSet="add64" Part="xc7z020clg484-1" ConstrsSet="add64" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/add64_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
     <Run Id="mult32x64_synth_1" Type="Ft3:Synth" SrcSet="mult32x64" Part="xc7z020clg484-1" ConstrsSet="mult32x64" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mult32x64_synth_1">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+    </Run>
+    <Run Id="synth_2" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" SynthRun="synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -322,9 +206,7 @@
     </Run>
     <Run Id="mult19_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mult19" Description="Vivado Implementation Defaults" SynthRun="mult19_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -338,9 +220,7 @@
     </Run>
     <Run Id="add64_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="add64" Description="Vivado Implementation Defaults" SynthRun="add64_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
-          <Desc>Vivado Implementation Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -353,6 +233,20 @@
       </Strategy>
     </Run>
     <Run Id="mult32x64_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mult32x64" Description="Vivado Implementation Defaults" SynthRun="mult32x64_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+    </Run>
+    <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_2">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014">
           <Desc>Vivado Implementation Defaults</Desc>

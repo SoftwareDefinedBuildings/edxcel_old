@@ -125,7 +125,7 @@ add64 add_d (
   .S(add_d_out)      // output wire [63 : 0] S
 );            
 
-reg [5:0] cycle;
+reg [33:0] cycle;
 
 reg signed [31:0] g1_19;
 reg signed [31:0] g2_19;
@@ -274,10 +274,10 @@ begin
     mul_d_in32 <= 0;
     mul_d_in64 <= 0;
     h0 <= h0;
-    cycle <= cycle + 1;
+    cycle <= cycle << 1;
     rdone <= 0;
     case (cycle)
-        6'd0  : begin //Idle state
+    33'h00000000  : begin //Idle state
                     if (valid == 1'b1)
                     begin
                                    mul19_a_in <= $signed(op_b[9*32+:32]);
@@ -300,11 +300,12 @@ begin
                                    h7 <= 0;
                                    h8 <= 0;
                                    h9 <= 0;
+                                   cycle <= 1;
                     end else
                         cycle <= 0;
                 end
                 
-        6'd1  : begin //========= CYCLE 1 ============
+    33'h00000001  : begin //========= CYCLE 1 ============
                     mul19_a_in <= $signed(op_b[3*32+:32]);
                     mul19_b_in <= $signed(op_b[4*32+:32]);
                     mul_a_in32 <= $signed(op_a[0*32+:32]);
@@ -316,7 +317,7 @@ begin
                     mul_d_in32 <= $signed(op_a[0*32+:32]);
                     mul_d_in64 <= $signed(op_b[7*32+:32]);
                 end
-        6'd2  : begin //========= CYCLE 2 ============
+    33'h00000002  : begin //========= CYCLE 2 ============
                     g9_19 <= mul19_a_out;
                     g2_19 <= mul19_b_out;
                     
@@ -331,7 +332,7 @@ begin
                     mul_d_in32 <= $signed(op_a[1*32+:32] << 1); //f1_2
                     mul_d_in64 <= $signed(op_b[1*32+:32]);
                 end
-        6'd3  : begin //========= CYCLE 3 ============
+    33'h000000004   : begin //========= CYCLE 3 ============
                     g3_19 <= mul19_a_out;
                     g4_19 <= mul19_b_out;
                     
@@ -346,7 +347,7 @@ begin
                     mul_d_in32 <= $signed(op_a[1*32+:32] << 1);
                     mul_d_in64 <= $signed(op_b[5*32+:32]);
                 end   
-        6'd4  : begin //========= CYCLE 4 ============
+    33'h00000008  : begin //========= CYCLE 4 ============
                     g5_19 <= mul19_a_out;
                     g6_19 <= mul19_b_out;
                     mul19_a_in <= $signed(op_b[1*32+:32]);
@@ -360,7 +361,7 @@ begin
                     mul_d_in32 <= $signed(op_a[1*32+:32] << 1);
                     mul_d_in64 <= g9_19;
                 end    
-        6'd5  : begin //========= CYCLE 5 ============
+    33'h00000010  : begin //========= CYCLE 5 ============
                     g7_19 <= mul19_a_out;
                     g8_19 <= mul19_b_out;
                     f0g0 <= mul_a_out;
@@ -380,7 +381,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= h2;
                     add_d_in1 <= mul_d_out; add_d_in2 <= h3;
                 end
-        6'd6  : begin //========= CYCLE 6 ============
+    33'h00000020  : begin //========= CYCLE 6 ============
                     g1_19 <= mul19_a_out;
                     f0g4 <= mul_a_out;
                     f0g5 <= mul_b_out;
@@ -399,7 +400,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= h6;
                     add_d_in1 <= mul_d_out; add_d_in2 <= h7;
                 end
-        6'd7  : begin //========= CYCLE 7 ============
+    33'h00000040 : begin //========= CYCLE 7 ============
                     f0g8 <= mul_a_out;
                     f0g9 <= mul_b_out;
                     f1g0 <= mul_c_out;
@@ -421,7 +422,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h1;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h2;
                 end
-        6'd8  : begin //========= CYCLE 8 ============
+    33'h00000080 : begin //========= CYCLE 8 ============
                     f1g2   <= mul_a_out;
                     f1g3_2 <= mul_b_out;
                     f1g4   <= mul_c_out;
@@ -443,7 +444,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h5;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h6;
                 end
-        6'd9  : begin //========= CYCLE 9 ============
+    33'h000000100  : begin //========= CYCLE 9 ============
                     f1g6    <= mul_a_out;
                     f1g7_2  <= mul_b_out;
                     f1g8    <= mul_c_out;
@@ -465,7 +466,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h9;
                     add_d_in1 <= mul_d_out; add_d_in2 <= h0;
                 end
-        6'd10 : begin //========= CYCLE 10 ============
+    33'h000000200  : begin //========= CYCLE 10 ============
                     f2g1  <= mul_a_out;
                     f2g2  <= mul_b_out;
                     f2g3  <= mul_c_out;
@@ -488,7 +489,7 @@ begin
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_d_out;//h6;
 
                 end
-        6'd11 : begin //========= CYCLE 11 ============
+    33'h000000400  : begin //========= CYCLE 11 ============
                     f2g5  <= mul_a_out;
                     f2g6  <= mul_b_out;
                     f2g7  <= mul_c_out;
@@ -511,7 +512,7 @@ begin
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_d_out;//h0;
 
                 end
-        6'd12 : begin //========= CYCLE 12 ============
+    33'h000000800  : begin //========= CYCLE 12 ============
                     f2g0    <= mul_a_out;
                     f3g0    <= mul_b_out;
                     f2g9_19 <= mul_c_out;
@@ -534,7 +535,7 @@ begin
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_b_out;//h4;
 
                 end
-        6'd13 : begin //========= CYCLE 13 ============
+    33'h000001000  : begin //========= CYCLE 13 ============
                     f3g2    <= mul_a_out;
                     f3g3_2  <= mul_b_out;
                     f3g4    <= mul_c_out;
@@ -556,7 +557,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_a_out;//h7;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_b_out;//h8;
                 end
-        6'd14 : begin //========= CYCLE 14 ============
+    33'h000002000  : begin //========= CYCLE 14 ============
                     f3g6     <= mul_a_out;
                     f3g7_38  <= mul_b_out;
                     f3g8_19  <= mul_c_out;
@@ -578,7 +579,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_c_out;//h1;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_a_out;//h2;
                 end
-        6'd15 : begin //========= CYCLE 15 ============
+    33'h000004000  : begin //========= CYCLE 15 ============
                     f4g0     <= mul_a_out;
                     f4g1     <= mul_b_out;
                     f4g2     <= mul_c_out;
@@ -600,7 +601,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h6;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h7;
                 end
-        6'd16 : begin //========= CYCLE 16 ============
+    33'h000008000  : begin //========= CYCLE 16 ============
                     f4g4     <= mul_a_out;
                     f4g5     <= mul_b_out;
                     f4g6_19  <= mul_c_out;
@@ -622,7 +623,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h0;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h1;
                 end
-        6'd17 : begin //========= CYCLE 17 ============
+    33'h000010000   : begin //========= CYCLE 17 ============
                     f4g8_19  <= mul_a_out;
                     f4g9_19  <= mul_b_out;
                     f5g0     <= mul_c_out;
@@ -644,7 +645,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h5;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h6;
                 end
-        6'd18 : begin //========= CYCLE 18 ============
+    33'h000020000  : begin //========= CYCLE 18 ============
                     f5g2     <= mul_a_out;
                     f5g3_2   <= mul_b_out;
                     f5g4     <= mul_c_out;
@@ -666,7 +667,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h9;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h0;
                 end                
-        6'd19 : begin //========= CYCLE 19 ============
+    33'h000040000  : begin //========= CYCLE 19 ============
                     f5g6_19   <= mul_a_out;
                     f5g7_38   <= mul_b_out;
                     f5g8_19   <= mul_c_out;
@@ -688,7 +689,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h3;
                     add_d_in1 <= mul_d_out; add_d_in2 <= h4;
                 end
-        6'd20 : begin //========= CYCLE 20 ============
+    33'h000080000   : begin //========= CYCLE 20 ============
                     f6g0     <= mul_a_out;
                     f6g1     <= mul_b_out;
                     f6g2     <= mul_c_out;
@@ -710,7 +711,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h8;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h9;
                 end
-        6'd21 : begin //========= CYCLE 21 ============
+    33'h000100000  : begin //========= CYCLE 21 ============
                     f6g4_19  <= mul_a_out;
                     f6g5_19  <= mul_b_out;
                     f6g6_19  <= mul_c_out;
@@ -732,7 +733,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h2;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h3;
                 end
-        6'd22 : begin //========= CYCLE 22 ============
+    33'h000200000  : begin //========= CYCLE 22 ============
                     f6g8_19  <= mul_a_out;
                     f6g9_19  <= mul_b_out;
                     f7g0     <= mul_c_out;
@@ -754,7 +755,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h7;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h8;
                 end
-        6'd23 : begin //========= CYCLE 23 ============
+    33'h000400000  : begin //========= CYCLE 23 ============
                     f7g2     <= mul_a_out;
                     f7g3_38  <= mul_b_out;
                     f7g4_19  <= mul_c_out;
@@ -776,7 +777,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h1;
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h2;
                 end
-        6'd24 : begin //========= CYCLE 24 ============
+    33'h000800000 : begin //========= CYCLE 24 ============
                     f7g6_19  <= mul_a_out;
                     f7g7_38  <= mul_b_out;
                     f7g8_19  <= mul_c_out;
@@ -798,7 +799,7 @@ begin
                     add_c_in1 <= mul_c_out; add_c_in2 <= add_b_out;//h5;
                     add_d_in1 <= mul_d_out; add_d_in2 <= h6;
                 end
-        6'd25 : begin //========= CYCLE 25 ============
+    33'h001000000 : begin //========= CYCLE 25 ============
                     f8g0     <= mul_a_out;
                     f8g1     <= mul_b_out;
                     f8g2_19  <= mul_c_out;
@@ -813,11 +814,11 @@ begin
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h1;
                 end
                 
-        6'd26 : begin //========= CYCLE 26 ============
+    33'h002000000: begin //========= CYCLE 26 ============
                     f8g4_19  <= mul_a_out;
                     f8g5_19  <= mul_b_out;
                     f8g6_19  <= mul_c_out;
-                    f8g7_19  <= mul_d_out;   
+                    f8g7_19  <= mul_d_out;
                     h3 <= add_a_out;
                     h4 <= add_b_out;
                     h5 <= add_c_out;
@@ -828,7 +829,7 @@ begin
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h5;
                 end
                     
-        6'd27 : begin //========= CYCLE 27 ============
+    33'h004000000 : begin //========= CYCLE 27 ============
                     f8g8_19  <= mul_a_out;
                     f8g9_19  <= mul_b_out;
                     f9g0     <= mul_c_out;
@@ -843,7 +844,7 @@ begin
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h0;
                 end
                     
-        6'd28 : begin //========= CYCLE 28 ============
+    33'h008000000 : begin //========= CYCLE 28 ============
                     f9g2_19  <= mul_a_out;
                     f9g3_38  <= mul_b_out;
                     f9g4_19  <= mul_c_out;
@@ -858,7 +859,7 @@ begin
                     add_d_in1 <= mul_d_out; add_d_in2 <= add_c_out;//h4;
                 end
                     
-        6'd29 : begin //========= CYCLE 29 ============
+    33'h010000000 : begin //========= CYCLE 29 ============
                     f9g6_19  <= mul_a_out;
                     f9g7_38  <= mul_b_out;
                     f9g8_19  <= mul_c_out;
@@ -873,20 +874,21 @@ begin
                     add_d_in1 <= mul_d_out; add_d_in2 <= h8;
                 end
                 
-        6'd30 : begin //========= CYCLE 30 ============
+    33'h020000000 : begin //========= CYCLE 30 ============
                     h1 <= add_a_out;
                     h2 <= add_b_out;
                     h3 <= add_c_out;
                     h4 <= add_d_out;
                 end
                 
-        6'd31 : begin //========= CYCLE 31 ============
+    33'h040000000  : begin //========= CYCLE 31 ============
                     h5 <= add_a_out;
                     h6 <= add_b_out;
                     h7 <= add_c_out;
                     h8 <= add_d_out;
                 end
-        6'd32 : begin : carryblk //========= CYCLE 32 ============
+    33'h080000000 : begin : carryblk //========= CYCLE 32 ============
+        
                     reg signed [63:0] carry0;
                     reg signed [63:0] carry1;
                     reg signed [63:0] carry2;
