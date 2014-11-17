@@ -22,6 +22,7 @@ void ge_add(ge_p1p1 *r, const ge_p3 *p, const ge_cached *q) {
 }
 
 
+
 static void slide(signed char *r, const unsigned char *a) {
     int i;
     int b;
@@ -159,161 +160,341 @@ static const fe d2 = {
     -21827239, -5839606, -30745221, 13898782, 229458, 15978800, -12551817, -6495438, 29715968, 9444199
 };
 
+
+fe bram [100] ;
+
+//Memorymap
+#define MM_t_X            0
+#define MM_t_Y            1
+#define MM_t_Z            2
+#define MM_t_T            3
+#define MM_u_X            4
+#define MM_u_Y            5
+#define MM_u_Z            6
+#define MM_u_T            7
+#define MM_A2_X           8
+#define MM_A2_Y           9
+#define MM_A2_Z           10
+#define MM_A2_T           11
+#define MM_q_X            12
+#define MM_q_Y            13
+#define MM_q_Z            14
+#define MM_Ai             15
+    //Ai is 4*8 = 32 elements long
+#define MM_A_X           47
+#define MM_A_Y           48
+#define MM_A_Z           49
+#define MM_A_T           50
+
+#define Ai_YplusX  0
+#define Ai_YminusX 1
+#define Ai_Z       2
+#define Ai_T2d     3
+
+#define BLOAD(dest, val) memcpy(&bram[dest], val, sizeof(fe))
+
 void ge_double_scalarmult_vartime(ge_p2 *r, const unsigned char *a, const ge_p3 *A, const unsigned char *b) {
     signed char aslide[256];
     signed char bslide[256];
     ge_cached Ai[8]; /* A,3A,5A,7A,9A,11A,13A,15A */
-    ge_p1p1 t;
-    ge_p3 u;
-    ge_p3 A2;
+    //ge_cached Ai[0];
+    //fe YplusX;
+    //fe YminusX;
+    //fe Z;
+    //fe T2d;
+    /*ge_cached Ai[1];
+    ge_cached Ai[2];
+    ge_cached Ai[3];
+    ge_cached Ai[4];
+    ge_cached Ai[5];
+    ge_cached Ai[6];
+    ge_cached Ai[7];*/
+    #if 0
+    //ge_p1p1 t;
+    fe t_X;
+    fe t_Y;
+    fe t_Z;
+    fe t_T;
+    //ge_p3 u;
+    fe u_X;
+    fe u_Y;
+    fe u_Z;
+    fe u_T;
+    //ge_p3 A2;
+    fe A2_X;
+    fe A2_Y;
+    fe A2_Z;
+    fe A2_T;
+    //ge_p2 q;
+    fe q_X;
+    fe q_Y;
+    fe q_Z;
+    #endif
+
+    BLOAD(MM_A_X, A->X);
+    BLOAD(MM_A_Y, A->Y);
+    BLOAD(MM_A_Z, A->Z);
+    BLOAD(MM_A_T, A->T);
+
+    #define t_X (bram[MM_t_X])
+    #define t_Y (bram[MM_t_Y])
+    #define t_Z (bram[MM_t_Z])
+    #define t_T (bram[MM_t_T])
+    #define u_X (bram[MM_u_X])
+    #define u_Y (bram[MM_u_Y])
+    #define u_Z (bram[MM_u_Z])
+    #define u_T (bram[MM_u_T])
+    #define A2_X (bram[MM_A2_X])
+    #define A2_Y (bram[MM_A2_Y])
+    #define A2_Z (bram[MM_A2_Z])
+    #define A2_T (bram[MM_A2_T])
+    #define q_X (bram[MM_q_X])
+    #define q_Y (bram[MM_q_Y])
+    #define q_Z (bram[MM_q_Z])
+    #define A_X (bram[MM_A_X])
+    #define A_Y (bram[MM_A_Y])
+    #define A_Z (bram[MM_A_Z])
+    #define A_T (bram[MM_A_T])
     int i;
+    fe t0;
+    fe n2 = {0x00000002}; // init first int32_t of n2 as 2
+    fe tmp;
+
     slide(aslide, a);
     slide(bslide, b);
-    //ge_p3_to_cached(&Ai[0], A);
+
+    //ge_p3_to_cached(&Ai[0]], A);
     {
-        fe_add(Ai[0].YplusX, A->Y, A->X);
-        fe_sub(Ai[0].YminusX, A->Y, A->X);
-        fe_copy(Ai[0].Z, A->Z);
-        fe_mul(Ai[0].T2d, A->T, d2);
+        fe_add(Ai[0].YplusX, A_Y, A_X);
+        fe_sub(Ai[0].YminusX, A_Y, A_X);
+        fe_copy(Ai[0].Z, A_Z);
+        fe_mul(Ai[0].T2d, A_T, d2);
     }
     //ge_p3_dbl(&t, A);
     {
-        ge_p2 q;
+
         //ge_p3_to_p2(&q, A);
         { //This just throws away A.T
-            fe_copy(q.X, A->X);
-            fe_copy(q.Y, A->Y);
-            fe_copy(q.Z, A->Z);
+            fe_copy(q_X, A_X);
+            fe_copy(q_Y, A_Y);
+            fe_copy(q_Z, A_Z);
         }
         //ge_p2_dbl(&t, &q);
         {
-            fe t0;
-            fe n2 = {0x00000002}; // init first int32_t of n2 as 2
-            fe tmp;
-
-            fe_mul(t.X, q.X, q.X);
-            fe_mul(t.Z, q.Y, q.Y);
-            fe_mul(tmp, n2, q.Z);
-            fe_mul(t.T, q.Z, tmp);
-            fe_add(t.Y, q.X, q.Y);
-            fe_mul(t0, t.Y, t.Y);
-            fe_add(t.Y, t.Z, t.X);
-            fe_sub(t.Z, t.Z, t.X);
-            fe_sub(t.X, t0, t.Y);
-            fe_sub(t.T, t.T, t.Z);
+            fe_mul(t_X, q_X, q_X);
+            fe_mul(t_Z, q_Y, q_Y);
+            fe_mul(tmp, n2, q_Z);
+            fe_mul(t_T, q_Z, tmp);
+            fe_add(t_Y, q_X, q_Y);
+            fe_mul(t0, t_Y, t_Y);
+            fe_add(t_Y, t_Z, t_X);
+            fe_sub(t_Z, t_Z, t_X);
+            fe_sub(t_X, t0, t_Y);
+            fe_sub(t_T, t_T, t_Z);
         }
     }
     //ge_p1p1_to_p3(&A2, &t);
     {
-        fe_mul(A2.X, t.X, t.T);
-        fe_mul(A2.Y, t.Y, t.Z);
-        fe_mul(A2.Z, t.Z, t.T);
-        fe_mul(A2.T, t.X, t.Y);
+        fe_mul(A2_X, t_X, t_T);
+        fe_mul(A2_Y, t_Y, t_Z);
+        fe_mul(A2_Z, t_Z, t_T);
+        fe_mul(A2_T, t_X, t_Y);
     }
-    ge_add(&t, &A2, &Ai[0]);
+    //ge_add(&t, &A2, &Ai[0]);
+    {
+        fe_add(t_X, A2_Y, A2_X);
+        fe_sub(t_Y, A2_Y, A2_X);
+        fe_mul(t_Z, t_X, Ai[0].YplusX);
+        fe_mul(t_Y, t_Y, Ai[0].YminusX);
+        fe_mul(t_T, Ai[0].T2d, A2_T);
+        fe_mul(t_X, A2_Z, Ai[0].Z);
+        fe_add(t0, t_X, t_X);
+        fe_sub(t_X, t_Z, t_Y);
+        fe_add(t_Y, t_Z, t_Y);
+        fe_add(t_Z, t0, t_T);
+        fe_sub(t_T, t0, t_T);
+    }
     //ge_p1p1_to_p3(&u, &t);
     {
-        fe_mul(u.X, t.X, t.T);
-        fe_mul(u.Y, t.Y, t.Z);
-        fe_mul(u.Z, t.Z, t.T);
-        fe_mul(u.T, t.X, t.Y);
+        fe_mul(u_X, t_X, t_T);
+        fe_mul(u_Y, t_Y, t_Z);
+        fe_mul(u_Z, t_Z, t_T);
+        fe_mul(u_T, t_X, t_Y);
     }
-    //ge_p3_to_cached(&Ai[1], &u);
+    //ge_p3_to_cached(&Ai[1]], &u);
     {
-        fe_add(Ai[1].YplusX, u.Y, u.X);
-        fe_sub(Ai[1].YminusX, u.Y, u.X);
-        fe_copy(Ai[1].Z, u.Z);
-        fe_mul(Ai[1].T2d, u.T, d2);
+        fe_add(Ai[1].YplusX, u_Y, u_X);
+        fe_sub(Ai[1].YminusX, u_Y, u_X);
+        fe_copy(Ai[1].Z, u_Z);
+        fe_mul(Ai[1].T2d, u_T, d2);
     }
-    ge_add(&t, &A2, &Ai[1]);
+    //ge_add(&t, &A2, &Ai[1]);
+    {
+        fe_add(t_X, A2_Y, A2_X);
+        fe_sub(t_Y, A2_Y, A2_X);
+        fe_mul(t_Z, t_X, Ai[1].YplusX);
+        fe_mul(t_Y, t_Y, Ai[1].YminusX);
+        fe_mul(t_T, Ai[1].T2d, A2_T);
+        fe_mul(t_X, A2_Z, Ai[1].Z);
+        fe_add(t0, t_X, t_X);
+        fe_sub(t_X, t_Z, t_Y);
+        fe_add(t_Y, t_Z, t_Y);
+        fe_add(t_Z, t0, t_T);
+        fe_sub(t_T, t0, t_T);
+    }
     //ge_p1p1_to_p3(&u, &t);
     {
-        fe_mul(u.X, t.X, t.T);
-        fe_mul(u.Y, t.Y, t.Z);
-        fe_mul(u.Z, t.Z, t.T);
-        fe_mul(u.T, t.X, t.Y);
+        fe_mul(u_X, t_X, t_T);
+        fe_mul(u_Y, t_Y, t_Z);
+        fe_mul(u_Z, t_Z, t_T);
+        fe_mul(u_T, t_X, t_Y);
     }
-    //ge_p3_to_cached(&Ai[2], &u);
+    //ge_p3_to_cached(&Ai[2]], &u);
     {
-        fe_add(Ai[2].YplusX, u.Y, u.X);
-        fe_sub(Ai[2].YminusX, u.Y, u.X);
-        fe_copy(Ai[2].Z, u.Z);
-        fe_mul(Ai[2].T2d, u.T, d2);
+        fe_add(Ai[2].YplusX, u_Y, u_X);
+        fe_sub(Ai[2].YminusX, u_Y, u_X);
+        fe_copy(Ai[2].Z, u_Z);
+        fe_mul(Ai[2].T2d, u_T, d2);
     }
-    ge_add(&t, &A2, &Ai[2]);
+    //ge_add(&t, &A2, &Ai[2]);
+    {
+        fe_add(t_X, A2_Y, A2_X);
+        fe_sub(t_Y, A2_Y, A2_X);
+        fe_mul(t_Z, t_X, Ai[2].YplusX);
+        fe_mul(t_Y, t_Y, Ai[2].YminusX);
+        fe_mul(t_T, Ai[2].T2d, A2_T);
+        fe_mul(t_X, A2_Z, Ai[2].Z);
+        fe_add(t0, t_X, t_X);
+        fe_sub(t_X, t_Z, t_Y);
+        fe_add(t_Y, t_Z, t_Y);
+        fe_add(t_Z, t0, t_T);
+        fe_sub(t_T, t0, t_T);
+    }
     //ge_p1p1_to_p3(&u, &t);
     {
-        fe_mul(u.X, t.X, t.T);
-        fe_mul(u.Y, t.Y, t.Z);
-        fe_mul(u.Z, t.Z, t.T);
-        fe_mul(u.T, t.X, t.Y);
+        fe_mul(u_X, t_X, t_T);
+        fe_mul(u_Y, t_Y, t_Z);
+        fe_mul(u_Z, t_Z, t_T);
+        fe_mul(u_T, t_X, t_Y);
     }
-    //ge_p3_to_cached(&Ai[3], &u);
+    //ge_p3_to_cached(&Ai[3]], &u);
     {
-        fe_add(Ai[3].YplusX, u.Y, u.X);
-        fe_sub(Ai[3].YminusX, u.Y, u.X);
-        fe_copy(Ai[3].Z, u.Z);
-        fe_mul(Ai[3].T2d, u.T, d2);
+        fe_add(Ai[3].YplusX, u_Y, u_X);
+        fe_sub(Ai[3].YminusX, u_Y, u_X);
+        fe_copy(Ai[3].Z, u_Z);
+        fe_mul(Ai[3].T2d, u_T, d2);
     }
-    ge_add(&t, &A2, &Ai[3]);
+    //ge_add(&t, &A2, &Ai[3]);
+    {
+        fe_add(t_X, A2_Y, A2_X);
+        fe_sub(t_Y, A2_Y, A2_X);
+        fe_mul(t_Z, t_X, Ai[3].YplusX);
+        fe_mul(t_Y, t_Y, Ai[3].YminusX);
+        fe_mul(t_T, Ai[3].T2d, A2_T);
+        fe_mul(t_X, A2_Z, Ai[3].Z);
+        fe_add(t0, t_X, t_X);
+        fe_sub(t_X, t_Z, t_Y);
+        fe_add(t_Y, t_Z, t_Y);
+        fe_add(t_Z, t0, t_T);
+        fe_sub(t_T, t0, t_T);
+    }
     //ge_p1p1_to_p3(&u, &t);
     {
-        fe_mul(u.X, t.X, t.T);
-        fe_mul(u.Y, t.Y, t.Z);
-        fe_mul(u.Z, t.Z, t.T);
-        fe_mul(u.T, t.X, t.Y);
+        fe_mul(u_X, t_X, t_T);
+        fe_mul(u_Y, t_Y, t_Z);
+        fe_mul(u_Z, t_Z, t_T);
+        fe_mul(u_T, t_X, t_Y);
     }
-    //ge_p3_to_cached(&Ai[4], &u);
+    //ge_p3_to_cached(&Ai[4]], &u);
     {
-        fe_add(Ai[4].YplusX, u.Y, u.X);
-        fe_sub(Ai[4].YminusX, u.Y, u.X);
-        fe_copy(Ai[4].Z, u.Z);
-        fe_mul(Ai[4].T2d, u.T, d2);
+        fe_add(Ai[4].YplusX, u_Y, u_X);
+        fe_sub(Ai[4].YminusX, u_Y, u_X);
+        fe_copy(Ai[4].Z, u_Z);
+        fe_mul(Ai[4].T2d, u_T, d2);
     }
-    ge_add(&t, &A2, &Ai[4]);
+    //ge_add(&t, &A2, &Ai[4]);
+    {
+        fe_add(t_X, A2_Y, A2_X);
+        fe_sub(t_Y, A2_Y, A2_X);
+        fe_mul(t_Z, t_X, Ai[4].YplusX);
+        fe_mul(t_Y, t_Y, Ai[4].YminusX);
+        fe_mul(t_T, Ai[4].T2d, A2_T);
+        fe_mul(t_X, A2_Z, Ai[4].Z);
+        fe_add(t0, t_X, t_X);
+        fe_sub(t_X, t_Z, t_Y);
+        fe_add(t_Y, t_Z, t_Y);
+        fe_add(t_Z, t0, t_T);
+        fe_sub(t_T, t0, t_T);
+    }
     //ge_p1p1_to_p3(&u, &t);
     {
-        fe_mul(u.X, t.X, t.T);
-        fe_mul(u.Y, t.Y, t.Z);
-        fe_mul(u.Z, t.Z, t.T);
-        fe_mul(u.T, t.X, t.Y);
+        fe_mul(u_X, t_X, t_T);
+        fe_mul(u_Y, t_Y, t_Z);
+        fe_mul(u_Z, t_Z, t_T);
+        fe_mul(u_T, t_X, t_Y);
     }
-    //ge_p3_to_cached(&Ai[5], &u);
+    //ge_p3_to_cached(&Ai[5]], &u);
     {
-        fe_add(Ai[5].YplusX, u.Y, u.X);
-        fe_sub(Ai[5].YminusX, u.Y, u.X);
-        fe_copy(Ai[5].Z, u.Z);
-        fe_mul(Ai[5].T2d, u.T, d2);
+        fe_add(Ai[5].YplusX, u_Y, u_X);
+        fe_sub(Ai[5].YminusX, u_Y, u_X);
+        fe_copy(Ai[5].Z, u_Z);
+        fe_mul(Ai[5].T2d, u_T, d2);
     }
-    ge_add(&t, &A2, &Ai[5]);
+    //ge_add(&t, &A2, &Ai[5]);
+    {
+        fe_add(t_X, A2_Y, A2_X);
+        fe_sub(t_Y, A2_Y, A2_X);
+        fe_mul(t_Z, t_X, Ai[5].YplusX);
+        fe_mul(t_Y, t_Y, Ai[5].YminusX);
+        fe_mul(t_T, Ai[5].T2d, A2_T);
+        fe_mul(t_X, A2_Z, Ai[5].Z);
+        fe_add(t0, t_X, t_X);
+        fe_sub(t_X, t_Z, t_Y);
+        fe_add(t_Y, t_Z, t_Y);
+        fe_add(t_Z, t0, t_T);
+        fe_sub(t_T, t0, t_T);
+    }
     //ge_p1p1_to_p3(&u, &t);
     {
-        fe_mul(u.X, t.X, t.T);
-        fe_mul(u.Y, t.Y, t.Z);
-        fe_mul(u.Z, t.Z, t.T);
-        fe_mul(u.T, t.X, t.Y);
+        fe_mul(u_X, t_X, t_T);
+        fe_mul(u_Y, t_Y, t_Z);
+        fe_mul(u_Z, t_Z, t_T);
+        fe_mul(u_T, t_X, t_Y);
     }
-    //ge_p3_to_cached(&Ai[6], &u);
+    //ge_p3_to_cached(&Ai[6]], &u);
     {
-        fe_add(Ai[6].YplusX, u.Y, u.X);
-        fe_sub(Ai[6].YminusX, u.Y, u.X);
-        fe_copy(Ai[6].Z, u.Z);
-        fe_mul(Ai[6].T2d, u.T, d2);
+        fe_add(Ai[6].YplusX, u_Y, u_X);
+        fe_sub(Ai[6].YminusX, u_Y, u_X);
+        fe_copy(Ai[6].Z, u_Z);
+        fe_mul(Ai[6].T2d, u_T, d2);
     }
-    ge_add(&t, &A2, &Ai[6]);
+    //ge_add(&t, &A2, &Ai[6]);
+    {
+        fe_add(t_X, A2_Y, A2_X);
+        fe_sub(t_Y, A2_Y, A2_X);
+        fe_mul(t_Z, t_X, Ai[6].YplusX);
+        fe_mul(t_Y, t_Y, Ai[6].YminusX);
+        fe_mul(t_T, Ai[6].T2d, A2_T);
+        fe_mul(t_X, A2_Z, Ai[6].Z);
+        fe_add(t0, t_X, t_X);
+        fe_sub(t_X, t_Z, t_Y);
+        fe_add(t_Y, t_Z, t_Y);
+        fe_add(t_Z, t0, t_T);
+        fe_sub(t_T, t0, t_T);
+    }
     //ge_p1p1_to_p3(&u, &t);
     {
-        fe_mul(u.X, t.X, t.T);
-        fe_mul(u.Y, t.Y, t.Z);
-        fe_mul(u.Z, t.Z, t.T);
-        fe_mul(u.T, t.X, t.Y);
+        fe_mul(u_X, t_X, t_T);
+        fe_mul(u_Y, t_Y, t_Z);
+        fe_mul(u_Z, t_Z, t_T);
+        fe_mul(u_T, t_X, t_Y);
     }
-    //ge_p3_to_cached(&Ai[7], &u);
+    //ge_p3_to_cached(&Ai[7]], &u);
     {
-        fe_add(Ai[7].YplusX, u.Y, u.X);
-        fe_sub(Ai[7].YminusX, u.Y, u.X);
-        fe_copy(Ai[7].Z, u.Z);
-        fe_mul(Ai[7].T2d, u.T, d2);
+        fe_add(Ai[7].YplusX, u_Y, u_X);
+        fe_sub(Ai[7].YminusX, u_Y, u_X);
+        fe_copy(Ai[7].Z, u_Z);
+        fe_mul(Ai[7].T2d, u_T, d2);
     }
     //ge_p2_0(r);
     {
@@ -331,110 +512,120 @@ void ge_double_scalarmult_vartime(ge_p2 *r, const unsigned char *a, const ge_p3 
     for (; i >= 0; --i) {
         //ge_p2_dbl(&t, r);
         {
-            fe t0;
-            fe n2 = {0x00000002}; // init first int32_t of n2 as 2
-            fe tmp;
+
         
-            fe_mul(t.X, r->X, r->X);
-            fe_mul(t.Z, r->Y, r->Y);
+            fe_mul(t_X, r->X, r->X);
+            fe_mul(t_Z, r->Y, r->Y);
             fe_mul(tmp, n2, r->Z);
-            fe_mul(t.T, r->Z, tmp);
-            fe_add(t.Y, r->X, r->Y);
-            fe_mul(t0, t.Y, t.Y);
-            fe_add(t.Y, t.Z, t.X);
-            fe_sub(t.Z, t.Z, t.X);
-            fe_sub(t.X, t0, t.Y);
-            fe_sub(t.T, t.T, t.Z);
+            fe_mul(t_T, r->Z, tmp);
+            fe_add(t_Y, r->X, r->Y);
+            fe_mul(t0, t_Y, t_Y);
+            fe_add(t_Y, t_Z, t_X);
+            fe_sub(t_Z, t_Z, t_X);
+            fe_sub(t_X, t0, t_Y);
+            fe_sub(t_T, t_T, t_Z);
         }
         if (aslide[i] > 0) {
             //ge_p1p1_to_p3(&u, &t);
             {
-                fe_mul(u.X, t.X, t.T);
-                fe_mul(u.Y, t.Y, t.Z);
-                fe_mul(u.Z, t.Z, t.T);
-                fe_mul(u.T, t.X, t.Y);
+                fe_mul(u_X, t_X, t_T);
+                fe_mul(u_Y, t_Y, t_Z);
+                fe_mul(u_Z, t_Z, t_T);
+                fe_mul(u_T, t_X, t_Y);
             }
-            ge_add(&t, &u, &Ai[aslide[i] / 2]);
+            int idx = aslide[i] / 2;
+            //ge_add(&t, &u, &Ai[idx]);
+            {
+                fe_add(t_X, u_Y, u_X);
+                fe_sub(t_Y, u_Y, u_X);
+                fe_mul(t_Z, t_X, Ai[idx].YplusX);
+                fe_mul(t_Y, t_Y, Ai[idx].YminusX);
+                fe_mul(t_T, Ai[idx].T2d, u_T);
+                fe_mul(t_X, u_Z, Ai[idx].Z);
+                fe_add(t0, t_X, t_X);
+                fe_sub(t_X, t_Z, t_Y);
+                fe_add(t_Y, t_Z, t_Y);
+                fe_add(t_Z, t0, t_T);
+                fe_sub(t_T, t0, t_T);
+            }
         } else if (aslide[i] < 0) {
             //ge_p1p1_to_p3(&u, &t);
             {
-                fe_mul(u.X, t.X, t.T);
-                fe_mul(u.Y, t.Y, t.Z);
-                fe_mul(u.Z, t.Z, t.T);
-                fe_mul(u.T, t.X, t.Y);
+                fe_mul(u_X, t_X, t_T);
+                fe_mul(u_Y, t_Y, t_Z);
+                fe_mul(u_Z, t_Z, t_T);
+                fe_mul(u_T, t_X, t_Y);
             }
-            //ge_sub(&t, &u, &Ai[(-aslide[i]) / 2]);
+            //ge_sub(&t, &u, &Ai_(-aslide[i]) / 2]);
             {
-                fe t0;
+
                 int idx = (-aslide[i]) / 2;
 
-                fe_add(t.X, u.Y, u.X);
-                fe_sub(t.Y, u.Y, u.X);
-                fe_mul(t.Z, t.X, Ai[idx].YminusX);
-                fe_mul(t.Y, t.Y, Ai[idx].YplusX);
-                fe_mul(t.T, Ai[idx].T2d, u.T);
-                fe_mul(t.X, u.Z, Ai[idx].Z);
-                fe_add(t0, t.X, t.X);
-                fe_sub(t.X, t.Z, t.Y);
-                fe_add(t.Y, t.Z, t.Y);
-                fe_sub(t.Z, t0, t.T);
-                fe_add(t.T, t0, t.T);
+                fe_add(t_X, u_Y, u_X);
+                fe_sub(t_Y, u_Y, u_X);
+                fe_mul(t_Z, t_X, Ai[idx].YminusX);
+                fe_mul(t_Y, t_Y, Ai[idx].YplusX);
+                fe_mul(t_T, Ai[idx].T2d, u_T);
+                fe_mul(t_X, u_Z, Ai[idx].Z);
+                fe_add(t0, t_X, t_X);
+                fe_sub(t_X, t_Z, t_Y);
+                fe_add(t_Y, t_Z, t_Y);
+                fe_sub(t_Z, t0, t_T);
+                fe_add(t_T, t0, t_T);
             }
         }
 
         if (bslide[i] > 0) {
             //ge_p1p1_to_p3(&u, &t);
             {
-                fe_mul(u.X, t.X, t.T);
-                fe_mul(u.Y, t.Y, t.Z);
-                fe_mul(u.Z, t.Z, t.T);
-                fe_mul(u.T, t.X, t.Y);
+                fe_mul(u_X, t_X, t_T);
+                fe_mul(u_Y, t_Y, t_Z);
+                fe_mul(u_Z, t_Z, t_T);
+                fe_mul(u_T, t_X, t_Y);
             }
             //ge_madd(&t, &u, &Bi[bslide[i] / 2]);
             {
                 int idx = bslide[i] / 2;
-                fe t0;
-                fe_add(t.X, u.Y, u.X);
-                fe_sub(t.Y, u.Y, u.X);
-                fe_mul(t.Z, t.X, Bi[idx].yplusx);
-                fe_mul(t.Y, t.Y, Bi[idx].yminusx);
-                fe_mul(t.T, Bi[idx].xy2d, u.T);
-                fe_add(t0, u.Z, u.Z);
-                fe_sub(t.X, t.Z, t.Y);
-                fe_add(t.Y, t.Z, t.Y);
-                fe_add(t.Z, t0, t.T);
-                fe_sub(t.T, t0, t.T);
+                fe_add(t_X, u_Y, u_X);
+                fe_sub(t_Y, u_Y, u_X);
+                fe_mul(t_Z, t_X, Bi[idx].yplusx);
+                fe_mul(t_Y, t_Y, Bi[idx].yminusx);
+                fe_mul(t_T, Bi[idx].xy2d, u_T);
+                fe_add(t0, u_Z, u_Z);
+                fe_sub(t_X, t_Z, t_Y);
+                fe_add(t_Y, t_Z, t_Y);
+                fe_add(t_Z, t0, t_T);
+                fe_sub(t_T, t0, t_T);
             }
         } else if (bslide[i] < 0) {
             //ge_p1p1_to_p3(&u, &t);
             {
-                fe_mul(u.X, t.X, t.T);
-                fe_mul(u.Y, t.Y, t.Z);
-                fe_mul(u.Z, t.Z, t.T);
-                fe_mul(u.T, t.X, t.Y);
+                fe_mul(u_X, t_X, t_T);
+                fe_mul(u_Y, t_Y, t_Z);
+                fe_mul(u_Z, t_Z, t_T);
+                fe_mul(u_T, t_X, t_Y);
             }
             //ge_msub(&t, &u, &Bi[(-bslide[i]) / 2]);
             {
-                fe t0;
                 int idx = (-bslide[i]) / 2;
-                fe_add(t.X, u.Y, u.X);
-                fe_sub(t.Y, u.Y, u.X);
-                fe_mul(t.Z, t.X, Bi[idx].yminusx);
-                fe_mul(t.Y, t.Y, Bi[idx].yplusx);
-                fe_mul(t.T, Bi[idx].xy2d, u.T);
-                fe_add(t0, u.Z, u.Z);
-                fe_sub(t.X, t.Z, t.Y);
-                fe_add(t.Y, t.Z, t.Y);
-                fe_sub(t.Z, t0, t.T);
-                fe_add(t.T, t0, t.T);
+                fe_add(t_X, u_Y, u_X);
+                fe_sub(t_Y, u_Y, u_X);
+                fe_mul(t_Z, t_X, Bi[idx].yminusx);
+                fe_mul(t_Y, t_Y, Bi[idx].yplusx);
+                fe_mul(t_T, Bi[idx].xy2d, u_T);
+                fe_add(t0, u_Z, u_Z);
+                fe_sub(t_X, t_Z, t_Y);
+                fe_add(t_Y, t_Z, t_Y);
+                fe_sub(t_Z, t0, t_T);
+                fe_add(t_T, t0, t_T);
             }
         }
 
         //ge_p1p1_to_p2(r, &t);
         {
-            fe_mul(r->X, t.X, t.T);
-            fe_mul(r->Y, t.Y, t.Z);
-            fe_mul(r->Z, t.Z, t.T);
+            fe_mul(r->X, t_X, t_T);
+            fe_mul(r->Y, t_Y, t_Z);
+            fe_mul(r->Z, t_Z, t_T);
         }
     }
 }
