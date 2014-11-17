@@ -40,7 +40,7 @@ fe_mulx ML(
     .done(mul_done)
     );
   
-reg [3:0] cycle;
+reg [3:0] cycle = 0;
 
 
 reg [319:0] rr_x;
