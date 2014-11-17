@@ -1,6 +1,6 @@
 module fe_sub_tb();
 
-`include "../fe/fe_sub.v"
+`include "../fe/fe_common.v"
 reg [319:0] f;
 reg [319:0] g;
 reg [319:0] h;

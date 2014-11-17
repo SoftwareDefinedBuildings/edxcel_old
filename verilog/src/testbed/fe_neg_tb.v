@@ -1,6 +1,6 @@
 module fe_neg_tb();
 
-`include "../fe/fe_neg.v"
+`include "../fe/fe_common.v"
 reg [319:0] f;
 reg [319:0] h;
 
