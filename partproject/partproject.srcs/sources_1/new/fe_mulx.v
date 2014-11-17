@@ -263,16 +263,16 @@ begin
         begin
     
     //TODO replace with zeroes
-    mul19_a_in <= 32'h55555555;
-    mul19_b_in <= 32'h55555555;
-    mul_a_in32 <= 32'h55555555;
-    mul_a_in64 <= 64'h55555555;
-    mul_b_in32 <= 32'h55555555;
-    mul_b_in64 <= 64'h55555555;
-    mul_c_in32 <= 32'h55555555;
-    mul_c_in64 <= 64'h55555555;
-    mul_d_in32 <= 32'h55555555;
-    mul_d_in64 <= 64'h55555555;
+    mul19_a_in <= 0;
+    mul19_b_in <= 0;
+    mul_a_in32 <= 0;
+    mul_a_in64 <= 0;
+    mul_b_in32 <= 0;
+    mul_b_in64 <= 0;
+    mul_c_in32 <= 0;
+    mul_c_in64 <= 0;
+    mul_d_in32 <= 0;
+    mul_d_in64 <= 0;
     h0 <= h0;
     cycle <= cycle + 1;
     rdone <= 0;

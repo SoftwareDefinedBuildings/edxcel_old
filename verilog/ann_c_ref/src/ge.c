@@ -8,17 +8,22 @@ r = p + q
 
 void ge_add(ge_p1p1 *r, const ge_p3 *p, const ge_cached *q) {
     fe t0;
-    fe_add(r->X, p->Y, p->X);
-    fe_sub(r->Y, p->Y, p->X);
-    fe_mul(r->Z, r->X, q->YplusX);
-    fe_mul(r->Y, r->Y, q->YminusX);
-    fe_mul(r->T, q->T2d, p->T);
-    fe_mul(r->X, p->Z, q->Z);
-    fe_add(t0, r->X, r->X);
-    fe_sub(r->X, r->Z, r->Y);
-    fe_add(r->Y, r->Z, r->Y);
-    fe_add(r->Z, t0, r->T);
-    fe_sub(r->T, t0, r->T);
+    fe_add(r->X, p->Y, p->X); //0
+    fe_sub(r->Y, p->Y, p->X); //0
+    fe_mul(r->Z, r->X, q->YplusX); //1
+    fe_mul(r->Y, r->Y, q->YminusX); //2
+    fe_mul(r->T, q->T2d, p->T); //3
+    fe_mul(r->X, p->Z, q->Z); //4
+	fe_add(r->Y, r->Z, r->Y); //4
+    fe_sub(r->X, r->Z, r->Y); //4
+    //5 get add + sub
+    
+    //6 get add
+    //7 wait for mul
+    fe_add(t0, r->X, r->X); //7
+    fe_add(r->Z, t0, r->T); //8
+    fe_sub(r->T, t0, r->T); //8
+    //9 get add/sub
 }
 
 
