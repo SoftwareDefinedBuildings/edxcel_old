@@ -73,7 +73,7 @@ always @ (posedge clk)
 begin
     if (rst == 1'b0)
     begin
-    
+        cycle <= 0;
     end
     else 
     begin
