@@ -231,25 +231,20 @@ void fe_invert(fe out, const fe z) {
     fe t3;
     int i;
 
+    printf("z:   ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", z[i]);
+    printf("\n");
+    
     fe_mul(t0, z, z);
-
-    for (i = 1; i < 1; ++i) {
-        fe_mul(t0, t0, t0);
-    }
 
     fe_mul(t1, t0, t0);
 
-    for (i = 1; i < 2; ++i) {
-        fe_mul(t1, t1, t1);
-    }
+    fe_mul(t1, t1, t1);
 
     fe_mul(t1, z, t1);
     fe_mul(t0, t0, t1);
     fe_mul(t2, t0, t0);
-
-    for (i = 1; i < 1; ++i) {
-        fe_mul(t2, t2, t2);
-    }
 
     fe_mul(t1, t1, t2);
     fe_mul(t2, t1, t1);
@@ -308,6 +303,11 @@ void fe_invert(fe out, const fe z) {
     }
 
     fe_mul(out, t1, t0);
+    
+    printf("out: ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", out[i]);
+    printf("\n");
 }
 
 
@@ -679,11 +679,6 @@ void fe_pow22523(fe out, const fe z) {
     fe t2;
     int i;
     
-    printf("z:   ");
-    for(i = 9; i >= 0; i--)
-        printf("%08x", z[i]);
-    printf("\n");
-    
     fe_mul(t0, z, z);
 
     fe_mul(t1, t0, t0);
@@ -751,11 +746,6 @@ void fe_pow22523(fe out, const fe z) {
     }
 
     fe_mul(out, t0, z);
-    
-    printf("out: ");
-    for(i = 9; i >= 0; i--)
-        printf("%08x", out[i]);
-    printf("\n");
     
     return;
 }
