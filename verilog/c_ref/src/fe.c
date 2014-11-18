@@ -231,11 +231,6 @@ void fe_invert(fe out, const fe z) {
     fe t3;
     int i;
 
-    printf("z:   ");
-    for(i = 9; i >= 0; i--)
-        printf("%08x", z[i]);
-    printf("\n");
-    
     fe_mul(t0, z, z);
 
     fe_mul(t1, t0, t0);
@@ -303,11 +298,6 @@ void fe_invert(fe out, const fe z) {
     }
 
     fe_mul(out, t1, t0);
-    
-    printf("out: ");
-    for(i = 9; i >= 0; i--)
-        printf("%08x", out[i]);
-    printf("\n");
 }
 
 
@@ -321,10 +311,17 @@ void fe_invert(fe out, const fe z) {
 */
 
 int fe_isnegative(const fe f) {
+    int i;
+    printf("f:      ");
+    for(i = 9; i >= 0; i--)
+        printf("%08x", f[i]);
+    printf("\n");
+    
     unsigned char s[32];
 
     fe_tobytes(s, f);
     
+    printf("s[0]&1: %08x\n\n", s[0]&1);
     return s[0] & 1;
 }
 
