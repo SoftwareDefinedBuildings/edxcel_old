@@ -28,8 +28,6 @@
 
 `include "../fe/fe_common.v"
 
-
-
 reg [319:0] pow_in;
 reg pow_valid;
 wire [319:0] pow_res;
@@ -94,10 +92,15 @@ begin
     frombytes_res = fe_frombytes(frombytes_in1);
 end 
 
+reg [319:0] add_in1;
+reg [319:0] add_in2;
+reg [319:0] sub_in1;
+reg [319:0] sub_in2;
+
 assign add_op_a = add_in1;
 assign add_op_b = add_in2;
 assign sub_op_a = sub_in1;
-assign sub_op_b = add_res;
+assign sub_op_b = sub_in2;
 
 reg [319:0] neg_in;
 reg [319:0] neg_res;
