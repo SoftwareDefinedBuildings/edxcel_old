@@ -1,6 +1,7 @@
 LIBS  = 
 CFLAGS = -Wall -I./ed25519/src/ -I.
-GCC = arm-xilinx-linux-gnueabi-gcc
+#GCC = arm-xilinx-linux-gnueabi-gcc
+GCC = gcc
 SRC=$(wildcard *.c ed25519/src/*.c)
 
 upload: bins
