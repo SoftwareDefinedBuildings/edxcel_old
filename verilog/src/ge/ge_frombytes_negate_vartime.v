@@ -96,7 +96,6 @@ reg [319:0] add_in1;
 reg [319:0] add_in2;
 reg [319:0] sub_in1;
 reg [319:0] sub_in2;
-
 assign add_op_a = add_in1;
 assign add_op_b = add_in2;
 assign sub_op_a = sub_in1;
@@ -129,7 +128,7 @@ begin
    begin
        rdone <= 0;
        state <= state + 1;
-       mul_valid <= 0;
+       self_mul_valid <= 0;
        pow_valid <= 0;
        pow_en <= 0;
        case (state)
@@ -149,18 +148,18 @@ begin
            6'd1 :  begin
                          rh_y <= frombytes_res;
                          // fe_mul(u, h->Y, h->Y);
-                         mul_in1 <= frombytes_res;
-                         mul_in2 <= frombytes_res;
-                         mul_valid <= 1;
+                         self_mul_in1 <= frombytes_res;
+                         self_mul_in2 <= frombytes_res;
+                         self_mul_valid <= 1;
                    end
            6'd2 :  begin
                        if (mul_done)
                        begin
                            u <= mul_res;
                            // fe_mul(v, u, d);
-                           mul_in1 <= mul_res;
-                           mul_in2 <= 320'hff480db4fee2b700ffce7199ffa03cbcff79e8980001c029006a0a0fff156ebd00d37285ff5978b6;
-                           mul_valid <= 1;
+                           self_mul_in1 <= mul_res;
+                           self_mul_in2 <= 320'hff480db4fee2b700ffce7199ffa03cbcff79e8980001c029006a0a0fff156ebd00d37285ff5978b6;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -187,18 +186,18 @@ begin
                          u <= sub_res;
                          v <= add_res;
                          // fe_mul(v3, v, v);
-                         mul_in1 <= add_res;
-                         mul_in2 <= add_res;
-                         mul_valid <= 1;
+                         self_mul_in1 <= add_res;
+                         self_mul_in2 <= add_res;
+                         self_mul_valid <= 1;
                    end
            6'd5 :  begin
                        if (mul_done)
                        begin
                            v3 <= mul_res;
                            // fe_mul(v3, v3, v);
-                           mul_in1 <= mul_res;
-                           mul_in2 <= v;
-                           mul_valid <= 1;
+                           self_mul_in1 <= mul_res;
+                           self_mul_in2 <= v;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -210,9 +209,9 @@ begin
                        begin
                            v3 <= mul_res;
                            // fe_mul(h->X, v3, v3);
-                           mul_in1 <= mul_res;
-                           mul_in2 <= mul_res;
-                           mul_valid <= 1;
+                           self_mul_in1 <= mul_res;
+                           self_mul_in2 <= mul_res;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -224,9 +223,9 @@ begin
                        begin
                            rh_x <= mul_res;
                            // fe_mul(h->X, h->X, v);
-                           mul_in1 <= mul_res;
-                           mul_in2 <= v;
-                           mul_valid <= 1;
+                           self_mul_in1 <= mul_res;
+                           self_mul_in2 <= v;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -238,9 +237,9 @@ begin
                        begin
                            rh_x <= mul_res;
                            // fe_mul(h->X, h->X, u);
-                           mul_in1 <= mul_res;
-                           mul_in2 <= u;
-                           mul_valid <= 1;
+                           self_mul_in1 <= mul_res;
+                           self_mul_in2 <= u;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -266,9 +265,9 @@ begin
                        begin
                            rh_x <= pow_res;
                            // fe_mul(h->X, h->X, v3);
-                           mul_in1 <= pow_res;
-                           mul_in2 <= v3;
-                           mul_valid <= 1;
+                           self_mul_in1 <= pow_res;
+                           self_mul_in2 <= v3;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -281,9 +280,9 @@ begin
                        begin
                            rh_x <= mul_res;
                            // fe_mul(h->X, h->X, u);
-                           mul_in1 <= mul_res;
-                           mul_in2 <= u;
-                           mul_valid <= 1;
+                           self_mul_in1 <= mul_res;
+                           self_mul_in2 <= u;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -295,9 +294,9 @@ begin
                        begin
                            rh_x <= mul_res;
                            // fe_mul(vxx, h->X, h->X);
-                           mul_in1 <= mul_res;
-                           mul_in2 <= mul_res;
-                           mul_valid <= 1;
+                           self_mul_in1 <= mul_res;
+                           self_mul_in2 <= mul_res;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -309,9 +308,9 @@ begin
                        begin
                            vxx <= mul_res;
                            // fe_mul(vxx, vxx, v);
-                           mul_in1 <= mul_res;
-                           mul_in2 <= v;
-                           mul_valid <= 1;
+                           self_mul_in1 <= mul_res;
+                           self_mul_in2 <= v;
+                           self_mul_valid <= 1;
                        end
                        else
                        begin
@@ -363,9 +362,9 @@ begin
                              else
                              begin
                                  // fe_mul(h->X, h->X, sqrtm1);
-                                 mul_in1 <= rh_x;
-                                 mul_in2 <= 320'h00ae0c920004fc1effe1656afe804c9ffffbd7a700bd0c600035697f008f189eff86c9d3fe0ea0b0;
-                                 mul_valid <= 1;
+                                 self_mul_in1 <= rh_x;
+                                 self_mul_in2 <= 320'h00ae0c920004fc1effe1656afe804c9ffffbd7a700bd0c600035697f008f189eff86c9d3fe0ea0b0;
+                                 self_mul_valid <= 1;
                              end
                          end
                    end
@@ -402,9 +401,9 @@ begin
                    end
            6'd22 :  begin
                          // fe_mul(h->T, h->X, h->Y);
-                         mul_in1 <= rh_x;
-                         mul_in2 <= rh_y;
-                         mul_valid <= 1;
+                         self_mul_in1 <= rh_x;
+                         self_mul_in2 <= rh_y;
+                         self_mul_valid <= 1;
                    end
            6'd23 :  begin
                        if (mul_done)

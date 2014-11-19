@@ -1,5 +1,6 @@
 module ge_frombytes_negate_vartime_tb();
 
+`include "../fe/fe_common.v"
 
 reg [255:0] s;
 wire [319:0] h_x;
@@ -12,23 +13,69 @@ reg rst;
 reg valid;
 wire done;
 
-reg [319:0] mul_in1;
-reg [319:0] mul_in2;
-reg mul_valid;
+wire [319:0] mul_in1;
+wire [319:0] mul_in2;
+wire mul_valid;
 wire [319:0] mul_res;
 wire mul_done;
 
-reg [319:0] add_in1;
-reg [319:0] add_in2;
+fe_mulx ML(
+   .op_a(mul_in1),
+   .op_b(mul_in2),
+   .valid(mul_valid),
+   .res(mul_res),
+   .clk(clk),
+   .rst(rst),
+   .done(mul_done)
+   );
+   
+//wire [319:0] mul_in1_gfnv;
+//wire [319:0] mul_in2_gfnv;
+//wire mul_valid_gfnv;
+
+wire [319:0] add_in1;
+wire [319:0] add_in2;
 reg [319:0] add_res;
+
+wire [319:0] sub_in1;
+wire [319:0] sub_in2;
+reg [319:0] sub_res;
+
+ge_frombytes_negate_vartime ge_frombytes_negate_vartime(
+   .s(s),
+   .h_x(h_x),
+   .h_y(h_y),
+   .h_z(h_z),
+   .h_t(h_t),
+   .error(error),
+   .clk(clk),
+   .rst(rst),
+   .valid(valid),
+   .done(done),
+   
+       //Resources
+   .mul_op_a(mul_in1),
+   .mul_op_b(mul_in2),
+   .mul_valid(mul_valid),
+   .mul_res(mul_res),
+   .mul_done(mul_done),
+       
+   .add_op_a(add_in1),
+   .add_op_b(add_in2),
+   .add_res(add_res),
+       
+   .sub_op_a(sub_in1),
+   .sub_op_b(sub_in2),
+   .sub_res(sub_res)
+   );
+
+
 always @ (*)
 begin
     add_res = fe_add(add_in1, add_in2);
 end 
 
-reg [319:0] sub_in1;
-reg [319:0] sub_in2;
-reg [319:0] sub_res;
+
 always @ (*)
 begin
     sub_res = fe_sub(sub_in1, sub_in2);
@@ -64,45 +111,10 @@ always begin
  #5 clk = !clk;
 end
 
-ge_frombytes_negate_vartime ge_frombytes_negate_vartime(
-.s(s),
-.h_x(h_z),
-.h_y(h_y),
-.h_z(h_z),
-.h_t(h_t),
-.error(error),
-.clk(clk),
-.rst(rst),
-.valid(valid),
-.done(done),
-
-    //Resources
-.mul_op_a(mul_in1),
-.mul_op_b(mul_in2),
-.mul_valid(mul_valid),
-.mul_res(mul_res),
-.mul_done(mul_done),
-    
-.add_op_a(add_in1),
-.add_op_b(add_in2),
-.add_res(add_res),
-    
-.sub_op_a(sub_in1),
-.sub_op_b(sub_in2),
-.sub_res(sub_res)
-);
 
 
 
-fe_mulx ML(
-   .op_a(mul_in1),
-   .op_b(mul_in2),
-   .valid(mul_valid),
-   .res(mul_res),
-   .clk(clk),
-   .rst(rst),
-   .done(mul_done)
-   );
+
    
    
 
