@@ -311,17 +311,10 @@ void fe_invert(fe out, const fe z) {
 */
 
 int fe_isnegative(const fe f) {
-    int i;
-    printf("f:      ");
-    for(i = 9; i >= 0; i--)
-        printf("%08x", f[i]);
-    printf("\n");
-    
     unsigned char s[32];
 
     fe_tobytes(s, f);
     
-    printf("s[0]&1: %08x\n\n", s[0]&1);
     return s[0] & 1;
 }
 
