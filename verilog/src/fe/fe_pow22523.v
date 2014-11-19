@@ -4,7 +4,14 @@
    input clk,
    input rst,
    input valid,
-   output done
+   output done,
+
+    //Resources
+   output [319:0] pmul_in1,
+   output [319:0] pmul_in2,
+   output pmul_valid,
+   input [319:0] mul_res,
+   input mul_done
 );
 
 `include "../fe/fe_common.v"
@@ -12,18 +19,10 @@
 reg [319:0] mul_in1;
 reg [319:0] mul_in2;
 reg mul_valid;
-wire [319:0] mul_res;
-wire mul_done;
 
-fe_mulx ML(
-   .op_a(mul_in1),
-   .op_b(mul_in2),
-   .valid(mul_valid),
-   .res(mul_res),
-   .clk(clk),
-   .rst(rst),
-   .done(mul_done)
-   );
+assign pmul_in1 = mul_in1;
+assign pmul_in2 = mul_in2;
+assign pmul_valid = mul_valid;
  
 integer cycle;
 
