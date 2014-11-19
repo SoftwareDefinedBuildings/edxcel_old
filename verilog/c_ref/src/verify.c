@@ -62,7 +62,18 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
         return 0;
     }
     sc_reduce(h);
-
+    printf("\nrhash:");
+    for (i=256/8 - 1;i>=0;i--)
+        printf("%02x", (uint8_t) h[i]);
+    printf("\n");
+    printf("public_key:");
+    for (i=256/8 - 1;i>=0;i--)
+        printf("%02x", (uint8_t) public_key[i]);
+    printf("\n");
+    printf("signature: ");
+    for (i=512/8 - 1;i>=0;i--)
+        printf("%02x", (uint8_t) signature[i]);
+    printf("\n");
     //TO FPGA: public key, h[..32], sig[..32]
     if (ge_frombytes_negate_vartime(&A, public_key) != 0) {
         return 0;

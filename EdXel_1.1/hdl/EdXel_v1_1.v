@@ -50,7 +50,7 @@
         output wire epu0_rdy,
         output wire [31:0] epu0_sigl,
         output wire [31:0] epu0_keyl,
-        output wire [31:0] epu0_msgl
+        output wire [31:0] epu0_rhashl
 	);
 // Instantiation of Axi Bus Interface S00_AXI
 	EdXel_v1_1_S00_AXI # ( 
@@ -84,11 +84,24 @@
 		.epu0_rdy(epu0_rdy),
 		.epu0_sigl(epu0_sigl),
 		.epu0_keyl(epu0_keyl),
-		.epu0_msgl(epu0_msgl)
+		.epu0_rhashl(epu0_rhashl),
+		.epu_clock(epu_clock)
 	);
 
+    wire posreset;
+    wire epu_clock;
+    assign posreset = !s00_axi_aresetn;
+    
 	// Add user logic here
-
+     clk_wiz_0 epu_clock_gen
+     (
+     // Clock in ports
+      .clk_in1(s00_axi_aclk),      // input clk_in1
+      // Clock out ports
+      .clk_out1(epu_clock),     // output clk_out1
+      // Status and control signals
+      .reset(posreset) // input reset
+     );      // output locked
 	// User logic ends
 
 	endmodule

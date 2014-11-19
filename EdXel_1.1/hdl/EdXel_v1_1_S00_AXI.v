@@ -89,8 +89,10 @@
 		output wire epu0_rdy,
 		output wire [31:0] epu0_sigl,
 		output wire [31:0] epu0_keyl,
-		output wire [31:0] epu0_msgl
+		output wire [31:0] epu0_rhashl,
+		input wire epu_clock
 	);
+
 
     
     localparam integer PL_VERSION = 32'h0410_0139;
@@ -144,11 +146,11 @@
 	// de-asserted when reset is low.
 
     //XTAG EPU assets
-    
+
     
     reg [511:0] epu_sig [0:NUM_EPU-1];
     reg [255:0] epu_key [0:NUM_EPU-1];
-    reg [255:0] epu_msg [0:NUM_EPU-1];
+    reg [255:0] epu_rhash [0:NUM_EPU-1];
     reg epu_vld [0:NUM_EPU-1];
     wire epu_rdy [0:NUM_EPU-1];
     wire epu_sok [0:NUM_EPU-1];
@@ -157,12 +159,13 @@
     genvar ep_idx;
     for (ep_idx = 0; ep_idx < NUM_EPU; ep_idx = ep_idx + 1)
     begin
-        DummyEPU U (
-             .clk(S_AXI_ACLK),
+        EPU U (
+             .axiclk(S_AXI_ACLK),
+             .modclk(epu_clock),
              .resetn(S_AXI_ARESETN),
-             .signature(epu_sig[ep_idx]),
+             .sig32(epu_sig[ep_idx]),
              .key(epu_key[ep_idx]),
-             .message(epu_msg[ep_idx]),
+             .rhash(epu_rhash[ep_idx]),
              .ready(epu_rdy[ep_idx]),
              .result(epu_sok[ep_idx]),
              .valid(epu_vld[ep_idx])
@@ -175,7 +178,7 @@
     assign epu0_rdy = epu_rdy[0];
     assign epu0_sigl = epu_sig[0][31:0];
     assign epu0_keyl = epu_key[0][31:0];
-    assign epu0_msgl = epu_msg[0][31:0];
+    assign epu0_rhashl = epu_rhash[0][31:0];
     
 	always @( posedge S_AXI_ACLK )
 	begin
@@ -279,7 +282,7 @@ begin : epu_loops
 	always @( posedge S_AXI_ACLK )
 	begin
 	  
-	  epu_msg[n] <= epu_msg[n];
+	  epu_rhash[n] <= epu_rhash[n];
       epu_sig[n] <= epu_sig[n];
       epu_key[n] <= epu_key[n];
       epu_vld[n] <= epu_vld[n];
@@ -328,7 +331,7 @@ begin : epu_loops
                       begin
                             if ( S_AXI_WSTRB[byte_index] == 1 ) 
                             begin
-                              epu_msg[n][(raddr + byte_index)*8 +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
+                              epu_rhash[n][(raddr + byte_index)*8 +: 8] <= S_AXI_WDATA[(byte_index*8) +: 8];
                             end
                       end
                   end
@@ -353,7 +356,7 @@ begin : epu_loops
               if (axi_awaddr[7:0] == 8'hCC)
               begin
                    epu_vld[n] <= 1'b0;
-                   epu_msg[n] <= 0;
+                   epu_rhash[n] <= 0;
                    epu_sig[n] <= 0;
                    epu_key[n] <= 0;
               end
