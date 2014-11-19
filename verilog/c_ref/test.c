@@ -15,11 +15,11 @@ int main() {
     unsigned char public_key[32], private_key[64], seed[32];
     unsigned char signature[64];
     unsigned char *message = private_key;
-    const int message_len = 64; // use private key as message
+    const int message_len = 32; // use private key as message
 
-    int i, j;
+    long i, j;
 
-    for (i = 0; i < 10000; i++) {
+    for (i = 0; i < 100000; i++) {
         /* create a random seed, and a keypair out of that seed */
         ed25519_create_seed(seed);
         ed25519_create_keypair(public_key, private_key, seed);
@@ -35,6 +35,11 @@ int main() {
         printf("sk:"); 
         for (j = 0; j < 64; j++)
             printf("%02x", private_key[j]);
+        printf("\n");
+        
+        printf("msg:"); 
+        for (j = 0; j < 32; j++)
+            printf("%02x", message[j]);
         printf("\n");
         
         printf("sig:"); 
