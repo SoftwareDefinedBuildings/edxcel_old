@@ -2,6 +2,11 @@
 #include "sha512.h"
 #include "ge.h"
 #include "sc.h"
+#include <time.h>
+#include <unistd.h>
+#include <sys/time.h>
+#include <string.h>
+#include <stdio.h>
 
 static int consttime_equal(const unsigned char *x, const unsigned char *y) {
     unsigned char r = 0;
@@ -43,10 +48,19 @@ static int consttime_equal(const unsigned char *x, const unsigned char *y) {
 
     return !r;
 }
-
+uint64_t GetTimeStamp() 
+{
+    struct timeval tv;
+    gettimeofday(&tv,NULL);
+    return tv.tv_sec*(uint64_t)1000000+tv.tv_usec;
+}
 int ed25519_verify(const unsigned char *signature, const unsigned char *message, size_t message_len, const unsigned char *public_key) {
     unsigned char h[64];
+    unsigned char hr[64];
     unsigned char checker[32];
+    long unsigned int then;
+    long unsigned int now;
+    int i;
     sha512_context hash;
     ge_p3 A;
     ge_p2 R;
@@ -55,9 +69,7 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
         return 0;
     }
 
-    if (ge_frombytes_negate_vartime(&A, public_key) != 0) {
-        return 0;
-    }
+
 
     sha512_init(&hash);
     sha512_update(&hash, signature, 32);
@@ -65,9 +77,38 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
     sha512_update(&hash, message, message_len);
     sha512_final(&hash, h);
     
-    sc_reduce(h);
-    ge_double_scalarmult_vartime(&R, h, &A, signature + 32);
-    ge_tobytes(checker, &R);
+    then = clock();
+    for (i = 0; i<1000;i++)
+    {
+		if (ge_frombytes_negate_vartime(&A, public_key) != 0) {
+		    return 0;
+		}
+    }
+    now = clock();
+    printf("a: %lu\n", now-then);
+    memcpy(&hr[0], &h[0], 64);
+    then = clock();
+    for (i = 0; i<1000;i++)
+    {
+    	memcpy(&h[0], &h[0], 64);
+    	sc_reduce(h);
+    }
+    now = clock();
+    printf("b: %lu\n", now - then);
+    then = clock();
+    for (i = 0; i<1000;i++)
+    {
+    	ge_double_scalarmult_vartime(&R, h, &A, signature + 32);
+	}
+    now = clock();
+    printf("c: %lu\n", now-then);
+    then = clock();
+    for (i = 0; i<1000;i++)
+    {
+    	ge_tobytes(checker, &R);
+	}
+    now = clock();
+    printf("d: %lu\n", now-then);
 
     if (!consttime_equal(checker, signature)) {
         return 0;

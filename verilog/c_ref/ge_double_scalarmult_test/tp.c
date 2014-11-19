@@ -66,14 +66,18 @@ int main()
     fe r_Y;
     fe r_Z;
 
+    #define THEM
+    #ifdef THEM
     ge_p2 R;
     uint8_t refc [32];
-    ge_double_scalarmult_vartime_(&R, h_arr, &A, sig32_arr);
+    ge_double_scalarmult_vartime(&R, h_arr, &A, sig32_arr + 32);
     ge_tobytes_(refc, &R);
     printf("\n\nREFC  ");
     for (i=256/8 - 1;i>=0;i--)
             printf("%02x", (uint8_t) refc[i]);
         printf("\n");
+
+        #endif
     /*printf("r_x:  ");
     for (i=320/8 - 1; i>= 0; i--)
     {
@@ -91,7 +95,9 @@ int main()
     }*/
 
     //printf("\n");
-   // ge_double_scalarmult_vartimep(r_X,r_Y,r_Z,h_arr,A.X,A.Y,A.Z,A.T,sig32_arr+32);
+    #ifndef THEM
+    ge_double_scalarmult_vartimep(r_X,r_Y,r_Z,h_arr,A.X,A.Y,A.Z,A.T,sig32_arr+32);
+    #endif
    /* printf("r_x:  ");
     for (i=320/8 - 1; i>= 0; i--)
     {
