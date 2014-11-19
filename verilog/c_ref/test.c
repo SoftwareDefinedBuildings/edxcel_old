@@ -8,8 +8,8 @@
 int main() {
     unsigned char public_key[32];
     unsigned char signature[64];
-    unsigned char message[64];
-    const int message_len = 64; // use private key as message
+    unsigned char message[32];
+    const int message_len = 32; // use private key as message
     unsigned char str[256];
 
     int i, j;
@@ -29,8 +29,9 @@ int main() {
         }
     
         scanf("%s", str);
-        pos = str + 3;
-        for (j = 0; j < 64; j++) {
+        scanf("%s", str);
+        pos = str + 4;
+        for (j = 0; j < 32; j++) {
             sscanf(pos, "%2hhx", &message[j]);
             pos += 2 * sizeof(char);
         }
