@@ -17,8 +17,6 @@
 
 #ifndef FIXEDINT_H_INCLUDED
     #define FIXEDINT_H_INCLUDED
-    
-    #include <limits.h>
 
     /* (u)int32_t */
     #ifndef uint32_t

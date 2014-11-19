@@ -30,7 +30,7 @@ static void slide(signed char *r, const unsigned char *a) {
     for (i = 0; i < 256; ++i) {
         r[i] = 1 & (a[i >> 3] >> (i & 7));
     }
-/*
+
     for (i = 0; i < 256; ++i)
         if (r[i]) {
             for (b = 1; b <= 6 && i + b < 256; ++b) {
@@ -54,7 +54,7 @@ static void slide(signed char *r, const unsigned char *a) {
                     }
                 }
             }
-        }*/
+        }
 }
 
 /*
@@ -99,101 +99,33 @@ void ge_double_scalarmult_vartime(ge_p2 *r, const unsigned char *a, const ge_p3 
     ge_p1p1_to_p3(&u, &t);
     ge_p3_to_cached(&Ai[7], &u);
     ge_p2_0(r);
-/*
+
     for (i = 255; i >= 0; --i) {
         if (aslide[i] || bslide[i]) {
             break;
         }
     }
-    */
 
-	i = 255;
-    /*for (; i >= 0; --i) {
+    for (; i >= 0; --i) {
         ge_p2_dbl(&t, r);
 
         if (aslide[i] > 0) {
             ge_p1p1_to_p3(&u, &t);
             ge_add(&t, &u, &Ai[aslide[i] / 2]);
-        } 
+        } else if (aslide[i] < 0) {
+            ge_p1p1_to_p3(&u, &t);
+            ge_sub(&t, &u, &Ai[(-aslide[i]) / 2]);
+        }
 
         if (bslide[i] > 0) {
             ge_p1p1_to_p3(&u, &t);
             ge_madd(&t, &u, &Bi[bslide[i] / 2]);
-        } 
+        } else if (bslide[i] < 0) {
+            ge_p1p1_to_p3(&u, &t);
+            ge_msub(&t, &u, &Bi[(-bslide[i]) / 2]);
+        }
 
         ge_p1p1_to_p2(r, &t);
-    }*/
-    for (; i >= 0; --i) {
-        //ge_p2_dbl(&t, r);
-        {
-
-            fe_mul(t_X, r_X, r_X);
-            fe_mul(t_Z, r_Y, r_Y);
-            fe_mul(tmp, n2, r_Z);
-            fe_mul(t_T, r_Z, tmp);
-            fe_add(t_Y, r_X, r_Y);
-            fe_mul(t0, t_Y, t_Y);
-            fe_add(t_Y, t_Z, t_X);
-            fe_sub(t_Z, t_Z, t_X);
-            fe_sub(t_X, t0, t_Y);
-            fe_sub(t_T, t_T, t_Z);
-        }
-        if (aslide[i] > 0)
-        {
-            //ge_p1p1_to_p3(&u, &t);
-            {
-                fe_mul(u_X, t_X, t_T);
-                fe_mul(u_Y, t_Y, t_Z);
-                fe_mul(u_Z, t_Z, t_T);
-                fe_mul(u_T, t_X, t_Y);
-            }
-            int idx = aslide[i] / 2;
-            //ge_add(&t, &u, &Ai[idx]);
-            {
-                fe_add(t_X, u_Y, u_X);
-                fe_sub(t_Y, u_Y, u_X);
-                fe_mul(t_Z, t_X, Ai[idx].YplusX);
-                fe_mul(t_Y, t_Y, Ai[idx].YminusX);
-                fe_mul(t_T, Ai[idx].T2d, u_T);
-                fe_mul(t_X, u_Z, Ai[idx].Z);
-                fe_add(t0, t_X, t_X);
-                fe_sub(t_X, t_Z, t_Y);
-                fe_add(t_Y, t_Z, t_Y);
-                fe_add(t_Z, t0, t_T);
-                fe_sub(t_T, t0, t_T);
-            }
-        }
-        if (bslide[i] > 0)
-        {
-            //ge_p1p1_to_p3(&u, &t);
-            {
-                fe_mul(u_X, t_X, t_T);
-                fe_mul(u_Y, t_Y, t_Z);
-                fe_mul(u_Z, t_Z, t_T);
-                fe_mul(u_T, t_X, t_Y);
-            }
-            //ge_madd(&t, &u, &Bi[bslide[i] / 2]);
-            {
-                int idx = bslide[i] / 2;
-                fe_add(t_X, u_Y, u_X);
-                fe_sub(t_Y, u_Y, u_X);
-                fe_mul(t_Z, t_X, Bi[idx].yplusx);
-                fe_mul(t_Y, t_Y, Bi[idx].yminusx);
-                fe_mul(t_T, Bi[idx].xy2d, u_T);
-                fe_add(t0, u_Z, u_Z);
-                fe_sub(t_X, t_Z, t_Y);
-                fe_add(t_Y, t_Z, t_Y);
-                fe_add(t_Z, t0, t_T);
-                fe_sub(t_T, t0, t_T);
-            }
-
-            //ge_p1p1_to_p2(r, &t);
-            {
-                fe_mul(r_X, t_X, t_T);
-                fe_mul(r_Y, t_Y, t_Z);
-                fe_mul(r_Z, t_Z, t_T);
-            }
-        }
     }
 }
 

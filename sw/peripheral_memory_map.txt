@@ -1,0 +1,26 @@
+The peripheral starts at 0x4C00000 and has a 64K memory address range.
+These are the mappings expressed as an offset:
+
+
+RO 0x0000 : Version of the PL
+RO 0x0004 : Configuration options for the PL (lsByte is number of EPUs)
+RO 0x0010 : Processing unit ready states. 0 for ready, 1 for busy
+RO 0x0014 : Index of the first available processing unit
+RO 0x0018 : Signature result, when ready is 0 this is 0 for OK, 1 for invalid. If 
+            there has been no previous signature, it will be 1
+
+For each EPU:
+
+0x0000 - 0x0040 : Signature
+0x0080 - 0x00A0 : Public key
+0x00A0 - 0x00C0 : RedHash
+0x00C0 : A write of 0x410 will start processing. This register will read 0
+         while processing, and read 1 for signature pass and 2 for signature
+         failure
+
+EPU's are mapped as
+
+0x2000 - 0x2080 : EPU 0
+0x2100 - 0x2180 : EPU 1
+...
+0x4000 - 0x4080 : EPU 32
