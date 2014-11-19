@@ -1,49 +1,69 @@
  module ge_frombytes_negate_vartime(
-   input [255:0] s,
-   output [319:0] h_x,
-   output [319:0] h_y,
-   output [319:0] h_z,
-   output [319:0] h_t,
-   output error,
-   input clk,
-   input rst,
-   input valid,
-   output done
+    input [255:0] s,
+    output [319:0] h_x,
+    output [319:0] h_y,
+    output [319:0] h_z,
+    output [319:0] h_t,
+    output error,
+    input clk,
+    input rst,
+    input valid,
+    output done,
+
+    //Resources
+    output [319:0] mul_op_a,
+    output [319:0] mul_op_b,
+    output mul_valid,
+    input [319:0] mul_res,
+    input mul_done,
+    
+    output [319:0] add_op_a,
+    output [319:0] add_op_b,
+    input [319:0]  add_res,
+    
+    output [319:0] sub_op_a,
+    output [319:0] sub_op_b,
+    input [319:0]  sub_res
 );
 
 `include "../fe/fe_common.v"
 
-reg [319:0] mul_in1;
-reg [319:0] mul_in2;
-reg mul_valid;
-wire [319:0] mul_res;
-wire mul_done;
 
-fe_mulx ML(
-   .op_a(mul_in1),
-   .op_b(mul_in2),
-   .valid(mul_valid),
-   .res(mul_res),
-   .clk(clk),
-   .rst(rst),
-   .done(mul_done)
-   );
 
 reg [319:0] pow_in;
 reg pow_valid;
 wire [319:0] pow_res;
 wire pow_done;
-
+wire [319:0] pow_mul_op_a;
+wire [319:0] pow_mul_op_b;
+wire pow_mul_valid;
 fe_pow22523 POW(
    .z(pow_in),
    .out(pow_res),
    .clk(clk),
    .rst(rst),
    .valid(pow_valid),
-   .done(pow_done)
+   .done(pow_done),
+
+    //Resources
+   .pmul_in1(pow_mul_op_a),
+   .pmul_in2(pow_mul_op_b),
+   .pmul_valid(pow_mul_valid),
+   .mul_res(mul_res),
+   .mul_done(mul_done)
    );
+
+reg [319:0] self_mul_in1;
+reg [319:0] self_mul_in2;
+reg self_mul_valid;
+
+reg pow_en;
+assign mul_valid = self_mul_valid | pow_mul_valid;
+assign mul_op_a = pow_en ? pow_mul_op_a : self_mul_in1;
+assign mul_op_b = pow_en ? pow_mul_op_b : self_mul_in2;
+
  
-integer cycle;
+reg [5:0] state;
 
 reg [319:0] u;
 reg [319:0] v;
@@ -66,6 +86,7 @@ assign error = rerror;
 reg rdone;
 assign done = rdone;
 
+
 reg [319:0] frombytes_in1;
 reg [319:0] frombytes_res;
 always @ (*)
@@ -73,21 +94,10 @@ begin
     frombytes_res = fe_frombytes(frombytes_in1);
 end 
 
-reg [319:0] add_in1;
-reg [319:0] add_in2;
-reg [319:0] add_res;
-always @ (*)
-begin
-    add_res = fe_add(add_in1, add_in2);
-end 
-
-reg [319:0] sub_in1;
-reg [319:0] sub_in2;
-reg [319:0] sub_res;
-always @ (*)
-begin
-    sub_res = fe_sub(sub_in1, sub_in2);
-end 
+assign add_op_a = add_in1;
+assign add_op_b = add_in2;
+assign sub_op_a = sub_in1;
+assign sub_op_b = add_res;
 
 reg [319:0] neg_in;
 reg [319:0] neg_res;
@@ -110,16 +120,17 @@ always @ (posedge clk)
 begin
    if (rst == 1'b0)
    begin
-       cycle <= 0;
+       state <= 0;
    end
    else 
    begin
        rdone <= 0;
-       cycle <= cycle + 1;
+       state <= state + 1;
        mul_valid <= 0;
        pow_valid <= 0;
-       case (cycle)
-           32'd0 :  begin
+       pow_en <= 0;
+       case (state)
+           6'd0 :  begin
                        if (valid == 1'b1)
                        begin
                            // fe_frombytes(h->Y, s);
@@ -129,17 +140,17 @@ begin
                        end
                        else
                        begin
-                           cycle <= 0;
+                           state <= 0;
                        end
                    end
-           32'd1 :  begin
+           6'd1 :  begin
                          rh_y <= frombytes_res;
                          // fe_mul(u, h->Y, h->Y);
                          mul_in1 <= frombytes_res;
                          mul_in2 <= frombytes_res;
                          mul_valid <= 1;
                    end
-           32'd2 :  begin
+           6'd2 :  begin
                        if (mul_done)
                        begin
                            u <= mul_res;
@@ -150,10 +161,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 2;
+                           state <= 2;
                        end
                    end
-           32'd3 :  begin
+           6'd3 :  begin
                        if (mul_done)
                        begin
                            v <= mul_res;
@@ -166,10 +177,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 3;
+                           state <= 3;
                        end
                    end
-           32'd4 :  begin
+           6'd4 :  begin
                          u <= sub_res;
                          v <= add_res;
                          // fe_mul(v3, v, v);
@@ -177,7 +188,7 @@ begin
                          mul_in2 <= add_res;
                          mul_valid <= 1;
                    end
-           32'd5 :  begin
+           6'd5 :  begin
                        if (mul_done)
                        begin
                            v3 <= mul_res;
@@ -188,10 +199,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 5;
+                           state <= 5;
                        end
                    end
-           32'd6 :  begin
+           6'd6 :  begin
                        if (mul_done)
                        begin
                            v3 <= mul_res;
@@ -202,10 +213,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 6;
+                           state <= 6;
                        end
                    end
-           32'd7 :  begin
+           6'd7 :  begin
                        if (mul_done)
                        begin
                            rh_x <= mul_res;
@@ -216,10 +227,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 7;
+                           state <= 7;
                        end
                    end
-           32'd8 :  begin
+           6'd8 :  begin
                        if (mul_done)
                        begin
                            rh_x <= mul_res;
@@ -230,23 +241,24 @@ begin
                        end
                        else
                        begin
-                           cycle <= 8;
+                           state <= 8;
                        end
                    end
-           32'd9 :  begin
+           6'd9 :  begin
                        if (mul_done)
                        begin
                            rh_x <= mul_res;
                            // fe_pow22523(h->X, h->X);
                            pow_in <= mul_res;
                            pow_valid <= 1;
+                           pow_en <= 1;
                        end
                        else
                        begin
-                           cycle <= 9;
+                           state <= 9;
                        end
                    end
-           32'd10 :  begin
+           6'd10 :  begin
                        if (pow_done)
                        begin
                            rh_x <= pow_res;
@@ -257,10 +269,11 @@ begin
                        end
                        else
                        begin
-                           cycle <= 10;
+                           state <= 10;
+                           pow_en <= 1;
                        end
                    end
-           32'd11 :  begin
+           6'd11 :  begin
                        if (mul_done)
                        begin
                            rh_x <= mul_res;
@@ -271,10 +284,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 11;
+                           state <= 11;
                        end
                    end
-           32'd12 :  begin
+           6'd12 :  begin
                        if (mul_done)
                        begin
                            rh_x <= mul_res;
@@ -285,10 +298,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 12;
+                           state <= 12;
                        end
                    end
-           32'd13 :  begin
+           6'd13 :  begin
                        if (mul_done)
                        begin
                            vxx <= mul_res;
@@ -299,10 +312,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 13;
+                           state <= 13;
                        end
                    end
-           32'd14 :  begin
+           6'd14 :  begin
                        if (mul_done)
                        begin
                            vxx <= mul_res;
@@ -312,10 +325,10 @@ begin
                        end
                        else
                        begin
-                           cycle <= 14;
+                           state <= 14;
                        end
                    end
-           32'd15 :  begin
+           6'd15 :  begin
                          check <= sub_res;
                          if (sub_res != 320'b0)
                          begin
@@ -325,7 +338,7 @@ begin
                             add_in2 <= u;
                          end
                    end
-           32'd16 :  begin
+           6'd16 :  begin
                          if (if1 == 1'b1)
                          begin
                              // fe_add(check, vxx, u);
@@ -333,7 +346,7 @@ begin
                              add_in2 <= u;
                          end
                    end
-           32'd17 :  begin
+           6'd17 :  begin
                          if (if1 == 1'b1)
                          begin
                              check <= add_res;
@@ -342,7 +355,7 @@ begin
                                  if1 <= 0;
                                  rerror <= 1;
                                  rdone <= 1;
-                                 cycle <= 0;
+                                 state <= 0;
                              end
                              else
                              begin
@@ -353,7 +366,7 @@ begin
                              end
                          end
                    end
-           32'd18 :  begin
+           6'd18 :  begin
                          if (if1 == 1'b1)
                          begin
                              if (mul_done)
@@ -363,44 +376,44 @@ begin
                              end
                              else
                              begin
-                                 cycle <= 18;
+                                 state <= 18;
                              end
                          end
                    end
-           32'd19 :  begin
+           6'd19 :  begin
                        isneg_in <= rh_x;
                    end
-           32'd20 :  begin
+           6'd20 :  begin
                        if (isneg_res == (s[31*8 +: 8] >> 7))
                        begin
                            if2 <= 1;
                            neg_in <= rh_x;
                        end
                    end
-           32'd21 :  begin
+           6'd21 :  begin
                        if (if2 == 1)
                        begin
                            if2 <= 0;
                            rh_x <= neg_res;
                        end
                    end
-           32'd22 :  begin
+           6'd22 :  begin
                          // fe_mul(h->T, h->X, h->Y);
                          mul_in1 <= rh_x;
                          mul_in2 <= rh_y;
                          mul_valid <= 1;
                    end
-           32'd23 :  begin
+           6'd23 :  begin
                        if (mul_done)
                        begin
                            rh_t <= mul_res;
                            rerror <= 0;
                            rdone <= 1;
-                           cycle <= 0;
+                           state <= 0;
                        end
                        else
                        begin
-                           cycle <= 23;
+                           state <= 23;
                        end
                    end
        endcase
