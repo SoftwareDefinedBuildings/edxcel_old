@@ -1,0 +1,142 @@
+//Begin GE ADD ge_add(&t, &u, &Ai[idx]);
+        10'd377  :   begin
+                        addra <= `MM_u_Y; //fe_add(t_X, u_Y, u_X); fe_sub(t_Y, u_Y, u_X);
+                        addrb <= `MM_u_X;
+                    end
+        10'd378  :   begin
+                        //stall
+                    end
+        10'd379  :   begin
+                        addra <= `MM_t_X;
+                        wea <= 1'b1;
+                        dina <= add_res;
+                        addrb <= `MM_t_Y;
+                        web <= 1'b1;
+                        dinb <= sub_res; 
+                    end
+        10'd380  :   begin
+                        addra <= `MM_t_X; //fe_mul(t_Z, t_X, Ai[0].YplusX);
+                        addrb <= `MM_Ai_YplusX(0);
+                    end
+        10'd381  :   begin
+                        addra <= `MM_t_X;
+                        addrb <= `MM_Ai_YplusX(0);
+                        mul_en <= 1;
+                    end
+        10'd382  :   begin
+                        if (mul_done)
+                        begin
+                           wea <= 1'b1;
+                           addra <= `MM_t_Z;
+                           dina <= mul_res;
+                        end else
+                        begin
+                           addra <= `MM_t_X;
+                           addrb <= `MM_Ai_YplusX(0);
+                           state <= 382;
+                        end
+                    end
+        10'd383  :   begin
+                        addra <= `MM_t_Y; //fe_mul(t_Y, t_Y, Ai[0].YminusX);
+                        addrb <= `MM_Ai_YminusX(0);
+                    end
+        10'd384  :   begin
+                        addra <= `MM_t_Y;
+                        addrb <= `MM_Ai_YminusX(0);
+                        mul_en <= 1;
+                    end
+        10'd385  :   begin
+                        if (mul_done)
+                        begin
+                           wea <= 1'b1;
+                           addra <= `MM_t_Y;
+                           dina <= mul_res;
+                        end else
+                        begin
+                           addra <= `MM_t_Y;
+                           addrb <= `MM_Ai_YminusX(0);
+                           state <= 385;
+                        end 
+                    end
+        10'd386 :   begin
+                        addra <= `MM_Ai_T2d(0); //fe_mul(t_T, Ai[0].T2d, u_T);
+                        addrb <= `MM_u_T;
+                    end
+        10'd387 :   begin
+                        addra <= `MM_Ai_T2d(0);
+                        addrb <= `MM_u_T;
+                        mul_en <= 1;
+                    end
+        10'd388 :   begin
+                        if (mul_done)
+                        begin
+                           wea <= 1'b1;
+                           addra <= `MM_t_T;
+                           dina <= mul_res;
+                        end else
+                        begin
+                           addra <= `MM_Ai_T2d(0);
+                           addrb <= `MM_u_T;
+                           state <= 388;
+                        end    
+                    end
+        10'd389 :   begin
+                        addra <= `MM_u_Z; //fe_mul(t_X, u_Z, Ai[0].Z);
+                        addrb <= `MM_Ai_Z(0);
+                    end
+        10'd390  :   begin
+                        addra <= `MM_u_Z;
+                        addrb <= `MM_Ai_Z(0);
+                        mul_en <= 1;
+                    end
+        10'd391 :   begin
+                        if (mul_done)
+                        begin
+                           wea <= 1'b1;
+                           addra <= `MM_t_X;
+                           dina <= mul_res;
+                        end else
+                        begin
+                           addra <= `MM_u_Z;
+                           addrb <= `MM_Ai_Z(0);
+                           state <= 391;
+                        end    
+                    end
+        10'd392  :   begin
+                        addra <= `MM_t_X; //fe_add(t0, t_X, t_X);
+                        addrb <= `MM_t_X;
+                    end
+        10'd393  :   begin
+                        addra <= `MM_t_Z; //fe_sub(t_X, t_Z, t_Y); fe_add(t_Y, t_Z, t_Y);
+                        addrb <= `MM_t_Y;
+                    end
+        10'd394  :   begin
+                        addra <= `MM_t0;
+                        wea <= 1'b1;
+                        dina <= add_res;
+                    end                  
+        10'd395  :   begin
+                        addra <= `MM_t_X;
+                        wea <= 1'b1;
+                        dina <= sub_res;
+                        addrb <= `MM_t_Y;
+                        web <= 1'b1;
+                        dinb <= add_res;
+                    end
+        10'd396  :   begin
+                        addra <= `MM_t0; //fe_add(t_Z, t0, t_T); fe_sub(t_T, t0, t_T);
+                        addrb <= `MM_t_T;
+                    end
+        10'd397  :   begin
+                        //stall
+                    end
+        10'd398  :   begin
+                        addra <= `MM_t_Z;
+                        wea <= 1'b1;
+                        dina <= add_res;
+                        addrb <= `MM_t_T;
+                        web <= 1'b1;
+                        dinb <= sub_res;
+                    end
+                    //end GE ADD   
+                    //end if aslide block
