@@ -52,6 +52,10 @@
         output wire [31:0] epu0_keyl,
         output wire [31:0] epu0_rhashl
 	);
+	
+	wire posreset;
+    wire epu_clock;
+    
 // Instantiation of Axi Bus Interface S00_AXI
 	EdXel_v1_1_S00_AXI # ( 
 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
@@ -88,8 +92,7 @@
 		.epu_clock(epu_clock)
 	);
 
-    wire posreset;
-    wire epu_clock;
+
     assign posreset = !s00_axi_aresetn;
     
 	// Add user logic here

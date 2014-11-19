@@ -8,6 +8,20 @@ reg rst;
 reg valid;
 wire done;
 
+wire [319:0] mul_op_a;
+wire [319:0] mul_op_b;
+wire mul_valid;
+wire [319:0] mul_res;
+wire mul_done;
+fe_mulx ML(
+    .op_a(mul_op_a),
+    .op_b(mul_op_b),
+    .valid(mul_valid),
+    .res(mul_res),
+    .clk(clk),
+    .rst(rst),
+    .done(mul_done)
+    );   
 
 initial begin
   clk = 0;
@@ -38,7 +52,12 @@ out,
 clk,
 rst,
 valid,
-done
+done,
+mul_op_a,
+mul_op_b,
+mul_valid,
+mul_res,
+mul_done
 );
 
 endmodule

@@ -68,7 +68,7 @@ reg [319:0] A_Z;
 reg [319:0] A_T;
 reg [255:0] b;
 reg gdsv_valid;  
-
+wire [255:0] gdsv_result;
 
 ge_double_scalarmult_vartime GDSV(
     
@@ -95,7 +95,8 @@ ge_double_scalarmult_vartime GDSV(
         .sub_op_a(sub_op_a),
         .sub_op_b(sub_op_b),
         .sub_res(sub_res),
-            
+        
+        .ge_bytes(gdsv_result),    
         //misc
         .clk(clk),
         .rst(rst)
@@ -121,11 +122,12 @@ begin
     //a = 256'h42e6b3da746f7982c72e3945ca2e987362ae2af25aa079470fd723b60d430c0a;
     //b = 256'h3851d56069f238f03097ebfef9ac3bcf271843e4843278023c306139b91f0b06;
     gdsv_valid = 1;
+    #10 gdsv_valid = 0;
     //R.X:          ff8c1eb0ff4b0322ff7b9797ffff83a700d59f7dfe6ea7b9004421d4feff541aff8a5d3f010bc5a4
     //R.Y:          ff7805a5000add29ff1409e3014f2a79000c9f0a0079546e008fb76c0006fb61ff54444301658970
     //R.Z:          00053a81017f6f0affc217b7fe20238d008e7c68fe44054e0062a67b00a68f5600a2a82fffd1a58d
     #10;
-    #150000;
+    #500000;
     $finish;
 end            
         

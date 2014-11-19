@@ -67,9 +67,14 @@ fifo_generator_0 outputfifo (
   .valid(output_fifo_dout_val)    // output wire valid
 );
 
+//==== ALU arbitration
+
+
+
 //==== ALU resources ====
-wire [319:0] mul_op_a;
-wire [319:0] mul_op_b;
+//Multiplier
+reg [319:0] mul_op_a;
+reg [319:0] mul_op_b;
 wire mul_valid;
 wire [319:0] mul_res;
 wire mul_done;
@@ -78,29 +83,127 @@ fe_mulx ML(
     .op_b(mul_op_b),
     .valid(mul_valid),
     .res(mul_res),
-    .clk(clk),
-    .rst(rst),
+    .clk(modclk),
+    .rst(resetn),
     .done(mul_done)
     );   
+//Mul arbitration
+wire [319:0] mul_op_a_gdsv;
+wire [319:0] mul_op_b_gdsv;
+wire mul_valid_gdsv;
+wire [319:0] mul_op_a_gfnv;
+wire [319:0] mul_op_b_gfnv;
+wire mul_valid_gfnv;
+assign mul_valid = mul_valid_gdsv | mul_valid_gfnv;
+always @ (*)
+begin
+    if (mul_valid_gdsv)
+        mul_op_a = mul_op_a_gdsv;
+    else if (mul_valid_gfnv)
+        mul_op_a = mul_op_a_gdsv;
+end
+always @ (*)
+begin
+    if (mul_valid_gdsv)
+        mul_op_b = mul_op_b_gdsv;
+    else if (mul_valid_gfnv)
+        mul_op_b = mul_op_b_gdsv;
+end
 
-wire [319:0] add_op_a;
-wire [319:0] add_op_b;
+//Adder
+reg [319:0] add_op_a;
+reg [319:0] add_op_b;
 reg [319:0] add_res;
 always @ (*)
 begin
     add_res = fe_add(add_op_a, add_op_b);
-end 
+end
+//Add arbitration
+reg addsub_gdsv_valid;
+reg addsub_gfnv_valid;
+wire [319:0] add_op_a_gdsv;
+wire [319:0] add_op_b_gdsv;
+wire [319:0] add_op_a_gfnv;
+wire [319:0] add_op_b_gfnv;
+always @ (*)
+begin
+    if (addsub_gdsv_valid)
+        add_op_a = add_op_a_gdsv;
+    if (addsub_gfnv_valid)
+        add_op_a = add_op_a_gfnv; 
+end
+always @ (*)
+begin
+    if (addsub_gdsv_valid)
+        add_op_b = add_op_b_gdsv;
+    if (addsub_gfnv_valid)
+        add_op_b = add_op_b_gfnv; 
+end
 
-
-wire [319:0] sub_op_a;
-wire [319:0] sub_op_b;
+//Subtractor
+reg [319:0] sub_op_a;
+reg [319:0] sub_op_b;
 reg [319:0] sub_res;
 always @ (*)
 begin
     sub_res = fe_sub(sub_op_a, sub_op_b);
 end
+//Subtract arbitration
+wire [319:0] sub_op_a_gdsv;
+wire [319:0] sub_op_b_gdsv;
+wire [319:0] sub_op_a_gfnv;
+wire [319:0] sub_op_b_gfnv;
+always @ (*)
+begin
+    if (addsub_gdsv_valid)
+        sub_op_a = sub_op_a_gdsv;
+    if (addsub_gfnv_valid)
+        sub_op_a = sub_op_a_gfnv; 
+end
+always @ (*)
+begin
+    if (addsub_gdsv_valid)
+        sub_op_b = sub_op_b_gdsv;
+    if (addsub_gfnv_valid)
+        sub_op_b = sub_op_b_gfnv; 
+end
 
- 
+//Real modules
+reg [319:0] A_X;
+reg [319:0] A_Y;
+reg [319:0] A_Z;
+reg [319:0] A_T;
+reg gsdv_valid;
+
+ge_double_scalarmult_vartime GDSV(  
+    //Parameters
+    .a(rhash),
+    .b(sig[511:256]),
+    .A_X(A_X),
+    .A_Y(A_Y),
+    .A_Z(A_Z),
+    .A_T(A_T),
+    .valid(gdsv_valid),
+    
+    //Resources
+    .mul_op_a(mul_op_a_gsdv),
+    .mul_op_b(mul_op_b_gsdv),
+    .mul_valid(mul_valid_gsdv),
+    .mul_res(mul_res),
+    .mul_done(mul_done),
+    
+    .add_op_a(add_op_a_gsdv),
+    .add_op_b(add_op_b_gsdv),
+    .add_res(add_res),
+    
+    .sub_op_a(sub_op_a_gsdv),
+    .sub_op_b(sub_op_b_gsdv),
+    .sub_res(sub_res),
+        
+    //misc
+    .clk(modclk),
+    .rst(modrst)
+    ); 
 //=======================
 /*
 //do this in global switch
