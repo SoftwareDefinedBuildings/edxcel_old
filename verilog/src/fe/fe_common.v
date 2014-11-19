@@ -342,3 +342,15 @@ begin : fe_tobytes_blk
     fe_tobytes[31*8+:8] = tmp[7:0];
 end
 endfunction
+
+
+function automatic [7:0] fe_isnegative;
+input [319:0] f;
+begin : fe_isnegative_blk
+
+    reg [255:0] s;
+    s = fe_tobytes(f);
+    fe_isnegative = s[0*8 +: 8] & 1;
+
+end
+endfunction
