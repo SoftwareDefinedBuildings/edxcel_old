@@ -160,31 +160,38 @@ static const fe d2 = {
     -21827239, -5839606, -30745221, 13898782, 229458, 15978800, -12551817, -6495438, 29715968, 9444199
 };
 
+static const fe n2 = {0x00000002};
 
 fe bram [100] ;
 
 //Memorymap
-#define MM_t_X            0
-#define MM_t_Y            1
-#define MM_t_Z            2
-#define MM_t_T            3
-#define MM_u_X            4
-#define MM_u_Y            5
-#define MM_u_Z            6
-#define MM_u_T            7
-#define MM_A2_X           8
-#define MM_A2_Y           9
-#define MM_A2_Z           10
-#define MM_A2_T           11
-#define MM_q_X            12
-#define MM_q_Y            13
-#define MM_q_Z            14
-#define MM_Ai             15
+#define MM_d              0
+#define MM_sqrtml         1
+#define MM_d2             2
+#define MM_n2             3
+#define MM_t_X            10
+#define MM_t_Y            11
+#define MM_t_Z            12
+#define MM_t_T            13
+#define MM_u_X            14
+#define MM_u_Y            15
+#define MM_u_Z            16
+#define MM_u_T            17
+#define MM_A2_X           18
+#define MM_A2_Y           19
+#define MM_A2_Z           20
+#define MM_A2_T           21
+#define MM_q_X            22
+#define MM_q_Y            23
+#define MM_q_Z            24
+#define MM_Ai             25
     //Ai is 4*8 = 32 elements long
-#define MM_A_X           47
-#define MM_A_Y           48
-#define MM_A_Z           49
-#define MM_A_T           50
+#define MM_A_X           57
+#define MM_A_Y           58
+#define MM_A_Z           59
+#define MM_A_T           60
+#define MM_t0            61
+#define MM_tmp           62
 
 #define Ai_YplusX  0
 #define Ai_YminusX 1
@@ -257,7 +264,6 @@ void ge_double_scalarmult_vartime(ge_p2 *r, const unsigned char *a, const ge_p3 
     #define A_T (bram[MM_A_T])
     int i;
     fe t0;
-    fe n2 = {0x00000002}; // init first int32_t of n2 as 2
     fe tmp;
 
     slide(aslide, a);

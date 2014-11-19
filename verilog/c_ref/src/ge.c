@@ -31,6 +31,8 @@ static void slide(signed char *r, const unsigned char *a) {
         r[i] = 1 & (a[i >> 3] >> (i & 7));
     }
 
+    /*
+     xtag
     for (i = 0; i < 256; ++i)
         if (r[i]) {
             for (b = 1; b <= 6 && i + b < 256; ++b) {
@@ -54,7 +56,7 @@ static void slide(signed char *r, const unsigned char *a) {
                     }
                 }
             }
-        }
+        }*/
 }
 
 /*

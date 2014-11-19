@@ -69,22 +69,12 @@ reg [319:0] A_T;
 reg [255:0] b;
 reg gdsv_valid;  
 
-reg [7:0] slide_a_waddr;
-reg [7:0] slide_b_waddr;
-reg [7:0] slide_a_din;
-reg [7:0] slide_b_din;
-reg slide_a_we;
-reg slide_b_we;
 
 ge_double_scalarmult_vartime GDSV(
     
         //Parameters
-        .slide_a_din(slide_a_din),
-        .slide_a_we(slide_a_we),
-        .slide_a_waddr(slide_a_waddr),
-        .slide_b_din(slide_a_din),
-        .slide_b_we(slide_b_we),
-        .slide_b_waddr(slide_b_waddr),
+        .a(a),
+        .b(b),
         .A_X(A_X),
         .A_Y(A_Y),
         .A_Z(A_Z),
@@ -111,8 +101,6 @@ ge_double_scalarmult_vartime GDSV(
         .rst(rst)
         );  
 
-reg [255:0] slide_a_target;
-reg [255:0] slide_b_target;
 
 integer i;        
 initial
@@ -123,28 +111,13 @@ begin
     A_Y = 320'h000327bf006b58a400a44e59feff3bf4ff61b14bfe2f9488ffcab3cefee521b4007997490196488a;
     A_Z = 320'h00000000000000000000000000000000000000000000000000000000000000000000000000000001;
     A_T = 320'hff14b7700089ecef0018075300f26d5effe67e010038eab6ff520d3aff4bd386ff6a910300d5e7c2;
-    slide_a_target = 256'h0101000101000100010001010000010101010100000101000001000000000100;
-    slide_b_target = 256'h0001010000000000010100010001000100010001000000010000010101000000; //LSB on right
-    slide_a_we = 0;
-    slide_b_we = 0;
+    a = 256'h0a0c430db623d70f4779a05af22aae6273982eca45392ec782796f74dab3e642;
+    b = 256'h060b1fb93961303c02783284e4431827cf3bacf9feeb9730f038f26960d55138; //LSB on right
+
     gdsv_valid = 0;
     #10;
     rst = 1;
-    #10
-    for (i = 0; i < 256/8; i = i + 1)
-    begin
-        #10; 
-        slide_a_din = slide_a_target[i*8 +: 8];
-        slide_a_waddr = i;
-        slide_b_din = slide_b_target[i*8 +: 8];
-        slide_b_waddr = i;
-        slide_a_we = 1;
-        slide_b_we = 1;
-    end
-    #10; 
-    slide_a_we = 0;
-    slide_b_we = 0;
-    
+    #30;
     //a = 256'h42e6b3da746f7982c72e3945ca2e987362ae2af25aa079470fd723b60d430c0a;
     //b = 256'h3851d56069f238f03097ebfef9ac3bcf271843e4843278023c306139b91f0b06;
     gdsv_valid = 1;
@@ -152,7 +125,7 @@ begin
     //R.Y:          ff7805a5000add29ff1409e3014f2a79000c9f0a0079546e008fb76c0006fb61ff54444301658970
     //R.Z:          00053a81017f6f0affc217b7fe20238d008e7c68fe44054e0062a67b00a68f5600a2a82fffd1a58d
     #10;
-    #30000;
+    #150000;
     $finish;
 end            
         

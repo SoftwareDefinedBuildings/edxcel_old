@@ -2,7 +2,7 @@
 #include "sha512.h"
 #include "ge.h"
 #include "sc.h"
-
+#include <stdio.h>
 static int consttime_equal(const unsigned char *x, const unsigned char *y) {
     unsigned char r = 0;
 
@@ -50,6 +50,7 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
     sha512_context hash;
     ge_p3 A;
     ge_p2 R;
+    int i;
 
     sha512_init(&hash);
     sha512_update(&hash, signature, 32);
@@ -60,14 +61,19 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
     if (signature[63] & 224) {
         return 0;
     }
+    sc_reduce(h);
 
+    //TO FPGA: public key, h[..32], sig[..32]
     if (ge_frombytes_negate_vartime(&A, public_key) != 0) {
         return 0;
     }
-    
-    sc_reduce(h);
     ge_double_scalarmult_vartime(&R, h, &A, signature + 32);
     ge_tobytes(checker, &R);
+    //From FPGA: checker [..32]
+
+    printf(" checker :");
+    for (i = 256/8 - 1; i >= 0; i--)
+        printf("%02x", (uint8_t) checker[i]);
 
     if (!consttime_equal(checker, signature)) {
         return 0;
