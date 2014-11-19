@@ -1,5 +1,5 @@
  module ge_frombytes_negate_vartime(
-   input [0:255] s,
+   input [255:0] s,
    output [319:0] h_x,
    output [319:0] h_y,
    output [319:0] h_z,
@@ -51,10 +51,10 @@ reg [319:0] v3;
 reg [319:0] vxx;
 reg [319:0] check;
 
-reg [319:0] rh_x,
-reg [319:0] rh_y,
-reg [319:0] rh_z,
-reg [319:0] rh_t,
+reg [319:0] rh_x;
+reg [319:0] rh_y;
+reg [319:0] rh_z;
+reg [319:0] rh_t;
 assign h_x = rh_x;
 assign h_y = rh_y;
 assign h_z = rh_z;
@@ -89,6 +89,20 @@ begin
     sub_res = fe_sub(sub_in1, sub_in2);
 end 
 
+reg [319:0] neg_in;
+reg [319:0] neg_res;
+always @ (*)
+begin
+    neg_res = fe_neg(neg_in);
+end
+
+reg [319:0] isneg_in;
+reg [7:0] isneg_res;
+always @ (*)
+begin
+    isneg_res = fe_isnegative(isneg_in);
+end 
+
 reg if1;
 reg if2;
 
@@ -111,7 +125,7 @@ begin
                            // fe_frombytes(h->Y, s);
                            frombytes_in1 <= s;
                            // fe_1(h->Z);
-                           rh_z <= 320'hffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;
+                           rh_z <= 320'h00000000000000000000000000000000000000000000000000000000000000000000000000000001;
                        end
                        else
                        begin
@@ -326,7 +340,7 @@ begin
                              if (add_res != 320'b0)
                              begin
                                  if1 <= 0;
-                                 error <= 1;
+                                 rerror <= 1;
                                  rdone <= 1;
                                  cycle <= 0;
                              end
@@ -334,7 +348,7 @@ begin
                              begin
                                  // fe_mul(h->X, h->X, sqrtm1);
                                  mul_in1 <= rh_x;
-                                 mul_in2 <= sqrtm1;
+                                 mul_in2 <= 320'h00ae0c920004fc1effe1656afe804c9ffffbd7a700bd0c600035697f008f189eff86c9d3fe0ea0b0;
                                  mul_valid <= 1;
                              end
                          end
@@ -359,13 +373,14 @@ begin
            32'd20 :  begin
                        if (isneg_res == (s[31*8 +: 8] >> 7))
                        begin
-                           f1 <= 1;
+                           if2 <= 1;
                            neg_in <= rh_x;
                        end
                    end
            32'd21 :  begin
-                       if (f1 == 1)
+                       if (if2 == 1)
                        begin
+                           if2 <= 0;
                            rh_x <= neg_res;
                        end
                    end
@@ -379,7 +394,7 @@ begin
                        if (mul_done)
                        begin
                            rh_t <= mul_res;
-                           error <= 0;
+                           rerror <= 0;
                            rdone <= 1;
                            cycle <= 0;
                        end
