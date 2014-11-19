@@ -81,9 +81,30 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
     if (ge_frombytes_negate_vartime(&A, public_key) != 0) {
         return 0;
     }
+    printf("A.X: ");
+    for (i = 9; i >= 0; i--)
+        printf("%08x", A.X[i]);
+    printf("\n");
+    printf("A.Y: ");
+    for (i = 9; i >= 0; i--)
+        printf("%08x", A.Y[i]);
+    printf("\n");
+    printf("A.Z: ");
+    for (i = 9; i >= 0; i--)
+        printf("%08x", A.Z[i]);
+    printf("\n");
+    printf("A.T: ");
+    for (i = 9; i >= 0; i--)
+        printf("%08x", A.T[i]);
+    printf("\n");
     
     ge_double_scalarmult_vartime(&R, h, &A, signature + 32);
     ge_tobytes(checker, &R);
+    
+    printf("checker: ");
+    for (i = 31; i >= 0; i--)
+        printf("%02x", checker[i]);
+    printf("\n");
 
     if (!consttime_equal(checker, signature)) {
         return 0;
