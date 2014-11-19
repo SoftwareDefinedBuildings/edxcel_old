@@ -204,6 +204,8 @@ ge_double_scalarmult_vartime GDSV(
     .clk(modclk),
     .rst(modrst)
     ); 
+    
+    
 //=======================
 /*
 //do this in global switch

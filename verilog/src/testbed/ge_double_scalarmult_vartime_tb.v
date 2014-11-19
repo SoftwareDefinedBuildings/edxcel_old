@@ -127,8 +127,8 @@ begin
     //R.Y:          ff7805a5000add29ff1409e3014f2a79000c9f0a0079546e008fb76c0006fb61ff54444301658970
     //R.Z:          00053a81017f6f0affc217b7fe20238d008e7c68fe44054e0062a67b00a68f5600a2a82fffd1a58d
     #10;
-    #500000;
-    $finish;
+    //#//500000;
+   // $finish;
 end            
         
  always

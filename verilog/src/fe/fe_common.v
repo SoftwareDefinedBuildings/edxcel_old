@@ -223,19 +223,19 @@ begin : fe_tobytes_blk
     carry4 = h4 >>> 26;
     h5 = h5 + carry4;
     h4 = h4 - (carry4 << 26);
-    carry5 = h5 >> 25;
+    carry5 = h5 >>> 25;
     h6 = h6 + carry5;
     h5 = h5 - (carry5 << 25);
-    carry6 = h6 >> 26;
+    carry6 = h6 >>> 26;
     h7 = h7 + carry6;
     h6 = h6 - (carry6 << 26);
-    carry7 = h7 >> 25;
+    carry7 = h7 >>> 25;
     h8 = h8 + carry7;
     h7 = h7 - (carry7 << 25);
-    carry8 = h8 >> 26;
+    carry8 = h8 >>> 26;
     h9 = h9 + carry8;
     h8 = h8 - (carry8 << 26);
-    carry9 = h9 >> 25;
+    carry9 = h9 >>> 25;
     h9 = h9 - (carry9 << 25); 
     /* h10 = carry9 */
     /*
@@ -245,100 +245,100 @@ begin : fe_tobytes_blk
     Goal: Output h0+...+2^230 h9.
     */
 
-    tmp = (h0 >> 0);
+    tmp = (h0 >>> 0);
     fe_tobytes[ 0*8+:8] = tmp[7:0];
     
-    tmp = (h0 >> 8);
+    tmp = (h0 >>> 8);
     fe_tobytes[ 1*8+:8] = tmp[7:0];
     
-    tmp = (h0 >> 16);
+    tmp = (h0 >>> 16);
     fe_tobytes[ 2*8+:8] = tmp[7:0];
     
-    tmp = ((h0 >> 24) | (h1 << 2));
+    tmp = ((h0 >>> 24) | (h1 << 2));
     fe_tobytes[ 3*8+:8] = tmp[7:0];
     
-    tmp = (h1 >> 6);
+    tmp = (h1 >>> 6);
     fe_tobytes[ 4*8+:8] = tmp[7:0];
     
-    tmp = (h1 >> 14);
+    tmp = (h1 >>> 14);
     fe_tobytes[ 5*8+:8] = tmp[7:0];
     
-    tmp = ((h1 >> 22) | (h2 << 3));
+    tmp = ((h1 >>> 22) | (h2 << 3));
     fe_tobytes[ 6*8+:8] = tmp[7:0];
     
-    tmp = (h2 >> 5);
+    tmp = (h2 >>> 5);
     fe_tobytes[ 7*8+:8] = tmp[7:0];
     
-    tmp = (h2 >> 13);
+    tmp = (h2 >>> 13);
     fe_tobytes[ 8*8+:8] = tmp[7:0];
     
-    tmp = ((h2 >> 21) | (h3 << 5));
+    tmp = ((h2 >>> 21) | (h3 << 5));
     fe_tobytes[ 9*8+:8] = tmp[7:0];
     
-    tmp = (h3 >> 3);
+    tmp = (h3 >>> 3);
     fe_tobytes[10*8+:8] = tmp[7:0];
     
-    tmp = (h3 >> 11);
+    tmp = (h3 >>> 11);
     fe_tobytes[11*8+:8] = tmp[7:0]; 
     
-    tmp = ((h3 >> 19) | (h4 << 6));
+    tmp = ((h3 >>> 19) | (h4 << 6));
     fe_tobytes[12*8+:8] = tmp[7:0];
     
-    tmp = (h4 >> 2);
+    tmp = (h4 >>> 2);
     fe_tobytes[13*8+:8] = tmp[7:0];
     
-    tmp = (h4 >> 10);
+    tmp = (h4 >>> 10);
     fe_tobytes[14*8+:8] = tmp[7:0];
     
-    tmp = (h4 >> 18);
+    tmp = (h4 >>> 18);
     fe_tobytes[15*8+:8] = tmp[7:0];
     
-    tmp = (h5 >> 0);
+    tmp = (h5 >>> 0);
     fe_tobytes[16*8+:8] = tmp[7:0];
     
-    tmp = (h5 >> 8);
+    tmp = (h5 >>> 8);
     fe_tobytes[17*8+:8] = tmp[7:0];
     
-    tmp = (h5 >> 16);
+    tmp = (h5 >>> 16);
     fe_tobytes[18*8+:8] = tmp[7:0];
     
-    tmp = ((h5 >> 24) | (h6 << 1));
+    tmp = ((h5 >>> 24) | (h6 << 1));
     fe_tobytes[19*8+:8] = tmp[7:0];
     
-    tmp = (h6 >> 7);
+    tmp = (h6 >>> 7);
     fe_tobytes[20*8+:8] = tmp[7:0];
     
-    tmp = (h6 >> 15);
+    tmp = (h6 >>> 15);
     fe_tobytes[21*8+:8] = tmp[7:0];
     
-    tmp = ((h6 >> 23) | (h7 << 3));
+    tmp = ((h6 >>> 23) | (h7 << 3));
     fe_tobytes[22*8+:8] = tmp[7:0];
     
-    tmp = (h7 >> 5);
+    tmp = (h7 >>> 5);
     fe_tobytes[23*8+:8] = tmp[7:0];
     
-    tmp = (h7 >> 13);
+    tmp = (h7 >>> 13);
     fe_tobytes[24*8+:8] = tmp[7:0];
     
-    tmp = ((h7 >> 21) | (h8 << 4));
+    tmp = ((h7 >>> 21) | (h8 << 4));
     fe_tobytes[25*8+:8] = tmp[7:0];
     
-    tmp = (h8 >> 4);
+    tmp = (h8 >>> 4);
     fe_tobytes[26*8+:8] = tmp[7:0];
     
-    tmp = (h8 >> 12);
+    tmp = (h8 >>> 12);
     fe_tobytes[27*8+:8] = tmp[7:0];
     
-    tmp = ((h8 >> 20) | (h9 << 6));
+    tmp = ((h8 >>> 20) | (h9 << 6));
     fe_tobytes[28*8+:8] = tmp[7:0];
     
-    tmp = (h9 >> 2);
+    tmp = (h9 >>> 2);
     fe_tobytes[29*8+:8] = tmp[7:0];
     
-    tmp = (h9 >> 10);
+    tmp = (h9 >>> 10);
     fe_tobytes[30*8+:8] = tmp[7:0];
     
-    tmp = (h9 >> 18);
+    tmp = (h9 >>> 18);
     fe_tobytes[31*8+:8] = tmp[7:0];
 end
 endfunction

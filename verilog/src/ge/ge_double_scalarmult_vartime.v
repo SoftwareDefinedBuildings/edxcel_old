@@ -3293,8 +3293,6 @@ begin
                         mul_en <= 1'b1;
                     end
         10'd448 :   begin
-                        $display("MM_r_Y %h",douta);
-                        $display("MM_t0 %h",doutb);
                         if (mul_done)
                         begin
                            rtmp_Y <= mul_res;
@@ -3307,19 +3305,15 @@ begin
                     end
         10'd449 :   begin
                         rge_bytes <= fe_tobytes(rtmp_X);
-                        $display("call rtmp_X %h",rtmp_X);
                     end
         10'd450 :   begin
                         rge_isneg <= rge_bytes[0];
-                        $display("first tobytes %h",rge_bytes);
                         rge_bytes <= fe_tobytes(rtmp_Y);
                     end
         10'd451 :   begin
-                        $display("second tobytes %h",rge_bytes);
                         rge_bytes[255] = rge_bytes[255] ^ rge_isneg;
                         rdone <= 1'b1;
                         state <= 10'd0;
-                        $finish;
                     end
         /*10'd499 :   begin
                     end
