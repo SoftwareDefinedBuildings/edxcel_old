@@ -48,6 +48,7 @@ module ge_double_scalarmult_vartime(
     
     //output
     output [255:0] ge_bytes,
+    output done,
         
     //misc
     input clk,
@@ -67,11 +68,11 @@ reg [319:0] dinb;
 reg [319:0] rtmp_X;   
 reg [319:0] rtmp_Y;   
 reg rdone;
-
 reg rge_isneg;
 reg [255:0] rge_bytes;
 
 assign ge_bytes = rge_bytes;
+assign done = rdone;
    
 blk_mem_gen_0 feram (
       .clka(clk),    // input wire clka

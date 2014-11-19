@@ -1,5 +1,6 @@
 
 `timescale 1 ns / 1 ps
+`default_nettype none
 
 	module EdXel_v1_1 #
 	(
@@ -54,7 +55,7 @@
 	);
 	
 	wire posreset;
-    wire epu_clock;
+    wire epu_clk;
     
 // Instantiation of Axi Bus Interface S00_AXI
 	EdXel_v1_1_S00_AXI # ( 
@@ -89,7 +90,7 @@
 		.epu0_sigl(epu0_sigl),
 		.epu0_keyl(epu0_keyl),
 		.epu0_rhashl(epu0_rhashl),
-		.epu_clock(epu_clock)
+		.epu_clock(epu_clk)
 	);
 
 
@@ -101,7 +102,7 @@
      // Clock in ports
       .clk_in1(s00_axi_aclk),      // input clk_in1
       // Clock out ports
-      .clk_out1(epu_clock),     // output clk_out1
+      .clk_out1(epu_clk),     // output clk_out1
       // Status and control signals
       .reset(posreset) // input reset
      );      // output locked
