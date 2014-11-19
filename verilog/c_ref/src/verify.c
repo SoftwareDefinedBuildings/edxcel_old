@@ -63,7 +63,6 @@ int ed25519_verify(const unsigned char *signature, const unsigned char *message,
     if (signature[63] & 224) {
         return 0;
     }
-    sc_reduce(h);
     printf("\nrhash:");
     for (i=256/8 - 1;i>=0;i--)
         printf("%02x", (uint8_t) h[i]);
