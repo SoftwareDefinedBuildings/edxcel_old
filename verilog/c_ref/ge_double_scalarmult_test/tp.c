@@ -66,11 +66,11 @@ int main()
     fe r_Y;
     fe r_Z;
 
-    #define THEM
+    //#define THEM
     #ifdef THEM
     ge_p2 R;
     uint8_t refc [32];
-    ge_double_scalarmult_vartime(&R, h_arr, &A, sig32_arr + 32);
+    ge_double_scalarmult_vartime_(&R, h_arr, &A, sig32_arr + 32);
     ge_tobytes_(refc, &R);
     printf("\n\nREFC  ");
     for (i=256/8 - 1;i>=0;i--)
@@ -160,34 +160,62 @@ void ge_double_scalarmult_vartime_(ge_p2 *r, const unsigned char *a, const ge_p3
     ge_p1p1_to_p3(&u, &t);
     ge_p3_to_cached(&Ai[7], &u);
     ge_p2_0(r);
+    i=255;
 
+/*
     for (i = 255; i >= 0; --i) {
         if (aslide[i] || bslide[i]) {
             break;
         }
     }
-
+*/
     for (; i >= 0; --i) {
+    printf("loop stats %d\n",i);
+    printfe("post presetup A2X",A2.X);
+    printfe("post presetup A2Y",A2.Y);
+    printfe("post presetup A2Z",A2.Z);
+    printfe("post presetup A2T",A2.T);
+    printfe("post presetup ux",u.X);
+    printfe("post presetup uy",u.Y);
+    printfe("post presetup uz",u.Z);
+    printfe("post presetup ut",u.T);
+    printfe("post presetup tx",t.X);
+    printfe("post presetup ty",t.Y);
+    printfe("post presetup tz",t.Z);
+    printfe("post presetup tt",t.T);
+    printfe("post presetup Ai.YplusX",Ai[0].YplusX);
+    printfe("post presetup Ai.YminusX",Ai[0].YminusX);
+    printfe("post presetup Ai.Z",Ai[0].Z);
+    printfe("post presetup Ai.T2d",Ai[0].T2d);
+
+
         ge_p2_dbl(&t, r);
 
         if (aslide[i] > 0) {
             ge_p1p1_to_p3(&u, &t);
             ge_add(&t, &u, &Ai[aslide[i] / 2]);
-        } else if (aslide[i] < 0) {
+        }/* else if (aslide[i] < 0) {
             ge_p1p1_to_p3(&u, &t);
             ge_sub(&t, &u, &Ai[(-aslide[i]) / 2]);
-        }
+        }*/
 
         if (bslide[i] > 0) {
             ge_p1p1_to_p3(&u, &t);
             ge_madd(&t, &u, &Bi[bslide[i] / 2]);
-        } else if (bslide[i] < 0) {
+        } /*else if (bslide[i] < 0) {
             ge_p1p1_to_p3(&u, &t);
             ge_msub(&t, &u, &Bi[(-bslide[i]) / 2]);
-        }
+        }*/
 
         ge_p1p1_to_p2(r, &t);
+        printf("loop %d: \n", i);
+        printfe("r_X : ",r->X);
+        printfe("r_Y : ",r->Y);
+        printfe("r_Z : ",r->Z);
     }
+    printfe("r_X : ",r->X);
+    printfe("r_Y : ",r->Y);
+    printfe("r_Z : ",r->Z);
 }
 void fe_mul2(fe h, const fe f, const fe g) {
     int32_t f0 = f[0];
@@ -1390,8 +1418,9 @@ void ge_double_scalarmult_vartimep(fe r_X, fe r_Y, fe r_Z, const unsigned char *
         fe_1(r_Z);
     }
 
+
     int choseni = 255;
-   /* for (i = 0; i < 128; i++) {
+  /*  for (i = 0; i < 128; i++) {
         if (aslide[i] || bslide[i]) {
             choseni = i;
         }
@@ -1405,7 +1434,26 @@ void ge_double_scalarmult_vartimep(fe r_X, fe r_Y, fe r_Z, const unsigned char *
     printf("i=%d\n", i);
     //TODO reinstate slide and add back in the negative checks here
     for (; i >= 0; --i) {
-    
+        printf("loop stats %d\n",i);
+    printfe("post presetup A2X",A2_X);
+    printfe("post presetup A2Y",A2_Y);
+    printfe("post presetup A2Z",A2_Z);
+    printfe("post presetup A2T",A2_T);
+    printfe("post presetup ux",u_X);
+    printfe("post presetup uy",u_Y);
+    printfe("post presetup uz",u_Z);
+    printfe("post presetup ut",u_T);
+    printfe("post presetup tx",t_X);
+    printfe("post presetup ty",t_Y);
+    printfe("post presetup tz",t_Z);
+    printfe("post presetup tt",t_T);
+    printfe("post presetup Ai.YplusX",Ai[0].YplusX);
+    printfe("post presetup Ai.YminusX",Ai[0].YminusX);
+    printfe("post presetup Ai.Z",Ai[0].Z);
+    printfe("post presetup Ai.T2d",Ai[0].T2d);
+
+
+
         //ge_p2_dbl(&t, r);
         {
 
@@ -1480,14 +1528,14 @@ void ge_double_scalarmult_vartimep(fe r_X, fe r_Y, fe r_Z, const unsigned char *
                 fe_sub(t_T, t0, t_T);
 
             }
-
-            //ge_p1p1_to_p2(r, &t);
-            {
-                fe_mul(r_X, t_X, t_T);
-                fe_mul(r_Y, t_Y, t_Z);
-                fe_mul(r_Z, t_Z, t_T);
-            }
         }
+        //ge_p1p1_to_p2(r, &t);
+        {
+            fe_mul(r_X, t_X, t_T);
+            fe_mul(r_Y, t_Y, t_Z);
+            fe_mul(r_Z, t_Z, t_T);
+        }
+        
 
         printf("loop %d: \n", i);
         printfe("r_X : ",r_X);
