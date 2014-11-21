@@ -87,7 +87,7 @@ initial begin
   rst = 1;
   #10 rst = 0;
   #10 rst = 1;
-  #20 s = 320'h80c9efc6b58a452272c5fe77e761b14a8be521f95679b7290da1e65d2596488a;
+  #20 s = 320'he8325d4a6aba7d0a29a15ab0f70bc332fbce07aeb4d1c5ec4e54cee26a4e6380;
   
   valid = 1;
   #10 valid = 0;
@@ -99,6 +99,14 @@ always @ (done) begin
 //      A.Y: 000327bf006b58a400a44e59feff3bf4ff61b14bfe2f9488ffcab3cefee521b4007997490196488a
 //      A.Z: 00000000000000000000000000000000000000000000000000000000000000000000000000000001
 //      A.T: ff14b7700089ecef0018075300f26d5effe67e010038eab6ff520d3aff4bd386ff6a910300d5e7c2
+//    sign = 512'h03e302d508532afeefa20360c8393e94aac9a0e12968ae80823d3ca54f9c89ff7db8b9c5a25d2cbc2dbe296513d5b7178409c49e22f9f0c3443da385325ea213;
+//key = 256'he8325d4a6aba7d0a29a15ab0f70bc332fbce07aeb4d1c5ec4e54cee26a4e6380;
+//rhash = 256'h03788934404d87830e38a9fdaa4e4261a2faf2a0d614c051d1dbb464561313e6;
+/*GFNV H_X: fff5be350174d4c2ffe50ccd01aa1121ff8f201cff4df97b0039950e015e03b000fd8f9bffa03e8b
+GFNV H_Y: ffa0c97500a6aba8ffa1453400ad587cff0bc333ffef381fff75a68e00bd89cbff33b89bfe4e6393
+GFNV H_Z: 00000000000000000000000000000000000000000000000000000000000000000000000000000001
+GFNV H_T: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+GFNV ERR: 1*/
       $display("h.X is %h", h_x);
       $display("h.Y is %h", h_y);
       $display("h.Z is %h", h_z);

@@ -208,10 +208,10 @@ void ge_double_scalarmult_vartime_(ge_p2 *r, const unsigned char *a, const ge_p3
         }*/
 
         ge_p1p1_to_p2(r, &t);
-        printf("loop %d: \n", i);
-        printfe("r_X : ",r->X);
-        printfe("r_Y : ",r->Y);
-        printfe("r_Z : ",r->Z);
+       // printf("loop %d: \n", i);
+       // printfe("r_X : ",r->X);
+       // printfe("r_Y : ",r->Y);
+       // printfe("r_Z : ",r->Z);
     }
     printfe("r_X : ",r->X);
     printfe("r_Y : ",r->Y);
@@ -1132,12 +1132,14 @@ void ge_double_scalarmult_vartimep(fe r_X, fe r_Y, fe r_Z, const unsigned char *
     int i;
     fe t0;
     fe tmp;
-
+//0101001010001001110111111000010110111111110100111101001001000011110001110101111110000110010100000000001011110011110111111011000111110010110100010110001111100011000110111110100011000000000011110010101010110110101110110111110011100110110011111111000011100000
+//0000001101111000100010010011010001000000010011011000011110000011000011100011100010101001111111011010101001001110010000100110000110100010111110101111001010100000110101100001010011000000010100011101000111011011101101000110010001010110000100110001001111100110
+//0001011100010101101111010110110000110000101101000101111110000110010011111010010010011101101000111110001110101011111110010101000011001111001010100110000101111001010111000010111010011110100000110000101101101010000000001001111011111111110111111111111111110010
     slide(aslide, a);
     slide(bslide, b);
 
     printf("aslide: ");
-    for (i=0;i<=255;i++)
+    for (i=255;i>=0;i--)
         printf("%01x", (uint8_t) aslide[i]);
     printf("\na: ");
     for (i=256/8 - 1;i>=0;i--)
@@ -1434,32 +1436,16 @@ void ge_double_scalarmult_vartimep(fe r_X, fe r_Y, fe r_Z, const unsigned char *
     printf("i=%d\n", i);
     //TODO reinstate slide and add back in the negative checks here
     for (; i >= 0; --i) {
-        printf("loop stats %d\n",i);
-    printfe("post presetup A2X",A2_X);
-    printfe("post presetup A2Y",A2_Y);
-    printfe("post presetup A2Z",A2_Z);
-    printfe("post presetup A2T",A2_T);
-    printfe("post presetup ux",u_X);
-    printfe("post presetup uy",u_Y);
-    printfe("post presetup uz",u_Z);
-    printfe("post presetup ut",u_T);
-    printfe("post presetup tx",t_X);
-    printfe("post presetup ty",t_Y);
-    printfe("post presetup tz",t_Z);
-    printfe("post presetup tt",t_T);
-    printfe("post presetup Ai.YplusX",Ai[0].YplusX);
-    printfe("post presetup Ai.YminusX",Ai[0].YminusX);
-    printfe("post presetup Ai.Z",Ai[0].Z);
-    printfe("post presetup Ai.T2d",Ai[0].T2d);
-
-
-
+        printf("Loop %d\n",i-1);
         //ge_p2_dbl(&t, r);
         {
 
             fe_mul(t_X, r_X, r_X); //AA
+            printfe("r_x", r_X);
             fe_mul(t_Z, r_Y, r_Y); //BB
+             printfe("r_Y", r_Y);
             fe_mul(tmp, n2, r_Z);
+             printfe("r_x", r_Z);
             fe_mul(t_T, r_Z, tmp);
             fe_add(t_Y, r_X, r_Y);
             fe_mul(t0, t_Y, t_Y);
@@ -1535,12 +1521,7 @@ void ge_double_scalarmult_vartimep(fe r_X, fe r_Y, fe r_Z, const unsigned char *
             fe_mul(r_Y, t_Y, t_Z);
             fe_mul(r_Z, t_Z, t_T);
         }
-        
 
-        printf("loop %d: \n", i);
-        printfe("r_X : ",r_X);
-        printfe("r_Y : ",r_Y);
-        printfe("r_Z : ",r_Z);
       //  printfe("4: ",t_T);
       //  printfe("5: ",t0);
       //  printfe("6: ",A2_T);
@@ -1563,11 +1544,11 @@ void ge_double_scalarmult_vartimep(fe r_X, fe r_Y, fe r_Z, const unsigned char *
         printfe("rY : ",r_Y);
         printfe("tmpX : ",t_X);
         printfe("tmpY : ",t_Y);
-        printf("RESULTs: ");
+        printf("tmpy bytes: ");
         for (i=256/8 - 1;i>=0;i--)
             printf("%02x", (uint8_t) s[i]);
         s[31] ^= fe_isnegative(t_X) << 7;
-        printf("\nRESULT2: ");
+        printf("\ntmpy mod bytes ");
         for (i=256/8 - 1;i>=0;i--)
             printf("%02x", (uint8_t) s[i]);
         printf("\n");

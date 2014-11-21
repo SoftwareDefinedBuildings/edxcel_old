@@ -1,17 +1,17 @@
  module fe_invert(
-   input [319:0] z,
-   output [319:0] out,
-   input clk,
-   input rst,
-   input valid,
-   output done,
+   input wire [319:0] z,
+   output wire [319:0] out,
+   input wire clk,
+   input wire rst,
+   input wire valid,
+   output wire done,
    
     //Resources
-   output [319:0] pmul_in1,
-   output [319:0] pmul_in2,
-   output pmul_valid,
-   input [319:0] mul_res,
-   input mul_done
+   output wire [319:0] pmul_in1,
+   output wire [319:0] pmul_in2,
+   output wire pmul_valid,
+   input wire [319:0] mul_res,
+   input wire mul_done
 );
 
 `include "../fe/fe_common.v"

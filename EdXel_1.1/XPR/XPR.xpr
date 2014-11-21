@@ -94,6 +94,132 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../src/add64/add64.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/fifo_generator_0/fifo_generator_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mult19/mult19.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../src/mult32x64/mult32x64.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/ila_0/ila_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_generic_mux.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_cfglut8.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_generic_memrd.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_prim_wrapper.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_ecc_decoder.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_input_block.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_defaults.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_bindec.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_mux.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_pkg.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_synth_comp.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_prim_wrapper_init.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_min_area_pkg.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_getinit_pkg.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_generic_cstr.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_ecc_encoder.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_prim_width.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0.veo"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="doc/ila_v5_0_changelog.txt"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_all_typeA_slice.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_cfglut6.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_cfglut5.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_async_edge_xfer.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_all_typeA.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_allx_typeA.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_ver_inc.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_bscan.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_lib_function.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_cfglut4.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_allx_typeA_nodelay.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_buf.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="sim/ila_0.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_cfglut7.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_adv_trigger_sequencer.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_trig_match.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="synth/ila_0.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_trace_memory.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_counter_match.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_counter.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_trigger.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_fsm_memory_read.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/constraints/ila.xdc"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0.xml"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_0_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_reg_p2s.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_reg_stat.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_reg.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_reg_ctl.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_reg_strm.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_rising_edge_detection.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_match.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_startup.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_xsdbs.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_async_xfer.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_if_buf.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ltlib_v1_0/hdl/verilog/ltlib_v1_0_match_nodelay.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_inc.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="xsdbs_v1_0/hdl/verilog/xsdbs_v1_0_icon2xsdb_inc.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_top.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_output_block.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_cap_window_counter.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_axi_write_fsm.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_axi_regs_fwd.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_axi_read_wrapper.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_axi_write_wrapper.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_cap_ctrl_legacy.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_gen_v8_2_synth.vhd"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_cap_sample_counter.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_lib_function.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_ver_inc.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_cap_addrgen.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_register.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_reset_ctrl.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="ila_v5_0/hdl/verilog/ila_v5_0_ila_core.v"/>
+        <CompFileExtendedInfo CompFileName="ila_0.xci" FileRelPathName="blk_mem_gen_v8_2/hdl/blk_mem_axi_read_fsm.vhd"/>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="EdXel_v1_1"/>
@@ -148,90 +274,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../verilog/src/testbed/ge_frombytes_negate_vartime_tb.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="EPU_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="SrcSet" Val="sources_1"/>
         <Option Name="xsim.simulate.runtime" Val="4ms"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="mult19" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mult19">
-      <File Path="$PPRDIR/../src/mult19/mult19.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="mult19"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="add64" Type="BlockSrcs" RelSrcDir="$PSRCDIR/add64">
-      <File Path="$PPRDIR/../src/add64/add64.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="add64"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="mult32x64" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mult32x64">
-      <File Path="$PPRDIR/../src/mult32x64/mult32x64.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="mult32x64"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="blk_mem_gen_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/blk_mem_gen_0">
-      <File Path="$PSRCDIR/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="blk_mem_gen_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="fifo_generator_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/fifo_generator_0">
-      <File Path="$PSRCDIR/sources_1/ip/fifo_generator_0/fifo_generator_0.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="fifo_generator_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="clk_wiz_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/clk_wiz_0">
-      <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <Config>
-        <Option Name="TopModule" Val="clk_wiz_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -250,27 +305,6 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="9">
-    <Run Id="mult19_synth_1" Type="Ft3:Synth" SrcSet="mult19" Part="xc7z020clg484-1" ConstrsSet="mult19" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mult19_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="add64_synth_1" Type="Ft3:Synth" SrcSet="add64" Part="xc7z020clg484-1" ConstrsSet="add64" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/add64_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="mult32x64_synth_1" Type="Ft3:Synth" SrcSet="mult32x64" Part="xc7z020clg484-1" ConstrsSet="mult32x64" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/mult32x64_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
     <Run Id="synth_2" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_2">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
@@ -278,112 +312,7 @@
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
     </Run>
-    <Run Id="blk_mem_gen_0_synth_1" Type="Ft3:Synth" SrcSet="blk_mem_gen_0" Part="xc7z020clg484-1" ConstrsSet="blk_mem_gen_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/blk_mem_gen_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="fifo_generator_0_synth_1" Type="Ft3:Synth" SrcSet="fifo_generator_0" Part="xc7z020clg484-1" ConstrsSet="fifo_generator_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/fifo_generator_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="clk_wiz_0_synth_1" Type="Ft3:Synth" SrcSet="clk_wiz_0" Part="xc7z020clg484-1" ConstrsSet="clk_wiz_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/clk_wiz_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2014"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-    </Run>
-    <Run Id="mult19_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mult19" Description="Vivado Implementation Defaults" SynthRun="mult19_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
-    <Run Id="add64_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="add64" Description="Vivado Implementation Defaults" SynthRun="add64_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
-    <Run Id="mult32x64_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="mult32x64" Description="Vivado Implementation Defaults" SynthRun="mult32x64_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
     <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Vivado Implementation Defaults" State="current" SynthRun="synth_2">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
-    <Run Id="blk_mem_gen_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="blk_mem_gen_0" Description="Vivado Implementation Defaults" SynthRun="blk_mem_gen_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
-    <Run Id="fifo_generator_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="fifo_generator_0" Description="Vivado Implementation Defaults" SynthRun="fifo_generator_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-    </Run>
-    <Run Id="clk_wiz_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="clk_wiz_0" Description="Vivado Implementation Defaults" SynthRun="clk_wiz_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2014"/>
         <Step Id="init_design"/>

@@ -31,7 +31,7 @@ void ge_add(ge_p1p1 *r, const ge_p3 *p, const ge_cached *q) {
         r[i] = 1 & (a[i >> 3] >> (i & 7));
     }
 
-    for (i = 0; i < 256; ++i)
+    /*for (i = 0; i < 256; ++i)
         if (r[i]) {
             for (b = 1; b <= 6 && i + b < 256; ++b) {
                 if (r[i + b]) {
@@ -54,7 +54,7 @@ void ge_add(ge_p1p1 *r, const ge_p3 *p, const ge_cached *q) {
                     }
                 }
             }
-        }
+        }*/
 }
 
 /*
@@ -112,17 +112,11 @@ void ge_double_scalarmult_vartime(ge_p2 *r, const unsigned char *a, const ge_p3 
         if (aslide[i] > 0) {
             ge_p1p1_to_p3(&u, &t);
             ge_add(&t, &u, &Ai[aslide[i] / 2]);
-        } else if (aslide[i] < 0) {
-            ge_p1p1_to_p3(&u, &t);
-            ge_sub(&t, &u, &Ai[(-aslide[i]) / 2]);
         }
 
         if (bslide[i] > 0) {
             ge_p1p1_to_p3(&u, &t);
             ge_madd(&t, &u, &Bi[bslide[i] / 2]);
-        } else if (bslide[i] < 0) {
-            ge_p1p1_to_p3(&u, &t);
-            ge_msub(&t, &u, &Bi[(-bslide[i]) / 2]);
         }
 
         ge_p1p1_to_p2(r, &t);

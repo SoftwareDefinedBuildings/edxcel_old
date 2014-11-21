@@ -21,13 +21,13 @@
 
 
 module fe_mulx(
-    input [319:0] op_a,
-    input [319:0] op_b,
-    input valid,
-    input [319:0] res,
-    input clk,
-    input rst,
-    output done
+    input wire [319:0] op_a,
+    input wire [319:0] op_b,
+    input wire valid,
+    input wire [319:0] res,
+    input wire clk,
+    input wire rst,
+    output wire done
     );
 
 // *19 multipliers, 1 pipeline stage

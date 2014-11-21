@@ -23,39 +23,41 @@
 module ge_double_scalarmult_vartime(
 
     //Parameters
-    input [255:0] a,
-    input [255:0] b,
-    input [319:0] A_X,
-    input [319:0] A_Y,
-    input [319:0] A_Z,
-    input [319:0] A_T,
-    input valid,
+    input wire [255:0] a,
+    input wire [255:0] b,
+    input wire [319:0] A_X,
+    input wire [319:0] A_Y,
+    input wire [319:0] A_Z,
+    input wire [319:0] A_T,
+    input wire valid,
     
     //Resources
-    output [319:0] mul_op_a,
-    output [319:0] mul_op_b,
-    output mul_valid,
-    input [319:0] mul_res,
-    input mul_done,
+    output wire [319:0] mul_op_a,
+    output wire [319:0] mul_op_b,
+    output wire mul_valid,
+    input wire [319:0] mul_res,
+    input wire mul_done,
     
-    output [319:0] add_op_a,
-    output [319:0] add_op_b,
-    input [319:0]  add_res,
+    output wire [319:0] add_op_a,
+    output wire [319:0] add_op_b,
+    input wire [319:0]  add_res,
     
-    output [319:0] sub_op_a,
-    output [319:0] sub_op_b,
-    input [319:0]  sub_res,
+    output wire [319:0] sub_op_a,
+    output wire [319:0] sub_op_b,
+    input wire [319:0]  sub_res,
     
     //output
-    output [255:0] ge_bytes,
-    output done,
+    output wire [255:0] ge_bytes,
+    output wire done,
         
     //misc
-    input clk,
-    input rst
+    input wire clk,
+    input wire rst
     
     );
     
+ `include "../fe/fe_common.v"   
+ 
 wire [319:0] douta;
 wire [319:0] doutb;
 reg wea;
@@ -70,6 +72,7 @@ reg [319:0] rtmp_Y;
 reg rdone;
 reg rge_isneg;
 reg [255:0] rge_bytes;
+reg [255:0] rrge_bytes;
 
 assign ge_bytes = rge_bytes;
 assign done = rdone;
@@ -176,6 +179,17 @@ reg [10:0] state;
 reg [319:0] foo;
 reg signed [8:0] loopi;
 
+reg  [255:0] rtmpXbytes;
+reg  [255:0] rtmpYbytes;
+
+always @ (*)
+begin
+    rtmpXbytes = fe_tobytes(rtmp_X);
+end
+always @ (*)
+begin
+    rtmpYbytes = fe_tobytes(rtmp_Y);
+end
 always @ (posedge clk)
 begin
     if (rst == 0)
@@ -200,7 +214,6 @@ begin
                         if (valid == 1'b0)
                         begin
                             state <= 10'd0;  
-                            foo <= 320'b0;
                         end
                     end
         10'd1   :   begin //Load Ax and Ay into ram
@@ -2544,6 +2557,7 @@ begin
          10'd341  :   begin
                          if (mul_done)
                          begin
+                            $display("loop %d r_X %h", loopi, douta);
                             wea <= 1'b1;
                             addra <= `MM_t_X;
                             dina <= mul_res;
@@ -2566,6 +2580,7 @@ begin
          10'd344  :   begin
                          if (mul_done)
                          begin
+                            $display("loop %d r_Y %h", loopi, douta);
                             wea <= 1'b1;
                             addra <= `MM_t_Z;
                             dina <= mul_res;
@@ -2588,6 +2603,7 @@ begin
          10'd347  :   begin
                          if (mul_done)
                          begin
+                            $display("loop %d r_Z %h", loopi, doutb);
                             wea <= 1'b1;
                             addra <= `MM_tmp;
                             dina <= mul_res;
@@ -2694,6 +2710,7 @@ begin
                         begin
                             state <= 10'd399;
                         end else begin
+                            $display("ASLIDE");
                         end
                     end
                     
@@ -2936,8 +2953,9 @@ begin
         10'd399  :   begin
                         if (b[loopi] == 1'b0)
                         begin
-                            state <= 10'd440;
+                            state <= 10'd431;
                         end else begin
+                            $display("BSLIDE %d",loopi);
                         end
                      end
                      
@@ -3153,91 +3171,98 @@ begin
                     end
                     //Done ge_madd
                     
+                    //END BSLIDE
+        10'd431 : begin
+                        //Begin p1p1_to_p2
+                    addra <= `MM_t_X; //fe_mul(u_X, t_X, t_T);
+                    addrb <= `MM_t_T;
+                  end  
                     //Begin p1p1_to_p2
-            10'd431 :   begin
-                        addra <= `MM_t_X; //fe_mul(u_X, t_X, t_T);
-                        addrb <= `MM_t_T;
+        10'd432  :   begin
+                    addra <= `MM_t_X;
+                    addrb <= `MM_t_T;
+                    mul_en <= 1'b1;
+                end
+        10'd433  :   begin
+                    if (mul_done)
+                    begin
+                       wea <= 1'b1;
+                       addra <= `MM_r_X;
+                       dina <= mul_res;
+                    end else
+                    begin
+                       addra <= `MM_t_X;
+                       addrb <= `MM_t_T;
+                       state <= 433;
                     end
-            10'd432  :   begin
-                        addra <= `MM_t_X;
-                        addrb <= `MM_t_T;
-                        mul_en <= 1'b1;
+                end
+        10'd434  :   begin
+                    addra <= `MM_t_Y; //fe_mul(u_Y, t_Y, t_Z);
+                    addrb <= `MM_t_Z;
+                end
+        10'd435  :   begin
+                    addra <= `MM_t_Y;
+                    addrb <= `MM_t_Z;
+                    mul_en <= 1; 
+                end
+        10'd436  :   begin
+                    if (mul_done)
+                    begin
+                       wea <= 1'b1;
+                       addra <= `MM_r_Y;
+                       dina <= mul_res;
+                    end else
+                    begin
+                       addra <= `MM_t_Y;
+                       addrb <= `MM_t_Z;
+                       state <= 436;
+                    end 
+                end
+        10'd437  :   begin
+                    addra <= `MM_t_Z; //fe_mul(u_Z, t_Z, t_T);
+                    addrb <= `MM_t_T;
+                end
+        10'd438  :   begin
+                    addra <= `MM_t_Z;
+                    addrb <= `MM_t_T;
+                    mul_en <= 1;
+                end
+        10'd439  :   begin
+                    if (mul_done)
+                    begin
+                       web <= 1'b1;
+                       addrb <= `MM_r_Z;
+                       dinb <= mul_res;
+
+                    end else
+                    begin
+                       addra <= `MM_t_Z;
+                       addrb <= `MM_t_T;
+                       state <= 439;
                     end
-            10'd433  :   begin
-                        if (mul_done)
-                        begin
-                           wea <= 1'b1;
-                           addra <= `MM_r_X;
-                           dina <= mul_res;
-                        end else
-                        begin
-                           addra <= `MM_t_X;
-                           addrb <= `MM_t_T;
-                           state <= 433;
-                        end
-                    end
-            10'd434  :   begin
-                        addra <= `MM_t_Y; //fe_mul(u_Y, t_Y, t_Z);
-                        addrb <= `MM_t_Z;
-                    end
-            10'd435  :   begin
-                        addra <= `MM_t_Y;
-                        addrb <= `MM_t_Z;
-                        mul_en <= 1; 
-                    end
-            10'd436  :   begin
-                        if (mul_done)
-                        begin
-                           wea <= 1'b1;
-                           addra <= `MM_r_Y;
-                           dina <= mul_res;
-                        end else
-                        begin
-                           addra <= `MM_t_Y;
-                           addrb <= `MM_t_Z;
-                           state <= 436;
-                        end 
-                    end
-            10'd437  :   begin
-                        addra <= `MM_t_Z; //fe_mul(u_Z, t_Z, t_T);
-                        addrb <= `MM_t_T;
-                    end
-            10'd438  :   begin
-                        addra <= `MM_t_Z;
-                        addrb <= `MM_t_T;
-                        mul_en <= 1;
-                    end
-            10'd439  :   begin
-                        if (mul_done)
-                        begin
-                           wea <= 1'b1;
+                end
+                //End p1p1_to_p2(r, t)
+                 
+                //loop header
+        10'd440:   begin
+                    if (loopi > 0)
+                    begin
+                        loopi <= loopi - 1;
+                        state <= 10'd339;
+                        $display("loop %d",loopi);
+                    end else begin
+                           //begin fe invert
                            addra <= `MM_r_Z;
-                           dina <= mul_res;
-                        end else
-                        begin
-                           addra <= `MM_t_Z;
-                           addrb <= `MM_t_T;
-                           state <= 439;
-                        end
+                           fei_en <= 1'b1; //assign multiplier to FEI
                     end
-                    //End p1p1_to_p2(r, t)
-                     
-                    //done if bslide > 0 
-    
+                end
+                
+                       //end loop of death
+                        
+    //end loop
     //===============BEGIN TOBYTES                                
-        10'd440 :   begin
-                        if (loopi > 0)
-                        begin
-                            loopi <= loopi - 1;
-                            state <= 10'd339;
-                            $display("loop %d",loopi);
-                        end else begin
-                            //fe_invert(t0, r_Z)
-                            addra <= `MM_r_Z;
-                            fei_en <= 1'b1; //assign multiplier to FEI
-                        end  
-                    end
-                    
+
+       
                     
                     //BEGIN
         10'd441 : begin
@@ -3304,18 +3329,42 @@ begin
                            state <= 448;
                         end
                     end
+                    //fe_tobytes is a long combinatorial chain. stall while it propogates
         10'd449 :   begin
-                        rge_bytes <= fe_tobytes(rtmp_X);
+                        //stall
                     end
         10'd450 :   begin
-                        rge_isneg <= rge_bytes[0];
-                        rge_bytes <= fe_tobytes(rtmp_Y);
-                    end
+                       //stall
+                    end     
         10'd451 :   begin
-                        rge_bytes[255] = rge_bytes[255] ^ rge_isneg;
+                        //stall
+                    end
+        10'd452 :   begin
+                       //stall
+                    end   
+        10'd453 :   begin
+                        //stall
+                    end
+        10'd454 :   begin
+                       //stall
+                    end     
+        10'd455 :   begin
+                        //stall
+                    end
+        10'd456 :   begin
+                       //stall
+                    end   
+                    
+        10'd457 :   begin
+                        rrge_bytes[254:0] <= rtmpYbytes[254:0];
+                        rrge_bytes[255] <= rtmpYbytes[255] ^ rtmpXbytes[0];
+                    end
+        10'd458 :   begin
+                        rge_bytes <= rrge_bytes;
                         rdone <= 1'b1;
                         state <= 10'd0;
                     end
+        default: if (state > 458) state <= 0;
         /*10'd499 :   begin
                     end
         10'd498 :   begin

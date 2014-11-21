@@ -24,6 +24,9 @@ module EPU_tb(
 
     );
 
+`include "../fe/fe_common.v"
+ 
+ 
 reg [511:0] sign;
 reg [255:0] key;
 reg [255:0] rhash;
@@ -35,7 +38,7 @@ reg axiclk;
 reg modclk;
 
  EPU epu(
-    .sign(sign),
+    .sig(sign),
     .key(key),
     .rhash(rhash),
     .ready(ready),
@@ -49,16 +52,24 @@ reg modclk;
 
 initial
 begin
-    resetn = 0;
+    resetn = 1;
     axiclk = 1;
     modclk = 1;
     valid = 0;
-    #20
+    #100
+    resetn = 0;
+    #200;
     resetn = 1;
+    #400
     //Good signature
-    sign = 512'h03e302d508532afeefa20360c8393e94aac9a0e12968ae80823d3ca54f9c89ff7db8b9c5a25d2cbc2dbe296513d5b7178409c49e22f9f0c3443da385325ea213;
-    key = 256'he8325d4a6aba7d0a29a15ab0f70bc332fbce07aeb4d1c5ec4e54cee26a4e6380;
-    rhash = 256'h03788934404d87830e38a9fdaa4e4261a2faf2a0d614c051d1dbb464561313e6;
+    sign =  512'h0e722c657a46123fd9e362f592424e7922262adddec344dfcef6414133fc022b1715bd6c30b45f864fa49da3e3abf950cf2a61795c2e9e830b6a009effdffff2;
+              //d37bd8a17a2cbd39b7171c20a048dae43fe426e86a9c87e74ca8473d968b0ca0
+    key =   256'h973ddda3cda397385e46a3bc714e2f1572e3ea6eb09667e3604520ce9638bf06;
+    rhash = 256'h070ff3673edd6d54f00317d8c7c68b4f8dfbcf400a61fae3c24bcbfda1fb914a;//03788934404d87830e38a9fdaa4e4261a2faf2a0d614c051d1dbb464561313e6;
+    
+        
+   // a = 256'h070ff3673edd6d54f00317d8c7c68b4f8dfbcf400a61fae3c24bcbfda1fb914a;
+   // b = 256'h0e722c657a46123fd9e362f592424e7922262adddec344dfcef6414133fc022b;
     #20; //axi clock
     valid = 1;
     #20;
@@ -66,8 +77,14 @@ begin
     
     while (ready == 1'b0)
     begin
-        #10;
+        #20;
     end 
+    #40
+    #20; //axi clock
+    valid = 1;
+    #20;
+    valid = 0;
+    
     
     
 end
