@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ge_frombytes_negate_vartime_tb_func_synth.wdb" id="1">
+         <top_modules>
+            <top_module name="ge_frombytes_negate_vartime_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="31" />
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/s">
+      <obj_property name="ElementShortName">s[255:0]</obj_property>
+      <obj_property name="ObjectShortName">s[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/h_x">
+      <obj_property name="ElementShortName">h_x[319:0]</obj_property>
+      <obj_property name="ObjectShortName">h_x[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/h_y">
+      <obj_property name="ElementShortName">h_y[319:0]</obj_property>
+      <obj_property name="ObjectShortName">h_y[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/h_z">
+      <obj_property name="ElementShortName">h_z[319:0]</obj_property>
+      <obj_property name="ObjectShortName">h_z[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/h_t">
+      <obj_property name="ElementShortName">h_t[319:0]</obj_property>
+      <obj_property name="ObjectShortName">h_t[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/error">
+      <obj_property name="ElementShortName">error</obj_property>
+      <obj_property name="ObjectShortName">error</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/mul_in1">
+      <obj_property name="ElementShortName">mul_in1[319:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_in1[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/mul_in2">
+      <obj_property name="ElementShortName">mul_in2[319:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_in2[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/mul_valid">
+      <obj_property name="ElementShortName">mul_valid</obj_property>
+      <obj_property name="ObjectShortName">mul_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/mul_res">
+      <obj_property name="ElementShortName">mul_res[319:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_res[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/mul_done">
+      <obj_property name="ElementShortName">mul_done</obj_property>
+      <obj_property name="ObjectShortName">mul_done</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/add_in1">
+      <obj_property name="ElementShortName">add_in1[319:0]</obj_property>
+      <obj_property name="ObjectShortName">add_in1[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/add_in2">
+      <obj_property name="ElementShortName">add_in2[319:0]</obj_property>
+      <obj_property name="ObjectShortName">add_in2[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/add_res">
+      <obj_property name="ElementShortName">add_res[319:0]</obj_property>
+      <obj_property name="ObjectShortName">add_res[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/sub_in1">
+      <obj_property name="ElementShortName">sub_in1[319:0]</obj_property>
+      <obj_property name="ObjectShortName">sub_in1[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/sub_in2">
+      <obj_property name="ElementShortName">sub_in2[319:0]</obj_property>
+      <obj_property name="ObjectShortName">sub_in2[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/sub_res">
+      <obj_property name="ElementShortName">sub_res[319:0]</obj_property>
+      <obj_property name="ObjectShortName">sub_res[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/pow_valid">
+      <obj_property name="ElementShortName">pow_valid</obj_property>
+      <obj_property name="ObjectShortName">pow_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/p_0_out">
+      <obj_property name="ElementShortName">p_0_out</obj_property>
+      <obj_property name="ObjectShortName">p_0_out</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/p_0_in">
+      <obj_property name="ElementShortName">p_0_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">p_0_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/state1">
+      <obj_property name="ElementShortName">state1</obj_property>
+      <obj_property name="ObjectShortName">state1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/n_6213_pow_en_reg">
+      <obj_property name="ElementShortName">n_6213_pow_en_reg</obj_property>
+      <obj_property name="ObjectShortName">n_6213_pow_en_reg</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/n_6213_pow_en_reg_rep">
+      <obj_property name="ElementShortName">n_6213_pow_en_reg_rep</obj_property>
+      <obj_property name="ObjectShortName">n_6213_pow_en_reg_rep</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/n_6213_pow_en_reg_rep__0">
+      <obj_property name="ElementShortName">n_6213_pow_en_reg_rep__0</obj_property>
+      <obj_property name="ObjectShortName">n_6213_pow_en_reg_rep__0</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/n_6213_pow_en_reg_rep__1">
+      <obj_property name="ElementShortName">n_6213_pow_en_reg_rep__1</obj_property>
+      <obj_property name="ObjectShortName">n_6213_pow_en_reg_rep__1</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/n_6213_pow_en_reg_rep__2">
+      <obj_property name="ElementShortName">n_6213_pow_en_reg_rep__2</obj_property>
+      <obj_property name="ObjectShortName">n_6213_pow_en_reg_rep__2</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_frombytes_negate_vartime_tb/ge_frombytes_negate_vartime/n_6213_pow_en_reg_rep__3">
+      <obj_property name="ElementShortName">n_6213_pow_en_reg_rep__3</obj_property>
+      <obj_property name="ObjectShortName">n_6213_pow_en_reg_rep__3</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ge_double_scalarmult_vartime_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="ge_double_scalarmult_vartime_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="22" />
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/state">
+      <obj_property name="ElementShortName">state[10:0]</obj_property>
+      <obj_property name="ObjectShortName">state[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group201">
+      <obj_property name="label">PARAMS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/A_X">
+         <obj_property name="ElementShortName">A_X[319:0]</obj_property>
+         <obj_property name="ObjectShortName">A_X[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/A_Y">
+         <obj_property name="ElementShortName">A_Y[319:0]</obj_property>
+         <obj_property name="ObjectShortName">A_Y[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/A_Z">
+         <obj_property name="ElementShortName">A_Z[319:0]</obj_property>
+         <obj_property name="ObjectShortName">A_Z[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/A_T">
+         <obj_property name="ElementShortName">A_T[319:0]</obj_property>
+         <obj_property name="ObjectShortName">A_T[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/b">
+      <obj_property name="ElementShortName">b[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/a">
+      <obj_property name="ElementShortName">a[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group191">
+      <obj_property name="label">MEM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/feram/addra">
+         <obj_property name="ElementShortName">addra[6:0]</obj_property>
+         <obj_property name="ObjectShortName">addra[6:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/feram/dina">
+         <obj_property name="ElementShortName">dina[319:0]</obj_property>
+         <obj_property name="ObjectShortName">dina[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/feram/wea">
+         <obj_property name="ElementShortName">wea[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wea[0:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/feram/douta">
+         <obj_property name="ElementShortName">douta[319:0]</obj_property>
+         <obj_property name="ObjectShortName">douta[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/feram/web">
+         <obj_property name="ElementShortName">web[0:0]</obj_property>
+         <obj_property name="ObjectShortName">web[0:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/feram/addrb">
+         <obj_property name="ElementShortName">addrb[6:0]</obj_property>
+         <obj_property name="ObjectShortName">addrb[6:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/feram/dinb">
+         <obj_property name="ElementShortName">dinb[319:0]</obj_property>
+         <obj_property name="ObjectShortName">dinb[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/feram/doutb">
+         <obj_property name="ElementShortName">doutb[319:0]</obj_property>
+         <obj_property name="ObjectShortName">doutb[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group178">
+      <obj_property name="label">ALU</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/mul_op_a">
+         <obj_property name="ElementShortName">mul_op_a[319:0]</obj_property>
+         <obj_property name="ObjectShortName">mul_op_a[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/mul_op_b">
+         <obj_property name="ElementShortName">mul_op_b[319:0]</obj_property>
+         <obj_property name="ObjectShortName">mul_op_b[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/mul_valid">
+         <obj_property name="ElementShortName">mul_valid</obj_property>
+         <obj_property name="ObjectShortName">mul_valid</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/mul_res">
+         <obj_property name="ElementShortName">mul_res[319:0]</obj_property>
+         <obj_property name="ObjectShortName">mul_res[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/mul_done">
+         <obj_property name="ElementShortName">mul_done</obj_property>
+         <obj_property name="ObjectShortName">mul_done</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/add_op_a">
+         <obj_property name="ElementShortName">add_op_a[319:0]</obj_property>
+         <obj_property name="ObjectShortName">add_op_a[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/add_op_b">
+         <obj_property name="ElementShortName">add_op_b[319:0]</obj_property>
+         <obj_property name="ObjectShortName">add_op_b[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/add_res">
+         <obj_property name="ElementShortName">add_res[319:0]</obj_property>
+         <obj_property name="ObjectShortName">add_res[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/sub_op_a">
+         <obj_property name="ElementShortName">sub_op_a[319:0]</obj_property>
+         <obj_property name="ObjectShortName">sub_op_a[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/sub_op_b">
+         <obj_property name="ElementShortName">sub_op_b[319:0]</obj_property>
+         <obj_property name="ObjectShortName">sub_op_b[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/sub_res">
+         <obj_property name="ElementShortName">sub_res[319:0]</obj_property>
+         <obj_property name="ObjectShortName">sub_res[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/foo">
+      <obj_property name="ElementShortName">foo[319:0]</obj_property>
+      <obj_property name="ObjectShortName">foo[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/loopi">
+      <obj_property name="ElementShortName">loopi[8:0]</obj_property>
+      <obj_property name="ObjectShortName">loopi[8:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/a">
+      <obj_property name="ElementShortName">a[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/b">
+      <obj_property name="ElementShortName">b[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/fei_mul_op_a">
+      <obj_property name="ElementShortName">fei_mul_op_a[319:0]</obj_property>
+      <obj_property name="ObjectShortName">fei_mul_op_a[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/fei_mul_op_b">
+      <obj_property name="ElementShortName">fei_mul_op_b[319:0]</obj_property>
+      <obj_property name="ObjectShortName">fei_mul_op_b[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/fei_done">
+      <obj_property name="ElementShortName">fei_done</obj_property>
+      <obj_property name="ObjectShortName">fei_done</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/fei_valid">
+      <obj_property name="ElementShortName">fei_valid</obj_property>
+      <obj_property name="ObjectShortName">fei_valid</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group132">
+      <obj_property name="label">FEI</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/z">
+         <obj_property name="ElementShortName">z[319:0]</obj_property>
+         <obj_property name="ObjectShortName">z[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/out">
+         <obj_property name="ElementShortName">out[319:0]</obj_property>
+         <obj_property name="ObjectShortName">out[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/rst">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/valid">
+         <obj_property name="ElementShortName">valid</obj_property>
+         <obj_property name="ObjectShortName">valid</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/done">
+         <obj_property name="ElementShortName">done</obj_property>
+         <obj_property name="ObjectShortName">done</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/pmul_in1">
+         <obj_property name="ElementShortName">pmul_in1[319:0]</obj_property>
+         <obj_property name="ObjectShortName">pmul_in1[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/pmul_in2">
+         <obj_property name="ElementShortName">pmul_in2[319:0]</obj_property>
+         <obj_property name="ObjectShortName">pmul_in2[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/pmul_valid">
+         <obj_property name="ElementShortName">pmul_valid</obj_property>
+         <obj_property name="ObjectShortName">pmul_valid</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/mul_res">
+         <obj_property name="ElementShortName">mul_res[319:0]</obj_property>
+         <obj_property name="ObjectShortName">mul_res[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/mul_done">
+         <obj_property name="ElementShortName">mul_done</obj_property>
+         <obj_property name="ObjectShortName">mul_done</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/mul_in1">
+         <obj_property name="ElementShortName">mul_in1[319:0]</obj_property>
+         <obj_property name="ObjectShortName">mul_in1[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/mul_in2">
+         <obj_property name="ElementShortName">mul_in2[319:0]</obj_property>
+         <obj_property name="ObjectShortName">mul_in2[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/mul_valid">
+         <obj_property name="ElementShortName">mul_valid</obj_property>
+         <obj_property name="ObjectShortName">mul_valid</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/cycle">
+         <obj_property name="ElementShortName">cycle[31:0]</obj_property>
+         <obj_property name="ObjectShortName">cycle[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/rt_0">
+         <obj_property name="ElementShortName">rt_0[319:0]</obj_property>
+         <obj_property name="ObjectShortName">rt_0[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/rt_1">
+         <obj_property name="ElementShortName">rt_1[319:0]</obj_property>
+         <obj_property name="ObjectShortName">rt_1[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/rt_2">
+         <obj_property name="ElementShortName">rt_2[319:0]</obj_property>
+         <obj_property name="ObjectShortName">rt_2[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/rt_3">
+         <obj_property name="ElementShortName">rt_3[319:0]</obj_property>
+         <obj_property name="ObjectShortName">rt_3[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/rout">
+         <obj_property name="ElementShortName">rout[319:0]</obj_property>
+         <obj_property name="ObjectShortName">rout[319:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/FEI/rdone">
+         <obj_property name="ElementShortName">rdone</obj_property>
+         <obj_property name="ObjectShortName">rdone</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="logic" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/fei_en">
+         <obj_property name="ElementShortName">fei_en</obj_property>
+         <obj_property name="ObjectShortName">fei_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/a">
+      <obj_property name="ElementShortName">a[255:0]</obj_property>
+      <obj_property name="ObjectShortName">a[255:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/b">
+      <obj_property name="ElementShortName">b[255:0]</obj_property>
+      <obj_property name="ObjectShortName">b[255:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/rge_bytes">
+      <obj_property name="ElementShortName">rge_bytes[255:0]</obj_property>
+      <obj_property name="ObjectShortName">rge_bytes[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/rtmpXbytes">
+      <obj_property name="ElementShortName">rtmpXbytes[255:0]</obj_property>
+      <obj_property name="ObjectShortName">rtmpXbytes[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/ge_double_scalarmult_vartime_tb/GDSV/rtmpYbytes">
+      <obj_property name="ElementShortName">rtmpYbytes[255:0]</obj_property>
+      <obj_property name="ObjectShortName">rtmpYbytes[255:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

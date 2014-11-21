@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="EPU_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="EPU_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="45" />
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/ML/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/state">
+      <obj_property name="ElementShortName">state[5:0]</obj_property>
+      <obj_property name="ObjectShortName">state[5:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/rh_x">
+      <obj_property name="ElementShortName">rh_x[319:0]</obj_property>
+      <obj_property name="ObjectShortName">rh_x[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/rh_y">
+      <obj_property name="ElementShortName">rh_y[319:0]</obj_property>
+      <obj_property name="ObjectShortName">rh_y[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/rh_z">
+      <obj_property name="ElementShortName">rh_z[319:0]</obj_property>
+      <obj_property name="ObjectShortName">rh_z[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/rh_t">
+      <obj_property name="ElementShortName">rh_t[319:0]</obj_property>
+      <obj_property name="ObjectShortName">rh_t[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/POW/cycle">
+      <obj_property name="ElementShortName">cycle[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cycle[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/GFNV/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/ML/op_a">
+      <obj_property name="ElementShortName">op_a[319:0]</obj_property>
+      <obj_property name="ObjectShortName">op_a[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/ML/op_b">
+      <obj_property name="ElementShortName">op_b[319:0]</obj_property>
+      <obj_property name="ObjectShortName">op_b[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/ML/res">
+      <obj_property name="ElementShortName">res[319:0]</obj_property>
+      <obj_property name="ObjectShortName">res[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/mul_op_a">
+      <obj_property name="ElementShortName">mul_op_a[319:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_op_a[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/mul_op_b">
+      <obj_property name="ElementShortName">mul_op_b[319:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_op_b[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GFNV/mul_res">
+      <obj_property name="ElementShortName">mul_res[319:0]</obj_property>
+      <obj_property name="ObjectShortName">mul_res[319:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/ML/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/ML/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/addsub_gdsv_valid">
+      <obj_property name="ElementShortName">addsub_gdsv_valid</obj_property>
+      <obj_property name="ObjectShortName">addsub_gdsv_valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/addsub_gfnv_valid">
+      <obj_property name="ElementShortName">addsub_gfnv_valid</obj_property>
+      <obj_property name="ObjectShortName">addsub_gfnv_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider637" type="divider">
+      <obj_property name="label">new</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/result">
+      <obj_property name="ElementShortName">result</obj_property>
+      <obj_property name="ObjectShortName">result</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider641" type="divider">
+      <obj_property name="label">df</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/GDSV/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GDSV/state">
+      <obj_property name="ElementShortName">state[10:0]</obj_property>
+      <obj_property name="ObjectShortName">state[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GDSV/loopi">
+      <obj_property name="ElementShortName">loopi[8:0]</obj_property>
+      <obj_property name="ObjectShortName">loopi[8:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/GDSV/state">
+      <obj_property name="ElementShortName">state[10:0]</obj_property>
+      <obj_property name="ObjectShortName">state[10:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/GDSV/done">
+      <obj_property name="ElementShortName">done</obj_property>
+      <obj_property name="ObjectShortName">done</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/outputfifo/rst">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/outputfifo/wr_clk">
+      <obj_property name="ElementShortName">wr_clk</obj_property>
+      <obj_property name="ObjectShortName">wr_clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/outputfifo/rd_clk">
+      <obj_property name="ElementShortName">rd_clk</obj_property>
+      <obj_property name="ObjectShortName">rd_clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/outputfifo/din">
+      <obj_property name="ElementShortName">din[0:0]</obj_property>
+      <obj_property name="ObjectShortName">din[0:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/outputfifo/wr_en">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/outputfifo/rd_en">
+      <obj_property name="ElementShortName">rd_en</obj_property>
+      <obj_property name="ObjectShortName">rd_en</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/EPU_tb/epu/outputfifo/dout">
+      <obj_property name="ElementShortName">dout[0:0]</obj_property>
+      <obj_property name="ObjectShortName">dout[0:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/outputfifo/full">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/outputfifo/empty">
+      <obj_property name="ElementShortName">empty</obj_property>
+      <obj_property name="ObjectShortName">empty</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/epu/outputfifo/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/valid">
+      <obj_property name="ElementShortName">valid</obj_property>
+      <obj_property name="ObjectShortName">valid</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/result">
+      <obj_property name="ElementShortName">result</obj_property>
+      <obj_property name="ObjectShortName">result</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/resetn">
+      <obj_property name="ElementShortName">resetn</obj_property>
+      <obj_property name="ObjectShortName">resetn</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/axiclk">
+      <obj_property name="ElementShortName">axiclk</obj_property>
+      <obj_property name="ObjectShortName">axiclk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/EPU_tb/modclk">
+      <obj_property name="ElementShortName">modclk</obj_property>
+      <obj_property name="ObjectShortName">modclk</obj_property>
+   </wvobject>
+</wave_config>

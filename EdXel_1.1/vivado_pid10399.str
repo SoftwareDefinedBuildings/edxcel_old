@@ -1,0 +1,661 @@
+/*
+
+Vivado v2014.3.1 (64-bit)
+SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+Process ID: 10399
+
+Current time: 	11/21/14 3:25:36 PM
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: DISTRIB_ID=Ubuntu
+Version: 3.13.0-35-generic
+Architecture: amd64
+Available processors (cores): 16
+
+DISPLAY: :0
+Screen size: 4000x2560
+Screen resolution (DPI): 96
+Available screens: 2
+
+Java version: 	1.8.0_25 64-bit
+Java home: 	/opt/Xilinx/Vivado/2014.3.1/tps/lnx64/jre
+
+User name: 	immesys
+User directory: /home/immesys/w/FPGA/edxcel/EdXel_1.1
+User country: 	US
+User language: 	en
+User locale: 	en_US
+Vivado preferences path: /home/immesys/.Xilinx/Vivado/2014.3/vivado.ini
+Vivado layouts directory: /home/immesys/.Xilinx/Vivado/2014.3/layouts/application
+
+GUI allocated memory:	216 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 4,860 MB
+
+*/
+
+// TclEventType: START_GUI
+// HColorUtils.generateUniqueColorPalette (num colors: 55) elapsed time: 0.5s
+// Tcl Message: start_gui 
+// [GUI Memory]: 38 MB (+37347kb) [00:00:07]
+// [Engine Memory]: 4,860 MB (+4944996kb) [00:00:07]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,860 MB. GUI used memory: 19 MB. Current time: 11/21/14 3:25:38 PM
+selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // k:JideButton (JPanel:JComponent, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.xpr");
+// cn:P (ch:JFrame):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'add64'. 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'blk_mem_gen_0'. 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'clk_wiz_0'. 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'fifo_generator_0'. 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'mult19'. 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'mult32x64'. 
+// Tcl Message: ERROR: [IP_Flow 19-993] Could not find IP file for IP 'ila_0'. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/immesys/w/FPGA/edxcel/EdXel_1.1'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 4,977 MB (+121946kb) [00:00:17]
+// [Engine Memory]: 4,979 MB (+2097kb) [00:00:17]
+// [Engine Memory]: 4,996 MB (+17838kb) [00:00:18]
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.3.1/data/ip'. 
+// [GUI Memory]: 49 MB (+11893kb) [00:00:19]
+// [GUI Memory]: 50 MB (+1096kb) [00:00:19]
+// [Engine Memory]: 4,998 MB (+1941kb) [00:00:19]
+// [GUI Memory]: 51 MB (+557kb) [00:00:19]
+// [Engine Memory]: 5,003 MB (+6012kb) [00:00:19]
+// [GUI Memory]: 52 MB (+1096kb) [00:00:19]
+// [GUI Memory]: 53 MB (+602kb) [00:00:19]
+// [Engine Memory]: 5,006 MB (+2768kb) [00:00:19]
+// [GUI Memory]: 53 MB (+548kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// [GUI Memory]: 53 MB (+29kb) [00:00:19]
+// [GUI Memory]: 54 MB (+1158kb) [00:00:19]
+// [GUI Memory]: 55 MB (+617kb) [00:00:19]
+// [GUI Memory]: 55 MB (+579kb) [00:00:19]
+// [GUI Memory]: 56 MB (+579kb) [00:00:19]
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: ERROR: [Common 17-39] 'open_project' failed due to earlier errors. 
+// 'g' command handler elapsed time: 7 seconds
+dismissDialog("Open Project"); // cn:P (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// a:a (ch:JFrame): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // i:a (JPanel:JComponent, a:a)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // g:JideTabbedPane (I:aG, ch:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP]", 0); // u:k (H:JPanel, ch:JFrame)
+// [Engine Memory]: 5,008 MB (+2097kb) [00:00:32]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, add64]", 1, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, mult32x64]", 7, false, true, false, false, false, false); // u:k (H:JPanel, ch:JFrame) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP, mult32x64]", 7, false, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// ay:P (ch:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ay:P)
+dismissDialog("Remove Sources"); // ay:P (ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files {/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/add64/add64.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/ila_0/ila_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/mult19/mult19.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/mult32x64/mult32x64.xci} 
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // g:JideTabbedPane (I:aG, ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 61 MB (+5392kb) [00:00:41]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 3); // u:k (H:JPanel, ch:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 2); // u:k (H:JPanel, ch:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, DummyEPU.v]", 2, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (ch:JFrame): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_EXISTING_CONFIGURABLE_IP, "Add Existing IP"); // a:JRadioButton (JPanel:JComponent, b:g)
+// [Engine Memory]: 5,013 MB (+5246kb) [00:01:03]
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+// Elapsed time: 15 seconds
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/add64/add64.xci");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/blk_mem_gen_0/blk_mem_gen_0.xci");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/blk_mem_gen_1/blk_mem_gen_1.xci");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+// [Engine Memory]: 5,020 MB (+7344kb) [00:01:33]
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/fifo_generator_0/fifo_generator_0.xci");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/clk_wiz_0/clk_wiz_0.xci");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/ila_0/ila_0.xci");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/mult19/mult19.xci");
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_CONFIGURABLE_IP_FILES, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+// [GUI Memory]: 62 MB (+1355kb) [00:01:53]
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/mult32x64/mult32x64.xci");
+// cn:P (ch:JFrame):  Add Existing IP : addNotify
+dismissDialog("Add Sources"); // b:g (ch:JFrame)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse {/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/mult19/mult19.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/blk_mem_gen_0/blk_mem_gen_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/ila_0/ila_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/mult32x64/mult32x64.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/fifo_generator_0/fifo_generator_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/blk_mem_gen_1/blk_mem_gen_1.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/clk_wiz_0/clk_wiz_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/add64/add64.xci} 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'f' command handler elapsed time: 63 seconds
+// [GUI Memory]: 64 MB (+1659kb) [00:02:00]
+dismissDialog("Add Existing IP"); // cn:P (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files, consts.coe]", 23, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files, consts.coe]", 24, false, false, true, false, false, false); // u:k (H:JPanel, ch:JFrame) - Control Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files, consts.coe]", 24, false, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// ay:P (ch:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ay:P)
+dismissDialog("Remove Sources"); // ay:P (ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/imports/edxcel/verilog/src/ge/consts.coe 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/ge/consts.coe 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// [GUI Memory]: 64 MB (+259kb) [00:02:14]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, DummyEPU.v]", 2, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, fe_common.v]", 11, false, true, false, false, false, false); // u:k (H:JPanel, ch:JFrame) - Shift Key
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, fe_common.v]", 11, false, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// ay:P (ch:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ay:P)
+dismissDialog("Remove Sources"); // ay:P (ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (ch:JFrame): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_HDL_AND_NETLIST_FILES_OR_DIRECTORIES, "Add or Create Design Sources"); // a:JRadioButton (JPanel:JComponent, b:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+// Elapsed time: 12 seconds
+String[] filenames31467 = {"/home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_common.v", "/home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_invert.v", "/home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_mulx.v", "/home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_pow22523.v"};
+setFileChooser(filenames31467);
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+String[] filenames16706 = {"/home/immesys/w/FPGA/edxcel/verilog/src/ge/ge_double_scalarmult_vartime.v", "/home/immesys/w/FPGA/edxcel/verilog/src/ge/ge_frombytes_negate_vartime.v"};
+setFileChooser(filenames16706);
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+// Elapsed time: 10 seconds
+setFileChooser("/home/immesys/w/FPGA/edxcel/verilog/src/EPU.v");
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'f' command handler elapsed time: 42 seconds
+dismissDialog("Add Sources"); // b:g (ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse -scan_for_includes {/home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_pow22523.v /home/immesys/w/FPGA/edxcel/verilog/src/EPU.v /home/immesys/w/FPGA/edxcel/verilog/src/ge/ge_double_scalarmult_vartime.v /home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_invert.v /home/immesys/w/FPGA/edxcel/verilog/src/ge/ge_frombytes_negate_vartime.v /home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_common.v /home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_mulx.v} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Elapsed time: 36 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Verilog Header]", 1); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+// [GUI Memory]: 66 MB (+1507kb) [00:03:45]
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_ADD_SOURCES, "Add Sources..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// b:g (ch:JFrame): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // a:JButton (JPanel:JComponent, b:g)
+// Elapsed time: 10 seconds
+String[] filenames29306 = {"/home/immesys/w/FPGA/edxcel/EdXel_1.1/hdl/EdXel_v1_1.v", "/home/immesys/w/FPGA/edxcel/EdXel_1.1/hdl/EdXel_v1_1_S00_AXI.v"};
+setFileChooser(filenames29306);
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, b:g)
+// 'f' command handler elapsed time: 15 seconds
+dismissDialog("Add Sources"); // b:g (ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: add_files -norecurse -scan_for_includes {/home/immesys/w/FPGA/edxcel/EdXel_1.1/hdl/EdXel_v1_1_S00_AXI.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/hdl/EdXel_v1_1.v} 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 14, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 14, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+// [GUI Memory]: 69 MB (+4030kb) [00:04:12]
+// Elapsed time: 26 seconds
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/component.xml");
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+# Current time: 11/21/14 3:30:06 PM
+# Process ID: 10399
+# Platform: Unix
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+ui.frmwork.CommandFailedException: ERROR: [Common 17-39] 'update_files' failed due to earlier errors.
+ (See /home/immesys/w/FPGA/edxcel/EdXel_1.1/vivado_pid10399.debug)
+*/
+// Tcl Message: update_files -from_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/component.xml -to_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml -filesets [get_filesets *] 
+// Tcl Message: INFO: [filemgmt 20-762] Replacing file '/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml' with file '/home/immesys/w/FPGA/edxcel/EdXel_1.1/component.xml'. INFO: [filemgmt 20-1080] Importing file from '/home/immesys/w/FPGA/edxcel/EdXel_1.1/component.xml' to '/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml'. 
+// Tcl Message: ERROR: [filemgmt 20-1081] Replace file failure for imported file. Reimport failed. Error copying file locally: /home/immesys/w/FPGA/edxcel/EdXel_1.1/component.xml 
+// Tcl Message: ERROR: [Common 17-39] 'update_files' failed due to earlier errors. 
+// HOptionPane Error: "ERROR: [Common 17-39] 'update_files' failed due to earlier errors.  (Vivado v2014.3.1 (64-bit))"
+selectButton("RDIResource.HOptionPane_APPLICATION_EXCEPTION_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+// Elapsed time: 41 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+setFileChooser("/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/component.xml");
+/*
+#-------------------------------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+# Current time: 11/21/14 3:31:07 PM
+# Process ID: 10399
+# Platform: Unix
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx
+# Technical Support with this file and a testcase attached.
+#-------------------------------------------------------------------------------
+ui.frmwork.CommandFailedException: ERROR: [Common 17-39] 'update_files' failed due to earlier errors.
+ (See /home/immesys/w/FPGA/edxcel/EdXel_1.1/vivado_pid10399.debug)
+*/
+// Tcl Message: update_files -from_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/component.xml -to_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml -filesets [get_filesets *] 
+// Tcl Message: INFO: [filemgmt 20-762] Replacing file '/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml' with file '/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/component.xml'. INFO: [filemgmt 20-1080] Importing file from '/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/component.xml' to '/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml'. 
+// Tcl Message: ERROR: [filemgmt 20-1081] Replace file failure for imported file. Reimport failed. Error copying file locally: /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/component.xml 
+// Tcl Message: ERROR: [Common 17-39] 'update_files' failed due to earlier errors. 
+// HOptionPane Error: "ERROR: [Common 17-39] 'update_files' failed due to earlier errors.  (Vivado v2014.3.1 (64-bit))"
+selectButton("RDIResource.HOptionPane_APPLICATION_EXCEPTION_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Package IP]", 5, false); // w:Y (v:H, ch:JFrame)
+// cn:P (ch:JFrame):  Open Project Manager : addNotify
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+dismissDialog("Open Project Manager"); // cn:P (ch:JFrame)
+// TclEventType: LOAD_FEATURE
+// Tcl Message: ipx::open_ipxact_file /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml 
+// Tcl Message: ERROR: [Ipptcl 7-529] Unknown IP-XACT file "/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml" 
+// Tcl Message: ERROR: [Common 17-39] 'ipx::open_ipxact_file' failed due to earlier errors. 
+// [Engine Memory]: 5,022 MB (+2097kb) [00:06:06]
+// [Engine Memory]: 5,052 MB (+31121kb) [00:06:07]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,052 MB. GUI used memory: 27 MB. Current time: 11/21/14 3:31:38 PM
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// ay:P (ch:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ay:P)
+dismissDialog("Remove Sources"); // ay:P (ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // w:Y (v:H, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+// cn:P (ch:JFrame):  IP Catalog : addNotify
+dismissDialog("IP Catalog"); // cn:P (ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v), EdXel_v1_1_S00_AXI_inst - EdXel_v1_1_S00_AXI (EdXel_v1_1_S00_AXI.v)]", 4, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v), EdXel_v1_1_S00_AXI_inst - EdXel_v1_1_S00_AXI (EdXel_v1_1_S00_AXI.v), U - EPU (EPU.v), epu_ila - ila_0 (ila_0.xci)]", 11, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v), EdXel_v1_1_S00_AXI_inst - EdXel_v1_1_S00_AXI (EdXel_v1_1_S00_AXI.v), U - EPU (EPU.v), GFNV - ge_frombytes_negate_vartime (ge_frombytes_negate_vartime.v)]", 10, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORT, "Report"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package IP..."); // Z:JMenuItem (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+// Z:g (ch:JFrame): Create and Package New IP: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, Z:g)
+// cn:P (Z:g):  Analyze source files for top modules : addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, Z:g)
+dismissDialog("Analyze source files for top modules"); // cn:P (Z:g)
+selectRadioButton(PAResourceItoN.NewIpWizard_INCLUDE_IP_GENERATED_FILES, "Include IP generated files"); // a:JRadioButton (G:JPanel, Z:g)
+selectRadioButton(PAResourceItoN.NewIpWizard_INCLUDE_XCI_FILES, "Include .xci files"); // a:JRadioButton (G:JPanel, Z:g)
+selectRadioButton(PAResourceItoN.NewIpWizard_INCLUDE_IP_GENERATED_FILES, "Include IP generated files"); // a:JRadioButton (G:JPanel, Z:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, Z:g)
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, Z:g)
+// 's' command handler elapsed time: 18 seconds
+dismissDialog("Create and Package New IP"); // Z:g (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// Tcl Message: ipx::package_project -root_dir /home/immesys/w/FPGA/edxcel -generated_files 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: DG_GRAPH_STALE
+// cn:P (ch:JFrame):  IP Packager : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [GUI Memory]: 74 MB (+5156kb) [00:06:52]
+// [Engine Memory]: 5,054 MB (+2101kb) [00:06:52]
+// [Engine Memory]: 5,054 MB (+4kb) [00:06:53]
+// Tcl Message: INFO: [IP_Flow 19-1842] HDL Parser: Found included file "verilog/src/fe/fe_common.v" from the top-level HDL file. INFO: [IP_Flow 19-2228] Inferred bus interface "signal_clock" of definition type "xilinx.com:signal:clock:1.0". 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// [GUI Memory]: 77 MB (+2892kb) [00:06:53]
+// Tcl Message: set_property vendor SDB [ipx::current_core] 
+// Tcl Message: set_property taxonomy /UserIP [ipx::current_core] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton("PAResourceItoN.NewIpWizard_FINISHED_PACKAGING_SUCCESSFULLY_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top EdXel_v1_1 [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+closeView(PAResourceOtoP.PAViews_PACKAGE_IP, "Package IP - ge_frombytes_negate_vartime"); // A:aG (TdiGroup:JideTabbedPane, ch:JFrame)
+// TclEventType: PACKAGER_UNLOAD_CORE
+selectButton("PAResourceItoN.IpPackagerView_DO_YOU_WANT_TO_SAVE_YOUR_CHANGES_BEFORE_No", "No"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+// Tcl Message: ipx::unload_core /home/immesys/w/FPGA/edxcel/component.xml 
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 14); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false); // u:k (H:JPanel, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 15, false, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// ay:P (ch:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ay:P)
+dismissDialog("Remove Sources"); // ay:P (ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files /home/immesys/w/FPGA/edxcel/component.xml 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_PROPERTIES, "Source Node Properties..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: RDIResourceCommand.RDICommands_PROPERTIES
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, EdXel_v1_1 (EdXel_v1_1.v)]", 3, true, false, false, false, false, true); // u:k (H:JPanel, ch:JFrame) - Double Click - Node
+selectCodeEditor("EdXel_v1_1.v", 162, 64); // aY:J (JPanel:JComponent, ch:JFrame)
+selectCodeEditor("EdXel_v1_1.v", 150, 69); // aY:J (JPanel:JComponent, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+selectMenu(PAResourceItoN.MainMenuMgr_REPORT, "Report"); // W:JMenu (JPopupMenu:JComponent, Popup:JWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD, "Create and Package IP..."); // Z:JMenuItem (JPopupMenu:JComponent, Popup:JWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // R:JideMenu (CommandMenuBar:CommandBar, ch:JFrame)
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER_WIZARD
+// Z:g (ch:JFrame): Create and Package New IP: addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, Z:g)
+// cn:P (Z:g):  Analyze source files for top modules : addNotify
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, Z:g)
+dismissDialog("Analyze source files for top modules"); // cn:P (Z:g)
+selectRadioButton(PAResourceItoN.NewIpWizard_INCLUDE_IP_GENERATED_FILES, "Include IP generated files"); // a:JRadioButton (G:JPanel, Z:g)
+selectButton("NEXT", "Next >"); // JButton:AbstractButton (ButtonPanel:JPanel, Z:g)
+selectButton("FINISH", "Finish"); // JButton:AbstractButton (ButtonPanel:JPanel, Z:g)
+// 's' command handler elapsed time: 8 seconds
+dismissDialog("Create and Package New IP"); // Z:g (ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_OBJECT_ADD
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [Engine Memory]: 5,056 MB (+2097kb) [00:08:21]
+// Tcl Message: ipx::package_project -root_dir /home/immesys/w/FPGA/edxcel -generated_files 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// cn:P (ch:JFrame):  IP Packager : addNotify
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property vendor SDB [ipx::current_core] 
+// Tcl Message: set_property taxonomy /UserIP [ipx::current_core] 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectButton("PAResourceItoN.NewIpWizard_FINISHED_PACKAGING_SUCCESSFULLY_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+setText(PAResourceItoN.IdentificationContentPanel_VERSION, "1.5"); // N:an (aF:M, ch:JFrame)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property version 1.5 [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_DELETE
+// TclEventType: PACKAGER_OBJECT_ADD
+// Elapsed time: 10 seconds
+setText(PAResourceItoN.IdentificationContentPanel_DISPLAY_NAME, "EdXel_1.5.0"); // N:an (aF:M, ch:JFrame)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property display_name EdXel_1.5.0 [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+setText(PAResourceItoN.IdentificationContentPanel_DESCRIPTION, "EdXel_1.5.0"); // N:an (aF:M, ch:JFrame)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property description EdXel_1.5.0 [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+setText(PAResourceItoN.IdentificationContentPanel_NAME, "EdXel"); // N:an (aF:M, ch:JFrame)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property name EdXel [ipx::current_core] 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Compatibility", 1); // P:v (JViewport:JComponent, ch:JFrame)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // P:v (JViewport:JComponent, ch:JFrame)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Addressing and Memory", 5); // P:v (JViewport:JComponent, ch:JFrame)
+// [GUI Memory]: 79 MB (+2204kb) [00:08:57]
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // P:v (JViewport:JComponent, ch:JFrame)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // P:v (JViewport:JComponent, ch:JFrame)
+selectButton(PAResourceQtoS.ReviewContentPanel_PACKAGE_IP, "Package IP"); // a:JButton (JPanel:JComponent, ch:JFrame)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 2 [ipx::current_core] 
+// cn:P (ch:JFrame):  Package IP : addNotify
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// TclEventType: PACKAGER_OBJECT_DELETE
+// TclEventType: PACKAGER_OBJECT_ADD
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property ip_repo_paths  {/home/immesys/w/FPGA/edxcel /home/immesys/w/FPGA/edxcel/EdXel_1.1} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/immesys/w/FPGA/edxcel'. 
+selectButton("PAResourceQtoS.ReviewContentPanel_FINISHED_PACKAGING_SUCCESSFULLY_OK", "OK"); // JButton:AbstractButton (JPanel:JComponent, Q:JDialog)
+// TclEventType: FILE_SET_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_1 (blk_mem_gen_1.xci)]", 4); // u:k (H:JPanel, ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // g:JideTabbedPane (I:aG, ch:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // g:JideTabbedPane (I:aG, ch:JFrame)
+// TclEventType: DG_UPDATE_GRAPH
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // g:JideTabbedPane (I:aG, ch:JFrame)
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "Hierarchy", 0); // g:JideTabbedPane (I:aG, ch:JFrame)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_1 (blk_mem_gen_1.xci)]", 4, true); // u:k (H:JPanel, ch:JFrame) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, blk_mem_gen_1 (blk_mem_gen_1.xci)]", 4, true, false, false, false, true, false); // u:k (H:JPanel, ch:JFrame) - Popup Trigger - Node
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenu(PAResourceQtoS.SrcMenu_IP_DOCUMENTATION, "IP Documentation"); // W:JMenu (ag:JPopupMenu, Popup:JWindow)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // Z:JMenuItem (ag:JPopupMenu, Popup:JWindow)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// ay:P (ch:JFrame): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a:JButton (JPanel:JComponent, ay:P)
+dismissDialog("Remove Sources"); // ay:P (ch:JFrame)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/blk_mem_gen_1/blk_mem_gen_1.xci 
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_UPDATE_GRAPH
+selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, (HResource) null, "IP Sources", 1); // g:JideTabbedPane (I:aG, ch:JFrame)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, IP]", 0); // u:k (H:JPanel, ch:JFrame)
+// [GUI Memory]: 81 MB (+1563kb) [00:16:02]
+// [GUI Memory]: 81 MB (+469kb) [00:16:07]
