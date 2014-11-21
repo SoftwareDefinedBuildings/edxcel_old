@@ -85,7 +85,7 @@ reg rdone;
 assign done = rdone;
 
 
-reg [319:0] frombytes_in1;
+reg [255:0] frombytes_in1;
 reg [319:0] frombytes_res;
 always @ (*)
 begin
@@ -418,6 +418,7 @@ begin
                            state <= 23;
                        end
                    end
+             default: state <= 0;
        endcase
    end
 

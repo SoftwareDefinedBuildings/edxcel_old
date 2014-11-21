@@ -24,7 +24,7 @@ module fe_mulx(
     input wire [319:0] op_a,
     input wire [319:0] op_b,
     input wire valid,
-    input wire [319:0] res,
+    output wire [319:0] res,
     input wire clk,
     input wire rst,
     output wire done
@@ -276,6 +276,7 @@ begin
     h0 <= h0;
     cycle <= cycle << 1;
     rdone <= 0;
+    rres <= 0;
     case (cycle)
     33'h00000000  : begin //Idle state
                     if (valid == 1'b1)
@@ -301,6 +302,7 @@ begin
                                    h8 <= 0;
                                    h9 <= 0;
                                    cycle <= 1;
+                                   
                     end else
                         cycle <= 0;
                 end

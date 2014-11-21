@@ -3364,7 +3364,7 @@ begin
                         rdone <= 1'b1;
                         state <= 10'd0;
                     end
-        default: if (state > 458) state <= 0;
+        default: state <= 0;
         /*10'd499 :   begin
                     end
         10'd498 :   begin

@@ -3727,6 +3727,7 @@ begin
                            cycle <= 262;
                        end
                    end
+               default: cycle <= 0;
        endcase
    end
 
