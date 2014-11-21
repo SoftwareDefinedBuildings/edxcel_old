@@ -95,7 +95,7 @@
 
 
     
-    localparam integer PL_VERSION = 32'h0410_0139;
+    localparam integer PL_VERSION = 32'h0410_0145;
     
 	// AXI4LITE signals
 	reg [C_S_AXI_ADDR_WIDTH-1 : 0] 	axi_awaddr;
@@ -163,7 +163,7 @@
              .axiclk(S_AXI_ACLK),
              .modclk(epu_clock),
              .resetn(S_AXI_ARESETN),
-             .sig32(epu_sig[ep_idx]),
+             .sig(epu_sig[ep_idx]),
              .key(epu_key[ep_idx]),
              .rhash(epu_rhash[ep_idx]),
              .ready(epu_rdy[ep_idx]),

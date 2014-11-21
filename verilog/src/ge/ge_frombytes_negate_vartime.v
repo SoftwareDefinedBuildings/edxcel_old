@@ -1,29 +1,29 @@
  module ge_frombytes_negate_vartime(
-    input [255:0] s,
-    output [319:0] h_x,
-    output [319:0] h_y,
-    output [319:0] h_z,
-    output [319:0] h_t,
-    output error,
-    input clk,
-    input rst,
-    input valid,
-    output done,
+    input wire [255:0] s,
+    output wire [319:0] h_x,
+    output wire [319:0] h_y,
+    output wire [319:0] h_z,
+    output wire [319:0] h_t,
+    output wire error,
+    input wire clk,
+    input wire rst,
+    input wire valid,
+    output wire done,
 
     //Resources
-    output [319:0] mul_op_a,
-    output [319:0] mul_op_b,
-    output mul_valid,
-    input [319:0] mul_res,
-    input mul_done,
+    output wire [319:0] mul_op_a,
+    output wire [319:0] mul_op_b,
+    output wire mul_valid,
+    input wire [319:0] mul_res,
+    input wire mul_done,
     
-    output [319:0] add_op_a,
-    output [319:0] add_op_b,
-    input [319:0]  add_res,
+    output wire [319:0] add_op_a,
+    output wire [319:0] add_op_b,
+    input wire [319:0]  add_res,
     
-    output [319:0] sub_op_a,
-    output [319:0] sub_op_b,
-    input [319:0]  sub_res
+    output wire [319:0] sub_op_a,
+    output wire [319:0] sub_op_b,
+    input wire [319:0]  sub_res
 );
 
 `include "../fe/fe_common.v"
