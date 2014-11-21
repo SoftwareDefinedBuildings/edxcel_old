@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.3.1 (lin64) Build 1056140 Thu Oct 30 16:30:39 MDT 2014
-//Date        : Thu Nov 20 17:41:46 2014
+//Date        : Fri Nov 21 14:24:22 2014
 //Host        : bunker running 64-bit Ubuntu 14.04.1 LTS
 //Command     : generate_target zed_wrapper.bd
 //Design      : zed_wrapper

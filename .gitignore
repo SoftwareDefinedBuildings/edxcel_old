@@ -6,3 +6,6 @@ EdXel_1.1/XPR/XPR.sim/
 *~
 EdXel_1.1/vivado_
 sw/edxcel
+integration/integration.runs/
+integration/integration.cache/
+integration/integration.hw/

@@ -136,6 +136,8 @@ begin
         mul_op_a = mul_op_a_gdsv;
     else if (addsub_gfnv_valid)
         mul_op_a = mul_op_a_gfnv;
+    else
+        mul_op_a = 320'h0;
 end
 always @ (*)
 begin
@@ -143,6 +145,8 @@ begin
         mul_op_b = mul_op_b_gdsv;
     else if (addsub_gfnv_valid)
         mul_op_b = mul_op_b_gfnv;
+    else
+        mul_op_b = 320'h0;
 end
 
 //Adder
@@ -163,15 +167,19 @@ always @ (*)
 begin
     if (addsub_gdsv_valid)
         add_op_a = add_op_a_gdsv;
-    if (addsub_gfnv_valid)
+    else if (addsub_gfnv_valid)
         add_op_a = add_op_a_gfnv; 
+    else
+        add_op_a = 320'h0;
 end
 always @ (*)
 begin
     if (addsub_gdsv_valid)
         add_op_b = add_op_b_gdsv;
-    if (addsub_gfnv_valid)
+    else if (addsub_gfnv_valid)
         add_op_b = add_op_b_gfnv; 
+    else
+        add_op_b = 320'h0;
 end
 
 //Subtractor
@@ -191,15 +199,19 @@ always @ (*)
 begin
     if (addsub_gdsv_valid)
         sub_op_a = sub_op_a_gdsv;
-    if (addsub_gfnv_valid)
+    else if (addsub_gfnv_valid)
         sub_op_a = sub_op_a_gfnv; 
+    else
+        sub_op_a = 320'h0;
 end
 always @ (*)
 begin
     if (addsub_gdsv_valid)
         sub_op_b = sub_op_b_gdsv;
-    if (addsub_gfnv_valid)
+    else if (addsub_gfnv_valid)
         sub_op_b = sub_op_b_gfnv; 
+    else
+        sub_op_b = 320'h0;
 end
 
 //Real modules

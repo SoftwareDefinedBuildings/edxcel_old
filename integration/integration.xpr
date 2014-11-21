@@ -25,16 +25,20 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_xlconstant_0_0/zed_xlconstant_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="hdl/zed.v"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_xbar_0/zed_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_EdXel_0_0/zed_EdXel_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_processing_system7_1_0/zed_processing_system7_1_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_btns_5bits_0/zed_btns_5bits_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_processing_system7_1_axi_periph_0/zed_processing_system7_1_axi_periph_0.xci"/>
         <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_rst_processing_system7_1_100M_0/zed_rst_processing_system7_1_100M_0.xci"/>
         <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_leds_8bits_0/zed_leds_8bits_0.xci"/>
         <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_sws_8bits_0/zed_sws_8bits_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="hdl/zed.v"/>
-        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_xlconstant_0_0/zed_xlconstant_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_processing_system7_1_0/zed_processing_system7_1_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_processing_system7_1_axi_periph_0/zed_processing_system7_1_axi_periph_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_btns_5bits_0/zed_btns_5bits_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_EdXel_0_0/zed_EdXel_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_xbar_0/zed_xbar_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="hw_handoff/zed.hwh"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="hw_handoff/zed_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="ip/zed_auto_pc_0/zed_auto_pc_0.xci"/>
+        <CompFileExtendedInfo CompFileName="zed.bd" FileRelPathName="zed_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/hdl/zed_wrapper.v">
         <FileInfo>
