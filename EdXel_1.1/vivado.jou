@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 16:30:39 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Fri Nov 21 15:25:23 2014
+# Process ID: 10399
+# Log file: /home/immesys/w/FPGA/edxcel/EdXel_1.1/vivado.log
+# Journal file: /home/immesys/w/FPGA/edxcel/EdXel_1.1/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.xpr
+remove_files {/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/add64/add64.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/fifo_generator_0/fifo_generator_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/ila_0/ila_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/mult19/mult19.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/ip/mult32x64/mult32x64.xci}
+add_files -norecurse {/home/immesys/w/FPGA/edxcel/EdXel_1.1/src/mult19/mult19.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/blk_mem_gen_0/blk_mem_gen_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/ila_0/ila_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/mult32x64/mult32x64.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/fifo_generator_0/fifo_generator_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/blk_mem_gen_1/blk_mem_gen_1.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/clk_wiz_0/clk_wiz_0.xci /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/add64/add64.xci}
+remove_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/imports/edxcel/verilog/src/ge/consts.coe
+remove_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/ge/consts.coe
+remove_files {/home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/src/DummyEPU.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/EPU.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/hdl/EdXel_v1_1.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/hdl/EdXel_v1_1_S00_AXI.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/fe/fe_invert.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/fe/fe_mulx.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/fe/fe_pow22523.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/ge/ge_double_scalarmult_vartime.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/ge/ge_frombytes_negate_vartime.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/verilog/src/fe/fe_common.v}
+add_files -norecurse -scan_for_includes {/home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_pow22523.v /home/immesys/w/FPGA/edxcel/verilog/src/EPU.v /home/immesys/w/FPGA/edxcel/verilog/src/ge/ge_double_scalarmult_vartime.v /home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_invert.v /home/immesys/w/FPGA/edxcel/verilog/src/ge/ge_frombytes_negate_vartime.v /home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_common.v /home/immesys/w/FPGA/edxcel/verilog/src/fe/fe_mulx.v}
+add_files -norecurse -scan_for_includes {/home/immesys/w/FPGA/edxcel/EdXel_1.1/hdl/EdXel_v1_1_S00_AXI.v /home/immesys/w/FPGA/edxcel/EdXel_1.1/hdl/EdXel_v1_1.v}
+update_files -from_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/component.xml -to_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml -filesets [get_filesets *]
+update_files -from_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/component.xml -to_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml -filesets [get_filesets *]
+ipx::open_ipxact_file /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml
+remove_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/XPR/XPR.srcs/sources_1/imports/edxcel/EdXel_1.1/component.xml
+ipx::package_project -root_dir /home/immesys/w/FPGA/edxcel -generated_files
+set_property vendor SDB [ipx::current_core]
+set_property taxonomy /UserIP [ipx::current_core]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top EdXel_v1_1 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+ipx::unload_core /home/immesys/w/FPGA/edxcel/component.xml
+remove_files /home/immesys/w/FPGA/edxcel/component.xml
+ipx::package_project -root_dir /home/immesys/w/FPGA/edxcel -generated_files
+set_property vendor SDB [ipx::current_core]
+set_property taxonomy /UserIP [ipx::current_core]
+set_property version 1.5 [ipx::current_core]
+set_property display_name EdXel_1.5.0 [ipx::current_core]
+set_property description EdXel_1.5.0 [ipx::current_core]
+set_property name EdXel [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property ip_repo_paths  {/home/immesys/w/FPGA/edxcel /home/immesys/w/FPGA/edxcel/EdXel_1.1} [current_project]
+update_ip_catalog
+remove_files /home/immesys/w/FPGA/edxcel/EdXel_1.1/src/blk_mem_gen_1/blk_mem_gen_1.xci
