@@ -24,7 +24,7 @@ assign pmul_in1 = mul_in1;
 assign pmul_in2 = mul_in2;
 assign pmul_valid = mul_valid;
  
-integer cycle;
+reg [31:0] cycle;
 
 reg [319:0] rt_0;
 reg [319:0] rt_1;
