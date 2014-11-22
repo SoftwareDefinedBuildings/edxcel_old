@@ -85,12 +85,33 @@ reg rdone;
 assign done = rdone;
 
 
-reg [255:0] frombytes_in1;
-reg [319:0] frombytes_res;
-always @ (*)
-begin
-    frombytes_res = fe_frombytes(frombytes_in1);
-end 
+reg [255:0] frombytes_in;
+wire [319:0] frombytes_res;
+reg frombytes_valid;
+wire frombytes_done;
+fe_frombytes FROMBYTES(
+.in(frombytes_in),
+.out(frombytes_res),
+.clk(clk),
+.rst(rst),
+.valid(frombytes_valid),
+.done(frombytes_done)
+   );
+   
+
+reg [255:0] tobytes_in;
+wire [319:0] tobytes_res;
+reg tobytes_valid;
+wire tobytes_done;
+fe_tobytes TOBYTES(
+.in(tobytes_in),
+.out(tobytes_res),
+.clk(clk),
+.rst(rst),
+.valid(tobytes_valid),
+.done(tobytes_done)
+   );
+
 
 reg [319:0] add_in1;
 reg [319:0] add_in2;
@@ -108,13 +129,6 @@ begin
     neg_res = fe_neg(neg_in);
 end
 
-reg [319:0] isneg_in;
-reg [7:0] isneg_res;
-always @ (*)
-begin
-    isneg_res = fe_isnegative(isneg_in);
-end 
-
 reg if1;
 reg if2;
 
@@ -128,6 +142,8 @@ begin
    begin
        rdone <= 0;
        state <= state + 1;
+       frombytes_valid <= 0;
+       tobytes_valid <= 0;
        self_mul_valid <= 0;
        pow_valid <= 0;
        pow_en <= 0;
@@ -136,7 +152,8 @@ begin
                        if (valid == 1'b1)
                        begin
                            // fe_frombytes(h->Y, s);
-                           frombytes_in1 <= s;
+                           frombytes_in <= s;
+                           frombytes_valid <= 1;
                            // fe_1(h->Z);
                            rh_z <= 320'h00000000000000000000000000000000000000000000000000000000000000000000000000000001;
                        end
@@ -146,11 +163,18 @@ begin
                        end
                    end
            6'd1 :  begin
-                         rh_y <= frombytes_res;
-                         // fe_mul(u, h->Y, h->Y);
-                         self_mul_in1 <= frombytes_res;
-                         self_mul_in2 <= frombytes_res;
-                         self_mul_valid <= 1;
+                        if (frombytes_done)
+                        begin
+                            rh_y <= frombytes_res;
+                            // fe_mul(u, h->Y, h->Y);
+                            self_mul_in1 <= frombytes_res;
+                            self_mul_in2 <= frombytes_res;
+                            self_mul_valid <= 1;
+                        end
+                        else
+                        begin
+                            state <= 1;
+                        end
                    end
            6'd2 :  begin
                        if (mul_done)
@@ -383,13 +407,21 @@ begin
                          end
                    end
            6'd19 :  begin
-                       isneg_in <= rh_x;
+                       tobytes_in <= rh_x;
+                       tobytes_valid <= 1;
                    end
            6'd20 :  begin
-                       if (isneg_res == (s[31*8 +: 8] >> 7))
+                       if (tobytes_done)
                        begin
-                           if2 <= 1;
-                           neg_in <= rh_x;
+                           if ((tobytes_res[0*8 +: 8] & 1) == (s[31*8 +: 8] >> 7))
+                           begin
+                               if2 <= 1;
+                               neg_in <= rh_x;
+                           end
+                       end
+                       else
+                       begin
+                           state <= 20;
                        end
                    end
            6'd21 :  begin
