@@ -67,8 +67,7 @@ reg [6:0] addrb;
 reg [319:0] dina;
 reg [319:0] dinb;
 
-reg [319:0] rtmp_X;   
-reg [319:0] rtmp_Y;   
+
 reg rdone;
 reg rge_isneg;
 reg [255:0] rge_bytes;
@@ -179,17 +178,24 @@ reg [10:0] state;
 reg [319:0] foo;
 reg signed [8:0] loopi;
 
+reg [319:0] rtmp_X;   
+reg [319:0] rtmp_Y;   
 reg  [255:0] rtmpXbytes;
 reg  [255:0] rtmpYbytes;
 
-always @ (*)
-begin
-    rtmpXbytes = fe_tobytes(rtmp_X);
-end
-always @ (*)
-begin
-    rtmpYbytes = fe_tobytes(rtmp_Y);
-end
+reg [319:0] tobytes_in;
+wire [255:0] tobytes_res;
+reg tobytes_valid;
+wire tobytes_done;
+fe_tobytes TOBYTES(
+.in(tobytes_in),
+.out(tobytes_res),
+.clk(clk),
+.rst(rst),
+.valid(tobytes_valid),
+.done(tobytes_done)
+   );
+
 always @ (posedge clk)
 begin
     if (rst == 0)
@@ -209,6 +215,7 @@ begin
         rdone <= 1'b0;
         fei_en <= 1'b0;
         fei_valid <= 1'b0;
+        tobytes_valid <= 0;
         case (state)
         10'd0   :   begin
                         if (valid == 1'b0)
@@ -3331,35 +3338,36 @@ begin
                     end
                     //fe_tobytes is a long combinatorial chain. stall while it propogates
         10'd449 :   begin
-                        //stall
+                        tobytes_in <= rtmp_X;
+                        tobytes_valid <= 1;
                     end
         10'd450 :   begin
-                       //stall
-                    end     
+                        if (tobytes_done)
+                        begin
+                            rtmpXbytes <= tobytes_res;
+                            tobytes_in <= rtmp_Y;
+                            tobytes_valid <= 1;
+                        end
+                        else
+                        begin
+                            state <= 450;
+                        end
+                     end     
         10'd451 :   begin
-                        //stall
+                        if (tobytes_done)
+                        begin
+                            rtmpYbytes <= tobytes_res;
+                        end
+                        else
+                        begin
+                            state <= 451;
+                        end
                     end
         10'd452 :   begin
-                       //stall
-                    end   
-        10'd453 :   begin
-                        //stall
-                    end
-        10'd454 :   begin
-                       //stall
-                    end     
-        10'd455 :   begin
-                        //stall
-                    end
-        10'd456 :   begin
-                       //stall
-                    end   
-                    
-        10'd457 :   begin
                         rrge_bytes[254:0] <= rtmpYbytes[254:0];
                         rrge_bytes[255] <= rtmpYbytes[255] ^ rtmpXbytes[0];
                     end
-        10'd458 :   begin
+        10'd453 :   begin
                         rge_bytes <= rrge_bytes;
                         rdone <= 1'b1;
                         state <= 10'd0;

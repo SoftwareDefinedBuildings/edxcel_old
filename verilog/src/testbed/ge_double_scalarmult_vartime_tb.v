@@ -69,7 +69,7 @@ reg [319:0] A_T;
 reg [255:0] b;
 reg gdsv_valid;  
 wire [255:0] gdsv_result;
-
+wire gdsv_done;
 ge_double_scalarmult_vartime GDSV(
     
         //Parameters
@@ -96,7 +96,8 @@ ge_double_scalarmult_vartime GDSV(
         .sub_op_b(sub_op_b),
         .sub_res(sub_res),
         
-        .ge_bytes(gdsv_result),    
+        .ge_bytes(gdsv_result),  
+        .done(gdsv_done),  
         //misc
         .clk(clk),
         .rst(rst)
@@ -147,5 +148,13 @@ end
         
  always
     #5 clk = !clk;
-           
+    
+always @ (gdsv_done) begin
+      if (gdsv_done === 1'b1) begin
+            // 1715bd6c30b45f864fa49da3e3abf950cf2a61795c2e9e830b6a009effdffff2
+            $display("GE bytes: %h", gdsv_result);
+          $finish;
+      end
+    end  
+    
 endmodule
